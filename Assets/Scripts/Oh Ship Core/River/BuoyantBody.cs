@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 /// <summary>
@@ -17,16 +16,24 @@ public class BuoyantBody : MonoBehaviour
     }
     void FixedUpdate()
     {
+        Vector3 totalAngularDrag = Vector3.zero;
         foreach (BuoyancyPoint point in m_buoyancyPoints)
         {
-            Vector3 globalPointPosition = transform.TransformPoint(point.m_localPosition);
-            if (globalPointPosition.y > m_waterHeight) continue;
-            m_rigidbody.AddForceAtPosition(((Mathf.Abs(globalPointPosition.y - m_waterHeight) * point.m_pointBuoyancy) + point.m_minimumBuoyancy) * Vector3.up, globalPointPosition);
+            Vector3 globalPointPosition = transform.TransformPoint(point.LocalPosition);
+            float depth = m_waterHeight - globalPointPosition.y;
+            if (depth <= 0) continue;
+            float submersion = Mathf.Clamp01(depth / point.Radius);
+            float buoyancyForce = submersion * point.PointBuoyancy;
+            m_rigidbody.AddForceAtPosition(buoyancyForce * Vector3.up, globalPointPosition);
+            Vector3 pointVelocity = m_rigidbody.GetPointVelocity(globalPointPosition);
+            m_rigidbody.AddForceAtPosition(-pointVelocity * (submersion * point.LinearDrag), globalPointPosition);
+            totalAngularDrag += -m_rigidbody.angularVelocity * (submersion * point.AngularDrag);
         }
+        m_rigidbody.AddTorque(totalAngularDrag);
     }
 }
 /// <summary>
-/// Allows the user to edit the buoyancy points of a BuoyantBody in the scene.
+/// Allows the user to edit the buoyancy points of a <see cref="BuoyantBody"/> in the scene.
 /// </summary>
 [CustomEditor(typeof(BuoyantBody))]
 public class BuoyantBodyEditor : Editor
@@ -40,11 +47,11 @@ public class BuoyantBodyEditor : Editor
         Transform objectTransform = ((BuoyantBody)target).transform;
         for (int i = 0; i < buoyancyPoints.arraySize; i++)
         {
-            SerializedProperty point = buoyancyPoints.GetArrayElementAtIndex(i).FindPropertyRelative("m_localPosition");
+            SerializedProperty point = buoyancyPoints.GetArrayElementAtIndex(i).FindPropertyRelative("LocalPosition");
             Vector3 worldPosition = objectTransform.TransformPoint(point.vector3Value);
             Vector3 updatedPosition = worldPosition;
             bool isSelected = i == m_selectedIndex;
-            float size = HandleUtility.GetHandleSize(worldPosition) * 0.3f;
+            float size = buoyancyPoints.GetArrayElementAtIndex(i).FindPropertyRelative("Radius").floatValue * 2;
             Handles.color = m_selectedIndex == i ? Color.yellow : Color.cyan;
             EditorGUI.BeginChangeCheck();
             if(isSelected)
