@@ -1,9 +1,18 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
+using Random = UnityEngine.Random;
+
 public class TerrainSpawner : MonoBehaviour
 {
     [SerializeField] SO_WaterPathingTerrain usableTerrain;
     //[SerializeField] bool useCustomSpawnLocation;
+    
+    public static Action<GameObject> OnCleanupTerrain;
+    //private int terrainCount = 0;
+    private List<GameObject> _spawnedTerrains = new List<GameObject>();
     
     void Start()
     {
@@ -24,11 +33,16 @@ public class TerrainSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (_spawnedTerrains.Count >= 3)
+        {
+           // OnCleanupTerrain?.Invoke(oldTerrain);
+        }
         if (Keyboard.current.spaceKey.wasPressedThisFrame)
         {
             Debug.Log("Spawning Terrain");
-            GameObject testObject = usableTerrain.waterPaths[Random.Range(0, usableTerrain.waterPaths.Length)];
-            Instantiate(testObject, transform.position, transform.rotation);
+            GameObject currentTerrain = usableTerrain.waterPaths[Random.Range(0, usableTerrain.waterPaths.Length)];
+            Instantiate(currentTerrain, transform.position, transform.rotation);
+            
         }
     }
     
