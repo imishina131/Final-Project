@@ -31,7 +31,7 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses:
   - MOTIONVECTORS
@@ -39,22 +39,6 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _SampleTexture2D_40ef71b8e42e4c598b68fcd4839ae50d_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: f8f77288b53782a4e9dab62cf889f939, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_80294c30c66b41c7958da79ea8fb1ef8_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: dc3554a8d0634cf4db967452fabb3a28, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_83a85a30c08d4a5a8e20f3c0479219b0_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: dc3554a8d0634cf4db967452fabb3a28, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_bf3fa94d821747eda93304b55ef5ee8e_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: f8f77288b53782a4e9dab62cf889f939, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_e5edef9204f74529aa67519a567607ec_Texture_1_Texture2D:
         m_Texture: {fileID: 2800000, guid: dc3554a8d0634cf4db967452fabb3a28, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -77,26 +61,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AlphaClip: 1
-    - _AlphaToMask: 0
-    - _Blend: 0
-    - _BlendModePreserveSpecular: 1
-    - _CastShadows: 0
-    - _Cull: 1
-    - _DstBlend: 10
-    - _DstBlendAlpha: 10
-    - _Height: 0.79
+    - _Height: 0.59
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _ReceiveShadows: 0
-    - _SrcBlend: 5
-    - _SrcBlendAlpha: 1
-    - _Surface: 1
-    - _WorkflowMode: 1
-    - _ZTest: 4
-    - _ZWrite: 0
-    - _ZWriteControl: 0
-    m_Colors:
-    - _Test: {r: 0, g: 0, b: 1, a: 0}
+    m_Colors: []
   m_BuildTextureStacks: []
   m_AllowLocking: 1
