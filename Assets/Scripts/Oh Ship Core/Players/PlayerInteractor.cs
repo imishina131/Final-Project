@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using UnityEngine.InputSystem;
+
 /// <summary>
 /// Handles interactions with <see cref="IInteractable"/> by the player.
 /// </summary>
@@ -9,35 +11,54 @@ public class PlayerInteractor : MonoBehaviour, IInteractor
     /// </summary>
     [SerializeField] float m_interactionRange = 2;
     InteractionSession m_session;
+    
     /// <inheritdoc/>
-    public bool IsInteracting() => m_session is { IsActive: true };
+    public bool IsInteracting() => m_session?.IsActive is true;
     /// <inheritdoc/>
     public InteractionSession GetSession() => m_session;
     /// <inheritdoc/>
-    public void RequestSessionTransfer(InteractionSession session)
+    public bool RequestSessionTransfer(InteractionSession session)
     {
-        session.TransferTo(this);
+        if (IsInteracting() || !session.TransferTo(this)) return false;
         m_session = session;
+        SubscribeToSession();
+        return true;
     }
     /// <summary>
     /// Attempts to begin an interaction with the nearest <see cref="IInteractable"/> in the <see cref="m_interactionRange"/>
     /// </summary>
-    public void OnInteraction()
+    public void OnInteractionButtonPressed(InputAction.CallbackContext context)
     {
-        if (IsInteracting()) return;
+        if (!context.performed) return;
+        if (IsInteracting())
+        {
+            EndActiveInteraction();
+            return;
+        }
         if (!Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, m_interactionRange)) return;
         if (!hit.collider.TryGetComponent(out IInteractable interactable)) return;
         m_session = interactable.BeginInteraction(this);
+        SubscribeToSession();
+    }
+    void SubscribeToSession()
+    {
+        m_session.OnEnded +=  () => m_session = null;
+        m_session.OnTransferred += (old, _) =>
+        {
+            if (!ReferenceEquals(old, this)) return;
+            m_session = null;
+        };
     }
     /// <summary>
-    /// Ends the active <see cref="InteractionSession"/> handled by this <see cref="PlayerInteractor"/>
+    /// Ends the current <see cref="InteractionSession"/> if one exists.
     /// </summary>
-    public void OnInteractionEnd()
+    public void EndActiveInteraction()
     {
         if (!IsInteracting()) return;
-        m_session.Target.EndInteraction(m_session);
-        m_session.End();
+        InteractionSession session = m_session;
         m_session = null;
+        session.Target.EndInteraction(session);
+        session.End();
     }
-    void OnDisable() => OnInteractionEnd();
+    void OnDisable() => EndActiveInteraction();
 }

@@ -17,5 +17,5 @@ public interface IInteractor
     /// Requests the <see cref="InteractionSession"/> to be transferred to this <see cref="PlayerInteractor"/>
     /// </summary>
     /// <param name="session">The <see cref="InteractionSession"/> to request the transfer of</param>
-    void RequestSessionTransfer(InteractionSession session);
+    bool RequestSessionTransfer(InteractionSession session);
 }
