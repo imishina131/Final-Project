@@ -29,9 +29,9 @@ public class TerrainSpawner : MonoBehaviour
 
     void Awake()
     {
-        SwapTerrainSet(terrainContainer.terrainTileSets[_terrainContainerIndex]);
-        _terrainHasSwapped = true;
-        StartCoroutine(ToggleBool());
+        InitializeTerrainSet(terrainContainer.terrainTileSets[_terrainContainerIndex]);
+       // _terrainHasSwapped = true;
+      //  StartCoroutine(ToggleBool());
     }
 
     void Start()
@@ -70,26 +70,46 @@ public class TerrainSpawner : MonoBehaviour
                 tile.transform.position = spawnLocation - tile.transform.Find("Entry Point").position;
                 spawnedTerrains.Add(tile);
                 
+                Debug.Log($"Spawned Terrain Key: {_currentTileKey}");
                 _currentTileKey = currentTileKey;
                 
-                Debug.Log($"Spawned Terrain Key: {currentTileKey}");
+                Debug.Log($"Spawned Terrain Key: {_currentTileKey}");
             }
         }
+        
+       // if (Time.time % 5 <= .1 && !_terrainHasSwapped)
 
-        if (Time.time % 5 <= .1 && !_terrainHasSwapped)
+        if (Keyboard.current.enterKey.wasPressedThisFrame)
         {
+            _terrainContainerIndex++;
             SwapTerrainSet(terrainContainer.terrainTileSets[_terrainContainerIndex]);
-            _terrainHasSwapped = true;
-            StartCoroutine(ToggleBool());
+            //_terrainHasSwapped = true;
+           // StartCoroutine(ToggleBool());
         }
     }
     
     private void SwapTerrainSet(SO_WaterPathingTerrain newTerrainSet)
     {
         Debug.Log("Tiles Swap");
+        
         _currentTileSet = _terrainSwaper.changeCurrentTerrainTiles(_currentTileSet, newTerrainSet);
         _terrainDictionary = _currentTileSet.possibleTiles;
-        _terrainContainerIndex++;
+        _currentTileKey = "0";
+        
+        
+        if (_terrainDictionary.TryGetValue("0", out GameObject terrain))
+        {
+            Vector3 spawnLocation = spawnedTerrains[^1].transform.Find("Exit Point").position;
+            GameObject tile = Instantiate(terrain, Vector3.zero, Quaternion.identity);
+            tile.transform.position = spawnLocation - tile.transform.Find("Entry Point").position;
+            spawnedTerrains.Add(tile);
+        }
+    }
+
+    private void InitializeTerrainSet(SO_WaterPathingTerrain newTerrainSet)
+    {
+        _currentTileSet = _terrainSwaper.changeCurrentTerrainTiles(_currentTileSet, newTerrainSet);
+        _terrainDictionary = _currentTileSet.possibleTiles;
         _currentTileKey = "0";
     }
 

@@ -14,4 +14,5 @@ public class SO_WaterPathingTerrain : ScriptableObject
 {
     public SerializableDictionary<string, GameObject> possibleTiles = new();
     public TerrainOptions[] terrainOptions;
+    public string startingTileKey;
 }
