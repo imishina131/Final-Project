@@ -119,6 +119,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &94534563
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 94534564}
+  m_Layer: 0
+  m_Name: SpawnA
+  m_TagString: SpawnSceneA
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &94534564
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94534563}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.6, y: 6.41, z: -7.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &116540596
 GameObject:
   m_ObjectHideFlags: 0
@@ -830,6 +861,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b8daf882b1e4f2142b7ee89306d8a32c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2023906172}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b8daf882b1e4f2142b7ee89306d8a32c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2023906176}
   m_SourcePrefab: {fileID: 100100000, guid: b8daf882b1e4f2142b7ee89306d8a32c, type: 3}
 --- !u!1 &401581849 stripped
 GameObject:
@@ -853,7 +887,7 @@ GameObject:
   - component: {fileID: 473566599}
   m_Layer: 0
   m_Name: Boat
-  m_TagString: Untagged
+  m_TagString: Boat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1591,7 +1625,7 @@ Transform:
   m_GameObject: {fileID: 1145903433}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.81, z: 0}
+  m_LocalPosition: {x: 0, y: 3.81, z: -1.21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2272,6 +2306,73 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.28674534, y: 0.12859952, z: 0.50499636}
   m_Center: {x: -0.000019396268, y: 0.0050774794, z: -0.28119934}
+--- !u!114 &2023906176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401581849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7c20ee1b8bce6c4e923477e56cddfeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: OhShip.Core.Ship::ShipMovement
+  <Rudder>k__BackingField: 0
+  <LeftThrottle>k__BackingField: 0
+  <RightThrottle>k__BackingField: 0
+  m_rigidbody: {fileID: 0}
+  m_leftWheelPowerPoint: {fileID: 116540597}
+  m_rightWheelPowerPoint: {fileID: 1105327444}
+  m_rudderPoint: {fileID: 1449750099}
+  m_rudderEffectiveness:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0.16666667
+      outSlope: 0.16666667
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 6
+      value: 1
+      inSlope: 0.16666667
+      outSlope: 0.16666667
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_throttleEffectiveness:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -1
+      value: -6
+      inSlope: 6
+      outSlope: 6
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 6
+      inSlope: 6
+      outSlope: 6
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &2106111591 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4e05564a69e988b46be32717efa4124a, type: 3}
@@ -2321,3 +2422,4 @@ SceneRoots:
   - {fileID: 401581848}
   - {fileID: 1351994526}
   - {fileID: 473566598}
+  - {fileID: 94534564}

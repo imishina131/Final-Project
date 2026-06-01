@@ -9,6 +9,7 @@ public class PlayerInteractions : MonoBehaviour
 
     bool inSceneA = false;
     bool inSceneB = false;
+    Rigidbody boatRb;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -53,6 +54,13 @@ public class PlayerInteractions : MonoBehaviour
 
         spawnPoint = GameObject.FindWithTag(spawnTag).transform;
         rb.position = spawnPoint.position;
+
+        GameObject boatObj = GameObject.FindWithTag("Boat");
+        boatRb = boatObj.GetComponent<Rigidbody>();
+
+        FixedJoint joint = boatObj.AddComponent<SpringJoint>();
+
+        joint.connectedBody = rb;
     }
 
     void CheckDoorEntry(Collider door)

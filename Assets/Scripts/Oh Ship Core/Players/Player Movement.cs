@@ -8,7 +8,12 @@ using UnityEngine.Serialization;
 /// </summary>
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField, Range(0f, 90f)] float maxGroundAngle = 25f;
+    float minGroundDotProduct;
+    bool onGround;
+
     Rigidbody m_rigidbody;
+    Rigidbody boatRb;
     Vector2 m_desiredMovement;
     [SerializeField] float m_acceleration;
     [SerializeField] float m_deceleration;
@@ -21,7 +26,21 @@ public class PlayerMovement : MonoBehaviour
     IPlayerController m_playerController;
     public void OnMovementInputChanged(Vector2 input) => m_desiredMovement = Vector2.ClampMagnitude(input, 1) * m_moveSpeed;
     public void OnLookInputChanged(Vector2 input) => m_currentLookInput = input;
-    void Start() => m_rigidbody = GetComponent<Rigidbody>();
+    void Start()
+    {
+        m_rigidbody = GetComponent<Rigidbody>();
+        GameObject boatObj = GameObject.FindWithTag("Boat");
+        boatRb = boatObj.GetComponent<Rigidbody>();
+
+        FixedJoint joint = boatObj.AddComponent<FixedJoint>();
+
+        joint.connectedBody = m_rigidbody;
+    }
+
+    void Awake()
+    {
+        OnValidate();
+    }
 
     void FixedUpdate()
     {
@@ -41,4 +60,23 @@ public class PlayerMovement : MonoBehaviour
         m_camera.rotation = m_lookYaw * Quaternion.Euler(m_lookPitch, 0, 0);
     }
     float GetRate(float current, float desired) => Mathf.Abs(current) < Mathf.Abs(desired) || !Mathf.Approximately(Mathf.Sign(current), Mathf.Sign(desired)) ? m_acceleration : m_deceleration;
+
+    void OnValidate()
+    {
+        minGroundDotProduct = Mathf.Cos(maxGroundAngle * Mathf.Deg2Rad);
+    }
+
+    void OnCollisionStay()
+    {
+        onGround = true;
+    }
+
+    void EvaluateCollision(Collision collision)
+    {
+        for (int i = 0; i < collision.contactCount; i++)
+        {
+            Vector3 normal = collision.GetContact(i).normal;
+            onGround |= normal.y >= minGroundDotProduct;
+        }
+    }
 }
