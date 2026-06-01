@@ -864,6 +864,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b8daf882b1e4f2142b7ee89306d8a32c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2023906176}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b8daf882b1e4f2142b7ee89306d8a32c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2023906178}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b8daf882b1e4f2142b7ee89306d8a32c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2023906177}
   m_SourcePrefab: {fileID: 100100000, guid: b8daf882b1e4f2142b7ee89306d8a32c, type: 3}
 --- !u!1 &401581849 stripped
 GameObject:
@@ -2373,6 +2379,75 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2023906177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401581849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a1eddbcbb491c248ba1f6998ff8045d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: OhShip.Core.Ship::BuoyantBody
+  m_waterHeight: 0
+  m_buoyancyPoints:
+  - PointBuoyancy: 7
+    LocalPosition: {x: 0.15, y: -0.0003325397, z: -0.4810457}
+    Radius: 4.52
+    Drag: {x: 0.4, y: 0.2, z: 0.4}
+  - PointBuoyancy: 7
+    LocalPosition: {x: -0.15, y: -0.00033226828, z: -0.48105833}
+    Radius: 4.52
+    Drag: {x: 0.4, y: 0.2, z: 0.4}
+  - PointBuoyancy: 7
+    LocalPosition: {x: -0.15, y: -0.00033226828, z: 0.19}
+    Radius: 4.52
+    Drag: {x: 0.4, y: 0.2, z: 0.4}
+  - PointBuoyancy: 7
+    LocalPosition: {x: 0.15, y: -0.00033226828, z: 0.19}
+    Radius: 4.52
+    Drag: {x: 0.4, y: 0.2, z: 0.4}
+  - PointBuoyancy: 7
+    LocalPosition: {x: 0.00025162514, y: 0, z: 0.42563418}
+    Radius: 4.52
+    Drag: {x: 0.4, y: 0.2, z: 0.4}
+  - PointBuoyancy: 7
+    LocalPosition: {x: 0.15, y: 0, z: -0.14}
+    Radius: 4.52
+    Drag: {x: 0.4, y: 0.2, z: 0.4}
+  - PointBuoyancy: 7
+    LocalPosition: {x: -0.15, y: 0, z: -0.14}
+    Radius: 4.52
+    Drag: {x: 0.4, y: 0.2, z: 0.4}
+--- !u!54 &2023906178
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401581849}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &2106111591 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4e05564a69e988b46be32717efa4124a, type: 3}

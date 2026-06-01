@@ -215,7 +215,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2051537735393309202}
   serializedVersion: 5
-  m_Mass: 1
+  m_Mass: 0.25
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -246,6 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9c2df8d50ed406428ec6d1cb9b98db1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: OhShip.Core.Players::PlayerController
+  maxGroundAngle: 25
   m_acceleration: 20
   m_deceleration: 30
   m_moveSpeed: 5
