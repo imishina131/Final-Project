@@ -5,10 +5,11 @@ using UnityEngine.UI;
 
 public class FishingManager : MonoBehaviour, IInteractable
 {
-    [SerializeField] private RectTransform greenZone;
-    [SerializeField] private RectTransform playerFishingIcon;
-    [SerializeField] private Slider fishingProgressBar;
-    [SerializeField] private RectTransform usableFishingArea;
+    private RectTransform greenZone;
+    private RectTransform playerFishingIcon;
+    private Slider fishingProgressBar;
+   private RectTransform usableFishingArea;
+    
     [SerializeField] private float speedOfFishIcon;
     
     [Range(0f, 1f)]
@@ -19,10 +20,30 @@ public class FishingManager : MonoBehaviour, IInteractable
     private float _maxOfUsableFishingSpace;
     
     private float _halfHeightOfFish;
+    private FishingUI _fishingUI;
     
     public InteractionSession BeginInteraction(IInteractor interactor)
     {
         Debug.Log("Beginning Interaction");
+        GameObject player = interactor.GetAssociatedGameObject().transform.root.gameObject;
+        Debug.Log(player);
+        _fishingUI = player.GetComponentInChildren<FishingUI>();
+        if (_fishingUI == null)
+        {
+            Debug.Log("No FishingUI found");
+        }
+        else
+        {
+            Debug.Log("Found FishingUI");
+            Debug.Log(_fishingUI);
+        }
+        greenZone = _fishingUI.GreenZone;
+        playerFishingIcon = _fishingUI.PlayerFishingIcon;
+        fishingProgressBar = _fishingUI.FishingProgressBar;
+        usableFishingArea = _fishingUI.UsableFishingArea;
+        
+        _fishingUI.DisplayFishingUI();
+       
         (_minOfUsableFishingSpace,_maxOfUsableFishingSpace) = GetMaxAndMinOfIcon(usableFishingArea);
       var (bottomOfFishIcon, topOfFishIcon) = GetMaxAndMinOfIcon(playerFishingIcon);
          _halfHeightOfFish = (topOfFishIcon - bottomOfFishIcon) / 2;
@@ -30,15 +51,26 @@ public class FishingManager : MonoBehaviour, IInteractable
         Vector3 startPos = playerFishingIcon.position;
         startPos.y = _minOfUsableFishingSpace + _halfHeightOfFish;
         playerFishingIcon.position = startPos;
-        
+        CheckFishingProgress(fishingProgressBar);
        return  new InteractionSession(interactor, this);
+       
+     
+    }
+
+    public InteractionSession EndInteraction(IInteractor interactor)
+    {
+        Debug.Log("Ending Interaction");
+        _fishingUI.DisplayFishingUI();
+        _fishingUI = null;
+        
+        return  new InteractionSession(interactor, this);
     }
 
     private void Update()
     {
-        _isHoldingButton = Keyboard.current.spaceKey.isPressed;
-        StartFishing(playerFishingIcon, usableFishingArea);
-        CheckFishingProgress(fishingProgressBar);
+        //_isHoldingButton = Keyboard.current.spaceKey.isPressed;
+       // StartFishing(playerFishingIcon, usableFishingArea);
+       
     }
 
 

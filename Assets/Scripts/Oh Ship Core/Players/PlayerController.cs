@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour, IPlayerController
     /// <inheritdoc/>
     public void ChangeControlledEntity(IPlayerControllable controllable)
     {
+        Debug.Log("Changing controlled entity");
         if (m_currentControlledEntity == controllable) return;
         m_currentControlledEntity?.OnControlReleased();
         m_currentControlledEntity = controllable ?? m_defaultControllable.Value;
