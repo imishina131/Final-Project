@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8658532052230713583}
   - component: {fileID: 3890149404350108893}
   - component: {fileID: 3994179610541121624}
+  - component: {fileID: -288984700650632213}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -221,6 +222,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &-288984700650632213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2051537735393309202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73f4150717f0c6840ab9c1bf37b18aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: OhShip.Core.Players::PlayerInteractions
+  spawnPoint: {fileID: 0}
 --- !u!1 &5183295149400410213
 GameObject:
   m_ObjectHideFlags: 0

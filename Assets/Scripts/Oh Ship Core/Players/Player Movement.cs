@@ -62,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(connectedBody.name);
+
     }
 
 
@@ -136,32 +136,35 @@ public class PlayerMovement : MonoBehaviour
 
     void AdjustVelocityAndRotation()
     {
-        Vector3 xAxis = ProjectOnContactPlane(Vector3.right).normalized;
-        Vector3 zAxis = ProjectOnContactPlane(Vector3.forward).normalized;
+        if(connectedBody)
+        {
+            Vector3 xAxis = ProjectOnContactPlane(Vector3.right).normalized;
+            Vector3 zAxis = ProjectOnContactPlane(Vector3.forward).normalized;
 
-        float connectionVelocityX = Vector3.Dot(m_lookYaw * Vector3.forward, connectionVelocity);
-        float connectionVelocityZ = Vector3.Dot(m_lookYaw * Vector3.right, connectionVelocity);
-        float currentX = Vector3.Dot(m_lookYaw * Vector3.forward, xAxis);
-        float currentZ = Vector3.Dot(m_lookYaw * Vector3.right, zAxis);
+            float connectionVelocityX = Vector3.Dot(m_lookYaw * Vector3.forward, connectionVelocity);
+            float connectionVelocityZ = Vector3.Dot(m_lookYaw * Vector3.right, connectionVelocity);
+            float currentX = Vector3.Dot(m_lookYaw * Vector3.forward, xAxis);
+            float currentZ = Vector3.Dot(m_lookYaw * Vector3.right, zAxis);
 
-        
-        float yawDelta = Mathf.DeltaAngle(pastPlatformYaw, platformYaw);
-        Quaternion platformRotation = Quaternion.Euler(0f, yawDelta, 0f);
 
-        Vector3 offset = m_rigidbody.position - connectedBody.position;
-        Vector3 rotatedOffset = platformRotation * offset;
-        Vector3 rotationVelocity = (rotatedOffset - offset) / Time.fixedDeltaTime;
+            float yawDelta = Mathf.DeltaAngle(pastPlatformYaw, platformYaw);
+            Quaternion platformRotation = Quaternion.Euler(0f, yawDelta, 0f);
 
-        float rotationVelocityX = Vector3.Dot(m_lookYaw * Vector3.forward, rotationVelocity);
-        float rotationVelocityZ = Vector3.Dot(m_lookYaw * Vector3.right, rotationVelocity);
-        
+            Vector3 offset = m_rigidbody.position - connectedBody.position;
+            Vector3 rotatedOffset = platformRotation * offset;
+            Vector3 rotationVelocity = (rotatedOffset - offset) / Time.fixedDeltaTime;
 
-        float forwardVelocity = currentX - connectionVelocityX;
-        float sidewaysVelocity = currentZ - connectionVelocityZ;
-        float newForward = Mathf.MoveTowards(forwardVelocity, m_desiredMovement.y, GetRate(forwardVelocity, m_desiredMovement.y)) + connectionVelocityX;
-        float newSideways = Mathf.MoveTowards(sidewaysVelocity, m_desiredMovement.x, GetRate(sidewaysVelocity, m_desiredMovement.x))  + connectionVelocityZ;
-        Vector3 worldVelocity = m_lookYaw * new Vector3(newSideways, 0, newForward);
-        m_rigidbody.linearVelocity = new(worldVelocity.x, m_rigidbody.linearVelocity.y, worldVelocity.z);
+            float rotationVelocityX = Vector3.Dot(m_lookYaw * Vector3.forward, rotationVelocity);
+            float rotationVelocityZ = Vector3.Dot(m_lookYaw * Vector3.right, rotationVelocity);
+
+
+            float forwardVelocity = currentX - connectionVelocityX;
+            float sidewaysVelocity = currentZ - connectionVelocityZ;
+            float newForward = Mathf.MoveTowards(forwardVelocity, m_desiredMovement.y, GetRate(forwardVelocity, m_desiredMovement.y)) + connectionVelocityX;
+            float newSideways = Mathf.MoveTowards(sidewaysVelocity, m_desiredMovement.x, GetRate(sidewaysVelocity, m_desiredMovement.x)) + connectionVelocityZ;
+            Vector3 worldVelocity = m_lookYaw * new Vector3(newSideways, 0, newForward);
+            m_rigidbody.linearVelocity = new(worldVelocity.x, m_rigidbody.linearVelocity.y, worldVelocity.z);
+        }
 
     }
 
