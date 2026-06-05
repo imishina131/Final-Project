@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,7 +14,12 @@ public class FishingUI : MonoBehaviour
     public RectTransform PlayerFishingIcon => playerFishingIcon;
     public RectTransform UsableFishingArea => usableFishingArea;
     public Slider FishingProgressBar => fishingProgress;
-    
+
+    private void Awake()
+    {
+       HideFishingUI();
+    }
+
     public void DisplayFishingUI()
     {
         fishingUI.SetActive(true);
