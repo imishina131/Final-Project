@@ -11,6 +11,10 @@ public class TerrainSpawner : MonoBehaviour
 {
     [SerializeField] SO_UsableTerrain terrainContainer;
 
+    [SerializeField] private int amountOfTilesTillDestroy = 4;
+    
+    [SerializeField]private BoatCoordinate boatCoordinate;
+
     private SO_WaterPathingTerrain _currentTileSet;
     
     private Dictionary<string, GameObject> _terrainDictionary;
@@ -26,17 +30,38 @@ public class TerrainSpawner : MonoBehaviour
     private int _terrainContainerIndex = 0;
     
     private bool _terrainHasSwapped = false;
+    private int _buffer;
+    
+    
+
+    private void OnEnable()
+    {
+        BoatCoordinate.OnTerrainTileChange += SpawnTerrainTile;
+    }
+
+    private void OnDisable()
+    {
+        BoatCoordinate.OnTerrainTileChange -= SpawnTerrainTile;
+    }
 
     void Awake()
     {
+        if (amountOfTilesTillDestroy % 2 == 1)
+        {
+            amountOfTilesTillDestroy++;
+            Debug.Log("Changed to " + amountOfTilesTillDestroy);
+            
+        }
+         _buffer = amountOfTilesTillDestroy / 2;
         InitializeTerrainSet(terrainContainer.terrainTileSets[_terrainContainerIndex]);
        // _terrainHasSwapped = true;
       //  StartCoroutine(ToggleBool());
     }
 
     void Start()
-    {
-
+    {   
+        
+        
         if (_terrainDictionary.TryGetValue(_currentTileKey, out GameObject terrain))
         {
             GameObject tile = Instantiate(terrain, new Vector3(0, 0, 0), Quaternion.identity);
@@ -49,9 +74,11 @@ public class TerrainSpawner : MonoBehaviour
     void Update()
     {
         
-        if (spawnedTerrains.Count >= 4)
+        if (spawnedTerrains.Count >= amountOfTilesTillDestroy)
         {
-            if (spawnedTerrains[0] != null)
+            int currentIndex = spawnedTerrains.IndexOf(boatCoordinate.CurrentTerrainTile);
+            if (currentIndex == -1) return;
+            if (currentIndex > _buffer)
             {
               
                 Destroy(spawnedTerrains[0]);
@@ -59,10 +86,10 @@ public class TerrainSpawner : MonoBehaviour
             }
             
         }
-        if (Keyboard.current.spaceKey.wasPressedThisFrame)
+        /*if (Keyboard.current.spaceKey.wasPressedThisFrame)
         {
             SpawnTerrainTile();
-        }
+        }*/
         
        // if (Time.time % 5 <= .1 && !_terrainHasSwapped)
 
@@ -111,10 +138,10 @@ public class TerrainSpawner : MonoBehaviour
             tile.transform.position = spawnLocation - tile.transform.Find("Entry Point").position;
             spawnedTerrains.Add(tile);
                 
-            Debug.Log($"Spawned Terrain Key: {_currentTileKey}");
+           // Debug.Log($"Spawned Terrain Key: {_currentTileKey}");
             _currentTileKey = currentTileKey;
                 
-            Debug.Log($"Spawned Terrain Key: {_currentTileKey}");
+           // Debug.Log($"Spawned Terrain Key: {_currentTileKey}");
         }
     }
 

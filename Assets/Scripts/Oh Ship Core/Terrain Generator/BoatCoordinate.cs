@@ -1,12 +1,18 @@
+using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class BoatCoordinate : MonoBehaviour
 {
     [SerializeField] private float rayCastLength = 100f;
     private RaycastHit _hit;
+    private GameObject _currentTerrainTile;
+    private GameObject _lastTerrainTile;
 
     private int _allowedLayerMasks;
-    // Update is called once per frame
+
+    public GameObject CurrentTerrainTile => _currentTerrainTile;
+    public static event Action OnTerrainTileChange;
     void Awake()
     {
         DisableChildCollidersFromRayCast();
@@ -16,7 +22,12 @@ public class BoatCoordinate : MonoBehaviour
         Debug.DrawRay(gameObject.transform.position, Vector3.down * rayCastLength, Color.red);
         if (Physics.Raycast(gameObject.transform.position, Vector3.down, out _hit, rayCastLength, _allowedLayerMasks))
         {
-            Debug.Log(_hit.transform.name);
+            _currentTerrainTile = _hit.collider.gameObject;
+            if (_currentTerrainTile != _lastTerrainTile)
+            {
+                _lastTerrainTile = _currentTerrainTile;
+                OnTerrainTileChange?.Invoke();
+            }
         }
     }
 
@@ -35,6 +46,6 @@ public class BoatCoordinate : MonoBehaviour
 
     public bool ShipHasChangedTerrainTiles()
     {
-        return false;
+        return true;
     }
 }

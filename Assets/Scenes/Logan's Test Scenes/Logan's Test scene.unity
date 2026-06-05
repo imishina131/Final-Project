@@ -276,6 +276,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: OhShip.Core::TerrainSpawner
   terrainContainer: {fileID: 11400000, guid: 6a9aae72465c0a742bb05c531ee50e40, type: 2}
+  amountOfTilesTillDestroy: 5
+  boatCoordinate: {fileID: 1217420397}
   spawnedTerrains: []
 --- !u!4 &659053506
 Transform:
@@ -324,7 +326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3c7210c35c60884fad4c081f9e3fdc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: OhShip.Core::BoatCoordinate
-  rayCastLength: 5
+  rayCastLength: 100
 --- !u!136 &1217420398
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -414,7 +416,7 @@ Transform:
   m_GameObject: {fileID: 1217420396}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -125.25444, y: 0.000010000001, z: -410.86798}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
