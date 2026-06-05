@@ -1,14 +1,20 @@
+using System;
 using UnityEngine;
+
 using UnityEngine.UI;
 
 public class FishingMiniGame
 {
     private FishingMiniGameData _data;
     private float _halfHeightOfFishingIcon;
+
+    public Action OnCaughtFish;
     
+    private bool _isGameOver;
    
     public void InitializeMiniGame(FishingMiniGameData fishingMiniGameData)
     {
+        _isGameOver = false;
         _data = fishingMiniGameData;
         _data.FishingProgressBar.value = 0;
         var (bottomOfFishIcon, topOfFishIcon) = GetMaxAndMinOfIconWorld(_data.PlayerFishingIcon);
@@ -19,10 +25,24 @@ public class FishingMiniGame
         startPos.y = minOfUsableFishingSpace + _halfHeightOfFishingIcon;
         _data.PlayerFishingIcon.position = startPos;
         CheckFishingProgress(_data.FishingProgressBar);
+        
+        
+    }
+    
+    public void UpdateMiniGame(bool isHoldingButton)
+    {
+        PlayingMinigame(isHoldingButton);
+        CheckFishingProgress(_data.FishingProgressBar);
+    }
+
+    public void EndMiniGame()
+    {
+        _isGameOver = true;
     }
 
     public void PlayingMinigame(bool isHoldingButton)
     {
+        if(_isGameOver) return;
         var (bottomOfFishArea, topOfFishArea) = GetMaxAndMinOfIconLocal(_data.UsableFishingArea);
         float directionOfFish = isHoldingButton ? _data.SpeedOfFishIcon : -_data.SpeedOfFishIcon;
         Vector3 localPos = _data.PlayerFishingIcon.localPosition;
@@ -35,15 +55,12 @@ public class FishingMiniGame
         _data.PlayerFishingIcon.localPosition = localPos;
     }
 
-    public void UpdateMiniGame(bool isHoldingButton)
-    {
-        PlayingMinigame(isHoldingButton);
-        CheckFishingProgress(_data.FishingProgressBar);
-    }
+    
 
     private void CheckFishingProgress(Slider incomingSlider)
     {
-
+        if(_isGameOver) return;
+        
         if (FishingIconOverlap(_data.PlayerFishingIcon, _data.GreenZone))
         {
             incomingSlider.value += _data.ProgressSpeed * Time.deltaTime;
@@ -53,6 +70,12 @@ public class FishingMiniGame
             incomingSlider.value -= _data.ProgressSpeed * Time.deltaTime;
         }
         incomingSlider.value = Mathf.Clamp(incomingSlider.value, 0f, 1f);
+        
+        if (incomingSlider.value >= incomingSlider.maxValue)
+        {
+            OnCaughtFish?.Invoke();
+            EndMiniGame();
+        }
         
     }
     

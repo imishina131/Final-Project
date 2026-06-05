@@ -4,18 +4,20 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.XR;
+using Random = System.Random;
 
 public class FishingManager : MonoBehaviour, IInteractable, IPlayerControllable
 {
     [SerializeField] private string _fishingControlActionMap = "Fishing";
-    private RectTransform _greenZone;
-    private RectTransform _playerFishingIcon;
-    private Slider _fishingProgressBar;
-    private RectTransform _usableFishingArea;
+    
     [SerializeField] private float _speedOfFishIcon;
     
     [Range(0f, 1f)]
     [SerializeField] private float _progressSpeed;
+
+    [Header("Add fish models here!")] 
+    [SerializeField]
+    private GameObject[] usableFishesToCatch;
     
     private bool _isHoldingButton = false;
 
@@ -25,6 +27,11 @@ public class FishingManager : MonoBehaviour, IInteractable, IPlayerControllable
     private IPlayerController _playerController;
     private IPlayerControllable _playerControllable;
     private FishingMiniGame _fishingMiniGame;
+    private RectTransform _greenZone;
+    private RectTransform _playerFishingIcon;
+    private Slider _fishingProgressBar;
+    private RectTransform _usableFishingArea;
+    private Transform holdingObjectTransform = null;
     
     private void Start()
     {
@@ -32,6 +39,13 @@ public class FishingManager : MonoBehaviour, IInteractable, IPlayerControllable
     }
     public InteractionSession BeginInteraction(IInteractor interactor)
     {
+        if (holdingObjectTransform != null && holdingObjectTransform.childCount > 0)
+        {
+            InteractionSession session = new InteractionSession(interactor, this);
+            session.End();
+            return session;
+        }
+        
         Debug.Log("Beginning Interaction");
 
         _playerControllable = interactor.GetAssociatedGameObject().transform.parent.GetComponent<IPlayerControllable>();
@@ -89,6 +103,7 @@ public class FishingManager : MonoBehaviour, IInteractable, IPlayerControllable
         data.ProgressSpeed = _progressSpeed;
         
         _fishingMiniGame.InitializeMiniGame(data);
+        _fishingMiniGame.OnCaughtFish += HandleFishCaught;
     }
 
     public void OnControlRequested(IPlayerController player)
@@ -118,12 +133,26 @@ public class FishingManager : MonoBehaviour, IInteractable, IPlayerControllable
         
         InputAction interactAction = _activeActionMap.FindAction("Interact");
         interactAction.performed -= HandleInteract;
+        
+        _fishingMiniGame.OnCaughtFish -= HandleFishCaught;
         _fishingUI.HideFishingUI();
         _activeActionMap = null;
     }
 
     public IPlayerController GetActivePlayerController() => _playerController;
-    
+
+    private void HandleFishCaught()
+    {
+        Debug.Log("Fish Caught");
+        int index = UnityEngine.Random.Range(0, usableFishesToCatch.Length);
+        GameObject player = _playerControllable.GetAssociatedGameObject();
+
+        holdingObjectTransform = player.GetComponentInChildren<HeldObjectLocation>().transform;
+        
+        GameObject caughtFish = Instantiate(usableFishesToCatch[index], holdingObjectTransform.position,holdingObjectTransform.rotation);
+        caughtFish.transform.SetParent(holdingObjectTransform);
+        _currentInteractionSession.End();
+    }
 
     public GameObject GetAssociatedGameObject()
     {

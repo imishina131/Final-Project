@@ -1,5 +1,49 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &800990461458659111
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8637963116083372980}
+  - component: {fileID: 4283127309468755903}
+  m_Layer: 0
+  m_Name: Holding Hand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8637963116083372980
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800990461458659111}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.27755964, y: 0.88111335, z: 0.17435753, w: -0.34088024}
+  m_LocalPosition: {x: 0.345, y: -0.5680001, z: 0.837}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7380261991574393363}
+  m_LocalEulerAnglesHint: {x: -29.768, y: 215.487, z: 25.248}
+--- !u!114 &4283127309468755903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800990461458659111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b58b37ba5cf574048a8350bbe9fca945, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: OhShip.Core::HeldObjectLocation
 --- !u!1 &2051537735393309202
 GameObject:
   m_ObjectHideFlags: 0
@@ -265,7 +309,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 8637963116083372980}
   m_Father: {fileID: 5393612588883750663}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7268588531060575580
