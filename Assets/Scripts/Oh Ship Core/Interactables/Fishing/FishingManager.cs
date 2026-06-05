@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.XR;
 
-public class FishingManager : MonoBehaviour, IInteractable
+public class FishingManager : MonoBehaviour, IInteractable, IPlayerControllable
 {
     [SerializeField] private string _fishingControlActionMap = "Fishing";
     private RectTransform greenZone;
@@ -32,34 +32,19 @@ public class FishingManager : MonoBehaviour, IInteractable
 
         _playerControllable = interactor.GetAssociatedGameObject().transform.parent.GetComponent<IPlayerControllable>();
         _playerController = _playerControllable.GetActivePlayerController();
+        
 
         SetUpFishingMinigame(interactor);
+        _playerController.ChangeControlledEntity(this);
 
         _currentInteractionSession = new InteractionSession(interactor, this);
-        _currentInteractionSession.OnEnded += () => _playerController.ChangeControlledEntity(null);
+        _currentInteractionSession.OnEnded += () => _playerController.ChangeControlledEntity(_playerControllable);
         
-        ChangeInputMaps();
+       
         
         return _currentInteractionSession;
     }
-
-    private void ChangeInputMaps()
-    {
-        if (!_playerController.ChangeInputActionMap(_fishingControlActionMap, out InputActionMap map))
-        {
-            Debug.LogError("Failed to assign input actions to player, reverting control to default.");
-            _playerController.ChangeControlledEntity(null);
-            return;
-        }
-        _activeActionMap = map;
-        InputAction reelFishAction = _activeActionMap.FindAction("Reel Fish");
-        reelFishAction.performed += HandleFishingInput;
-        reelFishAction.canceled += HandleFishingInput;
-        
-        InputAction interactAction = _activeActionMap.FindAction("Interact");
-        interactAction.performed += HandleInteract;
-
-    }
+    
 
     private bool FishingIconOverlap(RectTransform fishIcon, RectTransform greenZone)
     {
@@ -141,8 +126,6 @@ public class FishingManager : MonoBehaviour, IInteractable
 
         _fishingUI = player.GetComponentInChildren<FishingUI>();
         
-        //_fishingUI = interactor.GetComponentInChildren<FishingUI>();
-
         greenZone = _fishingUI.GreenZone;
         playerFishingIcon = _fishingUI.PlayerFishingIcon;
         fishingProgressBar = _fishingUI.FishingProgressBar;
@@ -167,5 +150,44 @@ public class FishingManager : MonoBehaviour, IInteractable
         playerFishingIcon.position = startPos;
         CheckFishingProgress(fishingProgressBar);
        
+    }
+
+    public void OnControlRequested(IPlayerController player)
+    {
+        _playerController = player;
+        
+        if (!_playerController.ChangeInputActionMap(_fishingControlActionMap, out InputActionMap map))
+        {
+            Debug.LogError("Failed to assign input actions to player, reverting control to default.");
+            _playerController.ChangeControlledEntity(null);
+            return;
+        }
+        _activeActionMap = map;
+        InputAction reelFishAction = _activeActionMap.FindAction("Reel Fish");
+        reelFishAction.performed += HandleFishingInput;
+        reelFishAction.canceled += HandleFishingInput;
+        
+        InputAction interactAction = _activeActionMap.FindAction("Interact");
+        interactAction.performed += HandleInteract;
+    }
+
+    public void OnControlReleased()
+    {
+        InputAction reelFishAction = _activeActionMap.FindAction("Reel Fish");
+        reelFishAction.performed -= HandleFishingInput;
+        reelFishAction.canceled -= HandleFishingInput;
+        
+        InputAction interactAction = _activeActionMap.FindAction("Interact");
+        interactAction.performed -= HandleInteract;
+        _fishingUI.HideFishingUI();
+        _activeActionMap = null;
+    }
+
+    public IPlayerController GetActivePlayerController() => _playerController;
+    
+
+    public GameObject GetAssociatedGameObject()
+    {
+        return gameObject;
     }
 }
