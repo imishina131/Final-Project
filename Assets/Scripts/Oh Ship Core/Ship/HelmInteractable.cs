@@ -1,4 +1,3 @@
-using System;
 using MatrixUtils.Attributes;
 using Unity.Cinemachine;
 using UnityEngine;
@@ -12,8 +11,8 @@ public class HelmInteractable : MonoBehaviour, IInteractable, IPlayerControllabl
     [SerializeField] float m_helmRudderSpeed = 0.5f;
     [SerializeField, RequiredField] ShipMovement m_shipMovement;
     IPlayerController m_activePlayerController;
-    Vector2 m_input = Vector2.zero;
-    InputActionMap m_activeActionMap;
+    Vector2 m_moveInput = Vector2.zero;
+    Vector2 m_lookInput = Vector2.zero;
     InteractionSession m_currentInteractionSession;
     ///<inheritdoc/>
     public InteractionSession BeginInteraction(IInteractor interactor)
@@ -33,8 +32,9 @@ public class HelmInteractable : MonoBehaviour, IInteractable, IPlayerControllabl
     void Update()
     {
         if(m_activePlayerController is null) return;
-        m_shipMovement.SetRudder(m_shipMovement.Rudder + m_input.x * Time.deltaTime * m_helmRudderSpeed);
-        m_shipMovement.SetThrottle(m_shipMovement.Throttle + m_input.y * Time.deltaTime * m_helmThrottleSpeed);
+        m_shipMovement.SetRudder(m_shipMovement.Rudder + m_moveInput.x * Time.deltaTime * m_helmRudderSpeed);
+        m_shipMovement.SetThrottle(m_shipMovement.Throttle + m_moveInput.y * Time.deltaTime * m_helmThrottleSpeed);
+        m_helmCamera.transform.Rotate(0, m_lookInput.x * Time.deltaTime * 100, 0);
     }
     ///<inheritdoc/>
     public void OnControlRequested(IPlayerController player)
@@ -46,33 +46,39 @@ public class HelmInteractable : MonoBehaviour, IInteractable, IPlayerControllabl
             player.ChangeControlledEntity(null);
             return;
         }
-        m_activeActionMap = map;
-        InputAction movementAction = m_activeActionMap.FindAction("Move");
+        InputAction movementAction = map.FindAction("Move");
         movementAction.performed += HandleMovementInput;
         movementAction.canceled += HandleMovementInput;
-        InputAction interactAction = m_activeActionMap.FindAction("Interact");
+        InputAction interactAction = map.FindAction("Interact");
         interactAction.performed += HandleInteract;
+        InputAction lookAction = map.FindAction("Look");
+        lookAction.performed += HandleLookInput;
+        lookAction.canceled += HandleLookInput;
+        
     }
     ///<inheritdoc/>
     public void OnControlReleased()
     {
-        m_input = Vector2.zero;
+        m_moveInput = Vector2.zero;
         m_helmCamera.Priority = 0;
         Update();
         if (!m_activePlayerController.GetCurrentInputActionMap(out InputActionMap map)) return;
-        InputAction movementAction = m_activeActionMap.FindAction("Move");
+        InputAction movementAction = map.FindAction("Move");
         movementAction.performed -= HandleMovementInput;
         movementAction.canceled -= HandleMovementInput;
-        InputAction interactAction = m_activeActionMap.FindAction("Interact");
+        InputAction interactAction = map.FindAction("Interact");
         interactAction.performed -= HandleInteract;
-        m_activeActionMap = null;
+        InputAction lookAction = map.FindAction("Look");
+        lookAction.performed -= HandleLookInput;
+        lookAction.canceled -= HandleLookInput;
         m_activePlayerController = null;
     }
     ///<inheritdoc/>
     public IPlayerController GetActivePlayerController() => m_activePlayerController;
 
-    void HandleMovementInput(InputAction.CallbackContext context) => m_input = context.ReadValue<Vector2>();
+    void HandleMovementInput(InputAction.CallbackContext context) => m_moveInput = context.ReadValue<Vector2>();
     void HandleInteract(InputAction.CallbackContext context) => m_currentInteractionSession.End();
+    void HandleLookInput(InputAction.CallbackContext context) => m_lookInput = context.ReadValue<Vector2>();
 
     public GameObject GetAssociatedGameObject()
     {
