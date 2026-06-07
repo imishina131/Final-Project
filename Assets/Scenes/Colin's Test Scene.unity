@@ -819,6 +819,57 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.1536406, y: 2.4112713, z: 0.3353771}
   m_Center: {x: -0.0028530557, y: 0.7056362, z: 0.0043790718}
+--- !u!1 &492590802
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 492590804}
+  - component: {fileID: 492590803}
+  m_Layer: 0
+  m_Name: PromptProvider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &492590803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492590802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9068eaab204c824d8545c637957ce81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: OhShip.Core.UI::PromptProvider
+  m_prompt:
+    rid: -2
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+--- !u!4 &492590804
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492590802}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.59605, y: 3.06377, z: 183.96692}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &520249268
 GameObject:
   m_ObjectHideFlags: 0
@@ -3519,3 +3570,4 @@ SceneRoots:
   - {fileID: 520249273}
   - {fileID: 2076054612}
   - {fileID: 739898501}
+  - {fileID: 492590804}
