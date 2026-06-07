@@ -7,5 +7,6 @@ public interface IDamageable
     /// Damages the object
     /// </summary>
     /// <param name="amount">The amount of damage to deal</param>
-    void Damage(uint amount);
+    /// <returns>Whether the damage was successfully applied</returns>
+    bool Damage(uint amount);
 }

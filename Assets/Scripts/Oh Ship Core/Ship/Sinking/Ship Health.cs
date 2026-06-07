@@ -1,6 +1,4 @@
-using System;
 using System.Collections.Generic;
-using MatrixUtils.Attributes;
 using MatrixUtils.GenericDatatypes;
 using UnityEngine;
 using UnityEngine.Pool;
@@ -27,11 +25,11 @@ public class ShipHealth : MonoBehaviour, IDamageable
         m_fillPercentage.Value = Mathf.Clamp01(m_holeCount > 0 ? m_fillPercentage +(m_holeCount * 0.005f * Time.deltaTime) : m_fillPercentage+ -0.05f * Time.deltaTime);
     }
     /// <inheritdoc/>
-    public void Damage(uint amount)
+    public bool Damage(uint amount)
     {
         for (uint i = 0; i < amount; i++)
         {
-            if (m_availableHoles.Count == 0) return;
+            if (m_availableHoles.Count == 0) return false;
             m_holeCount++;
             Transform holeTransform = m_availableHoles.Take();
             ShipHole selectedHole = m_shipHoles.Get();
@@ -46,6 +44,7 @@ public class ShipHealth : MonoBehaviour, IDamageable
             selectedHole.transform.rotation = holeTransform.rotation;
             selectedHole.gameObject.SetActive(true);
         }
+        return true;
     }
     void OnGUI()
     {
