@@ -44,7 +44,7 @@ public class CoalManager : MonoBehaviour, IInteractable, IPlayerControllable
        for (var i = 0; i < _howManyInputs; i++)
        {
            int randomInput = Random.Range(0,_coalData.PossibleInputs.Length);
-           m_inputsForQTE[i] = _coalData.PossibleInputs[randomInput];
+           m_inputsForQTE[i] = _coalData.PossibleInputs[randomInput].InputName;
        }
        
        SetUpUIConnection();
