@@ -734,8 +734,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: OhShip.Core::FishingManager
   _fishingControlActionMap: Fishing
-  speedOfFishIcon: 15
-  progressSpeed: 0.3
+  _speedOfFishIcon: 0
+  _progressSpeed: 0
+  usableFishesToCatch: []
 --- !u!135 &520249270
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1184,6 +1185,51 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1181113033 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 149681893435840606, guid: a9c2d169740099a4dba796b815e3f99e, type: 3}
+  m_PrefabInstance: {fileID: 1205454429}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1181113034 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8131076799858340979, guid: a9c2d169740099a4dba796b815e3f99e, type: 3}
+  m_PrefabInstance: {fileID: 1205454429}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1181113035
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181113033}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6074028379145110453, guid: a9c2d169740099a4dba796b815e3f99e, type: 3}
+--- !u!114 &1181113036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181113033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0298f15897d72fb42acd2a0ac6b50cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: OhShip.Core.Fish::StoveInteractable
+  fishToCook: {fileID: 1276233795}
 --- !u!1001 &1205454429
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1260,6 +1306,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 1.0788
       objectReference: {fileID: 0}
+    - target: {fileID: 149681893435840606, guid: a9c2d169740099a4dba796b815e3f99e, type: 3}
+      propertyPath: m_TagString
+      value: Stove
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a9c2d169740099a4dba796b815e3f99e, type: 3}
       propertyPath: m_Name
       value: PilothouseWithGalley
@@ -1267,7 +1317,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 691262430977157682, guid: a9c2d169740099a4dba796b815e3f99e, type: 3}
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8131076799858340979, guid: a9c2d169740099a4dba796b815e3f99e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1276233796}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2917774658842084967, guid: a9c2d169740099a4dba796b815e3f99e, type: 3}
       insertIndex: -1
@@ -1275,6 +1328,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2917774658842084967, guid: a9c2d169740099a4dba796b815e3f99e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1205454432}
+    - targetCorrespondingSourceObject: {fileID: 149681893435840606, guid: a9c2d169740099a4dba796b815e3f99e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1181113036}
+    - targetCorrespondingSourceObject: {fileID: 149681893435840606, guid: a9c2d169740099a4dba796b815e3f99e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1181113035}
   m_SourcePrefab: {fileID: 100100000, guid: a9c2d169740099a4dba796b815e3f99e, type: 3}
 --- !u!4 &1205454430 stripped
 Transform:
@@ -1299,6 +1358,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: OhShip.Core.Ship::HelmInteractable
   m_helmControlActionMap: Helm
+  m_helmCamera: {fileID: 0}
   m_helmThrottleSpeed: 0.5
   m_helmRudderSpeed: 0.5
   m_shipMovement: {fileID: 2023906176}
@@ -1323,6 +1383,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.1378126, y: 1.1385628, z: 0.65740293}
   m_Center: {x: 0, y: -0.00000011920929, z: 0.0000014901161}
+--- !u!1 &1276233795 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1092671246861489587, guid: 04ba7d3379c622f4d84369a0030280c3, type: 3}
+  m_PrefabInstance: {fileID: 1383181950}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1276233796 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9052388730665674606, guid: 04ba7d3379c622f4d84369a0030280c3, type: 3}
+  m_PrefabInstance: {fileID: 1383181950}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1351994523
 GameObject:
   m_ObjectHideFlags: 0
@@ -1441,6 +1511,79 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1383181950
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1181113034}
+    m_Modifications:
+    - target: {fileID: 1092671246861489587, guid: 04ba7d3379c622f4d84369a0030280c3, type: 3}
+      propertyPath: m_Name
+      value: Fish
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092671246861489587, guid: 04ba7d3379c622f4d84369a0030280c3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9052388730665674606, guid: 04ba7d3379c622f4d84369a0030280c3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.0025567354
+      objectReference: {fileID: 0}
+    - target: {fileID: 9052388730665674606, guid: 04ba7d3379c622f4d84369a0030280c3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.0014078836
+      objectReference: {fileID: 0}
+    - target: {fileID: 9052388730665674606, guid: 04ba7d3379c622f4d84369a0030280c3, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.0064678597
+      objectReference: {fileID: 0}
+    - target: {fileID: 9052388730665674606, guid: 04ba7d3379c622f4d84369a0030280c3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9052388730665674606, guid: 04ba7d3379c622f4d84369a0030280c3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.00612
+      objectReference: {fileID: 0}
+    - target: {fileID: 9052388730665674606, guid: 04ba7d3379c622f4d84369a0030280c3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9052388730665674606, guid: 04ba7d3379c622f4d84369a0030280c3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.020134805
+      objectReference: {fileID: 0}
+    - target: {fileID: 9052388730665674606, guid: 04ba7d3379c622f4d84369a0030280c3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9052388730665674606, guid: 04ba7d3379c622f4d84369a0030280c3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.9997973
+      objectReference: {fileID: 0}
+    - target: {fileID: 9052388730665674606, guid: 04ba7d3379c622f4d84369a0030280c3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9052388730665674606, guid: 04ba7d3379c622f4d84369a0030280c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9052388730665674606, guid: 04ba7d3379c622f4d84369a0030280c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9052388730665674606, guid: 04ba7d3379c622f4d84369a0030280c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 04ba7d3379c622f4d84369a0030280c3, type: 3}
 --- !u!1 &1509291215
 GameObject:
   m_ObjectHideFlags: 0
@@ -1752,8 +1895,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: OhShip.Core::FishingManager
   _fishingControlActionMap: Fishing
-  speedOfFishIcon: 10
-  progressSpeed: 0.542
+  _speedOfFishIcon: 0
+  _progressSpeed: 0
+  usableFishesToCatch: []
 --- !u!135 &2000419482
 SphereCollider:
   m_ObjectHideFlags: 0
