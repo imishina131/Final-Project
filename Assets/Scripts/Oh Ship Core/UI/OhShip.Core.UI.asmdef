@@ -1,4 +1,19 @@
 {
-	"name": "OhShip.Core.UI",
-	"references":[ "MatrixUtils.DependencyInjection", "MatrixUtils.Attributes" ]
+    "name": "OhShip.Core.UI",
+    "rootNamespace": "",
+    "references": [
+        "MatrixUtils.DependencyInjection",
+        "MatrixUtils.Attributes",
+        "OhShip.Core",
+        "MatrixUtils.GenericDatatypes"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }
