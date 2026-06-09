@@ -1,11 +1,23 @@
 using System.Collections;
 using UnityEngine;
+using System;
 
 public class CookFish : MonoBehaviour
 {
     Material material;
     float cookedAmount;
     bool isCooking = false;
+    bool isReady = false;
+    bool isBurnt = false;
+    [SerializeField] Stats stats;
+    [SerializeField] SimpleStatModifier modifier;
+    [SerializeField] StatData statToModify;
+
+    InteractionSession m_currentInteractionSession;
+
+    StatBroker mediator;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -17,7 +29,6 @@ public class CookFish : MonoBehaviour
     void Update()
     {
         CheckForStove();
-        CheckCookedStatus();
 
         if(isCooking)
         {
@@ -25,10 +36,6 @@ public class CookFish : MonoBehaviour
         }
     }
 
-    private void OnCollisionStay(Collision collision)
-    {
-
-    }
 
     private void StartCooking()
     {
@@ -40,23 +47,18 @@ public class CookFish : MonoBehaviour
 
         if(cookedAmount >= 0.7f)
         {
+            isCooking = false;
+            isReady = true;
             StartCoroutine(Burn());
         }
     }
 
     void EndCooking()
     {
-        isCooking = false;
-        gameObject.SetActive(false);
-        material.SetFloat("_Cooked_Amount", 0f);
-        cookedAmount = 0f;
-
+        isReady = false;
+        isBurnt = true;
     }
 
-    private void CheckCookedStatus()
-    {
-
-    }
 
     private void CheckForStove()
     {
@@ -91,4 +93,43 @@ public class CookFish : MonoBehaviour
         }
 
     }
+
+    public InteractionSession BeginInteraction(IInteractor interactor)
+    {
+        if (interactor.IsInteracting() || m_currentInteractionSession is { IsActive: true }) return null;
+
+        if (isBurnt)
+        {
+            Discard();
+        }
+        else if(isReady)
+        {
+            Eat();
+        }
+        else if(isCooking)
+        {
+            return null;
+        }
+        return m_currentInteractionSession;
+    }
+
+    private void Eat()
+    {
+        //sets stats
+        Func<float, float> Add = (x) => x + 5;
+        modifier = new SimpleStatModifier(Add, statToModify);
+        mediator = stats.broker;
+        mediator.AddModifier(modifier);
+        isReady = false;
+        gameObject.SetActive(false);
+
+    }
+
+    private void Discard()
+    {
+        gameObject.SetActive(false);
+        material.SetFloat("_Cooked_Amount", 0f);
+        cookedAmount = 0f;
+    }
+
 }

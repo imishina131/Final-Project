@@ -1,43 +1,26 @@
-using Codice.CM.Common;
 using UnityEngine;
-using System;
+using System.Collections.Generic;
 
-public enum StatType { Hunger, Thirst}
-public class Stats
+public class Stats: MonoBehaviour
 {
-    readonly StatData baseStats;
-    readonly StatBroker mediator;
 
-    public StatBroker Mediator => mediator;
+    [SerializeField] StatData hungerStat;
+    [SerializeField] StatData thirstStat;
 
-    /*
-    public int Hunger
+    public StatBroker broker = new StatBroker();
+
+
+    private Dictionary<StatData, float> stats;
+
+
+    private void Update()
     {
-        get
-        {
-            var q = new StatQuery(StatType.Hunger, baseStats.hunger);
-            mediator.PerformQuery(this, q);
-            return q.Value;
-        }
+        StatQuery value = new StatQuery(hungerStat, 1f);
+        broker.PerformStatQuery(this, value);
+        Debug.Log(value.Value);
     }
 
-    public int Thirst
-    {
-        get
-        {
-            var q = new StatQuery(StatData.Thirst, baseStats.thirst);
-            mediator.PerformQuery(this, q);
-            return q.Value;
-        }
-    }
 
-    public Stats(StatBroker mediator, StatData baseStats)
-    {
-        this.mediator = mediator;
-        this.baseStats = baseStats;
-    }
 
-    public override string ToString() => $"Hunger: {Hunger}, Thirst: {Thirst}";
 
-    */
 }
