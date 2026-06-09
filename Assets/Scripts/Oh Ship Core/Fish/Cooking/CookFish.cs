@@ -12,7 +12,6 @@ public class CookFish : MonoBehaviour
     [SerializeField] Stats stats;
     [SerializeField] SimpleStatModifier modifier;
     [SerializeField] StatData statToModify;
-    StatBroker statBroker;
 
     InteractionSession m_currentInteractionSession;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -26,7 +25,6 @@ public class CookFish : MonoBehaviour
     void Update()
     {
         CheckForStove();
-        CheckCookedStatus();
 
         if(isCooking)
         {
@@ -61,10 +59,6 @@ public class CookFish : MonoBehaviour
         isBurnt = true;
     }
 
-    private void CheckCookedStatus()
-    {
-
-    }
 
     private void CheckForStove()
     {
@@ -125,6 +119,7 @@ public class CookFish : MonoBehaviour
         Func<float, float> Add = (x) => x + 5;
         modifier = new SimpleStatModifier(Add, statToModify);
         stats.Mediator.AddModifier(modifier);
+        isReady = false;
 
     }
 
