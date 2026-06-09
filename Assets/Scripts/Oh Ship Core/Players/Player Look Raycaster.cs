@@ -7,6 +7,7 @@ public class PlayerLookRaycaster : MonoBehaviour
     [SerializeField] InterfaceReference<IPromptDisplay> m_activeDisplay;
     IPromptDisplay m_highlighted;
     IPromptProvider m_currentProvider;
+    
     void Update()
     {
         IPromptProvider provider = null;

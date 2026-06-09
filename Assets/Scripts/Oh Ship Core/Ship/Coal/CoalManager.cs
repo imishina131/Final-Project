@@ -3,9 +3,9 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using Random = UnityEngine.Random;
 
-public class CoalManager : MonoBehaviour, IInteractable, IPlayerControllable
+public class CoalManager : MonoBehaviour, IInteractable, IPlayerControllable, IPromptProvider
 {
-    
+    [SerializeField] private string _widgetForPrompt = "interact";
     [SerializeField] private SO_CoalData _coalData;
     [SerializeField] private int _howManyInputs = 5;
     [SerializeField] private string m_coalMiniGameActionMap = "Shovel Coal";
@@ -138,6 +138,16 @@ public class CoalManager : MonoBehaviour, IInteractable, IPlayerControllable
         m_coalUI = player.GetComponentInChildren<CoalUI>();
         
         m_coalUI.DisplayPasswordVisuals(m_inputsForQTE);
+    }
+
+    public PromptData GetPromptData()
+    {
+        return new PromptData {AssociatedWidget = _widgetForPrompt };
+    }
+
+    public Vector3 GetRequestedWorldPosition()
+    {
+        return transform.position;
     }
 }
 

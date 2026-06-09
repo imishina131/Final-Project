@@ -4,8 +4,9 @@ using UnityEngine.InputSystem;
 /// <summary>
 /// An interactable that allows the player to adjust the pressure of <see cref="SteamPressureSystem"/> on the ship.
 /// </summary>
-public class SteamPressureValveInteractable : MonoBehaviour, IInteractable, IPlayerControllable
+public class SteamPressureValveInteractable : MonoBehaviour, IInteractable, IPlayerControllable, IPromptProvider
 {
+    [SerializeField] private string _widgetForPrompt = "interact";
     IPlayerController m_activePlayerController;
     [SerializeField] string m_pressureControlActionMap = "Adjust Pressure";
     [SerializeField] SteamPressureSystem m_pressureSystem;
@@ -68,5 +69,15 @@ public class SteamPressureValveInteractable : MonoBehaviour, IInteractable, IPla
     public GameObject GetAssociatedGameObject()
     {
         return gameObject;
+    }
+
+    public PromptData GetPromptData()
+    {
+        return new PromptData {AssociatedWidget = _widgetForPrompt};
+    }
+
+    public Vector3 GetRequestedWorldPosition()
+    {
+        return transform.position;
     }
 }

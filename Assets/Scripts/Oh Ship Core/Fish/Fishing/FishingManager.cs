@@ -6,8 +6,9 @@ using UnityEngine.UI;
 using UnityEngine.XR;
 using Random = System.Random;
 
-public class FishingManager : MonoBehaviour, IInteractable, IPlayerControllable
+public class FishingManager : MonoBehaviour, IInteractable, IPlayerControllable, IPromptProvider
 {
+    [SerializeField] private string _widgetForPrompt = "interact";
     [SerializeField] private string _fishingControlActionMap = "Fishing";
     
     [SerializeField] private float _speedOfFishIcon;
@@ -157,5 +158,15 @@ public class FishingManager : MonoBehaviour, IInteractable, IPlayerControllable
     public GameObject GetAssociatedGameObject()
     {
         return gameObject;
+    }
+
+    public PromptData GetPromptData()
+    {
+        return new PromptData() { AssociatedWidget = _widgetForPrompt, };
+    }
+
+    public Vector3 GetRequestedWorldPosition()
+    {
+        return transform.position;
     }
 }
