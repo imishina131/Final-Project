@@ -1,11 +1,24 @@
 using System.Collections;
 using UnityEngine;
+using Codice.CM.Common;
+using System;
+using System.Collections.Generic;
+using UnityEngine.UIElements;
+using System.Runtime.CompilerServices;
+using OhShip.ShipCore;
 
 public class CookFish : MonoBehaviour
 {
     Material material;
     float cookedAmount;
     bool isCooking = false;
+    bool isReady = false;
+    bool isBurnt = false;
+    [SerializeField] Stats stats;
+    [SerializeField] SimpleStatModifier modifier;
+    StatBroker statBroker;
+
+    InteractionSession m_currentInteractionSession;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -40,6 +53,7 @@ public class CookFish : MonoBehaviour
 
         if(cookedAmount >= 0.7f)
         {
+            isReady = true;
             StartCoroutine(Burn());
         }
     }
@@ -47,10 +61,8 @@ public class CookFish : MonoBehaviour
     void EndCooking()
     {
         isCooking = false;
-        gameObject.SetActive(false);
-        material.SetFloat("_Cooked_Amount", 0f);
-        cookedAmount = 0f;
-
+        isReady = false;
+        isBurnt = true;
     }
 
     private void CheckCookedStatus()
@@ -91,4 +103,40 @@ public class CookFish : MonoBehaviour
         }
 
     }
+
+    public InteractionSession BeginInteraction(IInteractor interactor)
+    {
+        if (interactor.IsInteracting() || m_currentInteractionSession is { IsActive: true }) return null;
+
+        if (isCooking)
+        {
+            return null;
+        }
+        else if(isReady)
+        {
+            Eat();
+        }
+        else if(isBurnt)
+        {
+            Discard();
+        }
+        return m_currentInteractionSession;
+    }
+
+    private void Eat()
+    {
+        //sets stats
+        Func<float, float> Add = (x, y) => x + 5;
+        modifier = new SimpleStatModifier(Add, StatData stat)
+        stats.Mediator.AddModifier(modifier);
+
+    }
+
+    private void Discard()
+    {
+        gameObject.SetActive(false);
+        material.SetFloat("_Cooked_Amount", 0f);
+        cookedAmount = 0f;
+    }
+
 }

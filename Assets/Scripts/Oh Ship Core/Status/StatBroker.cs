@@ -1,5 +1,7 @@
-﻿using System;
+﻿using OhShip.ShipCore;
+using System;
 using System.Collections.Generic;
+using UnityEngine;
 /// <summary>
 /// Manages the application of stat modifiers to any stat. Perform a <see cref="StatQuery"/> to get the current value of a stat with <see cref="StatModifier"/>s applied.
 /// </summary>

@@ -59,6 +59,7 @@ GameObject:
   - component: {fileID: 8658532052230713583}
   - component: {fileID: 3890149404350108893}
   - component: {fileID: 3994179610541121624}
+  - component: {fileID: -862725965146413658}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -265,6 +266,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &-862725965146413658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2051537735393309202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1007cccdcb598e64dbe9e9adfe889ce0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: OhShip.Core.Status::Stats
+  hungerStat: {fileID: 11400000, guid: 0b06704c34e3c0d4db2b5e73d2fe0837, type: 2}
+  thirstStat: {fileID: 11400000, guid: 36b8ea26a78295d4581d6e98ea864b90, type: 2}
 --- !u!1 &5183295149400410213
 GameObject:
   m_ObjectHideFlags: 0
