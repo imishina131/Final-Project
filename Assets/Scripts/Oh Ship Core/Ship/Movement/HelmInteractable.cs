@@ -1,11 +1,13 @@
 using MatrixUtils.Attributes;
 using Unity.Cinemachine;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 public class HelmInteractable : MonoBehaviour, IInteractable, IPlayerControllable, IPromptProvider
 {
-    [SerializeField] private string _widgetForPrompt = "interact";
+    [FormerlySerializedAs("_widgetForPrompt")] [SerializeField] string m_widgetForPrompt = "interact";
     [SerializeField] string m_helmControlActionMap = "Helm";
     [SerializeField] CinemachineCamera m_helmCamera;
     [SerializeField] float m_helmThrottleSpeed = 0.5f;
@@ -14,6 +16,7 @@ public class HelmInteractable : MonoBehaviour, IInteractable, IPlayerControllabl
     IPlayerController m_activePlayerController;
     Vector2 m_moveInput = Vector2.zero;
     Vector2 m_lookInput = Vector2.zero;
+    
     InteractionSession m_currentInteractionSession;
     ///<inheritdoc/>
     public InteractionSession BeginInteraction(IInteractor interactor)
@@ -83,7 +86,7 @@ public class HelmInteractable : MonoBehaviour, IInteractable, IPlayerControllabl
 
     public GameObject GetAssociatedGameObject() => gameObject;
 
-    public PromptData GetPromptData() => new() {AssociatedWidget = _widgetForPrompt};
+    public PromptData GetPromptData() => new() {AssociatedWidget = m_widgetForPrompt};
 
     public Vector3 GetWidgetWorldPosition() => transform.position;
 }

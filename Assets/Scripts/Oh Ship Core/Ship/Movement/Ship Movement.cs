@@ -1,22 +1,23 @@
+using MatrixUtils.GenericDatatypes;
 using UnityEngine;
 using UnityEngine.Serialization;
 
 public class ShipMovement : MonoBehaviour
 {
-    [field:SerializeField, Range(-1 , 1)]public float Rudder{ get; private set;}
-    [field:SerializeField, Range(-1 , 1)]public float Throttle{ get; private set;}
+    [field:SerializeField]public Observer<float> Rudder{ get; private set;}
+    [field:SerializeField]public Observer<float> Throttle{ get; private set;}
 
     [SerializeField] Rigidbody m_rigidbody;
     [SerializeField] Transform m_wheelPowerPoint;
     [SerializeField] Transform m_rudderPoint;
     [SerializeField] AnimationCurve m_rudderEffectiveness;
     [SerializeField] AnimationCurve m_throttleEffectiveness;
-
+    
     [SerializeField] private float m_rudderTurnMultiplier = 10;
-    public void SetRudder(float rudder) => Rudder = Mathf.Clamp(rudder, -1 , 1);
+    public void SetRudder(float rudder) => Rudder.Value = Mathf.Clamp(rudder, -1 , 1);
     public void SetThrottle(float throttle)
     {
-        Throttle = Mathf.Clamp(throttle, -1, 1);
+        Throttle.Value = Mathf.Clamp(throttle, -1, 1);
     }
     
     private SteamPressureSystem m_steamPressureSystem;
@@ -29,12 +30,13 @@ public class ShipMovement : MonoBehaviour
         {
             Debug.LogWarning("No SteamPressureSystem found on ship!");
         }
-            
+        Throttle.Notify();
+        Rudder.Notify();
     }
     
     void FixedUpdate()
     {
-        if (m_steamPressureSystem == null)
+        if (!m_steamPressureSystem)
         {
             Debug.LogWarning("No SteamPressureSystem found on ship!");
             m_steamPressure = 1;
@@ -44,7 +46,7 @@ public class ShipMovement : MonoBehaviour
             m_steamPressure = m_steamPressureSystem.SteamPressure;
         }
 
-        m_rigidbody.AddForceAtPosition(m_wheelPowerPoint.forward * m_throttleEffectiveness.Evaluate(Throttle * 2) * (m_steamPressure), m_wheelPowerPoint.position, ForceMode.Force);
+        m_rigidbody.AddForceAtPosition(m_wheelPowerPoint.forward * (m_throttleEffectiveness.Evaluate(Throttle * 2) * (m_steamPressure)), m_wheelPowerPoint.position, ForceMode.Force);
        // Debug.Log(m_steamPressureSystem.SteamPressure);
          //Debug.Log($"Throttle: {Throttle}, Pressure: {m_steamPressureSystem.SteamPressure}, Force: {m_throttleEffectiveness.Evaluate(Throttle * 2) * (m_steamPressure)}");
         ApplyRudderForce(Rudder);
