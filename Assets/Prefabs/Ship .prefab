@@ -274,7 +274,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -602231290608192446, guid: 843a301febcf70643b5549fb13a676da, type: 3}
 --- !u!1 &2066246203762431140
@@ -1223,6 +1223,7 @@ Transform:
   m_Children:
   - {fileID: 1907087247233322412}
   - {fileID: 7959187600267199001}
+  - {fileID: 51595093381318620}
   m_Father: {fileID: 7542275446007984815}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6306467371704775011
@@ -1337,6 +1338,37 @@ Transform:
   - {fileID: 548727901475953229}
   - {fileID: 7167062374686219813}
   m_Father: {fileID: 7542275446007984815}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6737745311619254458
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 51595093381318620}
+  m_Layer: 0
+  m_Name: Player Spawn Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &51595093381318620
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6737745311619254458}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 3, z: -7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4035147575267125863}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7050457313900488222
 GameObject:
@@ -1785,27 +1817,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 8cf83eae36e7e8c4885e54392913e4f9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -4.7908235
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8cf83eae36e7e8c4885e54392913e4f9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.000000051329607
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8cf83eae36e7e8c4885e54392913e4f9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -33.31612
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8cf83eae36e7e8c4885e54392913e4f9, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: -0.00000035762784
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8cf83eae36e7e8c4885e54392913e4f9, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8cf83eae36e7e8c4885e54392913e4f9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8cf83eae36e7e8c4885e54392913e4f9, type: 3}
       propertyPath: m_LocalRotation.z
@@ -1817,7 +1849,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8cf83eae36e7e8c4885e54392913e4f9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8cf83eae36e7e8c4885e54392913e4f9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -1874,7 +1906,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7196852406926485525}
   serializedVersion: 5
-  m_Mass: 1
+  m_Mass: 1000
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -2005,7 +2037,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: OhShip.Core.Ship::ShipHealth
   m_holePositions: []
-  m_holePrefab: {fileID: 0}
+  m_holePrefab: {fileID: 5763194117079931533, guid: 2f3527a3d8be63c4389f9c399b7d3cb4, type: 3}
   m_fillPercentage:
     m_value: 0
     m_onValueChanged:
