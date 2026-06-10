@@ -1,9 +1,69 @@
 fileFormatVersion: 2
-guid: 28b83b53ee9c5154a942b45d858b37c4
+guid: 11692e105acc5f248a84c9226dfc4c5b
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Boat_Hull
+    second: {fileID: 2100000, guid: 836e8c29be306d744bc261f860f7d93c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Bolts
+    second: {fileID: 2100000, guid: 61ae814214912a841b65dbd79010d298, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_DeckCover
+    second: {fileID: 2100000, guid: a451290ac0ccb854d83d363bf5c94684, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_DeckPoles
+    second: {fileID: 2100000, guid: 795fd7ecc7bcfd944b25e7e35acf38d5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Flaps
+    second: {fileID: 2100000, guid: 0235714bcffcb8d43a9c197f2a631549, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Floater
+    second: {fileID: 2100000, guid: 988e4af97e4c07e4f907f97ea959ec59, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_HatchDoorBase
+    second: {fileID: 2100000, guid: ea2844e8bb92b214288e4c7d494c1dae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Paddlewheel
+    second: {fileID: 2100000, guid: 5ce0e8dddd9e24449b04460251f98351, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Rope
+    second: {fileID: 2100000, guid: 7d575d69ecd4eaf4d8a48beb55e38209, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_SmokeStack
+    second: {fileID: 2100000, guid: 2442122b5c77a4a4589a261ba1749526, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Wall
+    second: {fileID: 2100000, guid: 42436622c78bb4243b41378013ade675, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert19HatchDoor
+    second: {fileID: 2100000, guid: fe3117e791ddb1344a76ce3c4705f8b0, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
