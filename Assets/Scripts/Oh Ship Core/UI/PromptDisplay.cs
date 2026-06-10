@@ -42,7 +42,7 @@ public class PromptDisplay : MonoBehaviour, IPromptDisplay
         if (m_activePrompts.Count <= 0) return;
         foreach (KeyValuePair<IPromptProvider, PromptInfo> prompt in m_activePrompts)
         {
-            Vector3 worldPos = prompt.Key.GetRequestedWorldPosition();
+            Vector3 worldPos = prompt.Key.GetWidgetWorldPosition();
             Vector3 screenPos = m_connectedCamera.WorldToScreenPoint(worldPos);
             RectTransformUtility.ScreenPointToLocalPointInRectangle(m_promptContainer, screenPos, m_connectedCamera, out Vector2 localPoint);
             prompt.Value.Prompt.anchoredPosition = localPoint;
@@ -58,7 +58,7 @@ public class PromptDisplay : MonoBehaviour, IPromptDisplay
         if (!m_pools.TryGetValue(prompt.GetPromptData().AssociatedWidget, out ObjectPool<PromptInfo> pool)) return;
         PromptInfo info = pool.Get();
         prompt.GetPromptData().Apply(info.Prompt.gameObject);
-        Vector3 worldPos = prompt.GetRequestedWorldPosition();
+        Vector3 worldPos = prompt.GetWidgetWorldPosition();
         Vector3 screenPos = m_connectedCamera.WorldToScreenPoint(worldPos);
         RectTransformUtility.ScreenPointToLocalPointInRectangle(m_promptContainer, screenPos, m_connectedCamera, out Vector2 localPoint);
         info.Prompt.anchoredPosition = localPoint;

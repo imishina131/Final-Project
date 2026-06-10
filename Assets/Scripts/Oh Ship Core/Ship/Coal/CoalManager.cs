@@ -145,7 +145,7 @@ public class CoalManager : MonoBehaviour, IInteractable, IPlayerControllable, IP
         return new PromptData {AssociatedWidget = _widgetForPrompt };
     }
 
-    public Vector3 GetRequestedWorldPosition()
+    public Vector3 GetWidgetWorldPosition()
     {
         return transform.position;
     }

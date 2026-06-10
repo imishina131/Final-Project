@@ -38,7 +38,7 @@ public class StoveInteractable : MonoBehaviour, IInteractable, IPromptProvider
         return new PromptData { AssociatedWidget = _widgetForPrompt };
     }
 
-    public Vector3 GetRequestedWorldPosition()
+    public Vector3 GetWidgetWorldPosition()
     {
        return transform.position;
     }

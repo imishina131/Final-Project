@@ -6,7 +6,7 @@ using UnityEngine;
 public class HatchInteractable : MonoBehaviour, IInteractable, IPromptProvider
 {
     [SerializeReference, ClassSelector] PromptData m_promptData;
-    //[SerializeField] Transform m_widgetPosition;
+    [SerializeField] Transform m_widgetPosition;
     [SerializeField] Transform m_outPosition;
     public InteractionSession BeginInteraction(IInteractor interactor)
     {
@@ -21,5 +21,5 @@ public class HatchInteractable : MonoBehaviour, IInteractable, IPromptProvider
     }
 
     public PromptData GetPromptData() => m_promptData;
-    public Vector3 GetRequestedWorldPosition() => transform.position;
+    public Vector3 GetWidgetWorldPosition() => transform.position;
 }

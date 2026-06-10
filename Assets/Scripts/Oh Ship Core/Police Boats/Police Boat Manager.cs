@@ -13,7 +13,7 @@ public class PoliceBoatManager : MonoBehaviour
     
     void Start()
     {
-        _spline = FindObjectOfType<SplineContainer>();
+        _spline = FindAnyObjectByType<SplineContainer>();
         if(_transitionEvent == null) Debug.LogError($"{nameof(_transitionEvent)} is null");
     }
 

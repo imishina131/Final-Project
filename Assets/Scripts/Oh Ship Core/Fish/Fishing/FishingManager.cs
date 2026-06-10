@@ -165,7 +165,7 @@ public class FishingManager : MonoBehaviour, IInteractable, IPlayerControllable,
         return new PromptData() { AssociatedWidget = _widgetForPrompt, };
     }
 
-    public Vector3 GetRequestedWorldPosition()
+    public Vector3 GetWidgetWorldPosition()
     {
         return transform.position;
     }
