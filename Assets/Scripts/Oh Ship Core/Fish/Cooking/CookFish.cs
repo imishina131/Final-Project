@@ -23,6 +23,7 @@ public class CookFish : MonoBehaviour, IInteractable
     {
         material = GetComponent<Renderer>().material;
         cookedAmount = material.GetFloat("_Cooked_Amount");
+        Debug.Log(cookedAmount);
         
     }
 
@@ -43,6 +44,7 @@ public class CookFish : MonoBehaviour, IInteractable
     {
         if(cookedAmount < 0.5f)
         {
+            Debug.Log("Change Color");
             ChangeColor();
         }
         else if(cookedAmount >= 0.5f)

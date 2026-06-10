@@ -20,16 +20,12 @@ public class StoveInteractable : MonoBehaviour, IInteractable, IPromptProvider
 
     public InteractionSession BeginInteraction(IInteractor interactor)
     {
+        
         if (interactor.IsInteracting() || m_currentInteractionSession is { IsActive: true }) return null;
-
-        if(fishToCook.gameObject.activeSelf == true)
-        {
-            return null;
-        }
-        else
-        {
-            fishToCook.SetActive(true);
-        }
+        
+        fishToCook.SetActive(true);
+        Debug.Log(fishToCook.name);
+        
         return m_currentInteractionSession;
     }
 
