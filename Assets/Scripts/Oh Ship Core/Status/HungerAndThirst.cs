@@ -1,11 +1,12 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class Stats: MonoBehaviour
+public class HungerAndThirst: MonoBehaviour
 {
 
     [SerializeField] StatData hungerStat;
     [SerializeField] StatData thirstStat;
+
 
     public StatBroker broker = new StatBroker();
 
@@ -21,6 +22,11 @@ public class Stats: MonoBehaviour
         StatQuery value = new StatQuery(hungerStat, 1f);
         broker.PerformStatQuery(this, value);
         Debug.Log(value.Value);
+    }
+
+    public void OnPlayerControllerConnected(IPlayerController controller)
+    {
+
     }
 
 

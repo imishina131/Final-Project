@@ -13,7 +13,7 @@ public class CookFish : MonoBehaviour, IInteractable
     bool invoked = false;
 
 
-    [SerializeField] Stats stats;
+    [SerializeField] HungerAndThirst stats;
     [SerializeField] SimpleStatModifier modifier;
     [SerializeField] StatData hungerStatToModify;
 
