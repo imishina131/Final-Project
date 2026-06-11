@@ -8,6 +8,7 @@ public class EndGame : MonoBehaviour
     {
         if(other.CompareTag("Player Steam Boat"))
         {
+            Debug.Log("New Scene");
             endEvent.Invoke();
         }
     }
