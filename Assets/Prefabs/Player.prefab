@@ -309,16 +309,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: OhShip.Core.Status::Stats
   Hunger:
-    m_value: 0
+    m_value: 100
     m_onValueChanged:
       m_PersistentCalls:
         m_Calls: []
   Thirst:
-    m_value: 0
+    m_value: 100
     m_onValueChanged:
       m_PersistentCalls:
         m_Calls: []
   m_manager: {fileID: 0}
+  m_hungerLostPerTick: 0.01
 --- !u!1 &5183295149400410213
 GameObject:
   m_ObjectHideFlags: 0
