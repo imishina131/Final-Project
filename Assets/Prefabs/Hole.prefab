@@ -22,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8e8c9e8fa229cb34386dba97026f5318, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.3906567
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8e8c9e8fa229cb34386dba97026f5318, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -15.774753
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8e8c9e8fa229cb34386dba97026f5318, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 189.86337
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8e8c9e8fa229cb34386dba97026f5318, type: 3}
       propertyPath: m_LocalRotation.w
@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fb2c6d286e6433a99152e0f9bb11477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: OhShip.Core.Ship::ShipHole
+  _widgetForPrompt: interact
   m_repairTime: 3
 --- !u!65 &2526567277286737208
 BoxCollider:
@@ -116,5 +117,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2, y: 2.5, z: 2}
-  m_Center: {x: 0, y: -1, z: 0}
+  m_Size: {x: 2.730453, y: 6.351378, z: 2.9171953}
+  m_Center: {x: -0.04066074, y: -0.806077, z: 0.010672092}

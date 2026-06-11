@@ -509,6 +509,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 85726dab0b9d5c646897bc27060a69db, type: 3}
   m_PrefabInstance: {fileID: 223177774}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &377814906 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1336934512493051013, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
+  m_PrefabInstance: {fileID: 1920507445}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &378968719
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1514,6 +1519,59 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 7.1235847, y: 6.25884, z: 16.018559}
   m_Center: {x: 0.32318175, y: 2.62942, z: 7.5092793}
+--- !u!114 &1603220470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13924829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7934c7cfe2b50c843a931348fbe134c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: OhShip.Core.Ship::SteamPressureSystem
+  rateOfPressureLoss: 0.01
+--- !u!1 &1739141682
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1739141683}
+  - component: {fileID: 1739141684}
+  m_Layer: 0
+  m_Name: Capsule
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1739141683
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739141682}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.832, z: -2.75}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 377814906}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &1739141684
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739141682}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1755862609
 GameObject:
   m_ObjectHideFlags: 0
@@ -1690,6 +1748,22 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 0.008756527
       objectReference: {fileID: 0}
+    - target: {fileID: 3511390657383237687, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
+      propertyPath: m_buoyancyPoints.Array.data[2].LocalPosition.x
+      value: -3.4854999
+      objectReference: {fileID: 0}
+    - target: {fileID: 3511390657383237687, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
+      propertyPath: m_buoyancyPoints.Array.data[2].LocalPosition.y
+      value: -0.79999965
+      objectReference: {fileID: 0}
+    - target: {fileID: 3511390657383237687, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
+      propertyPath: m_buoyancyPoints.Array.data[2].LocalPosition.z
+      value: -1.9926401
+      objectReference: {fileID: 0}
+    - target: {fileID: 3537270660719649762, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b1aa66268261d4a47b9f014ea729e4f1, type: 2}
     - target: {fileID: 4550476056004219639, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.00000018262972
@@ -1746,6 +1820,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6189270867537227287, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b1aa66268261d4a47b9f014ea729e4f1, type: 2}
     - target: {fileID: 7196852406926485525, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
       propertyPath: m_Name
       value: 'Ship '
@@ -1814,10 +1892,16 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7542275446007984815, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
       insertIndex: -1
       addedObject: {fileID: 543450652432825280}
+    - targetCorrespondingSourceObject: {fileID: 1336934512493051013, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1739141683}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7196852406926485525, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1603220465}
+    - targetCorrespondingSourceObject: {fileID: 7196852406926485525, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1603220470}
   m_SourcePrefab: {fileID: 100100000, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
 --- !u!1 &1951877584
 GameObject:
@@ -2440,6 +2524,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3444610098444136536, guid: 8e4af74c2c10b9048b90d28e8b0beea7, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3493026939230256396, guid: 8e4af74c2c10b9048b90d28e8b0beea7, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -2868,6 +2956,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5739541206751002517, guid: 8e4af74c2c10b9048b90d28e8b0beea7, type: 3}
+      propertyPath: m_steamPressureSystem
+      value: 
+      objectReference: {fileID: 1603220470}
     - target: {fileID: 5821036428880999870, guid: 8e4af74c2c10b9048b90d28e8b0beea7, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -3004,6 +3096,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6606207833672605985, guid: 8e4af74c2c10b9048b90d28e8b0beea7, type: 3}
+      propertyPath: m_outPosition
+      value: 
+      objectReference: {fileID: 1739141683}
     - target: {fileID: 6607464740480735219, guid: 8e4af74c2c10b9048b90d28e8b0beea7, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -3180,6 +3276,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8049652121194207243, guid: 8e4af74c2c10b9048b90d28e8b0beea7, type: 3}
+      propertyPath: m_pressureSystem
+      value: 
+      objectReference: {fileID: 1603220470}
     - target: {fileID: 8056818525259074249, guid: 8e4af74c2c10b9048b90d28e8b0beea7, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0

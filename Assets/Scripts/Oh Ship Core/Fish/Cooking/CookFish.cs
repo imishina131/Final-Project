@@ -148,7 +148,7 @@ public class CookFish : MonoBehaviour, IInteractable
     private void Eat()
     {
         Debug.Log("eat");
-        hungerAndThirst.Hunger.Value += 0.2f;
+        hungerAndThirst.Hunger.Value += 0.8f;
         EndCooking();
     
         Debug.Log("Fish Eaten");

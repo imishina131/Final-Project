@@ -43,6 +43,7 @@ public class SteamPressureValveInteractable : MonoBehaviour, IInteractable, IPla
     /// <inheritdoc/>
     public void OnControlReleased()
     {
+        Debug.Log("OnControlReleased");
         if (m_activePlayerController == null) throw new("Player controller is null, cannot release control.");
         if (!m_activePlayerController.GetCurrentInputActionMap(out InputActionMap map)) throw new("Player controller is not null, but input action map is null...");
         InputAction increasePressureAction = map.FindAction("Increase Pressure");

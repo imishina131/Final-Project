@@ -15,7 +15,7 @@ public class StatusBarManager : MonoBehaviour
         public Image Fill;
         public void UpdateFillPercentage(float fill)
         {
-            Debug.Log("fill");
+            //Debug.Log("fill");
             //Fill.fillAmount = Mathf.Clamp01(fill);
             Fill.fillAmount = fill;
         }

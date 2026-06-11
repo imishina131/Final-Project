@@ -3,9 +3,19 @@ using UnityEngine;
 
 public class QuitButton : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private void Start()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
+
     public void Quit()
     {
         Application.Quit();
+    }
+
+    public void StartGame()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Build Scene");
     }
 }
