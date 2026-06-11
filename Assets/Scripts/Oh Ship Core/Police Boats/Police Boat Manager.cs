@@ -22,7 +22,7 @@ public class PoliceBoatManager : MonoBehaviour
     {
         _policeBoatPathingProgress += _speed / _spline.CalculateLength() * Time.deltaTime;
         transform.position = _spline.EvaluatePosition(_policeBoatPathingProgress);
-        transform.forward = (Vector3)_spline.EvaluateTangent(_policeBoatPathingProgress);
+        transform.forward = -(_spline.EvaluateTangent(_policeBoatPathingProgress));
     }
 
     private void OnTriggerEnter(Collider other)
