@@ -4,9 +4,11 @@ using UnityEngine;
 public class CharacterSelection : IPlayerSelection
 {
     [field:SerializeField] public Transform Transform { get; private set; }
+    
+    [SerializeField] private SO_CharacterSelectionData characterPrefab;
     public bool AllowsMultipleSelectors => false;
 
-    IPlayerControllable m_currentSelector;
+    public IPlayerControllable m_currentSelector;
 
     public bool TryAddSelector(IPlayerControllable selector)
     {
@@ -24,4 +26,8 @@ public class CharacterSelection : IPlayerSelection
     
     public bool IsSelectedBy(IPlayerControllable selector) => m_currentSelector == selector;
     public bool IsAvailableTo(IPlayerControllable selector)=> m_currentSelector == null || m_currentSelector == selector;
+    
+    public bool IsConfirmed => m_currentSelector != null;
+    
+    public SO_CharacterSelectionData CharacterData => characterPrefab;
 }

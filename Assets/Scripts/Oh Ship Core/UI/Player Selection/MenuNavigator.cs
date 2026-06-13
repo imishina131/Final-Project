@@ -19,8 +19,8 @@ public class MenuNavigator : MonoBehaviour, IPlayerControllable
         FindAnyObjectByType<Injector>().Inject(this);
         m_rectTransform = GetComponent<RectTransform>();
         m_currentSelection = _mMenuHandler.GetDefaultSelectionZone();
-        Debug.Log($"Default selection: {m_currentSelection}");
-        Debug.Log($"Handler: {_mMenuHandler}, Default: {_mMenuHandler?.GetDefaultSelectionZone()}");
+       // Debug.Log($"Default selection: {m_currentSelection}");
+       // Debug.Log($"Handler: {_mMenuHandler}, Default: {_mMenuHandler?.GetDefaultSelectionZone()}");
     }
     void Update()
     {
@@ -46,6 +46,7 @@ public class MenuNavigator : MonoBehaviour, IPlayerControllable
     /// <inheritdoc/>
     public void OnControlReleased()
     {
+        if (m_activePlayerController == null || m_activePlayerController.GetAssociatedGameObject() == null) return;
         if (!m_activePlayerController.TryGetCurrentInputActionMap(out InputActionMap actionMap)) return;
         actionMap.FindAction("Navigate").performed -= OnNavigate;
         actionMap.FindAction("Submit").performed -= OnSubmit;
@@ -59,7 +60,7 @@ public class MenuNavigator : MonoBehaviour, IPlayerControllable
 
     void OnNavigate(InputAction.CallbackContext context)
     {
-        Debug.Log($"Current selection before navigate: {m_currentSelection}");
+       // Debug.Log($"Current selection before navigate: {m_currentSelection}");
         if (context.ReadValue<Vector2>().magnitude < 0.5f) return;
         if (!_mMenuHandler.TryGetNextAvailableSelection(this, m_currentSelection, context.ReadValue<Vector2>(), out IPlayerSelection next)) return;
         m_currentSelection = next;
@@ -71,7 +72,14 @@ public class MenuNavigator : MonoBehaviour, IPlayerControllable
     void OnSubmit(InputAction.CallbackContext context)
     {
         if (m_currentSelection == null) return;
+        Debug.Log("Confirm");
         if (!m_currentSelection.IsSelectedBy(this)) _mMenuHandler.TryConfirmSelection(this, m_currentSelection);
         else _mMenuHandler.TryCancelSelection(this, m_currentSelection);
+    }
+
+    void OnDestroy()
+    {
+        if (m_activePlayerController == null) return;
+        OnControlReleased();
     }
 }
