@@ -22,13 +22,12 @@ public class HelmInteractable : MonoBehaviour, IInteractable, IPlayerControllabl
     {
         if(interactor.IsInteracting() || m_currentInteractionSession is { IsActive: true }) return null;   
         IPlayerControllable oldControllable = interactor.GetAssociatedGameObject().transform.parent.GetComponent<IPlayerControllable>();
-
-        //oldControllable.GetAssociatedGameObject().GetComponent<PlayerMovement>
+        
         CinemachineCamera playerCam = interactor.GetAssociatedGameObject().GetComponent<CinemachineCamera>();
         m_helmCamera.OutputChannel = playerCam.OutputChannel;
         m_helmCamera.Priority = 10;
         IPlayerController controller = oldControllable.GetActivePlayerController();
-       // controller.GetAssociatedGameObject().GetComponent<Player
+      
         controller.ChangeControlledEntity(this);
         m_currentInteractionSession = new(interactor, this);
         m_currentInteractionSession.OnEnded += () => controller.ChangeControlledEntity(oldControllable); 

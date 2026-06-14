@@ -120,7 +120,7 @@ public class PlayerMovement : MonoBehaviour
             stepsSinceLastGrounded = 0;
         }
 
-        //Added this just now
+        //Added this just now, when airborne it'll clear the connected body but keep a reference to the last thing.
         if (!connectedBody && pastConnectedBody && stepsSinceLastGrounded <= 3)
         {
             connectedBody = pastConnectedBody;
@@ -231,6 +231,7 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
+    //Might need this idk
     public void ZeroPlayerMovement()
     {
         m_desiredMovement = Vector2.zero;
