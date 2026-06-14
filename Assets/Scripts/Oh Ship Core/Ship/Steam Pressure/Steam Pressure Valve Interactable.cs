@@ -8,6 +8,7 @@ using UnityEngine.Serialization;
 /// </summary>
 public class SteamPressureValveInteractable : MonoBehaviour, IInteractable, IPlayerControllable, IPromptProvider
 {
+    [SerializeField] private Transform _displayForInteraction;
     [SerializeField] private CinemachineCamera _steamPressureCamera;
     [SerializeField] string m_widgetForPrompt = "interact";
     IPlayerController m_activePlayerController;
@@ -72,5 +73,5 @@ public class SteamPressureValveInteractable : MonoBehaviour, IInteractable, IPla
     void HandleInteract(InputAction.CallbackContext context) => m_currentInteractionSession.End();
     public GameObject GetAssociatedGameObject() => gameObject;
     public PromptData GetPromptData() => new() {AssociatedWidget = m_widgetForPrompt};
-    public Vector3 GetWidgetWorldPosition() => transform.position;
+    public Vector3 GetWidgetWorldPosition() => _displayForInteraction.position;
 }

@@ -1,5 +1,80 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1823314708326405367
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7526815069669599722}
+  - component: {fileID: 2393497667135581263}
+  m_Layer: 0
+  m_Name: CinemachineCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7526815069669599722
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823314708326405367}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6464857334955054848}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2393497667135581263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823314708326405367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
+  Priority:
+    Enabled: 0
+    m_Value: 0
+  OutputChannel: 1
+  StandbyUpdate: 2
+  m_StreamingVersion: 20241001
+  m_LegacyPriority: 0
+  Target:
+    TrackingTarget: {fileID: 0}
+    LookAtTarget: {fileID: 0}
+    CustomLookAtTarget: 0
+  Lens:
+    FieldOfView: 60.000004
+    OrthographicSize: 10
+    NearClipPlane: 0.1
+    FarClipPlane: 5000
+    Dutch: 0
+    ModeOverride: 0
+    PhysicalProperties:
+      GateFit: 2
+      SensorSize: {x: 21.946, y: 16.002}
+      LensShift: {x: 0, y: 0}
+      FocusDistance: 10
+      Iso: 200
+      ShutterSpeed: 0.005
+      Aperture: 16
+      BladeCount: 5
+      Curvature: {x: 2, y: 11}
+      BarrelClipping: 0.25
+      Anamorphism: 0
+  BlendHint: 0
 --- !u!1001 &6790706971653599467
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10,15 +85,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: fc40ba700f109a94db74433f57723483, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17.79
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fc40ba700f109a94db74433f57723483, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -27.925446
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fc40ba700f109a94db74433f57723483, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -37.591167
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fc40ba700f109a94db74433f57723483, type: 3}
       propertyPath: m_LocalRotation.w
@@ -52,6 +127,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 135d148921150b640bd44538cb3d271c, type: 2}
+    - target: {fileID: -939829958538960705, guid: fc40ba700f109a94db74433f57723483, type: 3}
+      propertyPath: m_Name
+      value: Body
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: fc40ba700f109a94db74433f57723483, type: 3}
       propertyPath: m_Name
       value: WaterTank (1)
@@ -68,8 +147,70 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[2]'
       value: 
       objectReference: {fileID: 2100000, guid: 041b5c078837a6f4f976534978d0e541, type: 2}
+    - target: {fileID: 4970459722103331130, guid: fc40ba700f109a94db74433f57723483, type: 3}
+      propertyPath: m_Name
+      value: Red Wheel
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: fc40ba700f109a94db74433f57723483, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7526815069669599722}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fc40ba700f109a94db74433f57723483, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4469413404006991458}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fc40ba700f109a94db74433f57723483, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1679674824472526696}
   m_SourcePrefab: {fileID: 100100000, guid: fc40ba700f109a94db74433f57723483, type: 3}
+--- !u!1 &5979682799121288634 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: fc40ba700f109a94db74433f57723483, type: 3}
+  m_PrefabInstance: {fileID: 6790706971653599467}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4469413404006991458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5979682799121288634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 342fed374b53a5742b1ec39319ef4fb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: OhShip.Core.Ship::SteamPressureValveInteractable
+  _displayForInteraction: {fileID: 0}
+  _steamPressureCamera: {fileID: 2393497667135581263}
+  m_widgetForPrompt: interact
+  m_pressureControlActionMap: Adjust Pressure
+  m_pressureSystem: {fileID: 0}
+  steamPressureOffset: 0.5
+--- !u!65 &1679674824472526696
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5979682799121288634}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.5780945, y: 2.6405582, z: 1.663208}
+  m_Center: {x: 18.764133, y: -0.72952557, z: -0.85518646}
+--- !u!4 &6464857334955054848 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: fc40ba700f109a94db74433f57723483, type: 3}
+  m_PrefabInstance: {fileID: 6790706971653599467}
+  m_PrefabAsset: {fileID: 0}
