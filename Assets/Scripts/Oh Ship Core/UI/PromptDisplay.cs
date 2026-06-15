@@ -53,6 +53,7 @@ public class PromptDisplay : MonoBehaviour, IPromptDisplay
 
     public void ShowPrompt(IPromptProvider prompt)
     {
+
         if (prompt is null) return;
         if (m_activePrompts.ContainsKey(prompt)) return;
         if (!m_pools.TryGetValue(prompt.GetPromptData().AssociatedWidget, out ObjectPool<PromptInfo> pool)) return;
@@ -62,8 +63,12 @@ public class PromptDisplay : MonoBehaviour, IPromptDisplay
         Vector3 screenPos = m_connectedCamera.WorldToScreenPoint(worldPos);
         RectTransformUtility.ScreenPointToLocalPointInRectangle(m_promptContainer, screenPos, m_connectedCamera, out Vector2 localPoint);
         info.Prompt.anchoredPosition = localPoint;
-       // float distance = Vector3.Distance(m_connectedCamera.transform.position, worldPos);
-        //info.Prompt.localScale = Vector3.one * (m_referenceDistance / distance);
+        
+        if (prompt is IProgressRepairProvider progressProviderRef &&
+            info.Prompt.GetComponent<ShipHoleVisual>() is ShipHoleVisual visual)
+        {
+            progressProviderRef.AddProgressSubscriber(visual.UpdateRadialProgress);
+        }
         m_activePrompts.Add(prompt, info);
     }
 
@@ -71,7 +76,11 @@ public class PromptDisplay : MonoBehaviour, IPromptDisplay
     {
         if (prompt is null) return;
         if (!m_activePrompts.Remove(prompt, out PromptInfo info)) return;
-        //Debug.Log("Hide Prompt");
+        
+        if (prompt is IProgressRepairProvider progressProviderRef && info.Prompt.GetComponent<ShipHoleVisual>() is ShipHoleVisual visual)
+        {
+            progressProviderRef.RemoveProgressSubscriber(visual.UpdateRadialProgress);
+        }
         if (m_pools.TryGetValue(info.Widget, out ObjectPool<PromptInfo> pool)) pool.Release(info);
     }
 

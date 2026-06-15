@@ -73,7 +73,7 @@ public class PlayerInteractor : MonoBehaviour, IInteractor
     private void Start()
     {
         m_heldObjectLocation = GetComponentInChildren<HeldObjectLocation>();
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+       // Cursor.visible = false;
+       // Cursor.lockState = CursorLockMode.Locked;
     }
 }

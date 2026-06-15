@@ -160,7 +160,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            Debug.Log($"connectedBody changed! past: {pastConnectedBody}, current: {connectedBody}");
+          //  Debug.Log($"connectedBody changed! past: {pastConnectedBody}, current: {connectedBody}");
 
         }
       
