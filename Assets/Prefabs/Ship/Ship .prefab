@@ -4679,6 +4679,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boat Hull
       objectReference: {fileID: 0}
+    - target: {fileID: 9055767057833011649, guid: 8cf83eae36e7e8c4885e54392913e4f9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9055767057833011649, guid: 8cf83eae36e7e8c4885e54392913e4f9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -4752,12 +4760,18 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8cf83eae36e7e8c4885e54392913e4f9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 9062479568041059116}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8cf83eae36e7e8c4885e54392913e4f9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5659278903733598814}
     - targetCorrespondingSourceObject: {fileID: -7513525490114262222, guid: 8cf83eae36e7e8c4885e54392913e4f9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3303257174621955613}
     - targetCorrespondingSourceObject: {fileID: -7513525490114262222, guid: 8cf83eae36e7e8c4885e54392913e4f9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8314382046544706759}
+    - targetCorrespondingSourceObject: {fileID: -7513525490114262222, guid: 8cf83eae36e7e8c4885e54392913e4f9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7031832376017849931}
     - targetCorrespondingSourceObject: {fileID: 1853675021763207056, guid: 8cf83eae36e7e8c4885e54392913e4f9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8895937442412077590}
@@ -5023,6 +5037,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: OhShip.Core.Ship::SteamPressureSystem
   m_rateOfPressureLoss: 0.001
+--- !u!81 &5659278903733598814
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7196852406926485525}
+  m_Enabled: 1
 --- !u!4 &7542275446007984815 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8cf83eae36e7e8c4885e54392913e4f9, type: 3}
@@ -5075,8 +5097,8 @@ MonoBehaviour:
   m_promptData:
     rid: 6115564182124625985
   m_interactSound:
-    Clip: {fileID: 0}
-    MixerGroup: {fileID: 0}
+    Clip: {fileID: 8300000, guid: 3d8e6e9157edffe42ac2978f2499269d, type: 3}
+    MixerGroup: {fileID: 1847626060670125143, guid: 141b63e12c5fde24f8b360b61ba9fdb9, type: 2}
     Loop: 0
     PlayOnAwake: 0
     PlayedFrequently: 0
@@ -5094,6 +5116,21 @@ MonoBehaviour:
     RolloffMode: 0
   m_widgetPosition: {fileID: 8903797785914435544}
   m_outPosition: {fileID: 0}
+  m_onInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7031832376017849931}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Open
+          m_BoolArgument: 0
+        m_CallState: 2
   references:
     version: 2
     RefIds:
@@ -5122,6 +5159,28 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: -1.67, y: 0.2, z: 2.14}
   m_Center: {x: 0.2, y: -0.06, z: -0.83}
+--- !u!95 &7031832376017849931
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8690727457720639094}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 012029ba8215d134191a4b41810bc3d4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &8260527478250038972
 PrefabInstance:
   m_ObjectHideFlags: 0
