@@ -27,7 +27,7 @@ public class ShipMovement : MonoBehaviour
     {
         m_rigidbody.AddForceAtPosition(m_wheelPowerPoint.forward * (m_throttleEffectiveness.Evaluate(Throttle * 2)), m_wheelPowerPoint.position, ForceMode.Force);
        // Debug.Log(m_waterController.SteamPressure);
-         //Debug.Log($"Throttle: {Throttle}, Pressure: {m_waterController.SteamPressure}, Force: {m_throttleEffectiveness.Evaluate(Throttle * 2) * (m_steamPressure)}");
+       //Debug.Log($"Throttle: {Throttle}, Pressure: {m_waterController.SteamPressure}, Force: {m_throttleEffectiveness.Evaluate(Throttle * 2) * (m_steamPressure)}");
         ApplyRudderForce(Rudder);
     }
 

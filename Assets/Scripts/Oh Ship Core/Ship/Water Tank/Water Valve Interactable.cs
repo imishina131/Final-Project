@@ -6,7 +6,7 @@ using UnityEngine.Serialization;
 /// <summary>
 /// An interactable that allows the player to adjust the pressure of <see cref="WaterController"/> on the ship.
 /// </summary>
-public class SteamPressureValveInteractable : MonoBehaviour, IInteractable, IPlayerControllable, IPromptProvider
+public class WaterValveInteractable : MonoBehaviour, IInteractable, IPlayerControllable, IPromptProvider
 {
     [SerializeField] private Transform _displayForInteraction;
     [SerializeField] private Transform _playerInteractionLocation;
@@ -16,7 +16,6 @@ public class SteamPressureValveInteractable : MonoBehaviour, IInteractable, IPla
     IPlayerController m_activePlayerController;
     [SerializeField] string m_pressureControlActionMap = "Adjust Pressure";
     [SerializeField] WaterController m_pressureSystem;
-    [SerializeField] float steamPressureOffset = .5f;
     
     InteractionSession m_currentInteractionSession;
     /// <inheritdoc/>
