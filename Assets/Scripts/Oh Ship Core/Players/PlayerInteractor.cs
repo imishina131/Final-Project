@@ -56,8 +56,7 @@ public class PlayerInteractor : MonoBehaviour, IInteractor
         if (!Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, m_interactionRange, m_interactionLayer)) return;
         if (!hit.collider.TryGetComponent(out IInteractable interactable)) return;
         m_session = interactable.BeginInteraction(this);
-
-        Debug.Log("found object");
+        
         if (m_session is not { IsActive: true }) return;
         SubscribeToSession();
     }

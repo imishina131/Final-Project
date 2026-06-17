@@ -27,12 +27,11 @@ public class PassOutInteractable : MonoBehaviour, IInteractable, IPromptProvider
 
     public InteractionSession BeginInteraction(IInteractor interactor)
     {
-        _playerControllable = interactor.GetAssociatedGameObject().transform.parent.GetComponent<IPlayerControllable>();
-
+        _playerControllable = GetComponent<PlayerControlRouter>();
         _playerController = _playerControllable.GetActivePlayerController();
-
-        status = transform.root.GetComponentInChildren<StatusBarManager>();
-
+        
+        status = _playerController.GetAssociatedGameObject().transform.root.GetComponentInChildren<StatusBarManager>();
+        
         Debug.Log("status" + status);
         Debug.Log("status-"+ status.isPassedOut);
 
@@ -52,11 +51,7 @@ public class PassOutInteractable : MonoBehaviour, IInteractable, IPromptProvider
         return m_currentInteractionSession;
 
     }
-
-    public void OnControlReleased()
-    {
-        gameObject.layer = LayerMask.NameToLayer("Player");
-    }
+    
 
     public PromptData GetPromptData()
     {
