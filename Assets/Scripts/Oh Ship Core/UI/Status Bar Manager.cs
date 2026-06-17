@@ -13,6 +13,11 @@ public class StatusBarManager : MonoBehaviour
     private Color imageAlpha;
     public bool isPassedOut = false;
     public bool wokeUp = false;
+    private GameObject m_player;
+    public void InitializePlayerReference(GameObject player)
+    {
+        m_player = player;
+    }
 
     public void UpdateHungerBar(float hungerPercentage)
     {
@@ -47,6 +52,8 @@ public class StatusBarManager : MonoBehaviour
     {
         Debug.Log("passed: " + isPassedOut);
         isPassedOut = true;
+        Debug.Log(m_player.name);
+        m_player.layer = LayerMask.NameToLayer("Default");
         Debug.Log("passed: " + isPassedOut);
     }
 
@@ -63,7 +70,7 @@ public class StatusBarManager : MonoBehaviour
         isPassedOut = false;
         imageAlpha.a = 0;
         fadeImage.color = imageAlpha;
-
+        m_player.layer = LayerMask.NameToLayer("Player");
     }
 
     public bool IsPassedOut()
