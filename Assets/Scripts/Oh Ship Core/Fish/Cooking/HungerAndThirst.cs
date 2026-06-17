@@ -11,6 +11,7 @@ public class HungerAndThirst: MonoBehaviour
     [FormerlySerializedAs("manager")] [SerializeField] StatusBarManager m_manager;
     [SerializeField] UnityEvent m_onPlayerStarved = new();
     [SerializeField] float m_hungerLostPerTick = 0.01f;
+    [SerializeField] PassOutScript playerState;
     void Start()
     {
         Hunger.Notify();
@@ -24,7 +25,8 @@ public class HungerAndThirst: MonoBehaviour
 
         if (Hunger.Value <= 0f)
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("GameOver");
+            //UnityEngine.SceneManagement.SceneManager.LoadScene("GameOver");
+            playerState.PassOut();
 
         }
     }
