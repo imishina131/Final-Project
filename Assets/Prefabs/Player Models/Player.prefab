@@ -274,6 +274,7 @@ MonoBehaviour:
         m_Calls: []
   m_manager: {fileID: 0}
   m_hungerLostPerTick: 0.01
+  isPassedOut: 0
 --- !u!114 &2301725045065718947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -300,7 +301,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: OhShip.Core.Players::PassOutInteractable
   _interactDisplayTransform: {fileID: 5867685216777915181}
-  status: {fileID: 0}
 --- !u!1 &2239227320701294626
 GameObject:
   m_ObjectHideFlags: 0

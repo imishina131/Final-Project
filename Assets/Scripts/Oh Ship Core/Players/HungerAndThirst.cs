@@ -2,6 +2,7 @@ using MatrixUtils.GenericDatatypes;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
 public class HungerAndThirst: MonoBehaviour
@@ -26,9 +27,8 @@ public class HungerAndThirst: MonoBehaviour
         Hunger.Value = Mathf.Clamp01(Hunger.Value - (m_hungerLostPerTick * Time.deltaTime));
         if (Hunger.Value <= 0 && !isPassedOut) PassOut();
         
-       m_manager.SlowDown(Hunger.Value);
-        //  if (Hunger.Value <= 0.3f && Hunger.Value > 0f) m_manager.SlowDown();
-
+        m_manager.SlowDown(Hunger.Value);
+        
     }
     public void OnPlayerControllerConnected(IPlayerController controller)
     {
@@ -42,7 +42,7 @@ public class HungerAndThirst: MonoBehaviour
     public void OnPlayerControllerDisconnected(IPlayerController controller)
     {
         //Hunger.RemoveListener(m_manager.UpdateHungerBar);
-        m_manager = null;
+        //m_manager = null;
     }
 
     public void ChangeLayer(GameObject player)
@@ -58,7 +58,7 @@ public class HungerAndThirst: MonoBehaviour
         isPassedOut = true;
         gameObject.layer = LayerMask.NameToLayer("Default");
         GetComponent<Rigidbody>().isKinematic = true;
-      //  m_manager.SlowDown();
+        if(numberOfPassedOutPlayers >= 2)SceneManager.LoadScene("GameOver");
     }
 
     public void WakeUp()

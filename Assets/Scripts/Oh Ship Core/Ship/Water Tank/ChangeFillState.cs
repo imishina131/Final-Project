@@ -34,6 +34,7 @@ public class ChangeFillState : IFillState
         }
         m_timer = new(duration);
         m_timer.OnTimerTick += HandleFillChange;
+       // m_timer.OnTimerStop += () => OnFillChange?.Invoke(m_targetFill);
         m_timer.Start();
     }
     /// <inheritdoc/>

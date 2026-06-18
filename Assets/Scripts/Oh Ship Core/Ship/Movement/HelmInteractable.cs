@@ -26,7 +26,12 @@ public class HelmInteractable : MonoBehaviour, IInteractable, IPlayerControllabl
     ///<inheritdoc/>
     public InteractionSession BeginInteraction(IInteractor interactor)
     {
-        if(interactor.IsInteracting() || m_currentInteractionSession is { IsActive: true }) return null;   
+        Debug.Log($"WasInteracting: {interactor.WasInteracting}, Session active: {m_currentInteractionSession?.IsActive}");
+        if (interactor.WasInteracting || m_currentInteractionSession is { IsActive: true })
+        {
+            Debug.Log("Blocking helm interaction");
+            return null;
+        }   
         IPlayerControllable oldControllable = interactor.GetAssociatedGameObject().transform.parent.GetComponent<IPlayerControllable>();
         
         CinemachineCamera playerCam = interactor.GetAssociatedGameObject().GetComponent<CinemachineCamera>();
@@ -47,8 +52,7 @@ public class HelmInteractable : MonoBehaviour, IInteractable, IPlayerControllabl
         m_wheelElement.Transform.localEulerAngles = new(0, 0, m_wheelElement.GetNextAngle(m_shipMovement.Rudder, m_wheelElement.Transform.localEulerAngles.z));
         m_shipMovement.SetThrottle(m_shipMovement.Throttle + m_moveInput.y * Time.deltaTime * m_helmThrottleSpeed);
         m_throttleElement.Transform.localEulerAngles = new(m_throttleElement.GetNextAngle(-m_shipMovement.Throttle, m_throttleElement.Transform.localEulerAngles.x), 0, 0);
-        m_speedometerElement.Transform.localEulerAngles = new(m_speedometerElement.GetNextAngle(Vector3.Dot(m_shipMovement.Rigidbody.linearVelocity, m_shipMovement.Rigidbody.transform.forward).Remap(-14, 14, -1, 1), m_speedometerElement.Transform.localEulerAngles.x), 0, 0);
-        m_helmCamera.transform.Rotate(0, m_lookInput.x * Time.deltaTime * 100, 0);
+        m_speedometerElement.Transform.localEulerAngles = new(0, 0, m_speedometerElement.GetNextAngle(Vector3.Dot(m_shipMovement.Rigidbody.linearVelocity, m_shipMovement.Rigidbody.transform.forward).Remap(-14, 14, -1, 1), m_speedometerElement.Transform.localEulerAngles.z));        m_helmCamera.transform.Rotate(0, m_lookInput.x * Time.deltaTime * 100, 0);
     }
     ///<inheritdoc/>
     public void OnControlRequested(IPlayerController player)

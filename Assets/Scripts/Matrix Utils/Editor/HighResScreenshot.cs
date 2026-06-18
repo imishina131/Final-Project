@@ -1,10 +1,10 @@
+#if UNITY_EDITOR 
 using UnityEngine;
 using UnityEditor;
 using System.IO;
-
 public class SceneViewScreenshot
 {
-    [MenuItem("Tools/Take Scene View Screenshot %#k")] // Ctrl+Shift+K
+    [MenuItem("Tools/Take Scene View Screenshot %#k")] // Ctrl+Shift+K 
     static void TakeScreenshot()
     {
         SceneView sceneView = SceneView.lastActiveSceneView;
@@ -57,3 +57,4 @@ public class SceneViewScreenshot
         AssetDatabase.Refresh();
     }
 }
+#endif

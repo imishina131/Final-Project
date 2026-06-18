@@ -43,10 +43,18 @@ public class PlayerInteractor : MonoBehaviour, IInteractor
                 && checkHit.collider.TryGetComponent(out IInteractable checkInteractable))
             {
                 WasInteracting = IsInteracting();
+                InteractionSession newSession = checkInteractable.BeginInteraction(this);
+                if (newSession is null)
+                {
+                    WasInteracting = false;
+                    return;
+                }
                 EndActiveInteraction();
-                m_session = checkInteractable.BeginInteraction(this);
-                if (m_session is not { IsActive: true }) return;
-                SubscribeToSession();
+                m_session = newSession;
+                if (m_session is { IsActive: true })
+                {
+                    SubscribeToSession();
+                }
                 return;
             }
             EndActiveInteraction();

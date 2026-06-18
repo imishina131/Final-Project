@@ -16,6 +16,7 @@ public class SelectStartingObject : MonoBehaviour
     IEnumerator SelectFirstAsync(PlayerInput playerInput)
     {
         MultiplayerEventSystem eventSystem = playerInput.gameObject.GetComponentInChildren<MultiplayerEventSystem>();
+        Debug.Log($"EventSystem found: {eventSystem}, firstSelected: {m_firstSelectedObject}");
         eventSystem.firstSelectedGameObject = m_firstSelectedObject;
         eventSystem.playerRoot = m_canvas.gameObject;
         yield return null;

@@ -32,10 +32,8 @@ public class StatusBarManager : MonoBehaviour
     
     public void SlowDown(float hungerValue)
     {
-        Debug.Log("Slow Down");
         imageAlpha = fadeImage.color;
         imageAlpha.a = 1 - hungerValue;
-        Debug.Log($"Current alpha: {imageAlpha.a}");
         fadeImage.color = imageAlpha;
         
     }

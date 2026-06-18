@@ -21,6 +21,8 @@ public class WaterValveInteractable : MonoBehaviour, IInteractable, IPlayerContr
     [SerializeField, RequiredField] WaterController m_pressureSystem;
     
     InteractionSession m_currentInteractionSession;
+
+    private GameObject player;
     /// <inheritdoc/>
     public InteractionSession BeginInteraction(IInteractor interactor)
     {
@@ -32,9 +34,10 @@ public class WaterValveInteractable : MonoBehaviour, IInteractable, IPlayerContr
         
         m_steamPressureCamera.OutputChannel =  playerCamera.OutputChannel;
         m_steamPressureCamera.Priority = 10;
-        
-        Transform playerPos = interactor.GetAssociatedGameObject().transform.parent;
-        playerPos.position = m_playerInteractionLocation.position;
+
+        player = oldControllable.GetAssociatedGameObject();
+       
+        player.GetComponentInChildren<MeshRenderer>().enabled = false;
         
         m_currentInteractionSession = new(interactor, this);
         m_currentInteractionSession.OnEnded += () => controller.ChangeControlledEntity(oldControllable);
@@ -71,6 +74,7 @@ public class WaterValveInteractable : MonoBehaviour, IInteractable, IPlayerContr
         decreasePressureAction.performed -= HandleDecreasePressure;
         InputAction interactAction = map.FindAction("Interact");
         interactAction.performed -= HandleInteract;
+        player.GetComponentInChildren<MeshRenderer>().enabled = true;
         m_activePlayerController = null;
     }
     

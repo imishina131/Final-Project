@@ -4,6 +4,7 @@ using MatrixUtils.AudioSystem;
 using MatrixUtils.GenericDatatypes;
 using UnityEngine;
 using UnityEngine.Pool;
+using UnityEngine.SceneManagement;
 
 public class ShipHealth : MonoBehaviour, IDamageable
 {
@@ -28,6 +29,11 @@ public class ShipHealth : MonoBehaviour, IDamageable
     void Update()
     {
         m_fillPercentage.Value = Mathf.Clamp01(m_holeCount > 0 ? m_fillPercentage +(m_holeCount * 0.005f * Time.deltaTime) : m_fillPercentage+ -0.05f * Time.deltaTime);
+
+        if (m_fillPercentage >= 1f - .1f)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
     }
     /// <inheritdoc/>
     public bool Damage(uint amount)

@@ -40,6 +40,7 @@ public class FishingManager : MonoBehaviour, IInteractable, IPlayerControllable,
     private RectTransform _usableFishingArea;
     private Transform _holdingObjectTransform;
     private IInteractor _interactor;
+    private GameObject _player;
     private void Start()
     {
         _fishingMiniGame = new FishingMiniGame();
@@ -67,6 +68,8 @@ public class FishingManager : MonoBehaviour, IInteractable, IPlayerControllable,
         _currentInteractionSession = new InteractionSession(interactor, this);
         _currentInteractionSession.OnEnded += () => _playerController.ChangeControlledEntity(_playerControllable);
         _interactor  = interactor;
+        _player = _playerControllable.GetAssociatedGameObject().gameObject;
+        _player.GetComponentInChildren<MeshRenderer>().enabled = false;
         return _currentInteractionSession;
     }
  
@@ -143,6 +146,7 @@ public class FishingManager : MonoBehaviour, IInteractable, IPlayerControllable,
         
         _fishingMiniGame.OnCaughtFish -= HandleFishCaught;
         _fishingUI.HideFishingUI();
+        _player.GetComponentInChildren<MeshRenderer>().enabled = true;
         _activeActionMap = null;
     }
 

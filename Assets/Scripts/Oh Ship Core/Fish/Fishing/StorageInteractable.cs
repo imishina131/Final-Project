@@ -7,7 +7,7 @@ public class StorageInteractable : MonoBehaviour, IInteractable
     private IPlayerController _playerController;
     private Transform _holdingObjectTransform;
     InteractionSession m_currentInteractionSession;
-    private int _storedFish = 0;
+    public int _storedFish = 0;
     [SerializeField] private int maxStoredFish = 5;
     [SerializeField] GameObject fishPrefab;
     

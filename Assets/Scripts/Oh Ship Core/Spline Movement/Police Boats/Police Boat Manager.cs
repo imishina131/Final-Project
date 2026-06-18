@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using UnityEngine.Splines;
 
 public class PoliceBoatManager : MonoBehaviour
@@ -30,7 +31,8 @@ public class PoliceBoatManager : MonoBehaviour
         if (other.CompareTag(_playerTag))
         {
             Debug.Log("Hit the player");
-            _transitionEvent?.Invoke();
+            //SceneManager.LoadScene("GameOver");
+            //_transitionEvent?.Invoke();
         }
     }
 }

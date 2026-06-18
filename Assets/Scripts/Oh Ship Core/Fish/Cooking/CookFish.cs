@@ -124,26 +124,30 @@ public class CookFish : MonoBehaviour, IInteractable
 
     public InteractionSession BeginInteraction(IInteractor interactor)
     {
-        if (interactor.IsInteracting() || m_currentInteractionSession is { IsActive: true }) return null;
+        if (m_currentInteractionSession is { IsActive: true }) return null;
 
         hungerAndThirst = interactor.GetAssociatedGameObject().transform.root.GetComponentInChildren<HungerAndThirst>();
       //  Debug.Log("Begin interaction");
-        if (isBurnt)
-        {
-          //  Debug.Log("Discard Fish");
-            EndCooking();
-        }
-        else if(isReady)
-        {
-          //  Debug.Log("Eat Fish");
-            Eat();
-        }
-        else if(isCooking)
-        {
-          //  Debug.Log("Still Cooking");
-            return null;
-        }
-        return m_currentInteractionSession;
+      if (isBurnt)
+      {
+          EndCooking();
+      }
+      else if (isReady)
+      {
+          Eat();
+      }
+      else if (isCooking)
+      {
+          return null;
+      }
+      else
+      {
+          return null;
+      }
+    
+      m_currentInteractionSession = new InteractionSession(interactor, this);
+      m_currentInteractionSession.End();
+      return m_currentInteractionSession;
     }
 
     private void Eat()

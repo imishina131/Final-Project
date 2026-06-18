@@ -1,15 +1,21 @@
+using System;
 using MatrixUtils.Attributes;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Controls the fill of the water tank using states that use the <see cref="IFillState"/> interface.
 /// </summary>
 public class WaterController : MonoBehaviour
 {
+    [SerializeField] private float m_criticalStateBuffer = 0.01f;
     [SerializeField] float m_maxFill = 1f;
     [SerializeField] float m_minFill = -1f;
     [SerializeField] float m_fillRate = 1f;
     [SerializeField] float m_currentFill;
+    
+    [SerializeField] float m_minHoldDuration = 30f;
+    [SerializeField] float m_maxHoldDuration = 40f;
     [SerializeField, RequiredField] MeshRenderer m_waterFillMesh;
     static readonly int s_fillProperty = Shader.PropertyToID("_Fill");
 
@@ -25,10 +31,12 @@ public class WaterController : MonoBehaviour
     /// Attempts to decrease the fill of the water tank.
     /// </summary>
     public void DecreaseWaterFill() => m_activeFillChange.HandleDecrease();
+    
+    private bool IsInCriticalState => m_currentFill <= m_minFill + + m_criticalStateBuffer || m_currentFill  >= m_maxFill - + m_criticalStateBuffer;
 
     void Awake()
     {
-        m_neutral = new(UpdateWaterFillChange, m_fillRate, 3f, 6f);
+        m_neutral = new(UpdateWaterFillChange, m_fillRate, m_minHoldDuration, m_maxHoldDuration);
         m_increase = new(UpdateWaterFillChange, m_maxFill, m_fillRate);
         m_decrease = new(UpdateWaterFillChange, m_minFill, m_fillRate);
         m_neutral.OnIncrease = m_increase;
@@ -56,5 +64,14 @@ public class WaterController : MonoBehaviour
     {
         m_currentFill = Mathf.Clamp(newValue, m_minFill, m_maxFill);
         m_waterFillMesh.material.SetFloat(s_fillProperty, m_currentFill);
+    }
+
+    private void Update()
+    {
+        if (IsInCriticalState)
+        {
+           Debug.Log("Criktical State");
+            // SceneManager.LoadScene("GameOver");
+        }
     }
 }
