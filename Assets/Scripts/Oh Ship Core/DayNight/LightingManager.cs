@@ -5,7 +5,8 @@ public class LightingManager : MonoBehaviour
 {
     [SerializeField] private Light directionalLight;
     [SerializeField] private LightingPreset preset;
-    [SerializeField, Range(0, 24)] private float timeOfDay;
+    [SerializeField, Range(0, 96)] private float timeOfDay;
+    [SerializeField] private GameObject lights;
 
     private void UpdateLighting(float timePercentage)
     {
@@ -29,12 +30,21 @@ public class LightingManager : MonoBehaviour
         if(Application.isPlaying)
         {
             timeOfDay += Time.deltaTime;
-            timeOfDay %= 24;
-            UpdateLighting(timeOfDay/24f);
+            timeOfDay %= 96;
+            UpdateLighting(timeOfDay/96f);
         }
         else
         {
-            UpdateLighting(timeOfDay / 24f);
+            UpdateLighting(timeOfDay / 96f);
+        }
+
+        if(timeOfDay <= 20 || timeOfDay >= 84)
+        {
+            lights.SetActive(true);
+        }
+        else
+        {
+            lights.SetActive(false);
         }
     }
     private void OnValidate()
