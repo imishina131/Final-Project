@@ -52,12 +52,14 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (gameObject.layer != LayerMask.NameToLayer("Default"))
+        {
+            UpdateState();
+            AdjustVelocityAndRotation();
 
-        UpdateState();
-        AdjustVelocityAndRotation();
 
-
-        ClearState();
+            ClearState();
+        }
     }
 
     void LateUpdate()

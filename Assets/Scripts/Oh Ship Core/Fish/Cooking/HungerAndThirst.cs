@@ -20,7 +20,7 @@ public class HungerAndThirst: MonoBehaviour
     void Update()
     {
         Hunger.Value = Mathf.Clamp01(Hunger.Value - (m_hungerLostPerTick * Time.deltaTime));
-       // if (Hunger.Value <= 0) m_onPlayerStarved.Invoke();
+       //if (Hunger.Value <= 0) m_onPlayerStarved.Invoke();
 
     }
     public void OnPlayerControllerConnected(IPlayerController controller)
