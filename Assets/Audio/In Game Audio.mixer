@@ -108,6 +108,20 @@ AudioMixerGroupController:
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
+--- !u!244 &-357383514281228898
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: d393b8a7d0a48dd4198982cf995b2841
+  m_EffectName: Attenuation
+  m_MixLevel: b709f926a6454a34fa1269fde50b9757
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!241 &24100000
 AudioMixerController:
   m_ObjectHideFlags: 0
@@ -131,6 +145,7 @@ AudioMixerController:
     - 66e6d88e7dfc6b34fa27cdc82f76f98e
     - 6b42f79563baa00448eaf2e462c631f4
     - da8a6245520b8674abf91777fb561dcb
+    - 021cbb3724c145f469f59f81d831bb52
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -148,6 +163,7 @@ AudioMixerGroupController:
   - {fileID: 1847626060670125143}
   - {fileID: 5981764306557978094}
   - {fileID: -442154555814685491}
+  - {fileID: 6818829232992242828}
   m_Volume: 0d5801b5bb53d5c41a3e23871599dcbe
   m_Pitch: 3c100825d23f86243b210bb82c01a719
   m_Send: 00000000000000000000000000000000
@@ -349,6 +365,25 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
+--- !u!243 &6818829232992242828
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ShipBumping
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 021cbb3724c145f469f59f81d831bb52
+  m_Children: []
+  m_Volume: c1a1b48119e90354dab237d0084ef351
+  m_Pitch: 962003431cd6fb148a9f56fbe8bffc2a
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: -357383514281228898}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
 --- !u!243 &7882097199093320564
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
