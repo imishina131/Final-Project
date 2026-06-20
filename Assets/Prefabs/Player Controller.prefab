@@ -233,8 +233,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1447475600237692604}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.001526974, y: 0.99919343, z: -0.03476905, w: -0.020032573}
-  m_LocalPosition: {x: 4.9995527, y: -25.974566, z: -4.8567176}
+  m_LocalRotation: {x: 0.06004022, y: 0.7045532, z: -0.06004022, w: 0.7045532}
+  m_LocalPosition: {x: 5.6659994, y: -25.877575, z: -0.14699554}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1411,7 +1411,9 @@ MonoBehaviour:
     Fill: {fileID: 4971578715985530211}
   m_thirstBar:
     Fill: {fileID: 7163030910490333323}
-  fadeImage: {fileID: 7624544167655017845}
+  m_hungerVolume:
+    Volume: {fileID: 6828565172952073661}
+    FadePoint: 0.4
 --- !u!1 &5492496889448183806
 GameObject:
   m_ObjectHideFlags: 0
@@ -1927,8 +1929,8 @@ MonoBehaviour:
   m_IsGlobal: 1
   priority: 0
   blendDistance: 0
-  weight: 1
-  sharedProfile: {fileID: 0}
+  weight: 0
+  sharedProfile: {fileID: 11400000, guid: 9123054cc73e54945ad54384e96b8c8f, type: 2}
 --- !u!1 &7510876469186520795
 GameObject:
   m_ObjectHideFlags: 0
