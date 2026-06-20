@@ -25,12 +25,24 @@ public class CookingInteractable : MonoBehaviour, IInteractable, IPromptProvider
         if (_playerInteractionState.CheckInteractionTag(InteractionTag.Holding))
         {
             _foodClassItem = _playerControllable.GetAssociatedGameObject().GetComponentInChildren<HeldObjectLocation>().GetComponentInChildren<FoodClass>();
-            if (_foodClassItem.CookingProcess == howIsCooked)
+            if (_foodClassItem.CookingProcess == howIsCooked && cookingLocation.childCount == 0)
             {
                 m_currentInteractionSession = new InteractionSession(interactor, this);
                 m_currentInteractionSession.OnEnded += () => _playerController.ChangeControlledEntity(_playerControllable);
                 MoveObjectToStove();
                 _playerInteractionState.RemoveInteractionTag(InteractionTag.Holding);
+                m_currentInteractionSession.End();
+                return m_currentInteractionSession;
+            }
+        }
+        else
+        {
+            if (cookingLocation.childCount > 0)
+            {
+                MoveObjetToHand();
+                m_currentInteractionSession = new InteractionSession(interactor, this);
+                m_currentInteractionSession.OnEnded += () => _playerController.ChangeControlledEntity(_playerControllable);
+                _playerInteractionState.AddInteractionTag(InteractionTag.Holding);
                 m_currentInteractionSession.End();
                 return m_currentInteractionSession;
             }
@@ -50,12 +62,20 @@ public class CookingInteractable : MonoBehaviour, IInteractable, IPromptProvider
 
     public Vector3 GetWidgetWorldPosition()
     {
-       return _interactDisplayTransform.position;
+       return _interactDisplayTransform == null? transform.position : _interactDisplayTransform.position;
     }
 
     private void MoveObjectToStove()
     { 
         _foodClassItem.transform.position = cookingLocation.position;
         _foodClassItem.transform.SetParent(cookingLocation);
+    }
+
+    private void MoveObjetToHand()
+    {
+        FoodClass cookingItem = cookingLocation.GetComponentInChildren<FoodClass>();
+        cookingItem.transform.position =
+            _playerControllable.GetAssociatedGameObject().GetComponentInChildren<HeldObjectLocation>().transform.position;
+        cookingItem.transform.SetParent(_playerControllable.GetAssociatedGameObject().GetComponentInChildren<HeldObjectLocation>().transform);
     }
 }
