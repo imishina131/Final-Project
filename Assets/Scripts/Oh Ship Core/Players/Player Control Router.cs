@@ -9,6 +9,7 @@ public class PlayerControlRouter : MonoBehaviour, IPlayerControllable
     [SerializeField] UnityEvent<Vector2> m_onMovementInputChanged;
     [SerializeField] UnityEvent<Vector2> m_onLookInputChanged;
     [SerializeField] UnityEvent m_onInteract;
+    [SerializeField] UnityEvent m_onUse;
     [SerializeField] UnityEvent<IPlayerController> m_onPlayerControlStarted;
     [SerializeField] UnityEvent<IPlayerController> m_onPlayerControlEnded;
     IPlayerController m_playerController;
@@ -16,6 +17,8 @@ public class PlayerControlRouter : MonoBehaviour, IPlayerControllable
     void OnMovementInputChanged(InputAction.CallbackContext context) => m_onMovementInputChanged.Invoke(context.ReadValue<Vector2>());
     void OnLookInputChanged(InputAction.CallbackContext context) => m_onLookInputChanged.Invoke(context.ReadValue<Vector2>());
     void OnInteract(InputAction.CallbackContext context) => m_onInteract.Invoke();
+    void OnUse(InputAction.CallbackContext context) => m_onUse.Invoke();
+    
     public void OnControlRequested(IPlayerController player)
     {
         if (!player.TryChangeInputActionMap(m_requiredInputActionMap, out InputActionMap map))
@@ -39,6 +42,9 @@ public class PlayerControlRouter : MonoBehaviour, IPlayerControllable
         InputAction interactAction = m_activeActionMap.FindAction("Interact");
         interactAction.performed += OnInteract;
         m_onPlayerControlStarted.Invoke(player);
+        
+        InputAction useAction = m_activeActionMap.FindAction("Use");
+        useAction.performed += OnUse;
     }
     /// <inheritdoc/>
     public void OnControlReleased()
@@ -53,9 +59,12 @@ public class PlayerControlRouter : MonoBehaviour, IPlayerControllable
         m_onLookInputChanged.Invoke(Vector2.zero);
         InputAction interactAction = m_activeActionMap.FindAction("Interact");
         interactAction.performed -= OnInteract;
+        InputAction useAction = m_activeActionMap.FindAction("Use");
+        useAction.performed -= OnUse;
         m_playerController = null;
         m_activeActionMap = null;
         m_onPlayerControlEnded.Invoke(m_playerController);
+        
     }
     /// <inheritdoc/>
     [Pure, CanBeNull] public IPlayerController GetActivePlayerController() => m_playerController;

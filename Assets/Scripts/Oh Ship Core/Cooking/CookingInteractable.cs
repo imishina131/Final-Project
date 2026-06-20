@@ -74,8 +74,9 @@ public class CookingInteractable : MonoBehaviour, IInteractable, IPromptProvider
     private void MoveObjetToHand()
     {
         FoodClass cookingItem = cookingLocation.GetComponentInChildren<FoodClass>();
-        cookingItem.transform.position =
-            _playerControllable.GetAssociatedGameObject().GetComponentInChildren<HeldObjectLocation>().transform.position;
+        cookingItem.transform.position = _playerControllable.GetAssociatedGameObject().GetComponentInChildren<HeldObjectLocation>().transform.position;
         cookingItem.transform.SetParent(_playerControllable.GetAssociatedGameObject().GetComponentInChildren<HeldObjectLocation>().transform);
+        cookingItem.InitializeHungerAndThirst(_playerControllable.GetAssociatedGameObject().GetComponentInChildren<HungerAndThirst>());
     }
+    
 }

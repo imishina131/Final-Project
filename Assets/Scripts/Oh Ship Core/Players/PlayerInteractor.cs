@@ -14,7 +14,7 @@ public class PlayerInteractor : MonoBehaviour, IInteractor
     [SerializeField] LayerMask m_interactionLayer;
     InteractionSession m_session;
     HeldObjectLocation m_heldObjectLocation;
-    
+    [SerializeField] PlayerInteractionState m_playerState;
     /// <inheritdoc/>
     public bool IsInteracting() => m_session?.IsActive is true;
     /// <inheritdoc/>
@@ -84,7 +84,20 @@ public class PlayerInteractor : MonoBehaviour, IInteractor
     private void Start()
     {
         m_heldObjectLocation = GetComponentInChildren<HeldObjectLocation>();
+     
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    public void UseHeldItem()
+    {
+        Debug.Log("Trying to use");
+        IUsableItem usableItem = m_heldObjectLocation.GetComponentInChildren<IUsableItem>();
+        if (m_playerState.CheckInteractionTag(InteractionTag.Holding) && usableItem != null)
+        {
+            Debug.Log("Using holding");
+            usableItem.Use();
+            m_playerState.RemoveInteractionTag(InteractionTag.Holding);
+        }
     }
 }

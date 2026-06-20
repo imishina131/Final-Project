@@ -6,6 +6,8 @@ public class Fish : FoodClass
     //readonly float m_cookedAmount = m_material.GetFloat("_Cooked_Amount");
     private float m_cookedAmount;
     private CookState m_currentCookState = CookState.Raw;
+    
+    public CookState CurrentCookState { get { return m_currentCookState; } }
     public override CookingProcess CookingProcess => CookingProcess.OnGrill;
 
     private void Awake()

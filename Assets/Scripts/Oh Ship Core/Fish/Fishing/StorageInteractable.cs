@@ -53,10 +53,15 @@ public class StorageInteractable : MonoBehaviour, IInteractable
 
     public void RemoveFishFromStorage(GameObject fishRef)
     {
+        HungerAndThirst hungerRef = _playerControllable.GetAssociatedGameObject().GetComponentInChildren<HungerAndThirst>();
         _storedFish--;
         _holdingObjectTransform =  _playerControllable.GetAssociatedGameObject().GetComponentInChildren<HeldObjectLocation>().transform;
         GameObject fish = Instantiate(fishRef, _holdingObjectTransform.position,_holdingObjectTransform.rotation);
+        Debug.Log(fish.GetComponent<Fish>().CurrentCookState);
         fish.transform.SetParent(_holdingObjectTransform);
+        fish.GetComponent<FoodClass>().InitializeHungerAndThirst(hungerRef);
         _playerInteractionState.AddInteractionTag(InteractionTag.Holding);
     }
+
+    
 }

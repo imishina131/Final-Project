@@ -221,6 +221,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  m_onUse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 191865983446707255}
+        m_TargetAssemblyTypeName: PlayerInteractor, OhShip.Core.Players
+        m_MethodName: UseHeldItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_onPlayerControlStarted:
     m_PersistentCalls:
       m_Calls:
@@ -275,7 +290,7 @@ MonoBehaviour:
         m_Calls: []
   m_manager: {fileID: 0}
   m_hungerLostPerTick: 0.005
-  isPassedOut: 0
+  m_isPassedOut: 0
   m_passedOutEffect: {fileID: 8383372828078370981}
 --- !u!114 &2301725045065718947
 MonoBehaviour:
@@ -439,6 +454,7 @@ MonoBehaviour:
   m_interactionLayer:
     serializedVersion: 2
     m_Bits: 1
+  m_playerState: {fileID: 4259362998317367922}
 --- !u!1 &5208185262547060752
 GameObject:
   m_ObjectHideFlags: 0
