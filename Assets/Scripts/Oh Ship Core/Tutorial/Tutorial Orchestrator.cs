@@ -6,6 +6,7 @@ public class TutorialOrchestrator : MonoBehaviour
 {
     [SerializeReference, ClassSelector] List<TutorialStep> m_tutorialSteps = new();
     int m_activeStep;
+    TutorialContext m_context;
     void Start()
     {
         AdvanceToNextStep();
@@ -19,6 +20,6 @@ public class TutorialOrchestrator : MonoBehaviour
         m_activeStep = next;
         TutorialStep step = m_tutorialSteps[m_activeStep];
         step.TryAddCompleteEvent(AdvanceToNextStep);
-        step.StartStep();
+        step.StartStep(m_context);
     }
 }

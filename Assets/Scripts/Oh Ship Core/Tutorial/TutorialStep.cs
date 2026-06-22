@@ -11,9 +11,9 @@ public abstract class TutorialStep
     /// <summary>
     /// Starts the tutorial step.
     /// </summary>
-    public void StartStep()
+    public void StartStep(TutorialContext context)
     {
-        StartStepInternal();
+        StartStepInternal(context);
         m_onStepStart.Invoke();
     }
     /// <summary>
@@ -27,7 +27,7 @@ public abstract class TutorialStep
     /// <summary>
     /// Override this to implement the step's starting logic. Will be called by <see cref="StartStep"/>
     /// </summary>
-    protected abstract void StartStepInternal();
+    protected abstract void StartStepInternal(TutorialContext context);
     /// <summary>
     /// Override this to implement the step's ending logic. Will be called by <see cref="EndStep"/>
     /// </summary>

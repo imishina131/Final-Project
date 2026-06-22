@@ -4,31 +4,23 @@ using UnityEngine.InputSystem;
 [Serializable]
 public class MovementTutorialStep : TutorialStep
 {
-    IPlayerController[] m_playerControllers;
     int m_playersCompletedSteps;
+    TutorialContext m_context;
 
-    public void InjectPlayerControllers(IPlayerController[] playerControllers)
+    protected override void StartStepInternal(TutorialContext context)
     {
-        if (playerControllers.Length == 0) throw new ArgumentException("No player controllers found.");
-        m_playerControllers = playerControllers;
-        m_playersCompletedSteps = 0;
-        foreach (IPlayerController controller in m_playerControllers)
+        m_context = context;
+        foreach (InterfaceReference<IPlayerController> movement in context.PlayerControllers)
         {
-            if (!controller.TryGetCurrentInputActionMap(out InputActionMap map)) continue;
+            if(!movement.Value.TryGetCurrentInputActionMap(out InputActionMap map)) return;
             map.FindAction("Move").performed += OnPlayerCompletedStep;
         }
     }
-
-    protected override void StartStepInternal()
-    {
-        
-    }
-
     protected override void EndStepInternal()
     {
-        foreach (IPlayerController controller in m_playerControllers)
+        foreach (InterfaceReference<IPlayerController> controller in m_context.PlayerControllers)
         {
-            if (!controller.TryGetCurrentInputActionMap(out InputActionMap map)) continue;
+            if (!controller.Value.TryGetCurrentInputActionMap(out InputActionMap map)) continue;
             map.FindAction("Move").performed -= OnPlayerCompletedStep;
         }
     }
@@ -36,7 +28,7 @@ public class MovementTutorialStep : TutorialStep
     void OnPlayerCompletedStep(InputAction.CallbackContext context)
     {
         m_playersCompletedSteps++;
-        if (m_playersCompletedSteps < m_playerControllers.Length) return;
+        if (m_playersCompletedSteps < m_context.PlayerControllers.Length) return;
         EndStep();
     }
 }
