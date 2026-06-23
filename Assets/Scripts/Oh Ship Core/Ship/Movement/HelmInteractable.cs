@@ -59,7 +59,7 @@ public class HelmInteractable : MonoBehaviour, IInteractable, IPlayerControllabl
     void Update()
     {
         if(m_activePlayerController is null) return;
-        switch (m_moveInput.magnitude)
+        switch (Mathf.Abs(m_moveInput.x))
         {
             case > 0f when !m_steeringSoundPlaying:
                 m_steeringSoundPlaying = true;
