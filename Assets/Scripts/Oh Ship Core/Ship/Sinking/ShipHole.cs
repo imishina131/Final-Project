@@ -1,10 +1,9 @@
 ﻿using System;
+using MatrixUtils.Attributes;
 using MatrixUtils.Timers;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.Serialization;
 using UnityEngine.VFX;
-
 public class ShipHole : MonoBehaviour, IInteractable, IPromptProvider, IProgressRepairProvider
 {
     [FormerlySerializedAs("_widgetForPrompt")] [SerializeField]
@@ -13,6 +12,8 @@ public class ShipHole : MonoBehaviour, IInteractable, IPromptProvider, IProgress
     string m_widgetForRepair = "repair";
     [SerializeField] float m_repairTime;
     [FormerlySerializedAs("m_leakEffect")] public VisualEffect LeakEffect;
+    [SerializeField, RequiredField] AudioSource m_repairAudioSource;
+    [SerializeField, RequiredField] AudioSource m_leakAudioSource;
     CountdownTimer m_repairTimer;
     InteractionSession m_currentInteraction;
     bool m_isRepairing;
@@ -21,12 +22,15 @@ public class ShipHole : MonoBehaviour, IInteractable, IPromptProvider, IProgress
     PromptDisplay m_promptDisplay;
     IPlayerControllable m_controllable;
     IPlayerController m_playerController;
+
+    
     public void Initialize(Action onRepairComplete)
     {
         m_onRepairComplete = onRepairComplete;
         m_repairTimer = new(m_repairTime);
         m_repairTimer.OnTimerStop += HandleRepairEnd;
         m_repairTimer.OnTimerTick += () => m_onRepairProgressCheck?.Invoke(1- m_repairTimer.Progress);
+        m_leakAudioSource.Play();
     }
     /// <inheritdoc/>
     public InteractionSession BeginInteraction(IInteractor interactor)
@@ -41,6 +45,7 @@ public class ShipHole : MonoBehaviour, IInteractable, IPromptProvider, IProgress
         m_promptDisplay.HidePrompt(this);
         m_isRepairing = true;
         m_promptDisplay.ShowPrompt(this);
+        m_repairAudioSource.Play();
         session.OnEnded += () =>
         {
             m_currentInteraction = null;
@@ -50,9 +55,7 @@ public class ShipHole : MonoBehaviour, IInteractable, IPromptProvider, IProgress
             m_promptDisplay.ShowPrompt(this);
             m_repairTimer.Pause();
         };
-        
         m_repairTimer.Start();
-        
         return session;
     }
 
@@ -64,22 +67,16 @@ public class ShipHole : MonoBehaviour, IInteractable, IPromptProvider, IProgress
             m_onRepairComplete?.Invoke();
             m_isRepairing = false;
             m_repairTimer = null;
+            m_repairAudioSource.Stop();
+            m_leakAudioSource.Stop();
             return;
         }
-        
+        m_repairAudioSource.Pause();
         m_repairTimer.Pause();
     }
 
-    public PromptData GetPromptData()
-    {
-        return new() {AssociatedWidget =  m_isRepairing? m_widgetForRepair : m_widgetForPrompt };
-    }
-
-    public Vector3 GetWidgetWorldPosition()
-    {
-        return transform.position;
-    }
-
+    public PromptData GetPromptData() => new() {AssociatedWidget =  m_isRepairing? m_widgetForRepair : m_widgetForPrompt };
+    public Vector3 GetWidgetWorldPosition() => transform.position;
     public void AddProgressSubscriber(Action<float> sub) => m_onRepairProgressCheck += sub;
     public void RemoveProgressSubscriber(Action<float> sub) => m_onRepairProgressCheck -= sub;
 }
