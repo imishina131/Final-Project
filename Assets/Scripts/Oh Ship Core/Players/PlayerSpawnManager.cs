@@ -26,7 +26,8 @@ public class PlayerSpawnManager : MonoBehaviour
             spawnRotation = spawnPoint.rotation;
         }
         m_injector.Inject(controller.GetAssociatedGameObject());
-        if(!m_characterSelectionDataHandler.TryGetCharacterSelectionData(playerInput.playerIndex, out SO_CharacterSpecificData data)) return;
+        SO_CharacterSpecificData data = null;
+        m_characterSelectionDataHandler?.TryGetCharacterSelectionData(playerInput.playerIndex, out data);
         IPlayerControllable selectedControllable = data?.CharacterModelPrefab.GetComponent<IPlayerControllable>() ?? m_playerControllable.Value;
         GameObject player = Instantiate(selectedControllable.GetAssociatedGameObject(), spawnPosition, spawnRotation);
         controller.ChangeControlledEntity(player.GetComponent<IPlayerControllable>());
