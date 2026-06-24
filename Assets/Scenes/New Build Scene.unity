@@ -851,8 +851,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 787566208}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.00000018262972, y: 4.619, z: 7.077999}
+  m_LocalRotation: {x: -0.13380519, y: -0.71876377, z: 0.095822066, w: -0.6754946}
+  m_LocalPosition: {x: 2.464339, y: 3.7839916, z: -8.972834}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1558,9 +1558,17 @@ PrefabInstance:
       propertyPath: m_fillPercentage.m_onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3020329544484955574, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
+      propertyPath: _overlapIconBuffer
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 3303257174621955613, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
       propertyPath: m_outPosition
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5115391741759406848, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
+      propertyPath: _overlapIconBuffer
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 6315079195521403227, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
       propertyPath: m_rudderEffectiveness.m_Curve.Array.size
