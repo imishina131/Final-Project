@@ -21,8 +21,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Crab
-  m_Shader: {fileID: -6465566751694194690, guid: d5e6fe27f856b3b419f43359e1992f7b, type: 3}
-  m_Parent: {fileID: 2100000, guid: b1aa66268261d4a47b9f014ea729e4f1, type: 2}
+  m_Shader: {fileID: -6465566751694194690, guid: 3975347424d32d5478e0493a49d09bdd, type: 3}
+  m_Parent: {fileID: 2100000, guid: 610518d607b302c4a9070fa83ccec2bf, type: 2}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _ADDITIONAL_LIGHT_SHADOWS
@@ -34,8 +34,7 @@ Material:
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap:
-    RenderType: Opaque
+  stringTagMap: {}
   disabledShaderPasses:
   - MOTIONVECTORS
   m_LockedProperties: 
@@ -46,7 +45,15 @@ Material:
         m_Texture: {fileID: 2800000, guid: 022d24e446ce92c4dabba1c5687ba1f4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Color_Texture:
+        m_Texture: {fileID: 2800000, guid: 022d24e446ce92c4dabba1c5687ba1f4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Metallic_Smoothness:
+        m_Texture: {fileID: 2800000, guid: 94dea41b78bbce940aca9e377fbf422f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Metallic_Smoothness_Texture:
         m_Texture: {fileID: 2800000, guid: 94dea41b78bbce940aca9e377fbf422f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -54,8 +61,16 @@ Material:
         m_Texture: {fileID: 2800000, guid: ae8da8b78f2898d4197b29381f2934cd, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Normal_Texture:
+        m_Texture: {fileID: 2800000, guid: ae8da8b78f2898d4197b29381f2934cd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
-    m_Floats: []
-    m_Colors: []
+    m_Floats:
+    - _Cooked_Amount: 0.5
+    m_Colors:
+    - _Burnt_Color_Tint: {r: 0.5, g: 0.1840336, b: 0.1721698, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Cooked_Color_Tint: {r: 0.9254902, g: 0.33725494, b: 0.35337654, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
