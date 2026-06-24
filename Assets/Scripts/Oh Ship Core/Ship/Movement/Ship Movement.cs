@@ -1,3 +1,4 @@
+using System.Timers;
 using MatrixUtils.GenericDatatypes;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -12,16 +13,20 @@ public class ShipMovement : MonoBehaviour
     [SerializeField] AnimationCurve m_rudderEffectiveness;
     [SerializeField] AnimationCurve m_throttleEffectiveness;
     [SerializeField] float m_rudderTurnMultiplier = 10;
-    float m_enginePower = 1;
+    [SerializeField] float m_enginePower = 1;
     public void SetRudder(float rudder) => Rudder.Value = Mathf.Clamp(rudder, -1 , 1);
     public void SetThrottle(float throttle) => Throttle.Value = Mathf.Clamp(throttle, -1, 1);
-    public void SetEnginePower(float power) => m_enginePower = Mathf.Clamp01(power);
+    public void SetEnginePower(float power) => m_enginePower += power = Mathf.Clamp01(power);
     void Start()
     {
         Throttle.Notify();
         Rudder.Notify();
     }
-    
+
+    private void Update()
+    {
+        SetEnginePower(-Time.deltaTime);
+    }
     void FixedUpdate()
     {
         Rigidbody.AddForceAtPosition(m_wheelPowerPoint.forward * (m_throttleEffectiveness.Evaluate(Throttle * 2) * m_enginePower), m_wheelPowerPoint.position, ForceMode.Force);
