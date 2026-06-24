@@ -35,6 +35,7 @@ public class SinkInteractable : MonoBehaviour, IInteractable, IPromptProvider
     public InteractionSession BeginInteraction(IInteractor interactor)
     {
         _playerControllable = interactor.GetAssociatedGameObject().transform.parent.GetComponent<IPlayerControllable>();
+        thirstManager = _playerControllable.GetAssociatedGameObject().GetComponent<HungerAndThirst>();
 
         _playerController = _playerControllable.GetActivePlayerController();
 

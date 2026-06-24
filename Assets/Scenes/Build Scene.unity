@@ -1846,128 +1846,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1738034009877250915, guid: 3b862cea1c9680f4bb7f3a72389c007b, type: 3}
   m_PrefabInstance: {fileID: 385545151}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &398191594
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 398191595}
-  - component: {fileID: 398191597}
-  - component: {fileID: 398191596}
-  m_Layer: 0
-  m_Name: Sink
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &398191595
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 398191594}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.327, y: 0.37, z: -2.772}
-  m_LocalScale: {x: 1, y: 1, z: 0.77447}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 410034520}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &398191596
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 398191594}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6e164a6d270032438f306c469f588a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: OhShip.Core.Cooking::SinkInteractable
-  _interactDisplayTransform: {fileID: 398191595}
-  animSink: {fileID: 0}
-  thirstManager: {fileID: 0}
-  drinkingRate: 0.4
---- !u!65 &398191597
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 398191594}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.5027492, y: 1, z: 0.7716971}
-  m_Center: {x: -0.14956963, y: 0, z: 0.0670467}
---- !u!1 &410034514 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 689486112149115444, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
-  m_PrefabInstance: {fileID: 1920507445}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &410034518
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 410034514}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.41751862, y: 0.034446955, z: 0.58042145}
-  m_Center: {x: 1.1538401, y: 0.8309461, z: -3.635601}
---- !u!65 &410034519
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 410034514}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.85408473, y: 0.8412329, z: 2.4388137}
-  m_Center: {x: 1.1572266, y: 0.38283008, z: -3.0253837}
---- !u!4 &410034520 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 205577182930978958, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
-  m_PrefabInstance: {fileID: 1920507445}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &419066545 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1018202654047799838, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
@@ -8264,7 +8142,7 @@ MonoBehaviour:
   _interactDisplayTransform: {fileID: 1579405410}
   animSink: {fileID: 1579405412}
   thirstManager: {fileID: 0}
-  drinkingRate: 0.4
+  drinkingRate: 0.04
 --- !u!95 &1579405412
 Animator:
   serializedVersion: 7
@@ -9826,6 +9704,7 @@ PrefabInstance:
     - {fileID: 1002352176545847088, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
     - {fileID: 9069713318385982659, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
     - {fileID: 7631837225598357250, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
+    - {fileID: 689486112149115444, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 7542275446007984815, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
       insertIndex: -1
@@ -9860,9 +9739,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 950496373432915917, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
       insertIndex: -1
       addedObject: {fileID: 902496190}
-    - targetCorrespondingSourceObject: {fileID: 205577182930978958, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 398191595}
     - targetCorrespondingSourceObject: {fileID: 4976349028185740443, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1313227052}
@@ -9900,12 +9776,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1018202654047799838, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
       insertIndex: -1
       addedObject: {fileID: 419066549}
-    - targetCorrespondingSourceObject: {fileID: 689486112149115444, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 410034519}
-    - targetCorrespondingSourceObject: {fileID: 689486112149115444, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 410034518}
     - targetCorrespondingSourceObject: {fileID: 4382837045038271656, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
       insertIndex: -1
       addedObject: {fileID: 485313843}
