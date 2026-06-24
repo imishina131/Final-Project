@@ -111,7 +111,6 @@ public class CoalManager : MonoBehaviour, IInteractable, IPlayerControllable, IP
     private void Update()
     {
         m_totalPressure = Mathf.Clamp01(m_totalPressure - (m_decayRate * Time.deltaTime));
-        m_onPressureSent.Invoke(m_totalPressure);
         if (m_activePlayerController == null) return;
         m_timeLimit -= Time.deltaTime;
         if (m_timeLimit <= 0f)

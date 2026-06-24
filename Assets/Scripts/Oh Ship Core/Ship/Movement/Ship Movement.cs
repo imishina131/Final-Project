@@ -32,7 +32,7 @@ public class ShipMovement : MonoBehaviour
     private void Update()
     {
         m_enginePower -=  .01f* Time.deltaTime;
-        
+        m_enginePower = Mathf.Clamp(m_enginePower, 0, 1);
         bool isLowFuel = m_enginePower <= m_lowFuelThreshold;
         if (isLowFuel != m_wasLowFuel)
         {
