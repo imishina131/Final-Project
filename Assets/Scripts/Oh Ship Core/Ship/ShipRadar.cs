@@ -48,7 +48,7 @@ public class ShipRadar : MonoBehaviour
             return;
         }
         Debug.DrawRay(transform.position, direction * hit.distance, Color.green);
-        Vector2 offset = new(hit.point.x - transform.position.x, hit.point.z - transform.position.z);
+        Vector2 offset = new(-(hit.point.x - transform.position.x), -(hit.point.z - transform.position.z));
         Vector2 uv = (offset / m_maxDistance) * 0.5f + Vector2.one * 0.5f;
         m_radarShader.SetVector(s_uv, uv);
         m_radarShader.Dispatch(m_writeKernel, 1, 1, 1);

@@ -9107,6 +9107,10 @@ PrefabInstance:
       propertyPath: OutputAudioMixerGroup
       value: 
       objectReference: {fileID: -5647781477826042681, guid: 141b63e12c5fde24f8b360b61ba9fdb9, type: 2}
+    - target: {fileID: 3337180211756329408, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
+      propertyPath: m_decayRate
+      value: 0.95
+      objectReference: {fileID: 0}
     - target: {fileID: 3511390657383237687, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
       propertyPath: m_buoyancyPoints.Array.data[0].LocalPosition.x
       value: 3.5121088

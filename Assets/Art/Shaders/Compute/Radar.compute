@@ -34,12 +34,12 @@ void WriteSweep(uint3 id : SV_DispatchThreadID)
 {
     uint width, height;
     _RadarTexture.GetDimensions(width, height);
-
     float2 uv = (float2)id.xy / float2(width, height) * 2.0 - 1.0;
-
-    float pixelAngle = atan2(uv.y, uv.x);
+    float pixelAngle = atan2(-uv.y, -uv.x);
     if (pixelAngle < 0) pixelAngle += 6.28318;
-    float angleDiff = abs(pixelAngle - _SweepAngle);
+    float sweepAngle = _SweepAngle;
+    if (sweepAngle < 0) sweepAngle += 6.28318;
+    float angleDiff = abs(pixelAngle - sweepAngle);
     angleDiff = min(angleDiff, 6.28318 - angleDiff);
 
     float4 current = _RadarTexture[id.xy];
