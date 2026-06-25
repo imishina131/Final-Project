@@ -39,6 +39,7 @@ public class ShipHealth : MonoBehaviour, IDamageable
                 return newHole;
             });
         m_fillPercentage.Notify();
+        FindAnyObjectByType<Injector>().Inject(this);
     }
     void Update()
     {

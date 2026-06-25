@@ -72,6 +72,8 @@ public class WaterController : MonoBehaviour
         
         UpdateWaterFillChange(m_neutral);
         m_neutral.OnEnteredNeutral += OnPressureEqualized;
+        
+        FindAnyObjectByType<Injector>().Inject(this);
     }
 
     void UpdateWaterFillChange(IFillState fillChange)
