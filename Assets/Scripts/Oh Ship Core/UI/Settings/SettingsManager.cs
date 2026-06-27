@@ -8,6 +8,9 @@ public static class SettingsManager
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSplashScreen)]
     public static void Initialize()
     {
+        if(!PlayerPrefs.HasKey(MusicVolumeKey)) PlayerPrefs.SetFloat(MusicVolumeKey, 1f);
+        if(!PlayerPrefs.HasKey(SFXVolumeKey)) PlayerPrefs.SetFloat(SFXVolumeKey, 1f);
+        PlayerPrefs.Save();
         
     }
 }

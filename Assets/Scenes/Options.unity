@@ -165,6 +165,7 @@ GameObject:
   m_Component:
   - component: {fileID: 91782064}
   - component: {fileID: 91782065}
+  - component: {fileID: 91782066}
   m_Layer: 5
   m_Name: SFX Volume Slider
   m_TagString: Untagged
@@ -245,6 +246,21 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &91782066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91782063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df9a0b112956516499663b3014ee2bd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: OhShip.Core.UI::PersistentSliderDataHandler
+  m_key: SFX Volume
+  m_defaultValue: 1
+  m_slider: {fileID: 91782065}
 --- !u!1 &139574634
 GameObject:
   m_ObjectHideFlags: 0
@@ -3204,6 +3220,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1220069237}
   - component: {fileID: 1220069238}
+  - component: {fileID: 1220069239}
   m_Layer: 5
   m_Name: Music Volume Slider
   m_TagString: Untagged
@@ -3284,6 +3301,21 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1220069239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1220069236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df9a0b112956516499663b3014ee2bd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: OhShip.Core.UI::PersistentSliderDataHandler
+  m_key: Music Volume
+  m_defaultValue: 1
+  m_slider: {fileID: 1220069238}
 --- !u!1 &1225229076
 GameObject:
   m_ObjectHideFlags: 0
@@ -4076,37 +4108,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1448294698}
   m_CullTransparentMesh: 1
---- !u!1 &1482532883
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1482532886}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1482532886
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1482532883}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 988.2023, y: 530.2559, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1501014970
 GameObject:
   m_ObjectHideFlags: 0
@@ -4117,8 +4118,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1501014971}
   - component: {fileID: 1501014972}
+  - component: {fileID: 1501014973}
   m_Layer: 5
-  m_Name: SFX Volume Slider
+  m_Name: Sensitivity Volume Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4197,6 +4199,21 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1501014973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501014970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df9a0b112956516499663b3014ee2bd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: OhShip.Core.UI::PersistentSliderDataHandler
+  m_key: Sensitivity
+  m_defaultValue: 0.5
+  m_slider: {fileID: 1501014972}
 --- !u!1 &1526487880
 GameObject:
   m_ObjectHideFlags: 0
@@ -6395,6 +6412,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5849cbee96bf6fe4d9a0f90b89e329e0, type: 3}
+--- !u!1001 &3148229104439408285
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 200780482652504787, guid: a5c31eddcc59f2d4d891a8cc19b44a8c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 200780482652504787, guid: a5c31eddcc59f2d4d891a8cc19b44a8c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 200780482652504787, guid: a5c31eddcc59f2d4d891a8cc19b44a8c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 200780482652504787, guid: a5c31eddcc59f2d4d891a8cc19b44a8c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 200780482652504787, guid: a5c31eddcc59f2d4d891a8cc19b44a8c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 200780482652504787, guid: a5c31eddcc59f2d4d891a8cc19b44a8c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 200780482652504787, guid: a5c31eddcc59f2d4d891a8cc19b44a8c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 200780482652504787, guid: a5c31eddcc59f2d4d891a8cc19b44a8c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 200780482652504787, guid: a5c31eddcc59f2d4d891a8cc19b44a8c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 200780482652504787, guid: a5c31eddcc59f2d4d891a8cc19b44a8c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048063224822213059, guid: a5c31eddcc59f2d4d891a8cc19b44a8c, type: 3}
+      propertyPath: m_Name
+      value: Data Storage
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a5c31eddcc59f2d4d891a8cc19b44a8c, type: 3}
 --- !u!1001 &5395660194101083375
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6465,4 +6539,4 @@ SceneRoots:
   - {fileID: 1156970883775613320}
   - {fileID: 5395660194101083375}
   - {fileID: 1870400572374149500}
-  - {fileID: 1482532886}
+  - {fileID: 3148229104439408285}
