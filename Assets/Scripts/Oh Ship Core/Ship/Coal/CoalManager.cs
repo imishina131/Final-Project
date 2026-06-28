@@ -1,4 +1,5 @@
 using System;
+using MatrixUtils.Extensions;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.Events;
@@ -7,6 +8,7 @@ using Random = UnityEngine.Random;
 
 public class CoalManager : MonoBehaviour, IInteractable, IPlayerControllable, IPromptProvider
 {
+    [SerializeField] ProcedurallyAnimatedElement m_gauge;
     [SerializeField] private CinemachineCamera _coalCamera;
     [SerializeField] private string _widgetForPrompt = "interact";
     [SerializeField] private SO_CoalData _coalData;
@@ -117,7 +119,8 @@ public class CoalManager : MonoBehaviour, IInteractable, IPlayerControllable, IP
         {
             m_currentInteractionSession.End();
         }
-        
+        Debug.Log(m_totalPressure);
+        m_gauge.Transform.localRotation = Quaternion.Euler(0, 0, m_gauge.GetNextAngle(m_totalPressure, m_gauge.Transform.localRotation.eulerAngles.z));
     }
 
     public void OnControlReleased()
@@ -159,7 +162,7 @@ public class CoalManager : MonoBehaviour, IInteractable, IPlayerControllable, IP
 
     public PromptData GetPromptData()
     {
-        return new PromptData {AssociatedWidget = _widgetForPrompt };
+        return new() {AssociatedWidget = _widgetForPrompt };
     }
 
     public Vector3 GetWidgetWorldPosition()
@@ -167,6 +170,18 @@ public class CoalManager : MonoBehaviour, IInteractable, IPlayerControllable, IP
         Transform positionValue = _promptVisualLocation != null ? _promptVisualLocation : transform;
         return positionValue.position;
     }
+    [Serializable]
+    class ProcedurallyAnimatedElement
+    {
+        public Transform Transform;
+        public float MinAngle;
+        public float MaxAngle;
+        float m_velocity;
+
+        public float GetNextAngle(float normalizedDesiredAngle, float currentAngle)
+        {
+            float desiredWheelAngle = Mathf.Lerp(MinAngle, MaxAngle, normalizedDesiredAngle);
+            return Mathf.SmoothDampAngle(currentAngle, desiredWheelAngle, ref m_velocity, 0.1f);
+        }
+    }
 }
-
-
