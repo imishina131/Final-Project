@@ -1,7 +1,8 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
-[System.Serializable]
-public class HolePositionInfo
+[Serializable]
+public struct HolePositionInfo
 {
     public Transform HolePosition;
     public Transform PlatePosition;

@@ -16,10 +16,10 @@ public class ShipHealth : MonoBehaviour, IDamageable
     [Header("Required References")]
     [SerializeField, RequiredField] ShipHole m_holePrefab;
     [SerializeField, RequiredField] RepairPlate m_platePrefab;
-    [SerializeField, RequiredField] CinemachineImpulseSource m_impulseSource;
+    [SerializeField] CinemachineImpulseSource m_impulseSource;
     [SerializeField, RequiredField] WaterFillController m_waterFillController;
     [Header("Settings")]
-    [SerializeField] List<HolePositionInfo> m_holePositions;
+    [SerializeField, NoSaveDuringPlay] List<HolePositionInfo> m_holePositions;
     [SerializeField] Observer<float> m_fillPercentage = new(0);
     [SerializeField] float m_invulnerabilityTime = 3;
     [SerializeField] SoundData[] m_damageSounds;
