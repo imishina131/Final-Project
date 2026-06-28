@@ -91,7 +91,7 @@ public class ShipHealth : MonoBehaviour, IDamageable
                 selectedHole.gameObject.SetActive(false);
                 RepairPlate newPlate = m_plates.Get();
                 newPlate.gameObject.SetActive(true);
-                newPlate.Initialize(positionInfo.PlatePosition.position, positionInfo.PlatePosition.rotation, () =>
+                newPlate.Initialize(positionInfo.PlatePosition, () =>
                 {
                     m_plates.Release(newPlate);
                     newPlate.gameObject.SetActive(false);

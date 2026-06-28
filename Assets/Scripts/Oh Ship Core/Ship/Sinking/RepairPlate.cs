@@ -11,11 +11,12 @@ public class RepairPlate : MonoBehaviour
     {
         m_rigidbody = GetComponent<Rigidbody>();
     }
-    public void Initialize(Vector3 position, Quaternion rotation, Action onDespawn)
+    public void Initialize(Transform parent, Action onDespawn)
     {
         m_rigidbody.isKinematic = true;
-        m_rigidbody.position = position;
-        m_rigidbody.rotation = rotation;
+        transform.parent = parent;
+        transform.localPosition = Vector3.zero;
+        transform.localRotation = Quaternion.identity;
         m_onDespawn = onDespawn;
     }
 
