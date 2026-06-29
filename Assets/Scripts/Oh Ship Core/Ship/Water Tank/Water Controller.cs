@@ -30,6 +30,7 @@ public class WaterController : MonoBehaviour
     [SerializeField] UnityEvent OnOverPressureThresholdReached;
     [SerializeField] UnityEvent OnOverPressureMaximumReached;
     [SerializeField] UnityEvent OnUnderPressureFailure;
+    [SerializeField] private UnityEvent<float> OnWaterFillUpdate =  new UnityEvent<float>();
 
     [Header("Sounds")]
     [SerializeField] SoundData m_overPressureThresholdReached;
@@ -57,6 +58,7 @@ public class WaterController : MonoBehaviour
     void Update()
     {
         UpdateCurrentFill(CurrentFill + m_activeFillDirection * m_playerFillChangeRate * Time.deltaTime);
+        OnWaterFillUpdate.Invoke(CurrentFill);
         m_currentDrift.OnEventUpdate(CurrentFill);
     }
 

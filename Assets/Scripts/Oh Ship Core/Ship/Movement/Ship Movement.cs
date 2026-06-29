@@ -22,6 +22,9 @@ public class ShipMovement : MonoBehaviour
     public void SetRudder(float rudder) => Rudder.Value = Mathf.Clamp(rudder, -1 , 1);
     public void SetThrottle(float throttle) => Throttle.Value = Mathf.Clamp(throttle, -1, 1);
     public void SetEnginePower(float power) => m_enginePower += power = Mathf.Clamp01(power);
+    
+    [SerializeField] UnityEvent<float> OnFuelChanged =  new UnityEvent<float>();
+    
     void Start()
     {
         Throttle.Notify();
@@ -33,6 +36,7 @@ public class ShipMovement : MonoBehaviour
     {
         m_enginePower -=  .01f* Time.deltaTime;
         m_enginePower = Mathf.Clamp(m_enginePower, 0, 1);
+        OnFuelChanged.Invoke(m_enginePower);
         bool isLowFuel = m_enginePower <= m_lowFuelThreshold;
         if (isLowFuel != m_wasLowFuel)
         {
