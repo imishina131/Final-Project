@@ -83,13 +83,14 @@ Material:
     m_Floats:
     - _ADDITIONAL_LIGHTS: 1
     - _ADDITIONAL_LIGHT_SHADOWS: 1
+    - _Animation_Speed: 0.02
     - _CLUSTER_LIGHT_LOOP: 1
-    - _Fill: -0.18
+    - _Fill: 0
     - _LIGHTMAP_SHADOW_MIXING: 1
     - _LIGHTPROBE_SH: 0
     - _MAIN_LIGHT_SHADOWS: 1
     - _MAIN_LIGHT_SHADOWS_CASCADE: 1
-    - _Normal_Strength: 0.5
+    - _Normal_Strength: 0.14
     - _Posterization: 12
     - _Posterization_Sharpness: 0.5
     - _QueueControl: 0
@@ -102,6 +103,7 @@ Material:
     - _SHADOW_MASKS: 1
     - _Smoothness: 0.9
     - _Test: 0
+    - _Tiling: 0.62
     - _Transition_Sharpness: 0.78
     - _X_Wobble: 0
     - _Z_Wobble: 0
