@@ -107,11 +107,14 @@ public class PlayerInteractor : MonoBehaviour, IInteractor
             usableItem.Use();
             if (m_playerState.CheckInteractionTag(InteractionTag.HoldingFish))
             {
+                audioSource.clip = chewing;
                 audioSource.PlayOneShot(chewing);
                 m_playerState.RemoveInteractionTag(InteractionTag.HoldingFish);
             }
             else if(m_playerState.CheckInteractionTag(InteractionTag.HoldingBottleWithWater))
             {
+                Debug.Log("plays");
+                audioSource.clip = drinking;
                 audioSource.PlayOneShot(drinking);
                 m_playerState.RemoveInteractionTag(InteractionTag.HoldingBottleWithWater);
             }

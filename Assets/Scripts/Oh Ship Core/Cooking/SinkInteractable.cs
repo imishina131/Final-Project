@@ -35,6 +35,8 @@ public class SinkInteractable : MonoBehaviour, IInteractable, IPromptProvider
 
     [Header("Sound")]
     [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip drink;
+    [SerializeField] private AudioClip waterSound;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -104,6 +106,9 @@ public class SinkInteractable : MonoBehaviour, IInteractable, IPromptProvider
         }
         else if (!_playerInteractionState.CheckInteractionTag(InteractionTag.HoldingBottle))
         {
+            _playerInteractionState.AddInteractionTag(InteractionTag.HoldingBottleWithWater);
+            audioSource.clip = drink;
+            audioSource.PlayOneShot(drink);
             DrinkWater(amountOfWater);
             bottleInSink.SetActive(false);
             bottleBack.SetActive(true);
@@ -133,6 +138,7 @@ public class SinkInteractable : MonoBehaviour, IInteractable, IPromptProvider
 
     void DrinkWater(float toDrink)
     {
+        audioSource.clip = waterSound;
         thirstManager.Thirst.Value += toDrink;
         amountOfWater = 0f;
     }
