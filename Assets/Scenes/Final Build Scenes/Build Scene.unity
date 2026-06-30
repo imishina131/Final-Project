@@ -3925,7 +3925,7 @@ AudioSource:
   m_GameObject: {fileID: 554760755}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -1281871082670242057, guid: 141b63e12c5fde24f8b360b61ba9fdb9, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
@@ -11321,6 +11321,14 @@ PrefabInstance:
       propertyPath: m_fillPercentage.m_onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 6761218904793655488}
+    - target: {fileID: 217558331183837081, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
+      propertyPath: cookSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 5705fd75f1ae75c4f8ae6195bbc1210d, type: 3}
+    - target: {fileID: 217558331183837081, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
+      propertyPath: dropCrabSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 68363452366e6424281fbb1663fe6fe5, type: 3}
     - target: {fileID: 458687639193111246, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.76
@@ -11401,6 +11409,14 @@ PrefabInstance:
       propertyPath: OnFuelLevelUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 571093363842849361, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
+      propertyPath: cookSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 5705fd75f1ae75c4f8ae6195bbc1210d, type: 3}
+    - target: {fileID: 571093363842849361, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
+      propertyPath: dropCrabSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 68363452366e6424281fbb1663fe6fe5, type: 3}
     - target: {fileID: 571093363842849361, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
       propertyPath: cookingLocation
       value: 
@@ -11545,6 +11561,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 2.72
       objectReference: {fileID: 0}
+    - target: {fileID: 4903584123746483576, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
+      propertyPath: cookSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 440fa44a1c893e44584fc6b41e65edba, type: 3}
     - target: {fileID: 4903887577138133999, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
       propertyPath: m_Size.y
       value: 0.809541
@@ -11573,6 +11593,10 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: -0.53730476
       objectReference: {fileID: 0}
+    - target: {fileID: 5755605183121602449, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
+      propertyPath: cookSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 440fa44a1c893e44584fc6b41e65edba, type: 3}
     - target: {fileID: 6209415758916147482, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
       propertyPath: 'm_gramophoneTracks.Array.data[0]'
       value: 
@@ -13613,10 +13637,10 @@ AudioSource:
   m_GameObject: {fileID: 2144755892}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 2106480059093569217, guid: 141b63e12c5fde24f8b360b61ba9fdb9, type: 2}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_Resource: {fileID: 8300000, guid: 1370aa16b2dc8164a8eae365e9c96685, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
