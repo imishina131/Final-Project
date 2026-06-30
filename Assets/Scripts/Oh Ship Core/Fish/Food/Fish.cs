@@ -13,6 +13,7 @@ public class Fish : FoodClass
     private void Start()
     {
         m_material = GetComponent<MeshRenderer>().material;
+        Reset();
     }
 
     public override void UpdateCookedAmount(float incomingAmount)
@@ -24,6 +25,16 @@ public class Fish : FoodClass
 
         if (newState == m_currentCookState) return;
         m_currentCookState = newState;
+    }
+
+    public override void Reset()
+    {
+        if (m_currentCookState == CookState.Raw)
+        {
+            m_material.SetFloat("_Cooked_Amount", 0);
+            m_cookedAmount = 0;
+            m_currentCookState = CookState.Raw;
+        }
     }
     
     public override float Eat()

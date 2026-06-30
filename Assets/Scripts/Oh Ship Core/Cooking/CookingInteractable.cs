@@ -17,6 +17,16 @@ public class CookingInteractable : MonoBehaviour, IInteractable, IPromptProvider
     private FoodClass currentFood;
     private Fish fish;
 
+    [Header("Sound")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip dropCrabSound;
+    [SerializeField] private AudioClip cookSound;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     public void Update()
     {
         Cook();
@@ -77,11 +87,20 @@ public class CookingInteractable : MonoBehaviour, IInteractable, IPromptProvider
     { 
         _foodClassItem.transform.position = cookingLocation.position;
         _foodClassItem.transform.SetParent(cookingLocation);
+        if(_foodClassItem.CookingProcess == CookingProcess.InPot)
+        {
+            audioSource.PlayOneShot(dropCrabSound);
+            Invoke("PlaySound", 1.5f);
+        }
+        else if (_foodClassItem.CookingProcess == CookingProcess.OnGrill)
+        {
+            PlaySound();
+        }
     }
 
     private void Cook()
     {
-        if(_foodClassItem == null)
+        if(_foodClassItem == null || cookingLocation.childCount <= 0        )
         {
             return;
         }
@@ -95,10 +114,17 @@ public class CookingInteractable : MonoBehaviour, IInteractable, IPromptProvider
 
     private void MoveObjetToHand()
     {
+        audioSource.Stop();
         FoodClass cookingItem = cookingLocation.GetComponentInChildren<FoodClass>();
         cookingItem.transform.position = _playerControllable.GetAssociatedGameObject().GetComponentInChildren<HeldObjectLocation>().transform.position;
         cookingItem.transform.SetParent(_playerControllable.GetAssociatedGameObject().GetComponentInChildren<HeldObjectLocation>().transform);
         cookingItem.InitializeHungerAndThirst(_playerControllable.GetAssociatedGameObject().GetComponentInChildren<HungerAndThirst>());
+    }
+
+    private void PlaySound()
+    {
+        audioSource.clip = cookSound;
+        audioSource.Play();
     }
     
 }

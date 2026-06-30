@@ -16,6 +16,7 @@ public abstract class FoodClass : MonoBehaviour, IUsableItem
  public void InitializeHungerAndThirst(HungerAndThirst hungerAndThirst)
  {
   m_HungerAndThirst = hungerAndThirst;
+    //Reset();
  }
 
  public void Use()
@@ -32,6 +33,8 @@ public float GetCookingSpeed()
 }
 
 public virtual void UpdateCookedAmount(float amount) { }
+
+public virtual void Reset() { }
 
 public abstract float Eat();
 

@@ -32,10 +32,14 @@ public class SinkInteractable : MonoBehaviour, IInteractable, IPromptProvider
     [SerializeField] private GameObject bottleToSpawn;
     [SerializeField] private GameObject bottleInSink;
     [SerializeField] private GameObject bottleBack;
+
+    [Header("Sound")]
+    [SerializeField] private AudioSource audioSource;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -53,6 +57,7 @@ public class SinkInteractable : MonoBehaviour, IInteractable, IPromptProvider
             if(!animSink.GetBool("waterRunning"))
             {
                 animSink.SetBool("waterRunning", true);
+                audioSource.Play();
             }
             amountOfWater = amountOfWater += 0.1f * Time.deltaTime;
             if (amountOfWater >= 1f)
@@ -62,6 +67,7 @@ public class SinkInteractable : MonoBehaviour, IInteractable, IPromptProvider
                 canInteract = false;
                 fillingUp = false;
                 animSink.SetBool("waterRunning", false);
+                audioSource.Stop();
                 filledUp = true;
             }
         }
@@ -104,6 +110,7 @@ public class SinkInteractable : MonoBehaviour, IInteractable, IPromptProvider
             filledUp = false;
             fillingUp = false;
             animSink.SetBool("waterRunning", false);
+            audioSource.Stop();
             timer = 0f;
         }
 
