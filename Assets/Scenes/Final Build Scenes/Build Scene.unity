@@ -6385,7 +6385,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1312286734}
         m_TargetAssemblyTypeName: QuitButton, OhShip.Core
         m_MethodName: Quit
         m_Mode: 1
@@ -12146,6 +12146,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2351294461627966267, guid: 5849cbee96bf6fe4d9a0f90b89e329e0, type: 3}
   m_PrefabInstance: {fileID: 1312286732}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1312286734 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1052933575411933413, guid: 5849cbee96bf6fe4d9a0f90b89e329e0, type: 3}
+  m_PrefabInstance: {fileID: 1312286732}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a50dc788db301646937453c6f88db42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: OhShip.Core::QuitButton
 --- !u!1 &1313187236
 GameObject:
   m_ObjectHideFlags: 0
@@ -19972,10 +19983,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2130940326}
-        m_TargetAssemblyTypeName: SceneTransitionerProxy, OhShip.Core.UI
-        m_MethodName: TransitionToScene
-        m_Mode: 5
+      - m_Target: {fileID: 495906061}
+        m_TargetAssemblyTypeName: PauseMenu, OhShip.Core.UI
+        m_MethodName: Resume
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
