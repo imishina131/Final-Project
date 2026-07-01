@@ -106,22 +106,6 @@ MonoBehaviour:
     max: Infinity
     enumValues: []
     descendantCount: 0
-  - name: Trail Color Over Time
-    path: Trail Color Over Time
-    tooltip: 
-    space: -1
-    spaceable: 0
-    sheetType: m_Gradient
-    realType: Gradient
-    defaultValue:
-      m_Type:
-        m_SerializableType: UnityEngine.Gradient, UnityEngine.CoreModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"colorKeys":[{"color":{"r":0.9529411792755127,"g":0.7764706015586853,"b":0.35686275362968447,"a":1.0},"time":0.0},{"color":{"r":0.7764706015586853,"g":0.46666666865348818,"b":0.3176470696926117,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":1.0,"time":0.10000763088464737},{"alpha":0.800000011920929,"time":0.738002598285675},{"alpha":0.0,"time":1.0}],"gradientMode":0}'
-    min: -Infinity
-    max: Infinity
-    enumValues: []
-    descendantCount: 0
   - name: Primary Color Over Time
     path: Primary Color Over Time
     tooltip: 
@@ -150,6 +134,22 @@ MonoBehaviour:
         m_SerializableType: UnityEngine.Gradient, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
       m_SerializableObject: '{"colorKeys":[{"color":{"r":0.9647058844566345,"g":0.6431372761726379,"b":0.19607843458652497,"a":1.0},"time":0.0},{"color":{"r":0.9647058844566345,"g":0.6666666865348816,"b":0.45098039507865908,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":1.0,"time":0.04100099205970764},{"alpha":0.800000011920929,"time":0.5349965691566467},{"alpha":0.0,"time":1.0}],"gradientMode":0}'
+    min: -Infinity
+    max: Infinity
+    enumValues: []
+    descendantCount: 0
+  - name: Trail Color Over Time
+    path: Trail Color Over Time
+    tooltip: 
+    space: -1
+    spaceable: 0
+    sheetType: m_Gradient
+    realType: Gradient
+    defaultValue:
+      m_Type:
+        m_SerializableType: UnityEngine.Gradient, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      m_SerializableObject: '{"colorKeys":[{"color":{"r":0.9529411792755127,"g":0.7764706015586853,"b":0.35686275362968447,"a":1.0},"time":0.0},{"color":{"r":0.7764706015586853,"g":0.46666666865348818,"b":0.3176470696926117,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":1.0,"time":0.10000763088464737},{"alpha":0.800000011920929,"time":0.738002598285675},{"alpha":0.0,"time":1.0}],"gradientMode":0}'
     min: -Infinity
     max: Infinity
     enumValues: []
@@ -5154,7 +5154,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: 120, y: 841}
+  m_UIPosition: {x: 23, y: 842}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots: []
@@ -9052,7 +9052,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615216}
   m_ExposedName: Primary Color Over Time
   m_Exposed: 1
-  m_Order: 2
+  m_Order: 1
   m_Category: 
   m_Min:
     m_Type:
@@ -9133,7 +9133,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615218}
   m_ExposedName: Rocket Trail Color Over Time
   m_Exposed: 1
-  m_Order: 3
+  m_Order: 2
   m_Category: 
   m_Min:
     m_Type:
@@ -9214,7 +9214,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615226}
   m_ExposedName: Trail Color Over Time
   m_Exposed: 1
-  m_Order: 1
+  m_Order: 3
   m_Category: 
   m_Min:
     m_Type:
