@@ -45,11 +45,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Blur_Multiplier: 1
-    - _Blurriness: 0.06
+    - _Blur_Multiplier: 5
+    - _Blurriness: 0
     - _ColorMask: 15
     - _Cycles: 3
-    - _Samples_Per_Cycle: 3
+    - _Samples_Per_Cycle: 10
     - _Stencil: 0
     - _StencilComp: 8
     - _StencilOp: 0
