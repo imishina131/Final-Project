@@ -6,7 +6,6 @@ public class CuttingBoardInteractable : MonoBehaviour, IInteractable, IPromptPro
     InteractionSession m_currentInteractionSession;
     [SerializeField] private Transform _interactDisplayTransform;
     [SerializeField] private Transform storingLocation;
-    [SerializeField] private CookingProcess howIsCooked;
 
     private readonly string _widgetForPrompt = "interact";
     private IPlayerControllable _playerControllable;
@@ -20,7 +19,7 @@ public class CuttingBoardInteractable : MonoBehaviour, IInteractable, IPromptPro
 
     public void Update()
     {
-        
+
     }
     public InteractionSession BeginInteraction(IInteractor interactor)
     {
