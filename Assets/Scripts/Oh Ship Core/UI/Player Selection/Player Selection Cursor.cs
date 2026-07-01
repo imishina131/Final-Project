@@ -1,16 +1,26 @@
+using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.InputSystem.UI;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(RectTransform))]
 public class PlayerSelectionCursor : MonoBehaviour
 {
+    [SerializeField] private Sprite[] playerIcons;
     RectTransform m_cursorTransform;
     MultiplayerEventSystem m_eventSystem;
     RectTransform m_selectedDestination;
     GameObject m_lastSelected;
     Vector3 m_velocity;
-
-    void Awake() => m_cursorTransform = GetComponent<RectTransform>();
+    private static int playerCount = 0;
+    
+    public int PlayerCount {get { return playerCount; } set { playerCount = value; } }
+    void Awake()
+    { 
+        playerCount++;
+        m_cursorTransform = GetComponent<RectTransform>();
+        GetComponent<Image>().sprite = playerIcons[playerCount -1];
+    }
     public void Initialize(MultiplayerEventSystem eventSystem) => m_eventSystem = eventSystem;
     void Update()
     {

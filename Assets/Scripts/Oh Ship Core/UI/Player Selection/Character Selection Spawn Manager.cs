@@ -4,7 +4,7 @@ using MatrixUtils.DependencyInjection;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.UI;
-
+using UnityEngine.SceneManagement;
 public class CharacterSelectionSpawnManager : MonoBehaviour
 {
     [Inject] IInjector m_injector;
@@ -46,6 +46,22 @@ public class CharacterSelectionSpawnManager : MonoBehaviour
         }
         result = null;
         return false;
+    }
+    
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+    
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Debug.Log("OnSceneLoaded");
+        m_playerSelectionCursorPrefab.PlayerCount = 0;
     }
 
 }
