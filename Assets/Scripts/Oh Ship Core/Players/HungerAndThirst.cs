@@ -18,6 +18,9 @@ public class HungerAndThirst: MonoBehaviour
     [SerializeField] private string shipTag;
      private PlayerInteractionState m_playerInteractionState;
      private PlayerInteractor m_playerInteractor;
+
+    private bool fromHunger = false;
+    private bool fromThirst = false;
     public bool IsPassedOut => m_isPassedOut;
     [SerializeField] private UnityEvent<bool> OnEnableMovement = new UnityEvent<bool>();
     void Start()
@@ -41,8 +44,8 @@ public class HungerAndThirst: MonoBehaviour
 
         Thirst.Value = Mathf.Clamp01(Thirst.Value - thirstLossRate * Time.deltaTime);
 
-        if (Hunger.Value <= 0 && !m_isPassedOut) PassOut();
-        if (Thirst.Value <= 0 && !m_isPassedOut) PassOut();
+        if (Hunger.Value <= 0 && !m_isPassedOut) PassOut(1);
+        if (Thirst.Value <= 0 && !m_isPassedOut) PassOut(2);
     }
     public void OnPlayerControllerConnected(IPlayerController controller)
     {
@@ -66,8 +69,16 @@ public class HungerAndThirst: MonoBehaviour
 
     //void UpdateHungerBar(float hunger) => m_manager.UpdateHunger(hunger);
 
-    public void PassOut()
+    public void PassOut(int cause)
     {
+        if(cause == 1)
+        {
+            fromHunger = true;
+        }
+        else if(cause == 2)
+        {
+            fromThirst = true;
+        }
         m_playerInteractor.EndActiveInteraction();
         numberOfPassedOutPlayers++;
         m_isPassedOut = true;
@@ -77,9 +88,18 @@ public class HungerAndThirst: MonoBehaviour
         m_passedOutEffect.Play();
     }
 
-    public void WakeUp()
+    public void WakeUp(float value)
     {
-        Hunger.Value = 1;
+        if(fromHunger)
+        {
+            Hunger.Value = value;
+            fromHunger = false;
+        }
+        else if (fromThirst)
+        {
+            Thirst.Value = value;
+            fromThirst = false;
+        }
         Debug.Log("Waking Up");
         numberOfPassedOutPlayers--;
         GetComponent<Rigidbody>().isKinematic = false;

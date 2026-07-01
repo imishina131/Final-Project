@@ -9,7 +9,8 @@ public class PassOutInteractable : MonoBehaviour, IInteractable, IPromptProvider
     private readonly string _widgetForPrompt = "interact";
     private IPlayerControllable _playerControllable;
     private IPlayerController _playerController;
-    
+    private PlayerInteractionState _playerInteractionState;
+
     private HungerAndThirst _hungerNThirst;
 
 
@@ -24,13 +25,25 @@ public class PassOutInteractable : MonoBehaviour, IInteractable, IPromptProvider
     {
         _playerControllable = GetComponent<PlayerControlRouter>();
         _playerController = _playerControllable.GetActivePlayerController();
-        
+        _playerInteractionState = _playerControllable.GetAssociatedGameObject().GetComponent<PlayerInteractionState>();
+
         if (_hungerNThirst.IsPassedOut)
-        {
+        {   
             Debug.Log("went through pass");
             m_currentInteractionSession = new InteractionSession(interactor, this);
             m_currentInteractionSession.OnEnded += () => _playerController.ChangeControlledEntity(_playerControllable);
-            _hungerNThirst.WakeUp();
+            if (_playerInteractionState.CheckInteractionTag(InteractionTag.HoldingCookedFish))
+            {
+                _hungerNThirst.WakeUp(1f);
+            }
+            else if (_playerInteractionState.CheckInteractionTag(InteractionTag.HoldingFish))
+            {
+                _hungerNThirst.WakeUp(0.5f);
+            }
+            else
+            {
+                _hungerNThirst.WakeUp(0.2f);
+            }
             return m_currentInteractionSession;
         }
 
