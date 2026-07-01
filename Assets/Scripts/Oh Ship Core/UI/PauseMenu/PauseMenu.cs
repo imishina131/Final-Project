@@ -1,52 +1,50 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering;
+using UnityEngine.Serialization;
 
 public class PauseMenu : MonoBehaviour
 {
-    [SerializeField] GameObject pauseMenuUI;
-    [SerializeField] InputActionReference togglePauseAction;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [FormerlySerializedAs("pauseMenuUI")] [SerializeField] GameObject m_pauseMenuUI;
+    [FormerlySerializedAs("togglePauseAction")] [SerializeField] InputActionReference m_togglePauseAction;
+    [FormerlySerializedAs("pauseMenuVolume")] [SerializeField] Volume m_pauseMenuVolume;
+    
     void Start()
     {
-        pauseMenuUI.SetActive(false);
+        m_pauseMenuUI.SetActive(false);
     }
 
     void OnEnable()
     {
-        if (togglePauseAction != null)
-        {
-            togglePauseAction.action.Enable();
-            togglePauseAction.action.performed += OnToggleMenu;
-        }
+        if (m_togglePauseAction == null) return;
+        m_togglePauseAction.action.Enable();
+        m_togglePauseAction.action.performed += OnToggleMenu;
     }
 
     void OnDisable()
     {
-        if (togglePauseAction != null)
-        {
-            togglePauseAction.action.performed -= OnToggleMenu;
-            togglePauseAction.action.Disable();
-        }
+        if (m_togglePauseAction == null) return;
+        m_togglePauseAction.action.performed -= OnToggleMenu;
+        m_togglePauseAction.action.Disable();
     }
 
     public void Resume()
     {
-        if(!pauseMenuUI.activeSelf) return;
-        pauseMenuUI.SetActive(false);
+        m_pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
+        m_pauseMenuVolume.weight = 0;
+    }
+
+    public void Pause()
+    {
+        m_pauseMenuUI.SetActive(true);
+        Time.timeScale = 0f;
+        m_pauseMenuVolume.weight = 1;
     }
     
     void OnToggleMenu(InputAction.CallbackContext context)
     {
-        if(!pauseMenuUI.activeSelf)
-        {
-            pauseMenuUI.SetActive(true);
-            Time.timeScale = 0f;
-        }
-        else
-        {
-            pauseMenuUI.SetActive(false);
-            Time.timeScale = 1f;
-        }
+        if(!m_pauseMenuUI.activeSelf) Pause();
+        else Resume();
     }
 }

@@ -4207,6 +4207,7 @@ RectTransform:
   m_Children:
   - {fileID: 1946499102}
   - {fileID: 1312286733}
+  - {fileID: 2009303909}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -4226,8 +4227,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fae0313e7a2aa740b2f61ccc2f099c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: OhShip.Core.UI::PauseMenu
-  pauseMenuUI: {fileID: 1946499101}
-  togglePauseAction: {fileID: -5058815930132469946, guid: 0f2aaf25f341e1843bac8e2259f7d29a, type: 3}
+  m_pauseMenuUI: {fileID: 1946499101}
+  m_togglePauseAction: {fileID: -5058815930132469946, guid: 0f2aaf25f341e1843bac8e2259f7d29a, type: 3}
+  m_pauseMenuVolume: {fileID: 2009303908}
 --- !u!21 &524549348
 Material:
   serializedVersion: 8
@@ -14947,7 +14949,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 2100000, guid: 0ef0b7cc9ba4b324398e33c058174a16, type: 2}
+  m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0.4392157}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -15300,6 +15302,55 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5076798556035486163, guid: 8849e9fbbc3c8f445823692a4bea6a55, type: 3}
+--- !u!1 &2009303907
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2009303909}
+  - component: {fileID: 2009303908}
+  m_Layer: 0
+  m_Name: Pause Post Processing
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2009303908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009303907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Core.Runtime::UnityEngine.Rendering.Volume
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 0
+  sharedProfile: {fileID: 11400000, guid: f325e85e8f75de94bae20ae2dd74eec2, type: 2}
+--- !u!4 &2009303909
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009303907}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -959.99994, y: -511.75702, z: 0}
+  m_LocalScale: {x: 1.0412147, y: 1.0412147, z: 1.0412147}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 495906060}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2018138998 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3997702882394554890, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
@@ -20203,6 +20254,10 @@ PrefabInstance:
       propertyPath: m_onPressureSent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1614289359}
+    - target: {fileID: 7247899958279513550, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
+      propertyPath: priority
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7247899958279513550, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
       propertyPath: blendDistance
       value: 0.1
