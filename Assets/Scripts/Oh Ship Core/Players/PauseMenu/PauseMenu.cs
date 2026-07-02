@@ -13,20 +13,46 @@ public class PauseMenu : MonoBehaviour
     void Start()
     {
         m_pauseMenuUI.SetActive(false);
+        foreach (PlayerInput playerInput in PlayerInput.all)
+            SubscribeToPlayer(playerInput);
     }
 
     void OnEnable()
     {
-        if (m_togglePauseAction == null) return;
-        m_togglePauseAction.action.Enable();
-        m_togglePauseAction.action.performed += OnToggleMenu;
+        Debug.Log($"PauseMenu OnEnable, PlayerInputManager: {PlayerInputManager.instance}, PlayerInput.all count: {PlayerInput.all.Count}");
+
+        if (PlayerInputManager.instance != null)
+            PlayerInputManager.instance.onPlayerJoined += OnPlayerJoined;
+        
     }
 
     void OnDisable()
     {
-        if (m_togglePauseAction == null) return;
-        m_togglePauseAction.action.performed -= OnToggleMenu;
-        m_togglePauseAction.action.Disable();
+        if (PlayerInputManager.instance != null)
+            PlayerInputManager.instance.onPlayerJoined -= OnPlayerJoined;
+        foreach (PlayerInput playerInput in PlayerInput.all)
+            UnsubscribeFromPlayer(playerInput);
+    }
+
+    void OnPlayerJoined(PlayerInput playerInput)
+    {
+        Debug.Log($"OnPlayerJoined: {playerInput.name}");
+        SubscribeToPlayer(playerInput);
+    }
+
+    void SubscribeToPlayer(PlayerInput playerInput)
+    {
+        InputAction pauseAction = playerInput.actions.FindAction("Pause");
+        if (pauseAction == null) return;
+        pauseAction.Enable();
+        pauseAction.performed += OnToggleMenu;
+    }
+
+    void UnsubscribeFromPlayer(PlayerInput playerInput)
+    {
+        InputAction pauseAction = playerInput.actions.FindAction("Pause");
+        if (pauseAction == null) return;
+        pauseAction.performed -= OnToggleMenu;
     }
 
     public void Resume()
@@ -35,9 +61,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         m_pauseMenuVolume.weight = 0;
         foreach (PlayerController controller in FindObjectsByType<PlayerController>(FindObjectsSortMode.None))
-        {
             controller.TryChangeInputActionMap("Player", out _);
-        }
     }
 
     public void Pause()
@@ -45,19 +69,17 @@ public class PauseMenu : MonoBehaviour
         m_pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         m_pauseMenuVolume.weight = 1;
-
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         foreach (PlayerController controller in FindObjectsOfType<PlayerController>())
-        {
             controller.TryChangeInputActionMap("UI", out _);
-            Debug.Log("Changed controller");
-        }
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(m_firstSelectedButton);
     }
-    
+
     void OnToggleMenu(InputAction.CallbackContext context)
     {
-        if(!m_pauseMenuUI.activeSelf) Pause();
+        if (!m_pauseMenuUI.activeSelf) Pause();
         else Resume();
     }
 }

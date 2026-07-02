@@ -22,7 +22,7 @@ public class SceneTransitionHandler : PersistentService<ISceneTransitioner>, ISc
         m_fadeCanvasGroup.blocksRaycasts = true;
         yield return m_fadeCanvasGroup.FadeToOpacity(1, duration);
 
-        if (sceneName == "GameOver")
+        if (sceneName == "GameOver" || sceneName == "CinematicScene")
         {
             foreach (PlayerController controller in FindObjectsByType<PlayerController>(FindObjectsSortMode.None))
             {
