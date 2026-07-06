@@ -111,13 +111,13 @@ public class PlayerInteractor : MonoBehaviour, IInteractor
         // TODO: This is awful for expansion and is the reason why the data should be encapsulated in the IHeldItem as Logan set up. You can also use the SoundManager to prevent the GC as it's fully pooled
         if (heldItem == null) return;
         heldItem.Use();
-        if (m_playerState.CheckInteractionTag(InteractionTag.HoldingFish) && !feeding)
+        if ((m_playerState.CheckInteractionTag(InteractionTag.HoldingFish) || m_playerState.CheckInteractionTag(InteractionTag.HoldingCookedFish) || m_playerState.CheckInteractionTag(InteractionTag.HoldingBurntFish)))
         {
             audioSource.clip = chewing;
             audioSource.PlayOneShot(chewing);
             m_playerState.RemoveInteractionTag(InteractionTag.HoldingFish);
         }
-        else if(m_playerState.CheckInteractionTag(InteractionTag.HoldingBottleWithWater) && !feeding)
+        else if(m_playerState.CheckInteractionTag(InteractionTag.HoldingBottleWithWater))
         {
             Debug.Log("plays");
             audioSource.clip = drinking;

@@ -39,32 +39,44 @@ public class PlayerMovement : MonoBehaviour
     public void OnMovementInputChanged(Vector2 input)
     {
         m_desiredMovement = input * m_moveSpeed;
-        // //Debug.Log("input: " + input);
-        // if(input == Vector2.zero)
-        // {
-        //     anim.SetBool("Forward", false);
-        //     anim.SetBool("Backward", false);
-        //     anim.SetBool("Right", false);
-        //     anim.SetBool("Left", false);
-        // }
-        //
-        // if(input.x < 0)
-        // {
-        //     anim.SetBool("Left", true);
-        // }
-        // else if(input.x > 0)
-        // {
-        //     anim.SetBool("Right", true);
-        // }
-        //
-        // if(input.y < 0)
-        // {
-        //     anim.SetBool("Backward", true);
-        // }
-        // else if (input.y > 0)
-        // {
-        //     anim.SetBool("Forward", true);
-        // }
+        Debug.Log("input: " + input);
+         if(input == Vector2.zero)
+         {
+             anim.SetBool("Forward", false);
+             anim.SetBool("Backward", false);
+             anim.SetBool("Right", false);
+             anim.SetBool("Left", false);
+         }
+        
+         if(input.x > 0.4f)
+         {
+            anim.SetBool("Right", true);
+            anim.SetBool("Forward", false);
+            anim.SetBool("Backward", false);
+            anim.SetBool("Left", false);
+        }
+         else if(input.x < -0.4f)
+         {
+            anim.SetBool("Left", true);
+            anim.SetBool("Forward", false);
+            anim.SetBool("Backward", false);
+            anim.SetBool("Right", false);
+        }
+        
+         if(input.y < 0)
+         {
+            anim.SetBool("Backward", true);
+            anim.SetBool("Forward", false);
+            anim.SetBool("Right", false);
+            anim.SetBool("Left", false);
+        }
+         else if (input.y > 0)
+         {
+            anim.SetBool("Forward", true);
+            anim.SetBool("Backward", false);
+            anim.SetBool("Right", false);
+            anim.SetBool("Left", false);
+        }
     }
 
     public void OnLookInputChanged(Vector2 input) => m_currentLookInput = input;
@@ -213,8 +225,8 @@ public class PlayerMovement : MonoBehaviour
 
             float currentX = Vector3.Dot(velocity, xAxis);
             float currentZ = Vector3.Dot(velocity, zAxis);
-            anim.SetFloat(s_xVelocityProperty, currentX);
-            anim.SetFloat(s_zVelocityProperty, currentZ);
+            //anim.SetFloat(s_xVelocityProperty, currentX);
+            //anim.SetFloat(s_zVelocityProperty, currentZ);
             if (m_disableMovement)
             {
                  newForward = Mathf.MoveTowards(currentX, 0, GetRate(currentX, 0));

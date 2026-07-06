@@ -26,11 +26,11 @@ public class HeldObjectHandler: MonoBehaviour
     }
     
     public bool HasSomethingInHand => transform.childCount > 0;
-    [FormerlySerializedAs("objectHoldConstraint"), RequiredField] public TwoBoneIKConstraint m_objectHoldConstraint;
+    //[FormerlySerializedAs("objectHoldConstraint"), RequiredField] public TwoBoneIKConstraint m_objectHoldConstraint;
     //TODO: This shouldn't be in update, but since there isn't any easy way to track when an object is picked up at this point. This is part of the reason why moving to the updated system I outlined above would be an improvement on top of allowing asynchronous transitions between holding animations and allowing for offsets
     void Update()
     {
-        m_objectHoldConstraint.weight = !HasSomethingInHand ? 0 : 1;
+        //m_objectHoldConstraint.weight = !HasSomethingInHand ? 0 : 1;
     }
     public void DestroyObjectsInHand()
     {
