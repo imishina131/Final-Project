@@ -19,34 +19,23 @@ public class BottleInteractable : MonoBehaviour, IInteractable, IPromptProvider
     
     public InteractionSession BeginInteraction(IInteractor interactor)
     {
-        _playerControllable = interactor.GetAssociatedGameObject().transform.parent.GetComponent<IPlayerControllable>();
-        _playerController = _playerControllable.GetActivePlayerController();
-        _playerInteractionState = _playerControllable.GetAssociatedGameObject().GetComponent<PlayerInteractionState>();
+        IPlayerControllable playerControllable = interactor.GetAssociatedGameObject().transform.parent.GetComponent<IPlayerControllable>();
+        PlayerInteractionState playerInteractionState = playerControllable.GetAssociatedGameObject().GetComponent<PlayerInteractionState>();
 
-        IPlayerControllable oldControllable = interactor.GetAssociatedGameObject().transform.parent.GetComponent<IPlayerControllable>();
-        IPlayerController controller = oldControllable.GetActivePlayerController();
-        _playerControllableForHoldingObject = oldControllable;
-        _playerController = controller;
-        _playerInteractionState = oldControllable.GetAssociatedGameObject().GetComponent<PlayerInteractionState>();
-
-        if (_playerInteractionState.CheckInteractionTag(InteractionTag.HoldingFish) || _playerInteractionState.CheckInteractionTag(InteractionTag.HoldingBottle) || _playerInteractionState.CheckInteractionTag(InteractionTag.HoldingCookedFish))
-        {
+        if (playerInteractionState.CheckInteractionTag(InteractionTag.HoldingFish) || 
+            playerInteractionState.CheckInteractionTag(InteractionTag.HoldingBottle) || 
+            playerInteractionState.CheckInteractionTag(InteractionTag.HoldingCookedFish))
             return null;
-        }
-        else
-        {
-            _playerInteractionState.AddInteractionTag(InteractionTag.HoldingBottle);
-            _holdingObjectTransform = _playerControllableForHoldingObject.GetAssociatedGameObject().GetComponentInChildren<HeldObjectHandler>().transform;
-            GameObject bottle = Instantiate(bottleToSpawn, _holdingObjectTransform.position, _holdingObjectTransform.rotation);
-            bottle.transform.SetParent(_holdingObjectTransform);
-            gameObject.SetActive(false);
-        }
+
+        playerInteractionState.AddInteractionTag(InteractionTag.HoldingBottle);
+        Transform holdingTransform = playerControllable.GetAssociatedGameObject().GetComponentInChildren<HeldObjectHandler>().transform;
+        GameObject bottle = Instantiate(bottleToSpawn, holdingTransform.position, holdingTransform.rotation);
+        bottle.transform.SetParent(holdingTransform);
+        gameObject.SetActive(false);
 
         m_currentInteractionSession = new InteractionSession(interactor, this);
         m_currentInteractionSession.End();
-
         return m_currentInteractionSession;
-
     }
 
     public PromptData GetPromptData()

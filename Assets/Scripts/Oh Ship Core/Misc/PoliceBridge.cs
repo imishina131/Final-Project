@@ -16,6 +16,7 @@ public class PoliceBridge : MonoBehaviour
     [SerializeField] private GameObject policeBoats;
     
     private AudioSource m_audioSource;
+    private bool passedBridge = false;
     
     
     void Start()
@@ -30,16 +31,17 @@ public class PoliceBridge : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag(playerShipTag))
+        if (other.CompareTag(playerShipTag) && !passedBridge)
         {
             StartCoroutine(PlayAudio());
+            passedBridge = true;
         }
        
     }
 
     public void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag(playerShipTag))
+        if (other.CompareTag(playerShipTag) && !policeBoats.activeSelf)
         {
             policeBoats.SetActive(true);
         }

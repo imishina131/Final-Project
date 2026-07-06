@@ -39,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
     public void OnMovementInputChanged(Vector2 input)
     {
         m_desiredMovement = input * m_moveSpeed;
-        Debug.Log("input: " + input);
+        //Debug.Log("input: " + input);
          if(input == Vector2.zero)
          {
              anim.SetBool("Forward", false);

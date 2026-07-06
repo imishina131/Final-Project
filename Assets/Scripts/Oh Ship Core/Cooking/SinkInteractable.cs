@@ -146,6 +146,7 @@ public class SinkInteractable : MonoBehaviour, IInteractable, IPromptProvider
         _thirstManager.Thirst.Value += toDrink;
         amountOfWater = 0f;
         _playerInteractionState.RemoveInteractionTag(InteractionTag.HoldingBottleWithWater);
+        Debug.Log("Removed HoldingBottleWithWater");
     }
 
     IEnumerator PlayerNotificationBlock()
