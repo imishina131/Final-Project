@@ -21,6 +21,7 @@ public class PoliceBoatManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(transform.position);
         _policeBoatPathingProgress += _speed / _spline.CalculateLength() * Time.deltaTime;
         transform.position = _spline.EvaluatePosition(_policeBoatPathingProgress);
         transform.forward = -(_spline.EvaluateTangent(_policeBoatPathingProgress));
@@ -31,7 +32,6 @@ public class PoliceBoatManager : MonoBehaviour
         if (other.CompareTag(_playerTag))
         {
             Debug.Log("Hit the player");
-            //SceneManager.LoadScene("GameOver");
             _transitionEvent?.Invoke();
         }
     }

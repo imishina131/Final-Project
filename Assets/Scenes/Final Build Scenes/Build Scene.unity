@@ -487,6 +487,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ba6fbc7c0f22d4187865da4d941327, type: 3}
   m_Name: 
   m_EditorClassIdentifier: OhShip.Core.Ship::CollisionDamager
+--- !u!1 &30875933 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1064362462823837752, guid: 021292b931dde9c49afabe95b4466375, type: 3}
+  m_PrefabInstance: {fileID: 82119641}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &33532787 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6090521906466634129, guid: a9ae24cad0d094247b5ca193360ed7fc, type: 3}
@@ -3279,6 +3284,11 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!1 &258883757 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2655401272801704331, guid: 021292b931dde9c49afabe95b4466375, type: 3}
+  m_PrefabInstance: {fileID: 82119641}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &266713706
 GameObject:
   m_ObjectHideFlags: 0
@@ -3761,6 +3771,11 @@ MeshCollider:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7980807229356924662, guid: a9ae24cad0d094247b5ca193360ed7fc, type: 3}
   m_PrefabInstance: {fileID: 2759527505578783048}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &376548703 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1080836222885275226, guid: 021292b931dde9c49afabe95b4466375, type: 3}
+  m_PrefabInstance: {fileID: 82119641}
   m_PrefabAsset: {fileID: 0}
 --- !u!21 &378687179
 Material:
@@ -5041,6 +5056,11 @@ Material:
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
+--- !u!1 &450330413 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6344415840948209644, guid: 021292b931dde9c49afabe95b4466375, type: 3}
+  m_PrefabInstance: {fileID: 82119641}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &450829653 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7231419186640213270, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
@@ -7451,6 +7471,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1421403850}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &627402133 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3793059509119242316, guid: 021292b931dde9c49afabe95b4466375, type: 3}
+  m_PrefabInstance: {fileID: 82119641}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &629839267
 GameObject:
   m_ObjectHideFlags: 0
@@ -16362,6 +16387,11 @@ Material:
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
+--- !u!1 &1492329148 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1794998472871267128, guid: 021292b931dde9c49afabe95b4466375, type: 3}
+  m_PrefabInstance: {fileID: 82119641}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1519176579 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4318138139759763297, guid: a9ae24cad0d094247b5ca193360ed7fc, type: 3}
@@ -17146,6 +17176,11 @@ Material:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 466682330031215921, guid: a9ae24cad0d094247b5ca193360ed7fc, type: 3}
   m_PrefabInstance: {fileID: 2759527505578783048}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1611935606 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7219352689515484190, guid: 021292b931dde9c49afabe95b4466375, type: 3}
+  m_PrefabInstance: {fileID: 82119641}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1614289349 stripped
 GameObject:
@@ -18514,6 +18549,14 @@ MonoBehaviour:
   preset: {fileID: 11400000, guid: 7b4941d7de2bd3843b785a74c40a7599, type: 2}
   timeOfDay: 18
   lights:
+  - {fileID: 1611935606}
+  - {fileID: 1492329148}
+  - {fileID: 627402133}
+  - {fileID: 450330413}
+  - {fileID: 30875933}
+  - {fileID: 258883757}
+  - {fileID: 1856648422}
+  - {fileID: 376548703}
   - {fileID: 18734734}
   - {fileID: 35344477}
   - {fileID: 37739386}
@@ -19448,6 +19491,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ba6fbc7c0f22d4187865da4d941327, type: 3}
   m_Name: 
   m_EditorClassIdentifier: OhShip.Core.Ship::CollisionDamager
+--- !u!1 &1856648422 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 186222397723465590, guid: 021292b931dde9c49afabe95b4466375, type: 3}
+  m_PrefabInstance: {fileID: 82119641}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1861005798
 GameObject:
   m_ObjectHideFlags: 0

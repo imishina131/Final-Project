@@ -81,23 +81,14 @@ public class SinkInteractable : MonoBehaviour, IInteractable, IPromptProvider
 
     public InteractionSession BeginInteraction(IInteractor interactor)
     {
-        //_playerControllable = interactor.GetAssociatedGameObject().transform.parent.GetComponent<IPlayerControllable>();
         IPlayerControllable oldControllable = interactor.GetAssociatedGameObject().transform.parent.GetComponent<IPlayerControllable>();
 
         _thirstManager = oldControllable.GetAssociatedGameObject().GetComponent<HungerAndThirst>();
 
-      //  IPlayerController controller = oldControllable.GetActivePlayerController();
-       // _playerControllableForHoldingObject = oldControllable;
-
-      //  _playerController = _playerControllable.GetActivePlayerController();
-
+     
         _playerInteractionState = oldControllable.GetAssociatedGameObject().GetComponent<PlayerInteractionState>();
 
-        /*if (_playerInteractionState.CheckInteractionTag(InteractionTag.HoldingFish))
-        {
-            return null;
-        }*/
-        
+       
         if(_playerInteractionState.CheckInteractionTag(InteractionTag.HoldingBottle))
         {
             _playerInteractionState.RemoveInteractionTag(InteractionTag.HoldingBottle);
@@ -110,26 +101,26 @@ public class SinkInteractable : MonoBehaviour, IInteractable, IPromptProvider
             timer = 0f;
             fillingUp = true;
         }
-       // else if (!_playerInteractionState.CheckInteractionTag(InteractionTag.HoldingBottle))
-       else if(filledUp || fillingUp) 
-       {
-           //Debug.Log("Doesn't contain bottle in hand?");
-           _playerInteractionState.AddInteractionTag(InteractionTag.HoldingBottleWithWater);
-           _audioSource.clip = drink;
-           _audioSource.PlayOneShot(drink);
-           DrinkWater(amountOfWater);
-           bottleInSink.SetActive(false);
-           bottleBack.SetActive(true);
-           filledUp = false;
-           fillingUp = false;
-           animSink.SetBool("waterRunning", false);
-           _audioSource.Stop();
-           timer = 0f;
-       }
-       else
-       {
-           StartCoroutine(PlayerNotificationBlock());
-       }
+       
+        else if(filledUp || fillingUp) 
+        {
+            //Debug.Log("Doesn't contain bottle in hand?");
+            _playerInteractionState.AddInteractionTag(InteractionTag.HoldingBottleWithWater);
+            _audioSource.clip = drink;
+            _audioSource.PlayOneShot(drink);
+            DrinkWater(amountOfWater);
+            bottleInSink.SetActive(false);
+            bottleBack.SetActive(true);
+            filledUp = false;
+            fillingUp = false;
+            animSink.SetBool("waterRunning", false);
+            _audioSource.Stop();
+            timer = 0f;
+        }
+        else
+        {
+            StartCoroutine(PlayerNotificationBlock());
+        }
 
         m_currentInteractionSession = new InteractionSession(interactor, this);
         m_currentInteractionSession.End();
