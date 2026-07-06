@@ -83,7 +83,7 @@ public class CookingInteractable : MonoBehaviour, IInteractable, IPromptProvider
                         _playerInteractionState.AddInteractionTag(InteractionTag.HoldingCookedFish);
                         break;
                 }
-                //_playerInteractionState.AddInteractionTag(InteractionTag.HoldingFish);
+                _playerInteractionState.AddInteractionTag(InteractionTag.HoldingFish);
                 m_currentInteractionSession.End();
                 return m_currentInteractionSession;
             }
@@ -156,7 +156,14 @@ public class CookingInteractable : MonoBehaviour, IInteractable, IPromptProvider
         FoodClass cookingItem = cookingLocation.GetComponentInChildren<FoodClass>();
         cookingItem.transform.position = _playerControllable.GetAssociatedGameObject().GetComponentInChildren<HeldObjectHandler>().transform.position;
         cookingItem.transform.SetParent(_playerControllable.GetAssociatedGameObject().GetComponentInChildren<HeldObjectHandler>().transform);
-        cookingItem.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+        if (_foodClassItem.GetComponentInChildren<Fish>())
+        {
+            cookingItem.transform.localRotation = Quaternion.Euler(44.1f, 142f, 77.5f);
+        }
+        else
+        {
+            cookingItem.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+        }
         cookingItem.InitializeHungerAndThirst(_playerControllable.GetAssociatedGameObject().GetComponentInChildren<HungerAndThirst>());
         if(cookedAmount > 0.3f)
         {

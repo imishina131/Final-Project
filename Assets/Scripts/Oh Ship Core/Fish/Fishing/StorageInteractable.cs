@@ -85,6 +85,23 @@ public class StorageInteractable : MonoBehaviour, IInteractable, IPromptProvider
         GameObject fish = Instantiate(foodData.Model, _holdingObjectTransform.position,_holdingObjectTransform.rotation);
         fish.transform.SetParent(_holdingObjectTransform);
         fish.GetComponent<FoodClass>().InitializeHungerAndThirst(hungerRef);
+        if (_playerControllable.GetAssociatedGameObject().GetComponentInChildren<Fish>() != null)
+        {
+            fishDisplayed -= 1;
+        }
+        else if (_playerControllable.GetAssociatedGameObject().GetComponentInChildren<Crab>() != null)
+        {
+            crabsDisplayed -= 1;
+        }
+
+        if (_holdingObjectTransform.GetComponentInChildren<Fish>())
+        {
+            fish.transform.localRotation = Quaternion.Euler(44.1f, 142f, 77.5f);
+        }
+        else
+        {
+            fish.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+        }
         _playerInteractionState.AddInteractionTag(InteractionTag.HoldingFish);
         _storedWaterLife.RemoveAt(0);
     }
@@ -111,12 +128,20 @@ public class StorageInteractable : MonoBehaviour, IInteractable, IPromptProvider
         
         switch (fishDisplayed)
         {
+            case (0):
+                fishes[0].SetActive(false);
+                fishes[1].SetActive(false);
+                fishes[2].SetActive(false);
+                break;
             case (1):
                 fishes[0].SetActive(true);
+                fishes[1].SetActive(false);
+                fishes[2].SetActive(false);
                 break;
             case (2):
                 fishes[0].SetActive(true);
                 fishes[1].SetActive(true);
+                fishes[2].SetActive(false);
                 break;
             case (3):
                 fishes[0].SetActive(true);
@@ -131,12 +156,20 @@ public class StorageInteractable : MonoBehaviour, IInteractable, IPromptProvider
     {
         switch (crabsDisplayed)
         {
+            case (0):
+                crabs[0].SetActive(false);
+                crabs[1].SetActive(false);
+                crabs[2].SetActive(false);
+                break;
             case (1):
                 crabs[0].SetActive(true);
+                crabs[1].SetActive(false);
+                crabs[2].SetActive(false);
                 break;
             case (2):
                 crabs[0].SetActive(true);
                 crabs[1].SetActive(true);
+                crabs[2].SetActive(false);
                 break;
             case (3):
                 crabs[0].SetActive(true);

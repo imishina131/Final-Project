@@ -858,6 +858,8 @@ GameObject:
   - component: {fileID: -552900803527440259}
   - component: {fileID: 4259362998317367922}
   - component: {fileID: 3216482273624154066}
+  - component: {fileID: 5985444400449217697}
+  - component: {fileID: 1103583150526182083}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -1278,6 +1280,31 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5985444400449217697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2051537735393309202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff44eb390ad833241bd1e98d5ee00b79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: OhShip.Core.Players::SceneTransitionerProxy
+  m_transitionDuration: 0.5
+--- !u!114 &1103583150526182083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2051537735393309202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 161ff0cb59279f042a995676bcdc6238, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: OhShip.Core.Players::Kill
 --- !u!1 &2170782253580155999
 GameObject:
   m_ObjectHideFlags: 0
@@ -2746,7 +2773,7 @@ MonoBehaviour:
   Lens:
     FieldOfView: 60.000004
     OrthographicSize: 5
-    NearClipPlane: 0.3
+    NearClipPlane: 0.1
     FarClipPlane: 1000
     Dutch: 0
     ModeOverride: 0

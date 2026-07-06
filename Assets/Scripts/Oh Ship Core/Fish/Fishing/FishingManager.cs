@@ -177,6 +177,10 @@ public class FishingManager : MonoBehaviour, IInteractable, IPlayerControllable,
         _holdingObjectTransform = _playerControllableForHoldingObject.GetAssociatedGameObject().GetComponentInChildren<HeldObjectHandler>().transform;
         GameObject caughtItem = Instantiate(usableThingsToCatch[index], _holdingObjectTransform.position,_holdingObjectTransform.rotation);
         caughtItem.transform.SetParent(_holdingObjectTransform);
+        if (caughtItem.GetComponentInChildren<Fish>())
+        {
+            caughtItem.transform.localRotation = Quaternion.Euler(44.1f, 142f, 77.5f);
+        }
         _playerInteractionState.AddInteractionTag(InteractionTag.HoldingFish);
        // _playerInteractionState.RemoveInteractionTag(InteractionTag.HoldingCookedFish);
 
