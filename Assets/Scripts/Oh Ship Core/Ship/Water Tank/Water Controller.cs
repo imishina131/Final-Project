@@ -82,7 +82,7 @@ public class WaterController : MonoBehaviour
 
     void StartDrift()
     {
-        float fillTarget = CurrentFill >= 0f ? m_maxFill : m_minFill;
+        float fillTarget = Random.value > 0.5f ? m_maxFill : m_minFill;
         DriftEvent drift = new(
             UpdateCurrentFill,
             fill => Mathf.Abs(fill - FillCenter) <= m_stableRange,
