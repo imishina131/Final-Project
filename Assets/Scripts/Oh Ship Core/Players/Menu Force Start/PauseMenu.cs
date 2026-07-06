@@ -14,6 +14,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private PauseMenuNavigation m_pauseMenuNavigation;
     private float m_lastMovement;
     private float  m_movementCoolDown = .15f;
+    private Dictionary<PlayerController, string> m_previousActionMaps = new();
     void Start()
     {
         m_pauseMenuUI.SetActive(false);
@@ -73,8 +74,10 @@ public class PauseMenu : MonoBehaviour
     {
         foreach (PlayerController controller in FindObjectsByType<PlayerController>(FindObjectsSortMode.None))
         {
-            controller.TryChangeInputActionMap("Player", out _);
+            string actionMapRef = m_previousActionMaps.TryGetValue(controller, out string map) ? map : "Player";
+            controller.TryChangeInputActionMap(actionMapRef, out _);
         }
+        m_previousActionMaps.Clear();
         Debug.Log("Resume game");
         m_pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
@@ -83,8 +86,14 @@ public class PauseMenu : MonoBehaviour
 
     public void Pause()
     {
+        m_previousActionMaps.Clear();
+        Debug.Log("Pause game");
         foreach (PlayerController controller in FindObjectsByType<PlayerController>(FindObjectsSortMode.None))
         {
+            if (controller.TryGetCurrentInputActionMap(out InputActionMap currentMap))
+            {
+                m_previousActionMaps[controller] = currentMap.name;
+            }
             controller.TryChangeInputActionMap("UI", out _);
         }
         m_pauseMenuUI.SetActive(true);
