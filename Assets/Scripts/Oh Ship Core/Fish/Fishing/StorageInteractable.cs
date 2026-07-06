@@ -18,6 +18,15 @@ public class StorageInteractable : MonoBehaviour, IInteractable, IPromptProvider
     private int fishDisplayed = 0;
     private int crabsDisplayed = 0;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource audioSFX;
+    [SerializeField] private AudioClip drop;
+    [SerializeField] private AudioClip pickup;
+
+    private void Awake()
+    {
+        audioSFX = GetComponent<AudioSource>();
+    }
     public InteractionSession BeginInteraction(IInteractor interactor)
     {
         _playerControllable = interactor.GetAssociatedGameObject().transform.parent.GetComponent<IPlayerControllable>();
@@ -57,6 +66,7 @@ public class StorageInteractable : MonoBehaviour, IInteractable, IPromptProvider
     public void AddFishToStorage(SO_CookableFoodData foodData)
     {
         _storedWaterLife.Add(foodData);
+        audioSFX.PlayOneShot(drop);
         if(_playerControllable.GetAssociatedGameObject().GetComponentInChildren<Fish>() != null)
         {
             fishDisplayed += 1;
@@ -69,6 +79,7 @@ public class StorageInteractable : MonoBehaviour, IInteractable, IPromptProvider
 
     public void RemoveFishFromStorage(SO_CookableFoodData foodData)
     {
+        audioSFX.PlayOneShot(pickup);
         HungerAndThirst hungerRef = _playerControllable.GetAssociatedGameObject().GetComponentInChildren<HungerAndThirst>();
         _holdingObjectTransform =  _playerControllable.GetAssociatedGameObject().GetComponentInChildren<HeldObjectHandler>().transform;
         GameObject fish = Instantiate(foodData.Model, _holdingObjectTransform.position,_holdingObjectTransform.rotation);
