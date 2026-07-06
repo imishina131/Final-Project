@@ -6,6 +6,8 @@ using UnityEngine.Serialization;
 public abstract class FoodClass : MonoBehaviour, IHeldItem
 {
     [FormerlySerializedAs("foodData")] [SerializeField] protected SO_CookableFoodData m_foodData;
+    
+    [SerializeField]  private AudioClip chewingSound;
     public SO_CookableFoodData FoodData => m_foodData;
 
     public abstract CookingProcess CookingProcess { get; }
@@ -13,16 +15,19 @@ public abstract class FoodClass : MonoBehaviour, IHeldItem
     public abstract CookState CookStateRef { get; }
 
     HungerAndThirst m_hungerAndThirst;
+    private AudioSource m_audioSource;
 
     public void InitializeHungerAndThirst(HungerAndThirst hungerAndThirst)
     {
         m_hungerAndThirst = hungerAndThirst;
+        m_audioSource = m_hungerAndThirst.GetComponentInChildren<AudioSource>();
         //Reset();
     }
 
     public void Use()
     {
         m_hungerAndThirst.Hunger.Value += Eat();
+        m_audioSource.PlayOneShot(chewingSound);
         Debug.Log(gameObject.name + " has been used!");
         Destroy(gameObject);
     }

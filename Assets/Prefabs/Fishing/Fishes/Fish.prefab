@@ -48,10 +48,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abeb095b2a536d44b8e103bb85285b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: OhShip.Core.Fish::Fish
-  foodData: {fileID: 11400000, guid: e4701296abe509c4ca23e7eb752bd2fc, type: 2}
+  m_foodData: {fileID: 11400000, guid: e4701296abe509c4ca23e7eb752bd2fc, type: 2}
+  chewingSound: {fileID: 8300000, guid: 3a8a7bb03a934bc4fb499670ba89f3b4, type: 3}
   cookedVFX: {fileID: 3026701635277317021}
-  playerInteractionState: {fileID: 0}
-  audioSource: {fileID: 0}
   cookingDone: {fileID: 8300000, guid: 4e1dfd5b056d2554aa697fb1f36e7418, type: 3}
 --- !u!33 &8439440430643992711
 MeshFilter:
