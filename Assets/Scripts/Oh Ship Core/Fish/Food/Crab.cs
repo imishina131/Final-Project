@@ -10,7 +10,7 @@ public class Crab : FoodClass
     private PlayerInteractionState playerInteractionState;
    
     [Header("Audio")]
-    [SerializeField] AudioSource audioSource;
+    private AudioSource audioSource;
     [SerializeField] private AudioClip cookingDone;
 
     public override CookState CookStateRef { get { return m_currentCookState; } }

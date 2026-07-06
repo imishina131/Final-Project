@@ -105,9 +105,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1abf88bc6b233e34498fcc0598ebb5b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: OhShip.Core.Fish::Crab
-  foodData: {fileID: 11400000, guid: f60c911ced2af0942b068f1e74cfa652, type: 2}
+  m_foodData: {fileID: 11400000, guid: f60c911ced2af0942b068f1e74cfa652, type: 2}
+  chewingSound: {fileID: 8300000, guid: 3a8a7bb03a934bc4fb499670ba89f3b4, type: 3}
   cookedVFX: {fileID: 8866636246663033740}
-  audioSource: {fileID: 0}
   cookingDone: {fileID: 8300000, guid: 4e1dfd5b056d2554aa697fb1f36e7418, type: 3}
 --- !u!82 &-9127337727254089188
 AudioSource:

@@ -7,13 +7,13 @@ public class Fish : FoodClass
     private Material m_material;
     private float m_cookedAmount;
     private CookState m_currentCookState = CookState.Raw;
-    [SerializeField] private ParticleSystem cookedVFX;
-    [SerializeField] private PlayerInteractionState playerInteractionState;
+    [SerializeField] private ParticleSystem cookedVFX; 
+    private PlayerInteractionState playerInteractionState;
     private HeldObjectHandler m_heldObjectHandler;
     Transform locationOfHeldObject;
 
     [Header("Audio")]
-    [SerializeField] AudioSource audioSource;
+     private AudioSource audioSource;
     [SerializeField] private AudioClip cookingDone;
 
     public override CookState CookStateRef => m_currentCookState;
