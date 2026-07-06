@@ -20053,6 +20053,22 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -16.290016
       objectReference: {fileID: 0}
+    - target: {fileID: 4163210127958193085, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5874412
+      objectReference: {fileID: 0}
+    - target: {fileID: 4163210127958193085, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4163210127958193085, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.8092669
+      objectReference: {fileID: 0}
+    - target: {fileID: 4163210127958193085, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 108.049
+      objectReference: {fileID: 0}
     - target: {fileID: 4565745278985841284, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.85
@@ -20360,7 +20376,7 @@ PrefabInstance:
     - target: {fileID: 8634883150542729029, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
       propertyPath: waterSound
       value: 
-      objectReference: {fileID: 8300000, guid: 1370aa16b2dc8164a8eae365e9c96685, type: 3}
+      objectReference: {fileID: 8300000, guid: 09f0e9b416732ba41a1cede1d73cba6a, type: 3}
     - target: {fileID: 8634883150542729029, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
       propertyPath: bottleInSink
       value: 
@@ -23754,7 +23770,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 1370aa16b2dc8164a8eae365e9c96685, type: 3}
+  m_Resource: {fileID: 8300000, guid: 09f0e9b416732ba41a1cede1d73cba6a, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
