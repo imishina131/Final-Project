@@ -7,8 +7,7 @@ public class Crab : FoodClass
     private float m_cookedAmount;
     private CookState m_currentCookState = CookState.Raw;
     [SerializeField] private ParticleSystem cookedVFX;
-    private PlayerInteractionState playerInteractionState;
-   
+    
     [Header("Audio")]
     private AudioSource audioSource;
     [SerializeField] private AudioClip cookingDone;
@@ -21,9 +20,6 @@ public class Crab : FoodClass
     {
         audioSource = GetComponent<AudioSource>();
         m_material = GetComponent<MeshRenderer>().material;
-       
-        playerInteractionState = GetComponentInParent<PlayerInteractionState>();
-       
         Debug.Log(playerInteractionState);
     }
 
@@ -59,10 +55,13 @@ public class Crab : FoodClass
 
     public override float Eat()
     {
+        Debug.Log($"Eating - playerInteractionState player: {playerInteractionState?.gameObject.name}");
+        Debug.Log($"HoldingCookedFish before remove: {playerInteractionState?.CheckInteractionTag(InteractionTag.HoldingCookedFish)}");
         playerInteractionState.RemoveInteractionTag(InteractionTag.HoldingFish);
         playerInteractionState.RemoveInteractionTag(InteractionTag.HoldingCookedFish);
         playerInteractionState.RemoveInteractionTag(InteractionTag.HoldingBurntFish);
- 
+        Debug.Log($"HoldingCookedFish after remove: {playerInteractionState?.CheckInteractionTag(InteractionTag.HoldingCookedFish)}");
+
         return m_foodData.HungerRestored(m_currentCookState);
     }
 

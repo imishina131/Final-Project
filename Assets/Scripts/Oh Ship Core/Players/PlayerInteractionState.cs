@@ -54,7 +54,7 @@ public class PlayerInteractionState : MonoBehaviour
 
     private void Update()
     {
-        /*if (m_interactionTags.Count > 0)
-            Debug.Log($"Active tags: {string.Join(", ", m_interactionTags)}");*/
+        if (m_interactionTags.Count > 0)
+            Debug.Log($"Active tags on: {gameObject.name} - {string.Join(", ", m_interactionTags)}");
     }
 }

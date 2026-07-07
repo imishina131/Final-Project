@@ -1,6 +1,7 @@
 using System;
 using MatrixUtils.DependencyInjection;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
 
 public abstract class FoodClass : MonoBehaviour, IHeldItem
@@ -16,11 +17,14 @@ public abstract class FoodClass : MonoBehaviour, IHeldItem
 
     HungerAndThirst m_hungerAndThirst;
     private AudioSource m_audioSource;
+    
+    protected PlayerInteractionState playerInteractionState;
 
     public void InitializeHungerAndThirst(HungerAndThirst hungerAndThirst)
     {
         m_hungerAndThirst = hungerAndThirst;
         m_audioSource = m_hungerAndThirst.GetComponentInChildren<AudioSource>();
+        playerInteractionState = m_hungerAndThirst.GetComponent<PlayerInteractionState>();
         //Reset();
     }
 

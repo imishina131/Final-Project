@@ -10,9 +10,9 @@ public class CuttingBoardInteractable : MonoBehaviour, IInteractable, IPromptPro
     [SerializeField] private Transform storingLocation;
 
     private readonly string _widgetForPrompt = "interact";
-    private IPlayerControllable _playerControllable;
-    private IPlayerController _playerController;
-    private PlayerInteractionState _playerInteractionState;
+   // private IPlayerControllable _playerControllable;
+  //  private IPlayerController _playerController;
+   // private PlayerInteractionState _playerInteractionState;
     private FoodClass _foodClassItem;
     private FoodClass currentFood;
     private Fish fish;
@@ -27,11 +27,11 @@ public class CuttingBoardInteractable : MonoBehaviour, IInteractable, IPromptPro
 
     public InteractionSession BeginInteraction(IInteractor interactor)
     {
-        _playerControllable = interactor.GetAssociatedGameObject().transform.parent.GetComponent<IPlayerControllable>();
+        IPlayerControllable  _playerControllable = interactor.GetAssociatedGameObject().transform.parent.GetComponent<IPlayerControllable>();
 
-        _playerController = _playerControllable.GetActivePlayerController();
+        IPlayerController  _playerController = _playerControllable.GetActivePlayerController();
 
-        _playerInteractionState = _playerControllable.GetAssociatedGameObject().GetComponent<PlayerInteractionState>();
+         PlayerInteractionState _playerInteractionState = _playerControllable.GetAssociatedGameObject().GetComponent<PlayerInteractionState>();
 
 
         if (_playerInteractionState.CheckInteractionTag(InteractionTag.HoldingCookedFish))
@@ -52,7 +52,7 @@ public class CuttingBoardInteractable : MonoBehaviour, IInteractable, IPromptPro
         {
             if (storingLocation.childCount > 0)
             {
-                MoveObjetToHand();
+                MoveObjetToHand(_playerControllable);
                 m_currentInteractionSession = new InteractionSession(interactor, this);
                 m_currentInteractionSession.OnEnded += () => _playerController.ChangeControlledEntity(_playerControllable);
                 _playerInteractionState.AddInteractionTag(InteractionTag.HoldingCookedFish);
@@ -64,7 +64,7 @@ public class CuttingBoardInteractable : MonoBehaviour, IInteractable, IPromptPro
         m_currentInteractionSession = new InteractionSession(interactor, this);
         m_currentInteractionSession.End();
 
-        StartCoroutine(DisplayWarning());
+        StartCoroutine(DisplayWarning(_playerInteractionState.PlayerIndex));
         return m_currentInteractionSession;
 
     }
@@ -95,11 +95,13 @@ public class CuttingBoardInteractable : MonoBehaviour, IInteractable, IPromptPro
     }
 
 
-    private void MoveObjetToHand()
+    private void MoveObjetToHand(IPlayerControllable playerControllable)
     {
+        Debug.Log($"MoveObjetToHand called for: {playerControllable.GetAssociatedGameObject().name}");
+
         FoodClass cookingItem = storingLocation.GetComponentInChildren<FoodClass>();
-        cookingItem.transform.position = _playerControllable.GetAssociatedGameObject().GetComponentInChildren<HeldObjectHandler>().transform.position;
-        cookingItem.transform.SetParent(_playerControllable.GetAssociatedGameObject().GetComponentInChildren<HeldObjectHandler>().transform);
+        cookingItem.transform.position = playerControllable.GetAssociatedGameObject().GetComponentInChildren<HeldObjectHandler>().transform.position;
+        cookingItem.transform.SetParent(playerControllable.GetAssociatedGameObject().GetComponentInChildren<HeldObjectHandler>().transform);
         if (_foodClassItem.GetComponentInChildren<Fish>())
         {
             cookingItem.transform.localRotation = Quaternion.Euler(44.1f, 142f, 77.5f);
@@ -108,13 +110,16 @@ public class CuttingBoardInteractable : MonoBehaviour, IInteractable, IPromptPro
         {
             cookingItem.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
         }
-        cookingItem.InitializeHungerAndThirst(_playerControllable.GetAssociatedGameObject().GetComponentInChildren<HungerAndThirst>());
+        HungerAndThirst hunger = playerControllable.GetAssociatedGameObject().GetComponentInChildren<HungerAndThirst>();
+        Debug.Log($"HungerAndThirst found on: {hunger?.gameObject.name}");
+        cookingItem.InitializeHungerAndThirst(hunger);
+        //cookingItem.InitializeHungerAndThirst(playerControllable.GetAssociatedGameObject().GetComponentInChildren<HungerAndThirst>());
     }
     
-    IEnumerator DisplayWarning()
+    IEnumerator DisplayWarning(int playerIndex)
     {
         Debug.Log("Warning Label");
-        int playerIndex = _playerInteractionState.PlayerIndex;
+       // int playerIndex = _playerInteractionState.PlayerIndex;
         Debug.Log($"Firing: 'enable cooked player{playerIndex}'");
         Debug.Log(m_notificationMessenger);
         m_notificationMessenger.TryNotify($"enable cooked player{playerIndex}");
