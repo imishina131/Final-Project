@@ -7,6 +7,7 @@ public class GramophoneInteractable : MonoBehaviour, IInteractable, IPromptProvi
     [SerializeField] Transform m_interactDisplayTransform;
     [SerializeField] string m_widgetForPrompt = "interact";
     AudioSource m_audioSource;
+    [SerializeField] Animator needleAnim;
     void Start()
     {
         m_audioSource = GetComponent<AudioSource>();
@@ -27,11 +28,16 @@ public class GramophoneInteractable : MonoBehaviour, IInteractable, IPromptProvi
     {
         if(m_currentTrack < m_gramophoneTracks.Length - 1) m_currentTrack++;
         else m_currentTrack = -1;
-        if(m_currentTrack == -1) m_audioSource.Stop();
+        if (m_currentTrack == -1)
+        {
+            m_audioSource.Stop();
+            needleAnim.SetBool("Play", false);
+        }
         else
         {
             m_audioSource.clip = m_gramophoneTracks[m_currentTrack];
             m_audioSource.Play();
+            needleAnim.SetBool("Play", true);
         }
         
     }

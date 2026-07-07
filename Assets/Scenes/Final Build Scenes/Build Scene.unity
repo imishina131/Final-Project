@@ -11199,6 +11199,33 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5736560626604668707, guid: a9ae24cad0d094247b5ca193360ed7fc, type: 3}
   m_PrefabInstance: {fileID: 2759527505578783048}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1016252839 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 20969589093762638, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
+  m_PrefabInstance: {fileID: 1920507445}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1016252840
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016252839}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 267a0d6668c8a794aa6a00b0456e1edc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1017511888
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20266,15 +20293,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3511390657383237687, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
       propertyPath: m_buoyancyPoints.Array.data[0].LocalPosition.x
-      value: 3.5307026
+      value: 3.5249877
       objectReference: {fileID: 0}
     - target: {fileID: 3511390657383237687, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
       propertyPath: m_buoyancyPoints.Array.data[0].LocalPosition.y
-      value: -0.8006093
+      value: -0.79810286
       objectReference: {fileID: 0}
     - target: {fileID: 3511390657383237687, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
       propertyPath: m_buoyancyPoints.Array.data[0].LocalPosition.z
-      value: 5.9911065
+      value: 5.9976983
       objectReference: {fileID: 0}
     - target: {fileID: 3511390657383237687, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
       propertyPath: m_buoyancyPoints.Array.data[3].LocalPosition.x
@@ -20468,6 +20495,10 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: -0.36208153
       objectReference: {fileID: 0}
+    - target: {fileID: 6209415758916147482, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
+      propertyPath: needleAnim
+      value: 
+      objectReference: {fileID: 1016252840}
     - target: {fileID: 6209415758916147482, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
       propertyPath: 'm_gramophoneTracks.Array.data[0]'
       value: 
@@ -20787,6 +20818,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5693318708947451448, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
       insertIndex: -1
       addedObject: {fileID: 788018984}
+    - targetCorrespondingSourceObject: {fileID: 20969589093762638, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1016252840}
     - targetCorrespondingSourceObject: {fileID: 5516093075538759265, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1915843968}
