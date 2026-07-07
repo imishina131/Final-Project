@@ -8,7 +8,6 @@ public class Fish : FoodClass
     private float m_cookedAmount;
     private CookState m_currentCookState = CookState.Raw;
     [SerializeField] private ParticleSystem cookedVFX; 
-    private PlayerInteractionState playerInteractionState;
     private HeldObjectHandler m_heldObjectHandler;
     Transform locationOfHeldObject;
 
@@ -28,7 +27,6 @@ public class Fish : FoodClass
         Debug.Log(m_heldObjectHandler);
         locationOfHeldObject = m_heldObjectHandler.transform;
         Debug.Log(locationOfHeldObject);
-        playerInteractionState = locationOfHeldObject.GetComponentInParent<PlayerInteractionState>();
         Debug.Log(playerInteractionState);
         
         //Reset();
@@ -64,11 +62,14 @@ public class Fish : FoodClass
     
     public override float Eat()
     {
-
+        
+        Debug.Log($"Eating - playerInteractionState player: {playerInteractionState?.gameObject.name}");
+        Debug.Log($"HoldingCookedFish before remove: {playerInteractionState?.CheckInteractionTag(InteractionTag.HoldingCookedFish)}");
         playerInteractionState.RemoveInteractionTag(InteractionTag.HoldingFish);
         playerInteractionState.RemoveInteractionTag(InteractionTag.HoldingCookedFish);
         playerInteractionState.RemoveInteractionTag(InteractionTag.HoldingBurntFish);
- 
+        Debug.Log($"HoldingCookedFish after remove: {playerInteractionState?.CheckInteractionTag(InteractionTag.HoldingCookedFish)}");
+
         return m_foodData.HungerRestored(m_currentCookState);
 
     }

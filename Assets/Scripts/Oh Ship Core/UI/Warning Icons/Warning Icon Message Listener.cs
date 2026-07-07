@@ -40,7 +40,7 @@ public class WarningIconMessageListener : MonoBehaviour
         
         foreach (WarningIcon warningIcon in m_warningIcons)
         {
-            Debug.Log($"Subscribing to: '{warningIcon.EnableMessage} player{playerIndex}'");
+            //Debug.Log($"Subscribing to: '{warningIcon.EnableMessage} player{playerIndex}'");
 
             m_messenger.TrySubscribe($"{warningIcon.EnableMessage} player{playerIndex}", () => StartCoroutine(warningIcon.EnableWarning()));
             m_messenger.TrySubscribe($"{warningIcon.EnableMessage} player{playerIndex}", () => StartCoroutine(warningIcon.FlashWarningLabel(true)));
