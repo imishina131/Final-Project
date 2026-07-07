@@ -21,6 +21,7 @@ public class HungerAndThirst: MonoBehaviour
     PlayerInteractor m_playerInteractor;
     bool fromHunger;
     bool fromThirst;
+    //[SerializeField] Animator fadeAnim;
     
     public bool IsPassedOut => m_isPassedOut;
     [SerializeField] UnityEvent<bool> OnEnableMovement = new();
@@ -86,6 +87,7 @@ public class HungerAndThirst: MonoBehaviour
             fromThirst = true;
         }
         m_animator.SetBool(s_passedOutAnimatorProperty, true);
+        //fadeAnim.SetBool("Fade", true);
         m_playerInteractor.EndActiveInteraction();
         numberOfPassedOutPlayers++;
         m_isPassedOut = true;
@@ -110,6 +112,7 @@ public class HungerAndThirst: MonoBehaviour
         }
 
         m_animator.SetBool(s_passedOutAnimatorProperty, false);
+        //fadeAnim.SetBool("Fade", false);
         Debug.Log("Waking Up");
         numberOfPassedOutPlayers--;
         GetComponent<Rigidbody>().isKinematic = false;
