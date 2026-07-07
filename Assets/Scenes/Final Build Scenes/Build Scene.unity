@@ -15877,10 +15877,6 @@ PrefabInstance:
       value: Siren
       objectReference: {fileID: 0}
     - target: {fileID: 8759274378445407582, guid: 9b76e0d638f6807468655bad2ec8b98f, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8759274378445407582, guid: 9b76e0d638f6807468655bad2ec8b98f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -20947,6 +20943,10 @@ PrefabInstance:
       propertyPath: 'm_gramophoneTracks.Array.data[1]'
       value: 
       objectReference: {fileID: 8300000, guid: 1f614bb40c862fc46b2f36b004910b99, type: 3}
+    - target: {fileID: 6315079195521403227, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
+      propertyPath: m_speedMultiplier
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6315079195521403227, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
       propertyPath: m_lowFuelThreshold
       value: 0.4
@@ -43135,6 +43135,10 @@ PrefabInstance:
       value: 0.64
       objectReference: {fileID: 0}
     - target: {fileID: 5523844188059048367, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
+      propertyPath: m_failureTime
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5523844188059048367, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
       propertyPath: m_smokeEffect
       value: 
       objectReference: {fileID: 1920507448}
@@ -43934,6 +43938,10 @@ PrefabInstance:
       propertyPath: m_gauge.Transform
       value: 
       objectReference: {fileID: 1240963813}
+    - target: {fileID: 7244109837531579984, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
+      propertyPath: m_amountOfPressureToSendReference
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 7244109837531579984, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
       propertyPath: m_onPressureSent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

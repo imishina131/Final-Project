@@ -17,6 +17,7 @@ public class ShipMovement : MonoBehaviour
     [SerializeField] float m_rudderTurnMultiplier = 10;
     [SerializeField] float m_enginePower = 1;
     [SerializeField] float m_lowFuelThreshold = .5f;
+    [SerializeField] float m_speedMultiplier = 2;
     private bool m_wasLowFuel;
     [SerializeField] private UnityEvent<bool> OnFuelBelowThreshold =  new UnityEvent<bool>();
     public void SetRudder(float rudder) => Rudder.Value = Mathf.Clamp(rudder, -1 , 1);
@@ -46,7 +47,7 @@ public class ShipMovement : MonoBehaviour
     }
     void FixedUpdate()
     {
-        Rigidbody.AddForceAtPosition(m_wheelPowerPoint.forward * (m_throttleEffectiveness.Evaluate(Throttle * 2) * m_enginePower), m_wheelPowerPoint.position, ForceMode.Force);
+        Rigidbody.AddForceAtPosition(m_wheelPowerPoint.forward * (m_throttleEffectiveness.Evaluate(Throttle * m_speedMultiplier) * m_enginePower), m_wheelPowerPoint.position, ForceMode.Force);
        // Debug.Log(m_waterController.SteamPressure);
        //Debug.Log($"Throttle: {Throttle}, Pressure: {m_waterController.SteamPressure}, Force: {m_throttleEffectiveness.Evaluate(Throttle * 2) * (m_steamPressure)}");
         ApplyRudderForce(Rudder);
