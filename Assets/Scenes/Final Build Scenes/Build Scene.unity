@@ -1356,6 +1356,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 62754321}
   m_CullTransparentMesh: 1
+--- !u!1 &67770903 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9159440181383975300, guid: c25b6fd3deb70a64b8b144046ce58859, type: 3}
+  m_PrefabInstance: {fileID: 839282928}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &69756464
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2433,6 +2438,37 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1421403850}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &127001515
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 127001516}
+  m_Layer: 0
+  m_Name: Point02
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &127001516
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127001515}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.118182674, z: -0, w: 0.9929919}
+  m_LocalPosition: {x: -53.2, y: 5.458, z: 2420.8}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 800623459}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &148510628 stripped
 GameObject:
@@ -5632,6 +5668,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f08291e091e536f4f968d1b921ba7e35, type: 3}
       propertyPath: m_Name
       value: Canoe Fill Mask
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f08291e091e536f4f968d1b921ba7e35, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9205,6 +9245,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1579495624}
+  - {fileID: 1208443611}
+  - {fileID: 127001516}
+  - {fileID: 1933902174}
   - {fileID: 839282929}
   - {fileID: 318594266}
   - {fileID: 1975498300}
@@ -9378,7 +9421,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8383185708652989246, guid: c25b6fd3deb70a64b8b144046ce58859, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.458
+      value: 6.58
       objectReference: {fileID: 0}
     - target: {fileID: 8383185708652989246, guid: c25b6fd3deb70a64b8b144046ce58859, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9422,13 +9465,57 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8383185708652989246, guid: c25b6fd3deb70a64b8b144046ce58859, type: 3}
       insertIndex: -1
       addedObject: {fileID: 973080550}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9159440181383975300, guid: c25b6fd3deb70a64b8b144046ce58859, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 839282935}
+    - targetCorrespondingSourceObject: {fileID: 9159440181383975300, guid: c25b6fd3deb70a64b8b144046ce58859, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 839282934}
   m_SourcePrefab: {fileID: 100100000, guid: c25b6fd3deb70a64b8b144046ce58859, type: 3}
 --- !u!4 &839282929 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8383185708652989246, guid: c25b6fd3deb70a64b8b144046ce58859, type: 3}
   m_PrefabInstance: {fileID: 839282928}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &839282934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67770903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8435af096fc266044ab8e9d3ab7c4960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: OhShip.Core::AIMovement
+  targetLocations:
+  - {fileID: 1208443611}
+  - {fileID: 127001516}
+  - {fileID: 1933902174}
+--- !u!195 &839282935
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67770903}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 1
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 3
+  m_BaseOffset: 1
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &846319224
 GameObject:
   m_ObjectHideFlags: 0
@@ -11170,6 +11257,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canoe Fill Mask
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f08291e091e536f4f968d1b921ba7e35, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11278,6 +11369,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f08291e091e536f4f968d1b921ba7e35, type: 3}
       propertyPath: m_Name
       value: Canoe Fill Mask
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f08291e091e536f4f968d1b921ba7e35, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11475,6 +11570,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f08291e091e536f4f968d1b921ba7e35, type: 3}
       propertyPath: m_Name
       value: Canoe Fill Mask
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f08291e091e536f4f968d1b921ba7e35, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12552,6 +12651,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canoe Fill Mask
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f08291e091e536f4f968d1b921ba7e35, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13122,6 +13225,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f08291e091e536f4f968d1b921ba7e35, type: 3}
       propertyPath: m_Name
       value: Canoe Fill Mask
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f08291e091e536f4f968d1b921ba7e35, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13928,6 +14035,37 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.590619, y: 1.1304651, z: 0.54444396}
   m_Center: {x: 0.000015288591, y: 0.00000017881393, z: -0.000015124679}
+--- !u!1 &1208443610
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1208443611}
+  m_Layer: 0
+  m_Name: Point01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1208443611
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1208443610}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.118182674, z: -0, w: 0.9929919}
+  m_LocalPosition: {x: -7.298728, y: 5.458, z: 2558.2893}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 800623459}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1214662988 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f08291e091e536f4f968d1b921ba7e35, type: 3}
@@ -14182,6 +14320,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f08291e091e536f4f968d1b921ba7e35, type: 3}
       propertyPath: m_Name
       value: Canoe Fill Mask
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f08291e091e536f4f968d1b921ba7e35, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15299,6 +15441,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f08291e091e536f4f968d1b921ba7e35, type: 3}
       propertyPath: m_Name
       value: Canoe Fill Mask
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f08291e091e536f4f968d1b921ba7e35, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18547,6 +18693,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canoe Fill Mask
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f08291e091e536f4f968d1b921ba7e35, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19407,6 +19557,70 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ba6fbc7c0f22d4187865da4d941327, type: 3}
   m_Name: 
   m_EditorClassIdentifier: OhShip.Core.Ship::CollisionDamager
+--- !u!1 &1841956062
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1841956064}
+  - component: {fileID: 1841956063}
+  m_Layer: 0
+  m_Name: Boat Navigation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1841956063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841956062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 2047
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 6b6cf1b6c4b320f40b9d0533889b1f2d, type: 2}
+  m_BuildHeightMesh: 0
+--- !u!4 &1841956064
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841956062}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 13.30363, y: 0.83332, z: -697.57465}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1843532789 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 285386998481814032, guid: a9ae24cad0d094247b5ca193360ed7fc, type: 3}
@@ -21525,6 +21739,37 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1933902173
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1933902174}
+  m_Layer: 0
+  m_Name: Point03
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1933902174
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1933902173}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.118182674, z: -0, w: 0.9929919}
+  m_LocalPosition: {x: -64.2, y: 5.458, z: 2255.5}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 800623459}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!21 &1940125937
 Material:
   serializedVersion: 8
@@ -22586,6 +22831,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canoe Fill Mask
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f08291e091e536f4f968d1b921ba7e35, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23234,6 +23483,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f08291e091e536f4f968d1b921ba7e35, type: 3}
       propertyPath: m_Name
       value: Canoe Fill Mask
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f08291e091e536f4f968d1b921ba7e35, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -44610,3 +44863,4 @@ SceneRoots:
   - {fileID: 547921121}
   - {fileID: 89437490}
   - {fileID: 996947424}
+  - {fileID: 1841956064}
