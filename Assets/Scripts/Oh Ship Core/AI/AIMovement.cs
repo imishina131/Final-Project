@@ -6,6 +6,8 @@ public class AIMovement : MonoBehaviour
     [SerializeField] Transform[] targetLocations;
     private NavMeshAgent agent;
     private int locationIndex = 0;
+
+    private bool goingBack = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -18,12 +20,23 @@ public class AIMovement : MonoBehaviour
     {     
         if(agent.remainingDistance < 1f)
         {
-            locationIndex++;
-            agent.SetDestination (targetLocations[locationIndex].position);
+            agent.SetDestination(targetLocations[locationIndex].position);
+            if(goingBack)
+            {
+                locationIndex--;
+            }
+            else
+            {
+                locationIndex++;
+            }
 
             if(locationIndex >= targetLocations.Length - 1) 
             {
-                locationIndex = 0;
+                goingBack = true;
+            }
+            else if(locationIndex <= 0) 
+            {
+                goingBack = false;
             }
         }
         
