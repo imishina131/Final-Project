@@ -12,7 +12,7 @@ public class HungerAndThirst: MonoBehaviour
     [FormerlySerializedAs("manager")] private HungerAndThirstVisualManager m_manager;
     [SerializeField] private SerializableDictionary<InteractionTag, float> m_hungerLossRates;
     [SerializeField] private float thirstLossRate = 0.01f;
-    static int numberOfPassedOutPlayers;
+    static int numberOfPassedOutPlayers = 0;
     static readonly int s_passedOutAnimatorProperty = Animator.StringToHash("Passed Out");
     [FormerlySerializedAs("isPassedOut")] [SerializeField] bool m_isPassedOut;
     [SerializeField] VisualEffect m_passedOutEffect;
@@ -93,7 +93,7 @@ public class HungerAndThirst: MonoBehaviour
         m_isPassedOut = true;
         gameObject.layer = LayerMask.NameToLayer("Default");
         OnEnableMovement.Invoke(false);
-        if(numberOfPassedOutPlayers >= 2)SceneManager.LoadScene("GameOver");
+        if(numberOfPassedOutPlayers >= 2)SceneManager.LoadScene("StarvedSequence");
         m_passedOutEffect.Play();
     }
 

@@ -68,7 +68,7 @@ public class ShipHealth : MonoBehaviour, IDamageable
         }
         if (m_fillPercentage >= 1f - .1f)
         {
-            m_sceneTransitioner.TransitionToScene("GameOver", 0.5f);
+            m_sceneTransitioner.TransitionToScene("DrownedSequence", 0.5f);
         }
     }
     /// <inheritdoc/>
