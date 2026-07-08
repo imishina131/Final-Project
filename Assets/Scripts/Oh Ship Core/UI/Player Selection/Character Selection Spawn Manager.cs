@@ -13,8 +13,15 @@ public class CharacterSelectionSpawnManager : MonoBehaviour
     [SerializeField, RequiredField] Canvas m_displayCanvas;
     [SerializeField, RequiredField] RectTransform m_playerSelectionLayout;
     [SerializeField, RequiredField] PlayerSelectionCursor m_playerSelectionCursorPrefab;
+    
+    void Awake()
+    {
+        FindAnyObjectByType<Injector>().Inject(this);
+
+    }
     public void OnSpawn(PlayerInput playerInput)
     {
+        Debug.Log($"OnSpawn called for: {playerInput.name}");
         if(playerInput.transform.root.GetComponentInChildren<MultiplayerEventSystem>() is not {} multiplayerEventSystem) return;
         StartCoroutine(SpawnPlayerSelectionCanvas(multiplayerEventSystem));
     }
@@ -23,6 +30,7 @@ public class CharacterSelectionSpawnManager : MonoBehaviour
     {
         yield return null;
         Canvas selectionCanvas = Instantiate(m_playerSelectionCanvasPrefab);
+        
         m_injector.Inject(selectionCanvas.gameObject);
         multiplayerEventSystem.playerRoot = selectionCanvas.gameObject;
         if (!TryGetChildWithTag(selectionCanvas.transform, "Multiplayer UI Start Position", out Transform startPosition)) yield break;
