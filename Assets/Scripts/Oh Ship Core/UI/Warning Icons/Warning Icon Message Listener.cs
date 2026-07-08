@@ -74,7 +74,7 @@ public class WarningIconMessageListener : MonoBehaviour
 
             if (string.IsNullOrEmpty(category))
             {
-                // no category — just show normally without tracking
+                
                 StartCoroutine(warningIcon.EnableWarning());
                 StartCoroutine(warningIcon.FlashWarningLabel(true));
                 return;
