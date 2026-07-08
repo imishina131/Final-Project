@@ -18,11 +18,17 @@ public class CuttingBoardInteractable : MonoBehaviour, IInteractable, IPromptPro
     private Fish fish;
     private GameObject lastCookedObject;
 
+    [Header ("Audio")]
+    [SerializeField] AudioSource audio;
+    [SerializeField] AudioClip pickUp;
+    [SerializeField] AudioClip putDown;
+
     [Inject] INotificationMessenger m_notificationMessenger;
 
     private void Awake()
     {
         FindAnyObjectByType<Injector>().Inject(this);
+        audio = GetComponent<AudioSource>();
     }
 
     public InteractionSession BeginInteraction(IInteractor interactor)
@@ -81,6 +87,7 @@ public class CuttingBoardInteractable : MonoBehaviour, IInteractable, IPromptPro
 
     private void MoveObjectToBoard()
     {
+        audio.PlayOneShot(putDown);
         _foodClassItem.transform.position = storingLocation.position;
         _foodClassItem.transform.SetParent(storingLocation);
         if (_foodClassItem.GetComponentInChildren<Fish>())
@@ -98,7 +105,7 @@ public class CuttingBoardInteractable : MonoBehaviour, IInteractable, IPromptPro
     private void MoveObjetToHand(IPlayerControllable playerControllable)
     {
         Debug.Log($"MoveObjetToHand called for: {playerControllable.GetAssociatedGameObject().name}");
-
+        audio.PlayOneShot(pickUp);
         FoodClass cookingItem = storingLocation.GetComponentInChildren<FoodClass>();
         cookingItem.transform.position = playerControllable.GetAssociatedGameObject().GetComponentInChildren<HeldObjectHandler>().transform.position;
         cookingItem.transform.SetParent(playerControllable.GetAssociatedGameObject().GetComponentInChildren<HeldObjectHandler>().transform);

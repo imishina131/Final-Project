@@ -16,7 +16,15 @@ public class BottleInteractable : MonoBehaviour, IInteractable, IPromptProvider
     private Transform _holdingObjectTransform;
     [SerializeField] private GameObject bottleToSpawn;
     [SerializeField] private GameObject bottleTaken;
+
+    [Header("Audio")]
+    [SerializeField] AudioSource audio;
+    [SerializeField] AudioClip pickUp;
     
+    private void Start()
+    {
+        
+    }
     public InteractionSession BeginInteraction(IInteractor interactor)
     {
         IPlayerControllable playerControllable = interactor.GetAssociatedGameObject().transform.parent.GetComponent<IPlayerControllable>();
@@ -28,6 +36,7 @@ public class BottleInteractable : MonoBehaviour, IInteractable, IPromptProvider
             return null;
 
         playerInteractionState.AddInteractionTag(InteractionTag.HoldingBottle);
+        audio.PlayOneShot(pickUp);
         Transform holdingTransform = playerControllable.GetAssociatedGameObject().GetComponentInChildren<HeldObjectHandler>().transform;
         GameObject bottle = Instantiate(bottleToSpawn, holdingTransform.position, holdingTransform.rotation);
         bottle.transform.SetParent(holdingTransform);

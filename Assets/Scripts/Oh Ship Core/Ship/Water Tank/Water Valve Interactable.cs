@@ -1,11 +1,12 @@
-using System;
 using MatrixUtils.Attributes;
 using MatrixUtils.DependencyInjection;
 using MatrixUtils.Extensions;
+using System;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
+using UnityEngine.Windows;
 
 /// <summary>
 /// An interactable that allows the player to adjust the pressure of <see cref="WaterController"/> on the ship.
@@ -26,8 +27,18 @@ public class WaterValveInteractable : MonoBehaviour, IInteractable, IPlayerContr
     PlayerInteractionState m_currentInteractionState;
     InteractionSession m_currentInteractionSession;
     GameObject m_player;
+
+    private AudioSource audio;
+
+    [Header ("Audio")]
+    [SerializeField] private AudioClip wheelTurning;
     
     /// <inheritdoc/>
+    /// 
+    private void Start()
+    {
+        audio = GetComponent<AudioSource>();
+    }
     public InteractionSession BeginInteraction(IInteractor interactor)
     {
         IPlayerControllable oldControllable = interactor.GetAssociatedGameObject().transform.parent.GetComponent<IPlayerControllable>();
@@ -89,7 +100,25 @@ public class WaterValveInteractable : MonoBehaviour, IInteractable, IPlayerContr
         m_pressureSystem.HandleFillInput(0);
         m_pressureSystem.OnUserInteractionEnded();
     }
-    void HandleAdjustPressure(InputAction.CallbackContext context) => m_pressureSystem.HandleFillInput(context.ReadValue<float>());
+    void HandleAdjustPressure(InputAction.CallbackContext context)
+    {
+        float input = context.ReadValue<float>();
+        m_pressureSystem.HandleFillInput(context.ReadValue<float>());
+
+        if (input != 0)
+        {
+            if (!audio.isPlaying)
+            {
+                audio.clip = wheelTurning;
+                audio.loop = true;
+                audio.Play();
+            }
+        }
+        else
+        {
+            audio.Stop();
+        }
+    }
     void Update()
     {
         m_valveElement.Transform.localEulerAngles = new(m_valveElement.GetNextAngle(m_pressureSystem.NormalizedFill, m_valveElement.Transform.localEulerAngles.x),0,0);

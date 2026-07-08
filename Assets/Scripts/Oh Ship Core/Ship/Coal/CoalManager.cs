@@ -30,6 +30,17 @@ public class CoalManager : MonoBehaviour, IInteractable, IPlayerControllable, IP
     private float m_pressureToSend;
     float m_totalPressure;
     private PlayerInteractionState m_playerInteractionState;
+
+    private AudioSource audio;
+
+    [Header("Audio")]
+    [SerializeField] private AudioClip rightInput;
+    [SerializeField] private AudioClip wrongInput;
+
+    private void Start()
+    {
+        audio = GetComponent<AudioSource>();
+    }
     public InteractionSession BeginInteraction(IInteractor interactor)
     { 
         IPlayerControllable oldControllable = interactor.GetAssociatedGameObject().transform.parent.GetComponent<IPlayerControllable>();
@@ -89,12 +100,14 @@ public class CoalManager : MonoBehaviour, IInteractable, IPlayerControllable, IP
         if (context.action.name == m_inputsForQTE[m_index])
         {
             Debug.Log("Correct");
+            audio.PlayOneShot(rightInput);
             m_coalUI.CorrectButtonPressed(m_index);
             m_correctInputCounter++;
         }
         else
         {
             Debug.Log("Incorrect");
+            audio.PlayOneShot(wrongInput);
             m_coalUI.IncorrectButtonPressed(m_index);
         }
         m_index++;

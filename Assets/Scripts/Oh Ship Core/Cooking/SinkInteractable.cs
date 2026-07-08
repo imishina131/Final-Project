@@ -39,6 +39,7 @@ public class SinkInteractable : MonoBehaviour, IInteractable, IPromptProvider
     [Header("Sound")] 
     [SerializeField] private AudioClip drink;
     [SerializeField] private AudioClip waterSound;
+    [SerializeField] private AudioClip putDown;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -91,6 +92,7 @@ public class SinkInteractable : MonoBehaviour, IInteractable, IPromptProvider
        
         if(_playerInteractionState.CheckInteractionTag(InteractionTag.HoldingBottle))
         {
+            _audioSource.PlayOneShot(putDown);
             _playerInteractionState.RemoveInteractionTag(InteractionTag.HoldingBottle);
             bottleInSink.SetActive(true);
             _holdingObjectTransform = oldControllable.GetAssociatedGameObject().GetComponentInChildren<HeldObjectHandler>().transform;

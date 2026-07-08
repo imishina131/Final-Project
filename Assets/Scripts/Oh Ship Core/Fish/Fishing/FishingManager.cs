@@ -48,9 +48,15 @@ public class FishingManager : MonoBehaviour, IInteractable, IPlayerControllable,
     [SerializeField] private float _minFishSpeed;
     [SerializeField] private float _maxFishSpeed;
 
+    [Header("Audio")]
+    [SerializeField] AudioSource audio;
+    [SerializeField] AudioClip plop;
+    [SerializeField] AudioClip fishing;
+
     private void Start()
     {
         _fishingMiniGame = new FishingMiniGame();
+        audio = GetComponent<AudioSource>();
     }
     public InteractionSession BeginInteraction(IInteractor interactor)
     {
@@ -69,6 +75,8 @@ public class FishingManager : MonoBehaviour, IInteractable, IPlayerControllable,
 
         
         CinemachineCamera playerCam = interactor.GetAssociatedGameObject().GetComponent<CinemachineCamera>();
+        audio.clip = plop;
+        audio.PlayOneShot(plop);
         _fishingCamera.OutputChannel = playerCam.OutputChannel;
         _fishingCamera.Priority = 10;
         SetUpFishingMinigame();
@@ -88,6 +96,17 @@ public class FishingManager : MonoBehaviour, IInteractable, IPlayerControllable,
     {
         if(_playerController == null) return;
         _fishingMiniGame.UpdateMiniGame(_isHoldingButton);
+        if(_isHoldingButton && !audio.isPlaying)
+        {
+            audio.clip = fishing;
+            audio.loop = true;
+            audio.Play();
+        }
+        else if(!_isHoldingButton && audio.loop == true)
+        {
+            audio.loop = false;
+            audio.Stop();
+        }
        
     }
 
@@ -171,6 +190,7 @@ public class FishingManager : MonoBehaviour, IInteractable, IPlayerControllable,
     private void HandleObjectCaught()
     {
         FoodClass foodClassRef;
+        _isHoldingButton = false;
         Debug.Log("Fish Caught");
         int index = UnityEngine.Random.Range(0, usableThingsToCatch.Length);
         
