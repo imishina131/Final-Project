@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 32c6047046b5c4b40bf573c94e151193
+guid: 39671d37db056994d81c443f1331eba9
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -7,8 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: building
-    second: {fileID: 2100000, guid: 36146ae592fe6c241b08e597809fe4af, type: 2}
+      name: UV
+    second: {fileID: 2100000, guid: 884ff11edb093b140823a27ef4d39e6a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Windows
+    second: {fileID: 2100000, guid: bb0889b92e69454479e424f7fc9b1317, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
