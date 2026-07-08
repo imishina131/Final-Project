@@ -116,7 +116,7 @@ public class WaterValveInteractable : MonoBehaviour, IInteractable, IPlayerContr
         }
         else
         {
-            audio.Stop();
+            audio.Pause();
         }
     }
     void Update()
