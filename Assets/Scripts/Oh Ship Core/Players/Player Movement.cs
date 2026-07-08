@@ -263,7 +263,7 @@ public class PlayerMovement : MonoBehaviour
             return false;
         }
         
-        if (!Physics.Raycast(m_rigidbody.position, Vector3.down, out RaycastHit hit, 1.5f))
+        if (!Physics.Raycast(m_rigidbody.position, Vector3.down, out RaycastHit hit, 1.5f, Physics.DefaultRaycastLayers, QueryTriggerInteraction.Ignore))
         {
             return false;
         }
