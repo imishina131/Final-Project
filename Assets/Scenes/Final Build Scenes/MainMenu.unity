@@ -815,6 +815,7 @@ GameObject:
   m_Component:
   - component: {fileID: 123005304}
   - component: {fileID: 123005303}
+  - component: {fileID: 123005305}
   m_Layer: 0
   m_Name: MenuAudioManager
   m_TagString: Untagged
@@ -934,6 +935,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &123005305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123005302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7eea8c11507b744399f0d65b0c83c23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: OhShip.Core.UI::MusicManager
+  objectMusic: {fileID: 413288652}
 --- !u!1 &139574634
 GameObject:
   m_ObjectHideFlags: 0
@@ -1330,6 +1344,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: OhShip.Core::GameOverFirstSelected
   m_firstSelected: {fileID: 63990889}
+--- !u!1 &413288652 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5926628205490379848, guid: ef40c5aa2f6b4e84d83075ddbd56e29e, type: 3}
+  m_PrefabInstance: {fileID: 5395660194101083375}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &413288653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413288652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98cf6a2cdbd69614fbb39c451c58815c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: OhShip.Core.UI::DontDestroy
+  scenesToCheck:
+  - MainMenu
+  - Options
+  - HelpMenu
+  - GameOver
+  - Credits
+  - Character Select
 --- !u!1001 &516111325
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3953,6 +3991,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3085529070082730905, guid: ef40c5aa2f6b4e84d83075ddbd56e29e, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3085529070082730905, guid: ef40c5aa2f6b4e84d83075ddbd56e29e, type: 3}
       propertyPath: m_Volume
       value: 0.083
       objectReference: {fileID: 0}
@@ -3968,10 +4010,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sound Emitter
       objectReference: {fileID: 0}
+    - target: {fileID: 5926628205490379848, guid: ef40c5aa2f6b4e84d83075ddbd56e29e, type: 3}
+      propertyPath: m_TagString
+      value: MenuMusic
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5926628205490379848, guid: ef40c5aa2f6b4e84d83075ddbd56e29e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 413288653}
   m_SourcePrefab: {fileID: 100100000, guid: ef40c5aa2f6b4e84d83075ddbd56e29e, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
