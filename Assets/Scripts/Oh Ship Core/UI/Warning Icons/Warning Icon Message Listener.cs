@@ -74,7 +74,7 @@ public class WarningIconMessageListener : MonoBehaviour
 
             if (string.IsNullOrEmpty(category))
             {
-                
+
                 StartCoroutine(warningIcon.EnableWarning());
                 StartCoroutine(warningIcon.FlashWarningLabel(true));
                 return;
