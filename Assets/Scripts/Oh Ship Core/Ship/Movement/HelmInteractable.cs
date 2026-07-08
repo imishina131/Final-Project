@@ -153,7 +153,14 @@ public class HelmInteractable : MonoBehaviour, IInteractable, IPlayerControllabl
 
     public GameObject GetAssociatedGameObject() => gameObject;
 
-    public PromptData GetPromptData() => new() {AssociatedWidget = m_widgetForPrompt};
+    public PromptData GetPromptData()
+    {
+        if (m_currentInteractionSession is { IsActive: true })
+        {
+            return new PromptData { AssociatedWidget = "" };
+        }
+        return new PromptData { AssociatedWidget = m_widgetForPrompt };
+    }
 
     public Vector3 GetWidgetWorldPosition() => m_interactDisplayTransform.position;
     

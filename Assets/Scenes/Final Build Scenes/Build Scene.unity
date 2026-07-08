@@ -5146,7 +5146,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1161538073}
     m_Modifications:
     - target: {fileID: 8339677600687994879, guid: cb4a19756d384f647abc8b0ebafa9cb2, type: 3}
       propertyPath: m_Name
@@ -5154,15 +5154,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8716624974157868357, guid: cb4a19756d384f647abc8b0ebafa9cb2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.644
+      value: 16.105999
       objectReference: {fileID: 0}
     - target: {fileID: 8716624974157868357, guid: cb4a19756d384f647abc8b0ebafa9cb2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -26.759
+      value: -1.4090004
       objectReference: {fileID: 0}
     - target: {fileID: 8716624974157868357, guid: cb4a19756d384f647abc8b0ebafa9cb2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.406
+      value: -5.998
       objectReference: {fileID: 0}
     - target: {fileID: 8716624974157868357, guid: cb4a19756d384f647abc8b0ebafa9cb2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -17540,6 +17540,11 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!4 &1443853450 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8716624974157868357, guid: cb4a19756d384f647abc8b0ebafa9cb2, type: 3}
+  m_PrefabInstance: {fileID: 431953078}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1453260708
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20884,12 +20889,6 @@ MonoBehaviour:
   preset: {fileID: 11400000, guid: 7b4941d7de2bd3843b785a74c40a7599, type: 2}
   timeOfDay: 18
   lights:
-  - {fileID: 1747658107}
-  - {fileID: 1865311763}
-  - {fileID: 1779745303}
-  - {fileID: 1603887495}
-  - {fileID: 1587519097}
-  - {fileID: 1514000454}
   - {fileID: 18734734}
   - {fileID: 30875933}
   - {fileID: 35344477}
@@ -20935,11 +20934,14 @@ MonoBehaviour:
   - {fileID: 1385668724}
   - {fileID: 1398086162}
   - {fileID: 1443109440}
+  - {fileID: 1514000454}
   - {fileID: 1519176579}
   - {fileID: 1528401563}
   - {fileID: 1561789282}
   - {fileID: 1574258950}
   - {fileID: 1584731973}
+  - {fileID: 1587519097}
+  - {fileID: 1603887495}
   - {fileID: 1657475325}
   - {fileID: 1667420306}
   - {fileID: 1679343444}
@@ -20948,8 +20950,11 @@ MonoBehaviour:
   - {fileID: 1736390620}
   - {fileID: 1739838512}
   - {fileID: 1744144040}
+  - {fileID: 1747658107}
+  - {fileID: 1779745303}
   - {fileID: 1816363545}
   - {fileID: 1843532789}
+  - {fileID: 1865311763}
   - {fileID: 1871025172}
   - {fileID: 1892599551}
   - {fileID: 1943265389}
@@ -43537,6 +43542,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 217134124005197324, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
+      propertyPath: yOffset
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 217134124005197324, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
       propertyPath: _playerSteamBoat
       value: 
       objectReference: {fileID: 1614289349}
@@ -47507,6 +47516,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1320048185041333726, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 436028066}
+    - targetCorrespondingSourceObject: {fileID: 1320048185041333726, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1443853450}
     - targetCorrespondingSourceObject: {fileID: 1771575596740442460, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1726279162}
@@ -47612,7 +47624,6 @@ SceneRoots:
   - {fileID: 1956191573}
   - {fileID: 1421403850}
   - {fileID: 1161333172}
-  - {fileID: 431953078}
   - {fileID: 1690915596}
   - {fileID: 299706315}
   - {fileID: 78752143}
