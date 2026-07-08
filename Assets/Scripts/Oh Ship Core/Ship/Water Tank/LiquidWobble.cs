@@ -37,7 +37,14 @@ public class LiquidWobble : MonoBehaviour
 
     void Update()
     {
-        if(Time.timeScale <= 0) return;
+        if(Time.timeScale <= 0 || Time.deltaTime <= 0)
+        {
+            m_rend.material.SetFloat(s_wobbleX, 0f);
+            m_rend.material.SetFloat(s_wobbleZ, 0f);
+            m_lastPos = transform.position;
+            m_lastRotation = transform.rotation;
+            return;
+        }
         m_time += Time.deltaTime;
         m_wobbleAmountToAddX = Mathf.Lerp(m_wobbleAmountToAddX, 0, Time.deltaTime * Recovery);
         m_wobbleAmountToAddZ = Mathf.Lerp(m_wobbleAmountToAddZ, 0, Time.deltaTime * Recovery);
