@@ -64,6 +64,8 @@ public class SinkInteractable : MonoBehaviour, IInteractable, IPromptProvider
             if(!animSink.GetBool("waterRunning"))
             {
                 animSink.SetBool("waterRunning", true);
+                _audioSource.clip = waterSound;
+                _audioSource.loop = true;
                 _audioSource.Play();
             }
             amountOfWater = amountOfWater += 0.1f * Time.deltaTime;
@@ -74,6 +76,7 @@ public class SinkInteractable : MonoBehaviour, IInteractable, IPromptProvider
                 canInteract = false;
                 fillingUp = false;
                 animSink.SetBool("waterRunning", false);
+                _audioSource.loop = false;
                 _audioSource.Stop();
                 filledUp = true;
             }
@@ -107,16 +110,14 @@ public class SinkInteractable : MonoBehaviour, IInteractable, IPromptProvider
         else if(filledUp || fillingUp) 
         {
             //Debug.Log("Doesn't contain bottle in hand?");
+            filledUp = false;
+            fillingUp = false;
+            _audioSource.Stop();
             _playerInteractionState.AddInteractionTag(InteractionTag.HoldingBottleWithWater);
-            _audioSource.clip = drink;
-            _audioSource.PlayOneShot(drink);
             DrinkWater(amountOfWater);
             bottleInSink.SetActive(false);
             bottleBack.SetActive(true);
-            filledUp = false;
-            fillingUp = false;
             animSink.SetBool("waterRunning", false);
-            _audioSource.Stop();
             timer = 0f;
         }
         else
@@ -144,7 +145,7 @@ public class SinkInteractable : MonoBehaviour, IInteractable, IPromptProvider
 
     void DrinkWater(float toDrink)
     {
-        _audioSource.clip = waterSound;
+        _audioSource.PlayOneShot(drink);
         _thirstManager.Thirst.Value += toDrink;
         amountOfWater = 0f;
         _playerInteractionState.RemoveInteractionTag(InteractionTag.HoldingBottleWithWater);
