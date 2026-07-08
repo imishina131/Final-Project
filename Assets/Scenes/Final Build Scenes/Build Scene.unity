@@ -18277,6 +18277,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 930e6158c9139c6429cb418f447ab1cc, type: 3}
+--- !u!1 &1514000454 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5587179335509659525, guid: 930e6158c9139c6429cb418f447ab1cc, type: 3}
+  m_PrefabInstance: {fileID: 1514000453}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1519176579 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4318138139759763297, guid: a9ae24cad0d094247b5ca193360ed7fc, type: 3}
@@ -19004,6 +19009,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 930e6158c9139c6429cb418f447ab1cc, type: 3}
+--- !u!1 &1587519097 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5587179335509659525, guid: 930e6158c9139c6429cb418f447ab1cc, type: 3}
+  m_PrefabInstance: {fileID: 1587519096}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1588935799 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8623320377466670425, guid: a9ae24cad0d094247b5ca193360ed7fc, type: 3}
@@ -19249,6 +19259,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 930e6158c9139c6429cb418f447ab1cc, type: 3}
+--- !u!1 &1603887495 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5587179335509659525, guid: 930e6158c9139c6429cb418f447ab1cc, type: 3}
+  m_PrefabInstance: {fileID: 1603887494}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1606100548 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 466682330031215921, guid: a9ae24cad0d094247b5ca193360ed7fc, type: 3}
@@ -20729,6 +20744,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 930e6158c9139c6429cb418f447ab1cc, type: 3}
+--- !u!1 &1747658107 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5587179335509659525, guid: 930e6158c9139c6429cb418f447ab1cc, type: 3}
+  m_PrefabInstance: {fileID: 1747658106}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1755862609
 GameObject:
   m_ObjectHideFlags: 0
@@ -20762,6 +20782,12 @@ MonoBehaviour:
   preset: {fileID: 11400000, guid: 7b4941d7de2bd3843b785a74c40a7599, type: 2}
   timeOfDay: 18
   lights:
+  - {fileID: 1747658107}
+  - {fileID: 1865311763}
+  - {fileID: 1779745303}
+  - {fileID: 1603887495}
+  - {fileID: 1587519097}
+  - {fileID: 1514000454}
   - {fileID: 18734734}
   - {fileID: 30875933}
   - {fileID: 35344477}
@@ -21137,6 +21163,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 930e6158c9139c6429cb418f447ab1cc, type: 3}
+--- !u!1 &1779745303 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5587179335509659525, guid: 930e6158c9139c6429cb418f447ab1cc, type: 3}
+  m_PrefabInstance: {fileID: 1779745302}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1782492186 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 848438743785790366, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
@@ -22201,6 +22232,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 930e6158c9139c6429cb418f447ab1cc, type: 3}
+--- !u!1 &1865311763 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5587179335509659525, guid: 930e6158c9139c6429cb418f447ab1cc, type: 3}
+  m_PrefabInstance: {fileID: 1865311762}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1871025172 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4491393671668240374, guid: a9ae24cad0d094247b5ca193360ed7fc, type: 3}
@@ -24531,8 +24567,8 @@ MonoBehaviour:
   _widgetForPrompt: interact
   _fishingControlActionMap: Fishing
   m_widgetPosition: {fileID: 686196560}
-  _speedOfFishIcon: 150
-  _overlapIconBuffer: 20
+  _speedOfFishIcon: 220
+  _overlapIconBuffer: 40
   _progressSpeed: 0.4
   usableThingsToCatch:
   - {fileID: 2305006631735972290, guid: 53d3ea83b9420624a981f32cdc0a69ab, type: 3}
