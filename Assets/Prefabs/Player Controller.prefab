@@ -1257,41 +1257,49 @@ MonoBehaviour:
     DisableMessage: removed HoldingFish
     sprites: []
     image: {fileID: 8714574009849304236}
+    Category: Eat
   - CanvasGroup: {fileID: 3784465528256255872}
     EnableMessage: added HoldingCookedFish
     DisableMessage: removed HoldingCookedFish
     sprites: []
     image: {fileID: 8714574009849304236}
+    Category: Eat
   - CanvasGroup: {fileID: 3784465528256255872}
     EnableMessage: added HoldingBurntFish
     DisableMessage: removed HoldingBurntFish
     sprites: []
     image: {fileID: 8714574009849304236}
+    Category: Eat
   - CanvasGroup: {fileID: 2334862418904022651}
     EnableMessage: enable raw
     DisableMessage: disable raw
     sprites: []
     image: {fileID: 2317039714564560811}
+    Category: Player Prompt
   - CanvasGroup: {fileID: 4724704466758235945}
     EnableMessage: enable cooked
     DisableMessage: disable cooked
     sprites: []
     image: {fileID: 1133559194072385560}
+    Category: Player Prompt
   - CanvasGroup: {fileID: 2668533990963353909}
     EnableMessage: enable bottle
     DisableMessage: disable bottle
     sprites: []
     image: {fileID: 3384260561371170489}
+    Category: Player Prompt
   - CanvasGroup: {fileID: 451289704897005958}
     EnableMessage: added Steering
     DisableMessage: removed Steering
     sprites: []
     image: {fileID: 3781851724679116642}
+    Category: Steering
   - CanvasGroup: {fileID: 7085188066735683930}
     EnableMessage: added AdjustingWaterTank
     DisableMessage: removed AdjustingWaterTank
     sprites: []
     image: {fileID: 2883082690942353967}
+    Category: Steam
   m_globalWarningIcons:
   - CanvasGroup: {fileID: 4106917271935715055}
     EnableMessage: enable repair
@@ -1299,6 +1307,7 @@ MonoBehaviour:
     sprites:
     - {fileID: 21300000, guid: 2d173148d43445d4bbf2bf748abc9eab, type: 3}
     image: {fileID: 7045992356486355126}
+    Category: 
   - CanvasGroup: {fileID: 7328535117769728158}
     EnableMessage: enable steam
     DisableMessage: disable steam
@@ -1306,6 +1315,7 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 4fcbab426ec0da24cb2040e0cbac98ca, type: 3}
     - {fileID: 21300000, guid: 5756e6fce3852494bbe9b508a3e8c53b, type: 3}
     image: {fileID: 2746712389559781253}
+    Category: 
   - CanvasGroup: {fileID: 5916050538489732959}
     EnableMessage: enable coal
     DisableMessage: disable coal
@@ -1313,6 +1323,7 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 008050e59f7c7f948907baf912a62a50, type: 3}
     - {fileID: 21300000, guid: d9affe32078df944e9a3d36dd7bed9be, type: 3}
     image: {fileID: 4223749488332393191}
+    Category: 
   m_worldWarningIcons:
   - GameObjectTag: Coal Warning
     EnableMessage: enable coal
