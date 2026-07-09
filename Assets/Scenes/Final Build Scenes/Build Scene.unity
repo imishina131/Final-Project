@@ -1560,6 +1560,11 @@ Material:
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
+--- !u!1 &64933122 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5935177614238338879, guid: a9ae24cad0d094247b5ca193360ed7fc, type: 3}
+  m_PrefabInstance: {fileID: 2759527505578783048}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &67770903 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9159440181383975300, guid: c25b6fd3deb70a64b8b144046ce58859, type: 3}
@@ -24219,6 +24224,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8440330414031293120, guid: a8b053361b5d663459d93206af2412c0, type: 3}
+      propertyPath: m_Size.x
+      value: 95.13292
+      objectReference: {fileID: 0}
+    - target: {fileID: 8440330414031293120, guid: a8b053361b5d663459d93206af2412c0, type: 3}
+      propertyPath: m_Center.x
+      value: 0.5146313
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -36288,6 +36301,7 @@ MonoBehaviour:
   - {fileID: 1541328528}
   - {fileID: 1664817086}
   windowLights:
+  - {fileID: 64933122}
   - {fileID: 33532787}
   - {fileID: 158011521}
   - {fileID: 161220174}
