@@ -273,7 +273,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 55388480}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
   m_Name: 
@@ -325,6 +325,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: OhShip.Core.UI::HelpButtonSelection
   helpText: Press the buttons in the displayed sequence to fuel the steam engine.
   hoverSFX: {fileID: 8300000, guid: a617896e742c69b43a0e5414ed1aaf38, type: 3}
+  m_audioSource: {fileID: 1669953316}
   _sprite: {fileID: 21300000, guid: ec0e883b630c4ab47b8983e637e32442, type: 3}
 --- !u!1 &66400119
 GameObject:
@@ -1171,7 +1172,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 411690849}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
   m_Name: 
@@ -1226,6 +1227,7 @@ MonoBehaviour:
     Don''t let it enter
     the red zones.'
   hoverSFX: {fileID: 8300000, guid: a617896e742c69b43a0e5414ed1aaf38, type: 3}
+  m_audioSource: {fileID: 1669953316}
   _sprite: {fileID: 21300000, guid: 25c18a16018b0cd4aaa0ed7d1e965d7c, type: 3}
 --- !u!1 &512518696
 GameObject:
@@ -1799,6 +1801,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3085529070082730905, guid: ef40c5aa2f6b4e84d83075ddbd56e29e, type: 3}
+      propertyPath: Priority
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 3085529070082730905, guid: ef40c5aa2f6b4e84d83075ddbd56e29e, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3085529070082730905, guid: ef40c5aa2f6b4e84d83075ddbd56e29e, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 9128751795871862012, guid: 141b63e12c5fde24f8b360b61ba9fdb9, type: 2}
     - target: {fileID: 5926628205490379848, guid: ef40c5aa2f6b4e84d83075ddbd56e29e, type: 3}
       propertyPath: m_Name
       value: Sound Emitter
@@ -2394,7 +2408,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1079286662}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
   m_Name: 
@@ -2451,6 +2465,7 @@ MonoBehaviour:
     Keep
     the green box on the fish to fill the catch meter. '
   hoverSFX: {fileID: 8300000, guid: a617896e742c69b43a0e5414ed1aaf38, type: 3}
+  m_audioSource: {fileID: 1669953316}
   _sprite: {fileID: 21300000, guid: 9afcff2549abfa944ba67213f25da41f, type: 3}
 --- !u!1 &1225029789
 GameObject:
@@ -2979,7 +2994,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1309523063}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
   m_Name: 
@@ -3035,6 +3050,7 @@ MonoBehaviour:
 
     Left Joy Stick - Steer'
   hoverSFX: {fileID: 8300000, guid: a617896e742c69b43a0e5414ed1aaf38, type: 3}
+  m_audioSource: {fileID: 1669953316}
   _sprite: {fileID: 21300000, guid: 095a5706fb88eed498a60050455a9d8a, type: 3}
 --- !u!1 &1313732106
 GameObject:
@@ -3327,7 +3343,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1365498793}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
   m_Name: 
@@ -3386,6 +3402,7 @@ MonoBehaviour:
 
     Press X to eat.'
   hoverSFX: {fileID: 8300000, guid: a617896e742c69b43a0e5414ed1aaf38, type: 3}
+  m_audioSource: {fileID: 1669953316}
   _sprite: {fileID: 21300000, guid: cdb653ba33dce7d45a2ba1479ec5fbb7, type: 3}
 --- !u!1 &1590652920
 GameObject:
@@ -3763,7 +3780,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1876133242}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
   m_Name: 
@@ -4074,6 +4091,7 @@ MonoBehaviour:
     Press
     Y to drink water.'
   hoverSFX: {fileID: 8300000, guid: a617896e742c69b43a0e5414ed1aaf38, type: 3}
+  m_audioSource: {fileID: 1669953316}
   _sprite: {fileID: 21300000, guid: 29c7d180ac0ca114b9914dd11735786c, type: 3}
 --- !u!114 &2025574591
 MonoBehaviour:
@@ -4082,7 +4100,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2025574588}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
   m_Name: 
