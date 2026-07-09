@@ -8,6 +8,11 @@ public class NeutralDriftingEvent : IDriftingEvent
     readonly float m_maxHoldDuration;
     CountdownTimer m_driftTimer;
 
+    ~NeutralDriftingEvent()
+    {
+        m_driftTimer?.Dispose();
+    }
+
     public NeutralDriftingEvent(Action onDriftStart, float minHoldDuration, float maxHoldDuration)
     {
         m_onDriftStart = onDriftStart;

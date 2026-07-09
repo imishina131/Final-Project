@@ -119,8 +119,13 @@ public class CoalManager : MonoBehaviour, IInteractable, IPlayerControllable, IP
             m_totalPressure += m_pressureToSend;
             m_onPressureSent.Invoke(m_totalPressure);
             Debug.Log("Sent " + m_pressureToSend + " of pressure");
-            m_currentInteractionSession.End();
+            Invoke("EndMiniGame", 1.0f);
         }
+    }
+
+    private void EndMiniGame()
+    {
+        m_currentInteractionSession.End();
     }
 
     private void Update()
