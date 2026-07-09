@@ -19,12 +19,12 @@ public class SinkInteractable : MonoBehaviour, IInteractable, IPromptProvider
 
     [Inject] INotificationMessenger m_notificationMessenger;
     private bool fillingUp = false;
-    private bool drinking = false;
-    [SerializeField] private float drinkingRate = 0.4f;
+    //private bool drinking = false;
+    //[SerializeField] private float drinkingRate = 0.4f;
     [SerializeField] private float cooldown = 3.0f;
     private float timer = 0f;
     private float amountOfWater = 0f;
-    private bool canInteract = true;
+    //private bool canInteract = true;
     private bool filledUp = false;
 
     private IPlayerControllable _playerControllableForHoldingObject;
@@ -57,10 +57,10 @@ public class SinkInteractable : MonoBehaviour, IInteractable, IPromptProvider
         timer = timer += 1 * Time.deltaTime;
         //Debug.Log("water" + amountOfWater);
 
-        if(timer >= cooldown)
+        /*if(timer >= cooldown)
         {
             canInteract = true;
-        }
+        }*/
         if(fillingUp)
         {
             if(!animSink.GetBool("waterRunning"))
@@ -75,7 +75,7 @@ public class SinkInteractable : MonoBehaviour, IInteractable, IPromptProvider
             {
 
                 timer = 0f;
-                canInteract = false;
+                //canInteract = false;
                 fillingUp = false;
                 animSink.SetBool("waterRunning", false);
                 _sinkAudioSource.loop = false;

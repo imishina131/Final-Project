@@ -8,13 +8,17 @@ public class HelpButtonSelection : MonoBehaviour, ISelectHandler, IDeselectHandl
     [Header("Type what you want for the help text here")]
     [TextArea(3, 10)] [SerializeField] private string helpText;
 
+    [Header("Insert SFX here to play")]
+    [SerializeField] private AudioClip hoverSFX;
+    
     private GameObject m_helpPictureLabel;
+    private AudioSource m_audioSource;
     
     public Sprite _sprite;
 
     private void Start()
     {
-        
+        m_audioSource = FindObjectOfType<AudioSource>();
         m_helpPictureLabel = transform.GetChild(0).gameObject;
         m_helpPictureLabel.SetActive(false);
     }
@@ -22,6 +26,7 @@ public class HelpButtonSelection : MonoBehaviour, ISelectHandler, IDeselectHandl
     public void OnSelect(BaseEventData eventData)
     {
         if (m_helpPictureLabel == null) return;
+        m_audioSource.PlayOneShot(hoverSFX);
         m_helpPictureLabel.SetActive(true);
 
     }
