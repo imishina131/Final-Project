@@ -216,6 +216,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1669953316}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 03c1ac5474790804a9111c37325c2a2d, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &55388483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,6 +324,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: OhShip.Core.UI::HelpButtonSelection
   helpText: Press the buttons in the displayed sequence to fuel the steam engine.
+  hoverSFX: {fileID: 8300000, guid: a617896e742c69b43a0e5414ed1aaf38, type: 3}
   _sprite: {fileID: 21300000, guid: ec0e883b630c4ab47b8983e637e32442, type: 3}
 --- !u!1 &66400119
 GameObject:
@@ -1101,6 +1114,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1669953316}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 03c1ac5474790804a9111c37325c2a2d, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &411690852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1200,6 +1225,7 @@ MonoBehaviour:
 
     Don''t let it enter
     the red zones.'
+  hoverSFX: {fileID: 8300000, guid: a617896e742c69b43a0e5414ed1aaf38, type: 3}
   _sprite: {fileID: 21300000, guid: 25c18a16018b0cd4aaa0ed7d1e965d7c, type: 3}
 --- !u!1 &512518696
 GameObject:
@@ -2311,6 +2337,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1669953316}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 03c1ac5474790804a9111c37325c2a2d, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1079286665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2378,22 +2416,22 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1038963848}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
+        - m_Target: {fileID: 1669953316}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: PlayOneShot
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 8300000, guid: a617896e742c69b43a0e5414ed1aaf38, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
-            m_BoolArgument: 0
+            m_BoolArgument: 1
           m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!114 &1079286668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2412,6 +2450,7 @@ MonoBehaviour:
 
     Keep
     the green box on the fish to fill the catch meter. '
+  hoverSFX: {fileID: 8300000, guid: a617896e742c69b43a0e5414ed1aaf38, type: 3}
   _sprite: {fileID: 21300000, guid: 9afcff2549abfa944ba67213f25da41f, type: 3}
 --- !u!1 &1225029789
 GameObject:
@@ -2883,6 +2922,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1669953316}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 03c1ac5474790804a9111c37325c2a2d, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1309523066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2983,6 +3034,7 @@ MonoBehaviour:
     LT - Brake / Reverse
 
     Left Joy Stick - Steer'
+  hoverSFX: {fileID: 8300000, guid: a617896e742c69b43a0e5414ed1aaf38, type: 3}
   _sprite: {fileID: 21300000, guid: 095a5706fb88eed498a60050455a9d8a, type: 3}
 --- !u!1 &1313732106
 GameObject:
@@ -3218,6 +3270,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1669953316}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 03c1ac5474790804a9111c37325c2a2d, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1365498796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3321,6 +3385,7 @@ MonoBehaviour:
     Press Y to pick it up.
 
     Press X to eat.'
+  hoverSFX: {fileID: 8300000, guid: a617896e742c69b43a0e5414ed1aaf38, type: 3}
   _sprite: {fileID: 21300000, guid: cdb653ba33dce7d45a2ba1479ec5fbb7, type: 3}
 --- !u!1 &1590652920
 GameObject:
@@ -4008,6 +4073,7 @@ MonoBehaviour:
 
     Press
     Y to drink water.'
+  hoverSFX: {fileID: 8300000, guid: a617896e742c69b43a0e5414ed1aaf38, type: 3}
   _sprite: {fileID: 21300000, guid: 29c7d180ac0ca114b9914dd11735786c, type: 3}
 --- !u!114 &2025574591
 MonoBehaviour:
@@ -4105,6 +4171,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1669953316}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 03c1ac5474790804a9111c37325c2a2d, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
