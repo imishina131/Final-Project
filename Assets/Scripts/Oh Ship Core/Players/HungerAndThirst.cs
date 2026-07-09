@@ -28,7 +28,7 @@ public class HungerAndThirst: MonoBehaviour
     
 
 
-    [FormerlySerializedAs("anim")] [SerializeField] Animator m_animator;
+    [FormerlySerializedAs("anim")] [SerializeField] Animator animator;
     void Start()
     {
          m_playerInteractor = GetComponentInChildren<PlayerInteractor>();
@@ -40,6 +40,7 @@ public class HungerAndThirst: MonoBehaviour
 
     void Update()
     {
+        Debug.Log("number of players:" + numberOfPassedOutPlayers);
         foreach (var hungerChecks in m_hungerLossRates)
         {
             if (m_playerInteractionState.CheckInteractionTag(hungerChecks.Key))
@@ -86,7 +87,7 @@ public class HungerAndThirst: MonoBehaviour
         {
             fromThirst = true;
         }
-        m_animator.SetBool(s_passedOutAnimatorProperty, true);
+        animator.SetBool(s_passedOutAnimatorProperty, true);
         //fadeAnim.SetBool("Fade", true);
         m_playerInteractor.EndActiveInteraction();
         numberOfPassedOutPlayers++;
@@ -111,7 +112,7 @@ public class HungerAndThirst: MonoBehaviour
             fromThirst = false;
         }
 
-        m_animator.SetBool(s_passedOutAnimatorProperty, false);
+        animator.SetBool(s_passedOutAnimatorProperty, false);
         //fadeAnim.SetBool("Fade", false);
         Debug.Log("Waking Up");
         numberOfPassedOutPlayers--;
