@@ -8,6 +8,7 @@ public class AIMovement : MonoBehaviour
     private int locationIndex = 0;
 
     private bool goingBack = false;
+    private bool collided = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -20,25 +21,43 @@ public class AIMovement : MonoBehaviour
     {     
         if(agent.remainingDistance < 1f)
         {
-            agent.SetDestination(targetLocations[locationIndex].position);
-            if(goingBack)
+            if(!collided)
             {
-                locationIndex--;
-            }
-            else
-            {
-                locationIndex++;
-            }
+                if (goingBack)
+                {
+                    locationIndex--;
+                }
+                else
+                {
+                    locationIndex++;
+                }
 
-            if(locationIndex >= targetLocations.Length - 1) 
-            {
-                goingBack = true;
+                if (locationIndex >= targetLocations.Length - 1)
+                {
+                    goingBack = true;
+                }
+                else if (locationIndex <= 0)
+                {
+                    goingBack = false;
+                }
+
+                agent.SetDestination(targetLocations[locationIndex].position);
             }
-            else if(locationIndex <= 0) 
+            else if(collided)
             {
-                goingBack = false;
+                agent.SetDestination(targetLocations[0].position);
+
             }
         }
         
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player Steam Boat")
+        {
+            Debug.Log("collided");
+            collided = true;
+        }
     }
 }
