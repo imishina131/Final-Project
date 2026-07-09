@@ -11,6 +11,7 @@ public class BottleInteractable : MonoBehaviour, IInteractable, IPromptProvider
     private IPlayerControllable _playerControllable;
     private IPlayerController _playerController;
     private PlayerInteractionState _playerInteractionState;
+    [SerializeField] GameObject _bottleProp;
 
     private IPlayerControllable _playerControllableForHoldingObject;
     private Transform _holdingObjectTransform;
@@ -21,10 +22,7 @@ public class BottleInteractable : MonoBehaviour, IInteractable, IPromptProvider
     [SerializeField] AudioSource audio;
     [SerializeField] AudioClip pickUp;
     
-    private void Start()
-    {
-        
-    }
+ 
     public InteractionSession BeginInteraction(IInteractor interactor)
     {
         IPlayerControllable playerControllable = interactor.GetAssociatedGameObject().transform.parent.GetComponent<IPlayerControllable>();
@@ -38,7 +36,7 @@ public class BottleInteractable : MonoBehaviour, IInteractable, IPromptProvider
         playerInteractionState.AddInteractionTag(InteractionTag.HoldingBottle);
         audio.PlayOneShot(pickUp);
         Transform holdingTransform = playerControllable.GetAssociatedGameObject().GetComponentInChildren<HeldObjectHandler>().transform;
-        GameObject bottle = Instantiate(bottleToSpawn, holdingTransform.position, holdingTransform.rotation);
+        GameObject bottle = Instantiate(_bottleProp, holdingTransform.position, holdingTransform.rotation);
         bottle.transform.SetParent(holdingTransform);
         gameObject.SetActive(false);
 
@@ -49,6 +47,10 @@ public class BottleInteractable : MonoBehaviour, IInteractable, IPromptProvider
 
     public PromptData GetPromptData()
     {
+        if (m_currentInteractionSession is { IsActive: true })
+        {
+            return new PromptData { AssociatedWidget = "" };
+        }
         return new PromptData { AssociatedWidget = _widgetForPrompt };
     }
 
