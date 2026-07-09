@@ -36288,6 +36288,7 @@ MonoBehaviour:
   - {fileID: 1541328528}
   - {fileID: 1664817086}
   windowLights:
+  - {fileID: 1958744471}
   - {fileID: 33532787}
   - {fileID: 158011521}
   - {fileID: 161220174}
@@ -39807,6 +39808,10 @@ PrefabInstance:
       propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
       value: 1.04
       objectReference: {fileID: 0}
+    - target: {fileID: 848438743785790366, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.848
+      objectReference: {fileID: 0}
     - target: {fileID: 1520308994910509136, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
       propertyPath: drop
       value: 
@@ -42413,6 +42418,11 @@ Transform:
   - {fileID: 479567270}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1958744471 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5935177614238338879, guid: a9ae24cad0d094247b5ca193360ed7fc, type: 3}
+  m_PrefabInstance: {fileID: 2759527505578783048}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1963251374 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2910075683458745073, guid: a9ae24cad0d094247b5ca193360ed7fc, type: 3}
