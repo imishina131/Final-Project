@@ -6,7 +6,7 @@ public class LightingManager : MonoBehaviour
 {
     [SerializeField] private Light directionalLight;
     [SerializeField] private LightingPreset preset;
-    [SerializeField, Range(0, 96)] private float timeOfDay;
+    [SerializeField, Range(0, 144)] private float timeOfDay;
     [SerializeField] private GameObject[] lights;
     [SerializeField] private GameObject[] fireflies;
     [SerializeField] private GameObject[] windowLights;
@@ -52,7 +52,7 @@ public class LightingManager : MonoBehaviour
         if(Application.isPlaying)
         {
             timeOfDay += Time.deltaTime;
-            timeOfDay %= 96;
+            timeOfDay %= 144;
             UpdateLighting(timeOfDay/144f);
         }
         else
