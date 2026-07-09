@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using System.Collections;
+using MatrixUtils.DependencyInjection;
 using UnityEngine;
 
 public class StorageInteractable : MonoBehaviour, IInteractable, IPromptProvider
@@ -17,6 +19,8 @@ public class StorageInteractable : MonoBehaviour, IInteractable, IPromptProvider
 
     private int fishDisplayed = 0;
     private int crabsDisplayed = 0;
+    
+    [Inject] INotificationMessenger m_notificationMessenger;
 
     [Header("Audio")]
     [SerializeField] private AudioSource audioSFX;
@@ -52,6 +56,7 @@ public class StorageInteractable : MonoBehaviour, IInteractable, IPromptProvider
 
         if (_storedWaterLife.Count == 0)
         {
+            StartCoroutine(DisplayWarning());
             m_currentInteractionSession = new InteractionSession(interactor, this);
             m_currentInteractionSession.End();
             return m_currentInteractionSession;
@@ -178,5 +183,16 @@ public class StorageInteractable : MonoBehaviour, IInteractable, IPromptProvider
                 break;
         }
 
+    }
+    
+    
+    IEnumerator DisplayWarning()
+    {
+        Debug.Log("Warning Label");
+        int playerIndex = _playerInteractionState.PlayerIndex;
+        Debug.Log($"Firing: 'enable raw player{playerIndex}'");
+        m_notificationMessenger.TryNotify($"enable raw player{playerIndex}");
+        yield return new WaitForSeconds(3f);
+        m_notificationMessenger.TryNotify($"disable raw player{playerIndex}");;
     }
 }
