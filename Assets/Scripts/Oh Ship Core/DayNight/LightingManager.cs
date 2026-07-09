@@ -53,14 +53,14 @@ public class LightingManager : MonoBehaviour
         {
             timeOfDay += Time.deltaTime;
             timeOfDay %= 96;
-            UpdateLighting(timeOfDay/96f);
+            UpdateLighting(timeOfDay/144f);
         }
         else
         {
-            UpdateLighting(timeOfDay / 96f);
+            UpdateLighting(timeOfDay / 144f);
         }
 
-        if(timeOfDay <= 20 || timeOfDay >= 84)
+        if(timeOfDay <= 30 || timeOfDay >= 126)
         {
             if(!startedFireflies)
             {
@@ -150,12 +150,10 @@ public class LightingManager : MonoBehaviour
     {
         foreach(GameObject windowLight in windowLights)
         {
+            MaterialPropertyBlock propertyBlock = new MaterialPropertyBlock();
+            propertyBlock.SetFloat("_Emissive_Intensity", 1.3f);
             Renderer renderer = windowLight.GetComponent<Renderer>();
-            Material[] currentMaterials = renderer.sharedMaterials;
-            foreach(Material mat in currentMaterials)
-            {
-                mat.SetFloat("_Emissive_Intensity", 1.3f);
-            }
+            renderer.SetPropertyBlock(propertyBlock);
         }
     }
 
@@ -163,12 +161,10 @@ public class LightingManager : MonoBehaviour
     {
         foreach (GameObject windowLight in windowLights)
         {
+            MaterialPropertyBlock propertyBlock = new MaterialPropertyBlock();
+            propertyBlock.SetFloat("_Emissive_Intensity", 0f);
             Renderer renderer = windowLight.GetComponent<Renderer>();
-            Material[] currentMaterials = renderer.sharedMaterials;
-            foreach (Material mat in currentMaterials)
-            {
-                mat.SetFloat("_Emissive_Intensity", 0f);
-            }
+            renderer.SetPropertyBlock(propertyBlock);
         }
     }
 }

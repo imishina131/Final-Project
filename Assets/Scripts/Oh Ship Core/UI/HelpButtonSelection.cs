@@ -12,13 +12,13 @@ public class HelpButtonSelection : MonoBehaviour, ISelectHandler, IDeselectHandl
     [SerializeField] private AudioClip hoverSFX;
     
     private GameObject m_helpPictureLabel;
-    private AudioSource m_audioSource;
+    [SerializeField] AudioSource m_audioSource;
     
     public Sprite _sprite;
 
     private void Start()
     {
-        m_audioSource = FindObjectOfType<AudioSource>();
+        
         m_helpPictureLabel = transform.GetChild(0).gameObject;
         m_helpPictureLabel.SetActive(false);
     }
