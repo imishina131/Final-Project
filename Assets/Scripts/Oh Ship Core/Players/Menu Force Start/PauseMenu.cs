@@ -58,7 +58,7 @@ public class PauseMenu : MonoBehaviour
         if (submitAction != null) { submitAction.Enable(); submitAction.performed += OnSubmit; }
     }
 
-    void UnsubscribeFromPlayer(PlayerInput playerInput)
+    public void UnsubscribeFromPlayer(PlayerInput playerInput)
     {
         InputAction pauseAction = playerInput.actions.FindAction("Pause");
         if (pauseAction != null) pauseAction.performed -= OnToggleMenu;

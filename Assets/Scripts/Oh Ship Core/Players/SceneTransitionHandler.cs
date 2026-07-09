@@ -2,7 +2,9 @@ using System.Collections;
 using JetBrains.Annotations;
 using MatrixUtils.DependencyInjection;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+
 
 public class SceneTransitionHandler : PersistentService<ISceneTransitioner>, ISceneTransitioner
 {
@@ -18,18 +20,24 @@ public class SceneTransitionHandler : PersistentService<ISceneTransitioner>, ISc
 
     IEnumerator TransitionToSceneAsync(string sceneName, float duration)
     {
+        bool keepPlayerControllers = sceneName == "Build Scene";
         m_isTransitioning = true;
         m_fadeCanvasGroup.blocksRaycasts = true;
         yield return m_fadeCanvasGroup.FadeToOpacity(1, duration);
 
-        if (sceneName == "GameOver" || sceneName == "CinematicScene" ||  sceneName == "Character Select" || sceneName == "MainMenu")
+        if (!keepPlayerControllers)
         {
+            PauseMenu pauseMenu = FindFirstObjectByType<PauseMenu>();
             foreach (PlayerController controller in FindObjectsByType<PlayerController>(FindObjectsSortMode.None))
             {
+                PlayerInput playerInput = controller.GetComponent<PlayerInput>();
+                if (playerInput != null && pauseMenu != null)
+                {
+                    pauseMenu.UnsubscribeFromPlayer(playerInput);
+                }
                 Destroy(controller.gameObject);
             }
         }
-        
         yield return SceneManager.LoadSceneAsync(sceneName);
         yield return m_fadeCanvasGroup.FadeToOpacity(0, duration);
         m_fadeCanvasGroup.blocksRaycasts = false;
