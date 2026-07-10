@@ -16,7 +16,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2620874881416909948
 Transform:
@@ -83,7 +83,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -127,653 +127,6 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
---- !u!1 &1670310997761899148
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1813347254336453039}
-  - component: {fileID: 285802826287183872}
-  - component: {fileID: 5171340214723778223}
-  m_Layer: 0
-  m_Name: GameObject (5)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1813347254336453039
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1670310997761899148}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.2232905, z: -0, w: 0.97475195}
-  m_LocalPosition: {x: -93.74808, y: 0.000023406377, z: -157.81305}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5051445984985366183}
-  m_LocalEulerAnglesHint: {x: 0, y: -25.805, z: 0}
---- !u!65 &285802826287183872
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1670310997761899148}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 63.416992, y: 50.351242, z: 68.40325}
-  m_Center: {x: -29.053745, y: 2.5439835, z: -56.63296}
---- !u!114 &5171340214723778223
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1670310997761899148}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40ba6fbc7c0f22d4187865da4d941327, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: OhShip.Core.Ship::CollisionDamager
---- !u!1 &2721876160816603384
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2269753035642569745}
-  - component: {fileID: 3232178612675817489}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2269753035642569745
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2721876160816603384}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.0017311932, z: -0, w: 0.9999985}
-  m_LocalPosition: {x: 59.592957, y: 0.000023406377, z: -2.8}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5051445984985366183}
-  m_LocalEulerAnglesHint: {x: 0, y: -0.198, z: 0}
---- !u!65 &3232178612675817489
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2721876160816603384}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 61.262886, y: 38.041695, z: 124.46725}
-  m_Center: {x: -30.131441, y: -3.6107903, z: -59.198025}
---- !u!1 &3059136018319069907
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6892644194721307709}
-  - component: {fileID: 6780801120554150891}
-  - component: {fileID: 5919700822595347726}
-  m_Layer: 0
-  m_Name: GameObject (01)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6892644194721307709
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3059136018319069907}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.0046690023, z: -0, w: 0.9999891}
-  m_LocalPosition: {x: -88.4, y: 0.000023406377, z: -2.9788513}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5051445984985366183}
-  m_LocalEulerAnglesHint: {x: 0, y: -0.535, z: 0}
---- !u!65 &6780801120554150891
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3059136018319069907}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 61.26288, y: 38.041695, z: 124.469284}
-  m_Center: {x: -30.131456, y: -3.6107903, z: -59.197}
---- !u!114 &5919700822595347726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3059136018319069907}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40ba6fbc7c0f22d4187865da4d941327, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: OhShip.Core.Ship::CollisionDamager
---- !u!1 &3662650177678825486
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1059956898380130482}
-  - component: {fileID: 8480014016480933954}
-  - component: {fileID: 7804010089346595317}
-  m_Layer: 0
-  m_Name: GameObject (11)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1059956898380130482
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3662650177678825486}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.2232905, z: -0, w: 0.97475195}
-  m_LocalPosition: {x: 54.4, y: 0.000023406377, z: -135}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5051445984985366183}
-  m_LocalEulerAnglesHint: {x: 0, y: -25.805, z: 0}
---- !u!65 &8480014016480933954
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3662650177678825486}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 63.416992, y: 50.351242, z: 68.40325}
-  m_Center: {x: -29.053745, y: 2.5439835, z: -56.63296}
---- !u!114 &7804010089346595317
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3662650177678825486}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40ba6fbc7c0f22d4187865da4d941327, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: OhShip.Core.Ship::CollisionDamager
---- !u!1 &4984927427743560156
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 570904399500986664}
-  - component: {fileID: 8774554750757010107}
-  - component: {fileID: 5854608274933732416}
-  m_Layer: 0
-  m_Name: GameObject (12)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &570904399500986664
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4984927427743560156}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.13858846, z: -0, w: 0.99035007}
-  m_LocalPosition: {x: -60.3, y: 0.000023406377, z: -221.9}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5051445984985366183}
-  m_LocalEulerAnglesHint: {x: 0, y: -15.932, z: 0}
---- !u!65 &8774554750757010107
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4984927427743560156}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 63.416992, y: 50.351242, z: 30.796686}
-  m_Center: {x: -29.053759, y: 2.5439835, z: -31.544107}
---- !u!114 &5854608274933732416
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4984927427743560156}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40ba6fbc7c0f22d4187865da4d941327, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: OhShip.Core.Ship::CollisionDamager
---- !u!1 &5416337359180284138
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3265255215921991555}
-  - component: {fileID: 9180752035845158}
-  - component: {fileID: 8227010624555254402}
-  m_Layer: 0
-  m_Name: GameObject (6)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3265255215921991555
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5416337359180284138}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.13858846, z: -0, w: 0.99035007}
-  m_LocalPosition: {x: 81.1, y: 0.000023406377, z: -170.6}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5051445984985366183}
-  m_LocalEulerAnglesHint: {x: 0, y: -15.932, z: 0}
---- !u!65 &9180752035845158
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5416337359180284138}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 63.416992, y: 50.351242, z: 68.40325}
-  m_Center: {x: -29.053745, y: 2.5439835, z: -56.63296}
---- !u!114 &8227010624555254402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5416337359180284138}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40ba6fbc7c0f22d4187865da4d941327, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: OhShip.Core.Ship::CollisionDamager
---- !u!1 &6052036814412925315
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1712159144005912729}
-  - component: {fileID: 3680681872729561113}
-  - component: {fileID: 3024953267325742808}
-  m_Layer: 0
-  m_Name: GameObject (10)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1712159144005912729
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6052036814412925315}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.0072281817, z: -0, w: 0.99997395}
-  m_LocalPosition: {x: -50, y: 0.000023406377, z: -184}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5051445984985366183}
-  m_LocalEulerAnglesHint: {x: 0, y: -0.828, z: 0}
---- !u!65 &3680681872729561113
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6052036814412925315}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 63.416992, y: 50.351242, z: 33.993103}
-  m_Center: {x: -29.053942, y: 2.5439835, z: -98.260124}
---- !u!114 &3024953267325742808
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6052036814412925315}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40ba6fbc7c0f22d4187865da4d941327, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: OhShip.Core.Ship::CollisionDamager
---- !u!1 &6503977039176495139
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1838950260159804472}
-  - component: {fileID: 8377821318094036698}
-  - component: {fileID: 1446044545982972026}
-  m_Layer: 0
-  m_Name: GameObject (8)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1838950260159804472
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6503977039176495139}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.0072281817, z: -0, w: 0.99997395}
-  m_LocalPosition: {x: 100, y: 0.000023406377, z: -184}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5051445984985366183}
-  m_LocalEulerAnglesHint: {x: 0, y: -0.828, z: 0}
---- !u!65 &8377821318094036698
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6503977039176495139}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 63.416992, y: 50.351242, z: 53.026493}
-  m_Center: {x: -29.05388, y: 2.5439835, z: -88.44964}
---- !u!114 &1446044545982972026
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6503977039176495139}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40ba6fbc7c0f22d4187865da4d941327, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: OhShip.Core.Ship::CollisionDamager
---- !u!1 &7255730902778337900
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5138135394203748442}
-  - component: {fileID: 7782140915106102983}
-  - component: {fileID: 5332361297184097677}
-  m_Layer: 0
-  m_Name: GameObject (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5138135394203748442
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7255730902778337900}
-  serializedVersion: 2
-  m_LocalRotation: {x: -2.0161435e-10, y: -0.09452371, z: -0.0000000028456482, w: 0.9955227}
-  m_LocalPosition: {x: -98.9, y: 0.000023406377, z: -85.9}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5051445984985366183}
-  m_LocalEulerAnglesHint: {x: 0, y: -10.848, z: 0}
---- !u!65 &7782140915106102983
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7255730902778337900}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 63.416992, y: 50.351242, z: 66.325966}
-  m_Center: {x: -29.053965, y: 2.5439835, z: -61.57595}
---- !u!114 &5332361297184097677
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7255730902778337900}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40ba6fbc7c0f22d4187865da4d941327, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: OhShip.Core.Ship::CollisionDamager
---- !u!1 &8143182931953832281
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7419496169977338603}
-  - component: {fileID: 3860519563439830756}
-  - component: {fileID: 5640311508280234599}
-  m_Layer: 0
-  m_Name: GameObject (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7419496169977338603
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8143182931953832281}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.07409927, z: -0, w: 0.9972509}
-  m_LocalPosition: {x: 57.3, y: 0.000023406377, z: -107.4}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5051445984985366183}
-  m_LocalEulerAnglesHint: {x: 0, y: -8.499, z: 0}
---- !u!65 &3860519563439830756
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8143182931953832281}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 63.416992, y: 50.351242, z: 59.390785}
-  m_Center: {x: -29.053583, y: 2.5439835, z: -34.912586}
---- !u!114 &5640311508280234599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8143182931953832281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40ba6fbc7c0f22d4187865da4d941327, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: OhShip.Core.Ship::CollisionDamager
 --- !u!1001 &4429429169834641
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -845,6 +198,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c38d8d444bcac1e4e81eced717277b73, type: 3}
       propertyPath: m_TagString
       value: WindowLight
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c38d8d444bcac1e4e81eced717277b73, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -986,6 +343,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RiverWallBack (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e584849c0435fb14cb8248e73fe871fb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1063,6 +424,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1298,6 +663,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1394,9 +763,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5051445984985366183}
     m_Modifications:
+    - target: {fileID: 1267420293437783450, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261679290181551016, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_Name
       value: Lampposts_Large (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2470728133328409328, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260285967341251339, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7177984082353532578, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8428141935717895241, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_LocalScale.x
@@ -1453,6 +854,10 @@ PrefabInstance:
     - target: {fileID: 8428141935717895241, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153232214555930955, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1532,6 +937,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (53)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1609,6 +1018,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1706,9 +1119,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5051445984985366183}
     m_Modifications:
+    - target: {fileID: 1267420293437783450, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261679290181551016, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_Name
       value: Lampposts_Large (08)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2470728133328409328, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260285967341251339, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7177984082353532578, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8428141935717895241, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_LocalScale.x
@@ -1766,6 +1211,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9153232214555930955, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1784,9 +1233,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5051445984985366183}
     m_Modifications:
+    - target: {fileID: 1267420293437783450, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261679290181551016, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_Name
       value: Lampposts_Large (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2470728133328409328, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260285967341251339, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7177984082353532578, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8428141935717895241, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_LocalScale.x
@@ -1843,6 +1324,10 @@ PrefabInstance:
     - target: {fileID: 8428141935717895241, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153232214555930955, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1909,6 +1394,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e584849c0435fb14cb8248e73fe871fb, type: 3}
       propertyPath: m_Name
       value: RiverWallBack (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e584849c0435fb14cb8248e73fe871fb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2066,6 +1555,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2162,9 +1655,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5051445984985366183}
     m_Modifications:
+    - target: {fileID: 1267420293437783450, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261679290181551016, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_Name
       value: Lampposts_Large (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2470728133328409328, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260285967341251339, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7177984082353532578, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8428141935717895241, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_LocalScale.x
@@ -2221,6 +1746,10 @@ PrefabInstance:
     - target: {fileID: 8428141935717895241, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153232214555930955, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2296,9 +1825,21 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -8153468022190502949, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
       propertyPath: m_Name
       value: PalmTree (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225469143748265590, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2374,9 +1915,21 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -8153468022190502949, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
       propertyPath: m_Name
       value: PalmTree (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225469143748265590, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2474,9 +2027,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5051445984985366183}
     m_Modifications:
+    - target: {fileID: 1267420293437783450, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261679290181551016, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_Name
       value: Lampposts_Large (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2470728133328409328, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260285967341251339, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7177984082353532578, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8428141935717895241, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_LocalScale.x
@@ -2534,6 +2119,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9153232214555930955, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2552,9 +2141,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5051445984985366183}
     m_Modifications:
+    - target: {fileID: 1267420293437783450, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261679290181551016, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_Name
       value: Lampposts_Large (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2470728133328409328, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260285967341251339, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7177984082353532578, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8428141935717895241, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_LocalScale.x
@@ -2611,6 +2232,10 @@ PrefabInstance:
     - target: {fileID: 8428141935717895241, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153232214555930955, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2764,9 +2389,21 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -8153468022190502949, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
       propertyPath: m_Name
       value: PalmTree (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225469143748265590, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2846,6 +2483,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (51)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2924,6 +2565,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (54)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3001,6 +2646,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3154,9 +2803,21 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -8153468022190502949, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
       propertyPath: m_Name
       value: PalmTree (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225469143748265590, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3236,6 +2897,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (42)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3310,6 +2975,14 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 6dddf3f6730d67d4e87ba427341e3f8e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 974ad544d4843fd4598db8e4791eb8ee, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 6dddf3f6730d67d4e87ba427341e3f8e, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2a9d3022417b6f24faba064f41bbe8c5, type: 2}
     - target: {fileID: 919132149155446097, guid: 6dddf3f6730d67d4e87ba427341e3f8e, type: 3}
       propertyPath: m_Name
       value: Building_CapeBrignet
@@ -3317,6 +2990,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 6dddf3f6730d67d4e87ba427341e3f8e, type: 3}
       propertyPath: m_TagString
       value: WindowLight
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6dddf3f6730d67d4e87ba427341e3f8e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3379,6 +3056,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e584849c0435fb14cb8248e73fe871fb, type: 3}
       propertyPath: m_Name
       value: RiverWallBack (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e584849c0435fb14cb8248e73fe871fb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3458,6 +3139,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3535,6 +3220,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (57)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3680,6 +3369,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RiverWallBack (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e584849c0435fb14cb8248e73fe871fb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3757,6 +3450,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4066,9 +3763,21 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -8153468022190502949, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
       propertyPath: m_Name
       value: PalmTree (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225469143748265590, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4148,6 +3857,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DowntownBuilding13
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b221cf371ce1d7b4cb613951f28072f6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4214,6 +3927,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RiverWallBack (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e584849c0435fb14cb8248e73fe871fb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4276,6 +3993,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RiverWallBack (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e584849c0435fb14cb8248e73fe871fb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4294,9 +4015,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5051445984985366183}
     m_Modifications:
+    - target: {fileID: 1267420293437783450, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261679290181551016, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_Name
       value: Lampposts_Large (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2470728133328409328, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260285967341251339, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7177984082353532578, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8428141935717895241, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_LocalScale.x
@@ -4353,6 +4106,10 @@ PrefabInstance:
     - target: {fileID: 8428141935717895241, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153232214555930955, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4432,6 +4189,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4510,6 +4271,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4571,6 +4336,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 78ebd69670dcfbb43846aac1fc8757f8, type: 3}
       propertyPath: m_Name
       value: Sidewalks_CurveRightToStraight
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 78ebd69670dcfbb43846aac1fc8757f8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4646,9 +4415,21 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -8153468022190502949, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
       propertyPath: m_Name
       value: PalmTree (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225469143748265590, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4728,6 +4509,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4806,6 +4591,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4883,6 +4672,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5118,6 +4911,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5195,6 +4992,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (44)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5558,6 +5359,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RiverWallBack (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e584849c0435fb14cb8248e73fe871fb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5636,6 +5441,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (48)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5654,9 +5463,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5051445984985366183}
     m_Modifications:
+    - target: {fileID: 1267420293437783450, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261679290181551016, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_Name
       value: Lampposts_Large (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2470728133328409328, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260285967341251339, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7177984082353532578, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8428141935717895241, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_LocalScale.x
@@ -5713,6 +5554,10 @@ PrefabInstance:
     - target: {fileID: 8428141935717895241, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153232214555930955, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5792,6 +5637,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (43)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5810,9 +5659,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5051445984985366183}
     m_Modifications:
+    - target: {fileID: 1267420293437783450, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261679290181551016, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_Name
       value: Lampposts_Large (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2470728133328409328, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260285967341251339, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7177984082353532578, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8428141935717895241, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_LocalScale.x
@@ -5870,6 +5751,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9153232214555930955, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5888,9 +5773,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5051445984985366183}
     m_Modifications:
+    - target: {fileID: 1267420293437783450, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261679290181551016, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_Name
       value: Lampposts_Large (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2470728133328409328, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260285967341251339, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7177984082353532578, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8428141935717895241, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_LocalScale.x
@@ -5947,6 +5864,10 @@ PrefabInstance:
     - target: {fileID: 8428141935717895241, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153232214555930955, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6091,6 +6012,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e584849c0435fb14cb8248e73fe871fb, type: 3}
       propertyPath: m_Name
       value: RiverWallBack (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e584849c0435fb14cb8248e73fe871fb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6248,6 +6173,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6404,6 +6333,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6556,9 +6489,21 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -8153468022190502949, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
       propertyPath: m_Name
       value: PalmTree (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225469143748265590, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6856,6 +6801,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RiverWallBack (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e584849c0435fb14cb8248e73fe871fb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6921,6 +6870,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9590439c3dc7b9c4a86b66287e08e5e6, type: 3}
       propertyPath: m_TagString
       value: WindowLight
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9590439c3dc7b9c4a86b66287e08e5e6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6988,6 +6941,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RiverWallBack (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e584849c0435fb14cb8248e73fe871fb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7006,9 +6963,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5051445984985366183}
     m_Modifications:
+    - target: {fileID: 1267420293437783450, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261679290181551016, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_Name
       value: Lampposts_Large (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2470728133328409328, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260285967341251339, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7177984082353532578, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8428141935717895241, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_LocalScale.x
@@ -7066,6 +7055,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9153232214555930955, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7084,9 +7077,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5051445984985366183}
     m_Modifications:
+    - target: {fileID: 1267420293437783450, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261679290181551016, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_Name
       value: Lampposts_Large (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2470728133328409328, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260285967341251339, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7177984082353532578, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8428141935717895241, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_LocalScale.x
@@ -7143,6 +7168,10 @@ PrefabInstance:
     - target: {fileID: 8428141935717895241, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153232214555930955, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7296,9 +7325,21 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -8153468022190502949, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
       propertyPath: m_Name
       value: PalmTree (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225469143748265590, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7365,6 +7406,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e584849c0435fb14cb8248e73fe871fb, type: 3}
       propertyPath: m_Name
       value: RiverWallBack (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e584849c0435fb14cb8248e73fe871fb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7443,6 +7488,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (45)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7526,6 +7575,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: WindowLight
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fea31d1a5a44cad4ab2fb5fbe938e5f1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7604,6 +7657,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7665,6 +7722,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e584849c0435fb14cb8248e73fe871fb, type: 3}
       propertyPath: m_Name
       value: RiverWallBack
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e584849c0435fb14cb8248e73fe871fb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7744,6 +7805,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7821,6 +7886,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7978,6 +8047,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8134,6 +8207,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8212,6 +8289,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8286,9 +8367,21 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -8153468022190502949, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
       propertyPath: m_Name
       value: PalmTree (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225469143748265590, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8446,6 +8539,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (46)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8511,6 +8608,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e584849c0435fb14cb8248e73fe871fb, type: 3}
       propertyPath: m_Name
       value: RiverWallBack (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e584849c0435fb14cb8248e73fe871fb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8746,6 +8847,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8980,6 +9085,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9058,6 +9167,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9132,9 +9245,21 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -8153468022190502949, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
       propertyPath: m_Name
       value: PalmTree (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225469143748265590, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9197,6 +9322,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c3140b9bb855581429ba479ec23c3dab, type: 3}
       propertyPath: m_Name
       value: TrolleyTracks_CurveRightToStraight
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c3140b9bb855581429ba479ec23c3dab, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9350,9 +9479,21 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -8153468022190502949, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
       propertyPath: m_Name
       value: PalmTree (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225469143748265590, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9588,6 +9729,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9744,6 +9889,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bridge
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 39315725a3cc4c74fb18ad4295e2d545, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9846,7 +9995,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55fca3bffd80de8458bda02e668d3788, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.7
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55fca3bffd80de8458bda02e668d3788, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9880,6 +10029,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -927051184001087479, guid: 55fca3bffd80de8458bda02e668d3788, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 55fca3bffd80de8458bda02e668d3788, type: 3}
       propertyPath: m_Name
       value: ModularEnvironmentPiece_Downtown_CurveRightToStraight
@@ -9887,6 +10040,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 55fca3bffd80de8458bda02e668d3788, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55fca3bffd80de8458bda02e668d3788, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4686930929427217183, guid: 55fca3bffd80de8458bda02e668d3788, type: 3}
       propertyPath: m_IsActive
@@ -9905,7 +10062,8 @@ PrefabInstance:
       value: 307.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 4686930929427217183, guid: 55fca3bffd80de8458bda02e668d3788, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 55fca3bffd80de8458bda02e668d3788, type: 3}
       insertIndex: 0
@@ -10069,36 +10227,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 55fca3bffd80de8458bda02e668d3788, type: 3}
       insertIndex: 53
       addedObject: {fileID: 6486957655409414347}
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 55fca3bffd80de8458bda02e668d3788, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2269753035642569745}
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 55fca3bffd80de8458bda02e668d3788, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6892644194721307709}
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 55fca3bffd80de8458bda02e668d3788, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5138135394203748442}
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 55fca3bffd80de8458bda02e668d3788, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7419496169977338603}
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 55fca3bffd80de8458bda02e668d3788, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1813347254336453039}
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 55fca3bffd80de8458bda02e668d3788, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1059956898380130482}
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 55fca3bffd80de8458bda02e668d3788, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3265255215921991555}
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 55fca3bffd80de8458bda02e668d3788, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 570904399500986664}
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 55fca3bffd80de8458bda02e668d3788, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1838950260159804472}
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 55fca3bffd80de8458bda02e668d3788, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1712159144005912729}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 55fca3bffd80de8458bda02e668d3788, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5103546948507545827}
@@ -10615,109 +10743,8 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 55fca3bffd80de8458bda02e668d3788, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4297479132852482245}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: -927051184001087479, guid: 55fca3bffd80de8458bda02e668d3788, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 9164640717222159339}
-    - targetCorrespondingSourceObject: {fileID: -927051184001087479, guid: 55fca3bffd80de8458bda02e668d3788, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4023678580788598409}
-    - targetCorrespondingSourceObject: {fileID: -927051184001087479, guid: 55fca3bffd80de8458bda02e668d3788, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7603541639987339564}
-    - targetCorrespondingSourceObject: {fileID: -927051184001087479, guid: 55fca3bffd80de8458bda02e668d3788, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6581534096238099008}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55fca3bffd80de8458bda02e668d3788, type: 3}
---- !u!1 &3653155959022276933 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -927051184001087479, guid: 55fca3bffd80de8458bda02e668d3788, type: 3}
-  m_PrefabInstance: {fileID: 4724537836485564748}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &9164640717222159339
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3653155959022276933}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.73208934, y: 2.9930322, z: 0.17232232}
-  m_Center: {x: -1.1293083, y: 1.4965152, z: -0.048711024}
---- !u!65 &4023678580788598409
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3653155959022276933}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.6560436, y: 1.3804163, z: 0.17232232}
-  m_Center: {x: 0.66965544, y: 0.6902128, z: -0.048711024}
---- !u!65 &7603541639987339564
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3653155959022276933}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.1958706, y: 2.9930322, z: 0.17232232}
-  m_Center: {x: 0.89974165, y: 1.4965152, z: -0.048711024}
---- !u!65 &6581534096238099008
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3653155959022276933}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.1885791, y: 0.27759007, z: 0.17232232}
-  m_Center: {x: -0.9010617, y: 2.8542442, z: -0.048711024}
 --- !u!4 &5051445984985366183 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 55fca3bffd80de8458bda02e668d3788, type: 3}
@@ -10935,6 +10962,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RiverWallBack (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e584849c0435fb14cb8248e73fe871fb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10953,9 +10984,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5051445984985366183}
     m_Modifications:
+    - target: {fileID: 1267420293437783450, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261679290181551016, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_Name
       value: Lampposts_Large (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2470728133328409328, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260285967341251339, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7177984082353532578, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8428141935717895241, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_LocalScale.x
@@ -11012,6 +11075,10 @@ PrefabInstance:
     - target: {fileID: 8428141935717895241, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153232214555930955, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11157,6 +11224,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RiverWallBack (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e584849c0435fb14cb8248e73fe871fb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11253,9 +11324,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5051445984985366183}
     m_Modifications:
+    - target: {fileID: 1267420293437783450, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261679290181551016, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_Name
       value: Lampposts_Large (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2470728133328409328, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260285967341251339, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7177984082353532578, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8428141935717895241, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_LocalScale.x
@@ -11312,6 +11415,10 @@ PrefabInstance:
     - target: {fileID: 8428141935717895241, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153232214555930955, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11535,6 +11642,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RiverWallBack (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e584849c0435fb14cb8248e73fe871fb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11612,6 +11723,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (47)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11691,6 +11806,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11709,9 +11828,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5051445984985366183}
     m_Modifications:
+    - target: {fileID: 1267420293437783450, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261679290181551016, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_Name
       value: Lampposts_Large (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2470728133328409328, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260285967341251339, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7177984082353532578, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8428141935717895241, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_LocalScale.x
@@ -11768,6 +11919,10 @@ PrefabInstance:
     - target: {fileID: 8428141935717895241, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153232214555930955, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11955,9 +12110,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5051445984985366183}
     m_Modifications:
+    - target: {fileID: 1267420293437783450, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261679290181551016, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_Name
       value: Lampposts_Large (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2470728133328409328, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260285967341251339, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7177984082353532578, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8428141935717895241, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_LocalScale.x
@@ -12014,6 +12201,10 @@ PrefabInstance:
     - target: {fileID: 8428141935717895241, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153232214555930955, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12167,9 +12358,21 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -8153468022190502949, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
       propertyPath: m_Name
       value: PalmTree (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225469143748265590, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12249,6 +12452,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12327,6 +12534,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12401,9 +12612,21 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -8153468022190502949, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
       propertyPath: m_Name
       value: PalmTree (09)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225469143748265590, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12470,6 +12693,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e584849c0435fb14cb8248e73fe871fb, type: 3}
       propertyPath: m_Name
       value: RiverWallBack (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e584849c0435fb14cb8248e73fe871fb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12545,9 +12772,21 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -8153468022190502949, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
       propertyPath: m_Name
       value: PalmTree (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225469143748265590, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12626,6 +12865,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12861,6 +13104,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12939,6 +13186,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12957,9 +13208,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5051445984985366183}
     m_Modifications:
+    - target: {fileID: 1267420293437783450, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261679290181551016, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_Name
       value: Lampposts_Large (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2470728133328409328, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260285967341251339, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7177984082353532578, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8428141935717895241, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_LocalScale.x
@@ -13016,6 +13299,10 @@ PrefabInstance:
     - target: {fileID: 8428141935717895241, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153232214555930955, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13095,6 +13382,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13161,6 +13452,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RiverWallBack (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e584849c0435fb14cb8248e73fe871fb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13222,6 +13517,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e584849c0435fb14cb8248e73fe871fb, type: 3}
       propertyPath: m_Name
       value: RiverWallBack (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e584849c0435fb14cb8248e73fe871fb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13297,9 +13596,21 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -8153468022190502949, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
       propertyPath: m_Name
       value: PalmTree (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225469143748265590, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13457,6 +13768,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13535,6 +13850,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13609,9 +13928,21 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -8153468022190502949, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
       propertyPath: m_Name
       value: PalmTree (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225469143748265590, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13675,6 +14006,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RiverWallBack (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e584849c0435fb14cb8248e73fe871fb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13693,9 +14028,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5051445984985366183}
     m_Modifications:
+    - target: {fileID: 1267420293437783450, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261679290181551016, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_Name
       value: Lampposts_Large (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2470728133328409328, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260285967341251339, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7177984082353532578, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8428141935717895241, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_LocalScale.x
@@ -13752,6 +14119,10 @@ PrefabInstance:
     - target: {fileID: 8428141935717895241, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153232214555930955, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13830,6 +14201,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (52)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14065,6 +14440,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (49)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14217,9 +14596,21 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -8153468022190502949, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
       propertyPath: m_Name
       value: PalmTree (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225469143748265590, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14361,6 +14752,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RiverWallCurveRightToStraight (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9ec3c06a0e608a744b4e1157f0568d82, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14435,9 +14830,21 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -8153468022190502949, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
       propertyPath: m_Name
       value: PalmTree (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225469143748265590, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14677,6 +15084,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: WindowLight
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2a9033780fdb7dd4bab8220d646f958d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14751,9 +15162,21 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -8153468022190502949, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
       propertyPath: m_Name
       value: PalmTree (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225469143748265590, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14829,6 +15252,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 3e1f7e122b4ef6b479d811c2e2e437f0, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 91cdcdc9c79bf1443a49ab48e3012f5c, type: 2}
     - target: {fileID: 919132149155446097, guid: 3e1f7e122b4ef6b479d811c2e2e437f0, type: 3}
       propertyPath: m_Name
       value: DowntownBuilding06
@@ -14836,6 +15263,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 3e1f7e122b4ef6b479d811c2e2e437f0, type: 3}
       propertyPath: m_TagString
       value: WindowLight
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3e1f7e122b4ef6b479d811c2e2e437f0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14914,6 +15345,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15323,9 +15758,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5051445984985366183}
     m_Modifications:
+    - target: {fileID: 1267420293437783450, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261679290181551016, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_Name
       value: Lampposts_Large (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2470728133328409328, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260285967341251339, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7177984082353532578, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8428141935717895241, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_LocalScale.x
@@ -15382,6 +15849,10 @@ PrefabInstance:
     - target: {fileID: 8428141935717895241, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153232214555930955, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15461,6 +15932,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15539,6 +16014,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (50)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15613,9 +16092,21 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -8153468022190502949, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
       propertyPath: m_Name
       value: PalmTree (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225469143748265590, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15773,6 +16264,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RiverWallBack (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e584849c0435fb14cb8248e73fe871fb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15847,9 +16342,21 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -8153468022190502949, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
       propertyPath: m_Name
       value: PalmTree (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225469143748265590, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15925,9 +16432,21 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -8153468022190502949, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
       propertyPath: m_Name
       value: PalmTree (08)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225469143748265590, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16085,6 +16604,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (41)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16241,6 +16764,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16302,6 +16829,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 978293579b1cc33438777f9e150bc1c1, type: 3}
       propertyPath: m_Name
       value: Sidewalks_Grass_CurveRightToStraight
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 978293579b1cc33438777f9e150bc1c1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16380,6 +16911,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16619,6 +17154,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (56)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16637,9 +17176,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5051445984985366183}
     m_Modifications:
+    - target: {fileID: 1267420293437783450, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261679290181551016, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_Name
       value: Lampposts_Large (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2470728133328409328, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260285967341251339, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7177984082353532578, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8428141935717895241, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_LocalScale.x
@@ -16696,6 +17267,10 @@ PrefabInstance:
     - target: {fileID: 8428141935717895241, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153232214555930955, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16759,6 +17334,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RiverWallBack (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e584849c0435fb14cb8248e73fe871fb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16777,9 +17356,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5051445984985366183}
     m_Modifications:
+    - target: {fileID: 1267420293437783450, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261679290181551016, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_Name
       value: Lampposts_Large (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2470728133328409328, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260285967341251339, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7177984082353532578, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8428141935717895241, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_LocalScale.x
@@ -16836,6 +17447,10 @@ PrefabInstance:
     - target: {fileID: 8428141935717895241, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153232214555930955, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16903,6 +17518,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RiverWallCurveRightToStraight
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9ec3c06a0e608a744b4e1157f0568d82, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16968,6 +17587,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e584849c0435fb14cb8248e73fe871fb, type: 3}
       propertyPath: m_Name
       value: RiverWallBack (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e584849c0435fb14cb8248e73fe871fb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17109,6 +17732,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RiverWallBack (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e584849c0435fb14cb8248e73fe871fb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17170,6 +17797,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e584849c0435fb14cb8248e73fe871fb, type: 3}
       propertyPath: m_Name
       value: RiverWallBack (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e584849c0435fb14cb8248e73fe871fb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17245,9 +17876,21 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -8153468022190502949, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
       propertyPath: m_Name
       value: PalmTree (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225469143748265590, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17327,6 +17970,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (55)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17345,9 +17992,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5051445984985366183}
     m_Modifications:
+    - target: {fileID: 1267420293437783450, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261679290181551016, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_Name
       value: Lampposts_Large (07)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2470728133328409328, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260285967341251339, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7177984082353532578, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8428141935717895241, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_LocalScale.x
@@ -17404,6 +18083,10 @@ PrefabInstance:
     - target: {fileID: 8428141935717895241, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153232214555930955, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17487,6 +18170,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: WindowLight
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 344b237a2ad228942b4f6cba6b4837aa, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17561,9 +18248,21 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -8153468022190502949, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
       propertyPath: m_Name
       value: PalmTree (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225469143748265590, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17583,9 +18282,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5051445984985366183}
     m_Modifications:
+    - target: {fileID: 1267420293437783450, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261679290181551016, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_Name
       value: Lampposts_Large (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2470728133328409328, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260285967341251339, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7177984082353532578, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8428141935717895241, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_LocalScale.x
@@ -17643,6 +18374,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9153232214555930955, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17661,9 +18396,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5051445984985366183}
     m_Modifications:
+    - target: {fileID: 1267420293437783450, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261679290181551016, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_Name
       value: Lampposts_Large (09)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2470728133328409328, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260285967341251339, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7177984082353532578, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8428141935717895241, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_LocalScale.x
@@ -17720,6 +18487,10 @@ PrefabInstance:
     - target: {fileID: 8428141935717895241, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153232214555930955, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17787,6 +18558,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RiverWallBack (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e584849c0435fb14cb8248e73fe871fb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17805,9 +18580,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5051445984985366183}
     m_Modifications:
+    - target: {fileID: 1267420293437783450, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261679290181551016, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_Name
       value: Lampposts_Large (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2470728133328409328, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260285967341251339, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7177984082353532578, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8428141935717895241, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_LocalScale.x
@@ -17864,6 +18671,10 @@ PrefabInstance:
     - target: {fileID: 8428141935717895241, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153232214555930955, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18099,6 +18910,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (38)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18251,9 +19066,21 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -8153468022190502949, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
       propertyPath: m_Name
       value: PalmTree (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225469143748265590, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18333,6 +19160,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18407,9 +19238,21 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -8153468022190502949, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
       propertyPath: m_Name
       value: PalmTree (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225469143748265590, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18429,9 +19272,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5051445984985366183}
     m_Modifications:
+    - target: {fileID: 1267420293437783450, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261679290181551016, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_Name
       value: Lampposts_Large (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2470728133328409328, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260285967341251339, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7177984082353532578, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8428141935717895241, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_LocalScale.x
@@ -18488,6 +19363,10 @@ PrefabInstance:
     - target: {fileID: 8428141935717895241, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153232214555930955, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18563,9 +19442,21 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -8153468022190502949, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
       propertyPath: m_Name
       value: PalmTree (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225469143748265590, guid: 265b0f878b7003f4dbc648ae40178525, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18585,9 +19476,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5051445984985366183}
     m_Modifications:
+    - target: {fileID: 1267420293437783450, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261679290181551016, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_Name
       value: Lampposts_Large (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2423842109117972608, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2470728133328409328, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499825116131698556, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260285967341251339, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7177984082353532578, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8428141935717895241, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_LocalScale.x
@@ -18644,6 +19567,10 @@ PrefabInstance:
     - target: {fileID: 8428141935717895241, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153232214555930955, guid: eb56f8e968a5c974cb74a134990f50b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18723,6 +19650,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sidewalks_ConcreteTile (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc28d4f3179dba142a741bdb50aa061c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18788,6 +19719,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 3419e375228e1294fbb93a7d6e44cb26, type: 3}
       propertyPath: m_TagString
       value: WindowLight
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3419e375228e1294fbb93a7d6e44cb26, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
