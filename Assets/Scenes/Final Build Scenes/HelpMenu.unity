@@ -147,17 +147,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 55388480}
-  m_LocalRotation: {x: -0, y: -0, z: -0.032187067, w: 0.99948186}
+  m_LocalRotation: {x: -0, y: -0, z: -0.046593625, w: 0.99891394}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.176251, y: 10.881256, z: 0.725417}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1261242695}
   m_Father: {fileID: 1984826716}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -3.689}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -5.341}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1444, y: 718}
+  m_AnchoredPosition: {x: 1597, y: 675}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &55388482
@@ -904,16 +904,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 316662196}
-  m_LocalRotation: {x: -0, y: -0, z: -0.0037223566, w: 0.99999315}
+  m_LocalRotation: {x: -0, y: -0, z: -0.0108253425, w: 0.9999414}
   m_LocalPosition: {x: 0, y: 0, z: -0.2649002}
-  m_LocalScale: {x: 0.99780315, y: 0.9841963, z: 0.9911651}
+  m_LocalScale: {x: 1.2094373, y: 1.1929444, z: 1.2013912}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 669370234}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.427}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -1.241}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.3, y: 124.8}
+  m_AnchoredPosition: {x: 7.3, y: 123.2}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &316662198
@@ -1172,7 +1172,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &336552063
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1182,14 +1182,14 @@ RectTransform:
   m_GameObject: {fileID: 336552062}
   m_LocalRotation: {x: -0, y: -0, z: 0.00016280833, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 31.109842}
-  m_LocalScale: {x: 1.1046396, y: 1.0231712, z: 1.0369897}
+  m_LocalScale: {x: 1.1631855, y: 1.0773993, z: 1.09195}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1261242695}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.166}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 43.63967, y: 42.42605}
+  m_AnchoredPosition: {x: 44, y: 37.2}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &336552064
@@ -1330,7 +1330,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 4.281}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -1447, y: 320}
+  m_AnchoredPosition: {x: -1319, y: 277}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &411690851
@@ -1498,6 +1498,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: OhShip.Core.UI::HelpButtonSelection
   helpText: 'Keep the water level inside the green zone.
 
+
     Don''t let it enter
     the red zones.'
   hoverSFX: {fileID: 8300000, guid: a617896e742c69b43a0e5414ed1aaf38, type: 3}
@@ -1530,14 +1531,14 @@ RectTransform:
   m_GameObject: {fileID: 493877266}
   m_LocalRotation: {x: -0, y: -0, z: 0.0015280517, w: 0.9999988}
   m_LocalPosition: {x: 0, y: 0, z: 31.837374}
-  m_LocalScale: {x: 1.4065604, y: 1.0901831, z: 1.0612406}
+  m_LocalScale: {x: 1.5309004, y: 1.1865554, z: 1.1550542}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 623854287}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.175}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 56.4, y: 42.1}
+  m_AnchoredPosition: {x: 66.1, y: 37.7}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &493877268
@@ -2337,14 +2338,14 @@ RectTransform:
   m_GameObject: {fileID: 838525234}
   m_LocalRotation: {x: -0.009505887, y: 0.0775549, z: 0.000000017622368, w: 0.9969428}
   m_LocalPosition: {x: 0, y: 0, z: 0.0000038146973}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1591, y: 1.1591, z: 1.1591}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1313732107}
   m_LocalEulerAnglesHint: {x: -1.086, y: 8.897, z: -0.084}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.9, y: 29.8}
+  m_AnchoredPosition: {x: 8.8, y: 31}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &838525236
@@ -2769,14 +2770,14 @@ RectTransform:
   m_GameObject: {fileID: 1027852473}
   m_LocalRotation: {x: -0, y: -0, z: -1.45519135e-11, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.2652, y: 1.2652, z: 1.2652}
+  m_LocalScale: {x: 1.2204752, y: 1.2204752, z: 1.2204752}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1643967813}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.014}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6.1, y: 25.8}
+  m_AnchoredPosition: {x: 7, y: 30.1}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1027852475
@@ -2904,17 +2905,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1038963848}
-  m_LocalRotation: {x: -0, y: -0, z: 0.0039184615, w: 0.9999923}
+  m_LocalRotation: {x: -0, y: -0, z: -0.00047159352, w: 0.9999999}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.7459075, y: 0.14205731, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1884317771}
   m_Father: {fileID: 1079286663}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.449}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.054}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9.5, y: 4.5}
+  m_AnchoredPosition: {x: 14.915861, y: -8.981812}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1038963850
@@ -3045,17 +3046,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1079286662}
-  m_LocalRotation: {x: -0, y: -0, z: 0.07102964, w: 0.9974742}
+  m_LocalRotation: {x: -0, y: -0, z: 0.0028649108, w: 0.99999595}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.1265206, y: 10.632603, z: 0.7088402}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1038963849}
   m_Father: {fileID: 1984826716}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 8.146}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.328}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 206, y: -351}
+  m_AnchoredPosition: {x: 336, y: -406}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1079286664
@@ -3223,7 +3224,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   helpText: 'Press Y at the fishing pole to start.
 
+
     Press A to cast.
+
 
     Keep
     the green box on the fish to fill the catch meter. '
@@ -3402,7 +3405,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -260, y: -110}
+  m_AnchoredPosition: {x: -236, y: -110}
   m_SizeDelta: {x: 500, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1204246168
@@ -3917,7 +3920,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 11.692}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -544, y: 331}
+  m_AnchoredPosition: {x: -487, y: 298}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1282698702
@@ -3932,15 +3935,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8edb21669fe1d3c4b9e56c4f1c7fd9fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: OhShip.Core.UI::HelpButtonSelection
-  helpText: 'Press Y to grab the bottle.
+  helpText: 'Store raw food in box.
 
-    Press Y at the sink to fill bottle.
 
-    Press
-    Y to drink water.'
+    Store cooked food on cutting board.'
   hoverSFX: {fileID: 8300000, guid: a617896e742c69b43a0e5414ed1aaf38, type: 3}
   m_audioSource: {fileID: 1669953316}
-  _sprite: {fileID: 21300000, guid: 29c7d180ac0ca114b9914dd11735786c, type: 3}
+  _sprite: {fileID: 21300000, guid: f5c22d2cc6bf1f4488dd09cafd250f18, type: 3}
 --- !u!114 &1282698703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4074,7 +4075,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 29c7d180ac0ca114b9914dd11735786c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ba2f3d5027a452c40a302117e3ba020f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4120,17 +4121,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1309523063}
-  m_LocalRotation: {x: -0, y: -0, z: 0.054561604, w: 0.9985104}
+  m_LocalRotation: {x: -0, y: -0, z: 0.05491379, w: 0.9984911}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.1265206, y: 10.632603, z: 0.7088402}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1861263851}
   m_Father: {fileID: 1984826716}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 6.255}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 6.296}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -955, y: -366}
+  m_AnchoredPosition: {x: -762, y: -409}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1309523065
@@ -4298,7 +4299,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: OhShip.Core.UI::HelpButtonSelection
   helpText: 'RT - Accelerate
 
+
     LT - Brake / Reverse
+
 
     Left Joy Stick - Steer'
   hoverSFX: {fileID: 8300000, guid: a617896e742c69b43a0e5414ed1aaf38, type: 3}
@@ -4480,7 +4483,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -3.637}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -387, y: -362}
+  m_AnchoredPosition: {x: -194, y: -405}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1365498795
@@ -4658,14 +4661,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8edb21669fe1d3c4b9e56c4f1c7fd9fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  helpText: 'Press Y to place a fish on the stove or a crab in the pot.
+  helpText: 'Press Y to place raw food on stove.
 
-    Wait
-    until it''s cooked.
 
-    Press Y to pick it up.
+    Wait until it''s cooked.
 
-    Press X to eat.'
+
+    Press
+    Y to pick it up and Press X to eat. '
   hoverSFX: {fileID: 8300000, guid: a617896e742c69b43a0e5414ed1aaf38, type: 3}
   m_audioSource: {fileID: 1669953316}
   _sprite: {fileID: 21300000, guid: cdb653ba33dce7d45a2ba1479ec5fbb7, type: 3}
@@ -4872,7 +4875,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1643967813
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5350,16 +5353,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1884317770}
-  m_LocalRotation: {x: -0.022770302, y: -0.15269098, z: -0.001956515, w: 0.98800975}
+  m_LocalRotation: {x: -0.025935782, y: -0.045151684, z: 0.01255968, w: 0.9985645}
   m_LocalPosition: {x: 0, y: 0, z: 31.837374}
-  m_LocalScale: {x: 0.8264769, y: 1.1207018, z: 1.1514486}
+  m_LocalScale: {x: 0.96349454, y: 1.2197719, z: 1.2532367}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1038963849}
-  m_LocalEulerAnglesHint: {x: -2.477, y: -17.594, z: 0.606}
+  m_LocalEulerAnglesHint: {x: -2.904, y: -5.218, z: 1.574}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 13.23774, y: 66.33176}
+  m_AnchoredPosition: {x: 15.1, y: 160.4}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1884317772
@@ -5613,7 +5616,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -7.002}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -1001, y: 331}
+  m_AnchoredPosition: {x: -919, y: 283}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2025574590
@@ -5630,7 +5633,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: OhShip.Core.UI::HelpButtonSelection
   helpText: 'Press Y to grab the bottle.
 
+
     Press Y at the sink to fill bottle.
+
 
     Press
     Y to drink water.'
@@ -5872,14 +5877,14 @@ RectTransform:
   m_GameObject: {fileID: 2071618878}
   m_LocalRotation: {x: -0, y: -0, z: -0.005523982, w: 0.9999848}
   m_LocalPosition: {x: 0, y: 0, z: 31.837374}
-  m_LocalScale: {x: 1.0687283, y: 1.0534816, z: 1.0612406}
+  m_LocalScale: {x: 1.1442875, y: 1.1279628, z: 1.1362703}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1861263851}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.633}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -29.8, y: 160.8}
+  m_AnchoredPosition: {x: -23.1, y: 155.9}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2071618880
