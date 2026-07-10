@@ -67,6 +67,15 @@ public class CookingInteractable : MonoBehaviour, IInteractable, IPromptProvider
         {
             if (cookingLocation.childCount > 0)
             {
+                if (_playerInteractionState.CheckInteractionTag(InteractionTag.HoldingFish) ||
+                    _playerInteractionState.CheckInteractionTag(InteractionTag.HoldingCookedFish) ||
+                    _playerInteractionState.CheckInteractionTag(InteractionTag.HoldingBottle) ||
+                    _playerInteractionState.CheckInteractionTag(InteractionTag.HoldingBottleWithWater))
+                {
+                    m_currentInteractionSession = new InteractionSession(interactor, this);
+                    m_currentInteractionSession.End();
+                    return m_currentInteractionSession;
+                }
                 MoveObjetToHand();
                 m_currentInteractionSession = new InteractionSession(interactor, this);
                 m_currentInteractionSession.OnEnded += () => _playerController.ChangeControlledEntity(_playerControllable);
@@ -83,7 +92,7 @@ public class CookingInteractable : MonoBehaviour, IInteractable, IPromptProvider
                         _playerInteractionState.AddInteractionTag(InteractionTag.HoldingCookedFish);
                         break;
                 }
-                _playerInteractionState.AddInteractionTag(InteractionTag.HoldingFish);
+                //_playerInteractionState.AddInteractionTag(InteractionTag.HoldingFish);
                 m_currentInteractionSession.End();
                 return m_currentInteractionSession;
             }

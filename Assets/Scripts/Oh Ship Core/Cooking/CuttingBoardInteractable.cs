@@ -54,18 +54,27 @@ public class CuttingBoardInteractable : MonoBehaviour, IInteractable, IPromptPro
                 return m_currentInteractionSession;
             }
         }
-        else
+
+        if (_playerInteractionState.CheckInteractionTag(InteractionTag.HoldingFish) ||
+            _playerInteractionState.CheckInteractionTag(InteractionTag.HoldingCookedFish) ||
+            _playerInteractionState.CheckInteractionTag(InteractionTag.HoldingBottle) ||
+            _playerInteractionState.CheckInteractionTag(InteractionTag.HoldingBottleWithWater))
         {
-            if (storingLocation.childCount > 0)
-            {
-                MoveObjetToHand(_playerControllable);
-                m_currentInteractionSession = new InteractionSession(interactor, this);
-                m_currentInteractionSession.OnEnded += () => _playerController.ChangeControlledEntity(_playerControllable);
-                _playerInteractionState.AddInteractionTag(InteractionTag.HoldingCookedFish);
-                m_currentInteractionSession.End();
-                return m_currentInteractionSession;
-            }
+            m_currentInteractionSession = new InteractionSession(interactor, this);
+            m_currentInteractionSession.End();
+            return m_currentInteractionSession;
         }
+        
+        if (storingLocation.childCount > 0)
+        {
+            MoveObjetToHand(_playerControllable);
+            m_currentInteractionSession = new InteractionSession(interactor, this);
+            m_currentInteractionSession.OnEnded += () => _playerController.ChangeControlledEntity(_playerControllable);
+            _playerInteractionState.AddInteractionTag(InteractionTag.HoldingCookedFish);
+            m_currentInteractionSession.End();
+            return m_currentInteractionSession;
+        }
+        
 
         m_currentInteractionSession = new InteractionSession(interactor, this);
         m_currentInteractionSession.End();

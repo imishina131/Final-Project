@@ -6,7 +6,7 @@ using UnityEngine;
 public class StorageInteractable : MonoBehaviour, IInteractable, IPromptProvider
 {
     private IPlayerControllable _playerControllable;
-    private IPlayerController _playerController;
+   // private IPlayerController _playerController;
     private Transform _holdingObjectTransform;
     InteractionSession m_currentInteractionSession;
     [SerializeField] private List<SO_CookableFoodData> _storedWaterLife =  new List<SO_CookableFoodData>();
@@ -34,8 +34,6 @@ public class StorageInteractable : MonoBehaviour, IInteractable, IPromptProvider
     public InteractionSession BeginInteraction(IInteractor interactor)
     {
         _playerControllable = interactor.GetAssociatedGameObject().transform.parent.GetComponent<IPlayerControllable>();
-       
-        _playerController = _playerControllable.GetActivePlayerController();
         
         _playerInteractionState = _playerControllable.GetAssociatedGameObject().GetComponent<PlayerInteractionState>();
         
@@ -57,6 +55,16 @@ public class StorageInteractable : MonoBehaviour, IInteractable, IPromptProvider
         if (_storedWaterLife.Count == 0)
         {
             StartCoroutine(DisplayWarning());
+            m_currentInteractionSession = new InteractionSession(interactor, this);
+            m_currentInteractionSession.End();
+            return m_currentInteractionSession;
+        }
+
+        if (_playerInteractionState.CheckInteractionTag(InteractionTag.HoldingFish) ||
+            _playerInteractionState.CheckInteractionTag(InteractionTag.HoldingCookedFish) ||
+            _playerInteractionState.CheckInteractionTag(InteractionTag.HoldingBottle) ||
+            _playerInteractionState.CheckInteractionTag(InteractionTag.HoldingBottleWithWater))
+        {
             m_currentInteractionSession = new InteractionSession(interactor, this);
             m_currentInteractionSession.End();
             return m_currentInteractionSession;
