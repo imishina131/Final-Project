@@ -23,9 +23,9 @@ public class Fish : FoodClass
     {
         audioSource = GetComponent<AudioSource>();
         m_material = GetComponent<MeshRenderer>().material;
-        m_heldObjectHandler = GetComponentInParent<HeldObjectHandler>();
+       // m_heldObjectHandler = GetComponentInParent<HeldObjectHandler>();
         Debug.Log(m_heldObjectHandler);
-        locationOfHeldObject = m_heldObjectHandler.transform;
+        //locationOfHeldObject = m_heldObjectHandler.transform;
         Debug.Log(locationOfHeldObject);
         Debug.Log(playerInteractionState);
         

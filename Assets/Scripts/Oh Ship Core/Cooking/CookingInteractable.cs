@@ -12,7 +12,7 @@ public class CookingInteractable : MonoBehaviour, IInteractable, IPromptProvider
     
     private readonly string _widgetForPrompt = "interact";
     private IPlayerControllable _playerControllable;
-    private IPlayerController _playerController;
+    //private IPlayerController _playerController;
     private PlayerInteractionState _playerInteractionState;
     private FoodClass _foodClassItem;
     private float cookedAmount;
@@ -45,7 +45,7 @@ public class CookingInteractable : MonoBehaviour, IInteractable, IPromptProvider
     {
         _playerControllable = interactor.GetAssociatedGameObject().transform.parent.GetComponent<IPlayerControllable>();
        
-        _playerController = _playerControllable.GetActivePlayerController();
+        IPlayerController _playerController = _playerControllable.GetActivePlayerController();
         
         _playerInteractionState = _playerControllable.GetAssociatedGameObject().GetComponent<PlayerInteractionState>();
          
@@ -163,6 +163,7 @@ public class CookingInteractable : MonoBehaviour, IInteractable, IPromptProvider
         audioSource.Stop();
         hasDropped = false;
         FoodClass cookingItem = cookingLocation.GetComponentInChildren<FoodClass>();
+        _foodClassItem = cookingItem;
         cookingItem.transform.position = _playerControllable.GetAssociatedGameObject().GetComponentInChildren<HeldObjectHandler>().transform.position;
         cookingItem.transform.SetParent(_playerControllable.GetAssociatedGameObject().GetComponentInChildren<HeldObjectHandler>().transform);
         if (_foodClassItem.GetComponentInChildren<Fish>())
@@ -174,9 +175,13 @@ public class CookingInteractable : MonoBehaviour, IInteractable, IPromptProvider
             cookingItem.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
         }
         cookingItem.InitializeHungerAndThirst(_playerControllable.GetAssociatedGameObject().GetComponentInChildren<HungerAndThirst>());
-        if(cookedAmount > 0.3f)
+        if(cookedAmount > cookingItem.FoodData.GetThreshold(CookState.Cooked))
         {
             _playerInteractionState.AddInteractionTag(InteractionTag.HoldingCookedFish);
+        }
+        else
+        {
+            _playerInteractionState.AddInteractionTag(InteractionTag.HoldingFish);
         }
     }
 

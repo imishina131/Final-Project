@@ -5,8 +5,8 @@ public class QuitButton : MonoBehaviour
 {
     private void Start()
     {
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void Quit()
