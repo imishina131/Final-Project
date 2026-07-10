@@ -604,7 +604,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8658882730568395451}
   - component: {fileID: 3261937982875562375}
-  - component: {fileID: 4302041488701304253}
   - component: {fileID: 2937608701732384484}
   m_Layer: 0
   m_Name: GameObject
@@ -649,18 +648,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 61.262886, y: 38.041695, z: 124.46725}
   m_Center: {x: -30.131441, y: -3.6107903, z: -59.198025}
---- !u!114 &4302041488701304253
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7901406964049024115}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40ba6fbc7c0f22d4187865da4d941327, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: OhShip.Core.Ship::CollisionDamager
 --- !u!114 &2937608701732384484
 MonoBehaviour:
   m_ObjectHideFlags: 0

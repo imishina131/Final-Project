@@ -1,5 +1,137 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1432940561708502481
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5818399375153881859}
+  - component: {fileID: 585350775569239418}
+  - component: {fileID: 9079697648868727519}
+  m_Layer: 0
+  m_Name: GameObject (19)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!4 &5818399375153881859
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432940561708502481}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 105.1, y: 0.000000028635, z: 291.3}
+  m_LocalScale: {x: 1, y: 1, z: 1.8109243}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 593186667298116998}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &585350775569239418
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432940561708502481}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 59.281277, y: 38.041695, z: 133.24446}
+  m_Center: {x: -31.122252, y: -3.6107903, z: -63.584393}
+--- !u!114 &9079697648868727519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432940561708502481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40ba6fbc7c0f22d4187865da4d941327, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: OhShip.Core::CollisionDamager
+--- !u!1 &1948567015076729910
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6925008125191557757}
+  - component: {fileID: 6225016719466368487}
+  - component: {fileID: 4077619461371580254}
+  m_Layer: 0
+  m_Name: GameObject (18)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!4 &6925008125191557757
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948567015076729910}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -43.6, y: 0.000000028635, z: 139.2}
+  m_LocalScale: {x: 1, y: 1, z: 0.6168021}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 593186667298116998}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &6225016719466368487
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948567015076729910}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 59.281277, y: 38.041695, z: 133.24446}
+  m_Center: {x: -31.122252, y: -3.6107903, z: -63.584393}
+--- !u!114 &4077619461371580254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948567015076729910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40ba6fbc7c0f22d4187865da4d941327, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: OhShip.Core::CollisionDamager
 --- !u!1 &3183026111264713742
 GameObject:
   m_ObjectHideFlags: 0
@@ -26,13 +158,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3183026111264713742}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.084053196, z: -0, w: 0.99646133}
-  m_LocalPosition: {x: 99.4, y: 0, z: 38.7}
+  m_LocalRotation: {x: -0, y: -0.053009667, z: -0, w: 0.99859405}
+  m_LocalPosition: {x: 109.323654, y: 0.000000028634531, z: 63.97754}
   m_LocalScale: {x: 1, y: 1, z: 1.6150299}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 593186667298116998}
-  m_LocalEulerAnglesHint: {x: 0, y: -9.643, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -6.077, z: 0}
 --- !u!65 &6914152044385423050
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -246,6 +378,138 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &4669393761281327064
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5726544397430043392}
+  - component: {fileID: 6886235951754334409}
+  - component: {fileID: 8505211135390409605}
+  m_Layer: 0
+  m_Name: GameObject (17)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!4 &5726544397430043392
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4669393761281327064}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -86.1, y: 0.000000028635, z: -188.6}
+  m_LocalScale: {x: 1, y: 1, z: 0.85746986}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 593186667298116998}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &6886235951754334409
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4669393761281327064}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 59.281277, y: 38.041695, z: 133.24446}
+  m_Center: {x: -31.122252, y: -3.6107903, z: -63.584393}
+--- !u!114 &8505211135390409605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4669393761281327064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40ba6fbc7c0f22d4187865da4d941327, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: OhShip.Core::CollisionDamager
+--- !u!1 &8368064832560605616
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7735447363367293042}
+  - component: {fileID: 7987002591542495177}
+  - component: {fileID: 7267896624609276752}
+  m_Layer: 0
+  m_Name: GameObject (20)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!4 &7735447363367293042
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8368064832560605616}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.15571323, z: -0, w: 0.9878023}
+  m_LocalPosition: {x: -77.9, y: 0.000000028634531, z: 300.8}
+  m_LocalScale: {x: 1, y: 1, z: 0.8778328}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 593186667298116998}
+  m_LocalEulerAnglesHint: {x: 0, y: -17.916, z: 0}
+--- !u!65 &7987002591542495177
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8368064832560605616}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 59.281277, y: 38.041695, z: 133.24446}
+  m_Center: {x: -31.122252, y: -3.6107903, z: -63.584393}
+--- !u!114 &7267896624609276752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8368064832560605616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40ba6fbc7c0f22d4187865da4d941327, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: OhShip.Core::CollisionDamager
 --- !u!1 &8444052347954832038
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,7 +627,7 @@ Transform:
   m_GameObject: {fileID: 8855769613618004018}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.05316868, z: -0, w: 0.9985856}
-  m_LocalPosition: {x: -44.87166, y: 0, z: 15.914795}
+  m_LocalPosition: {x: -45.6, y: 0, z: 61}
   m_LocalScale: {x: 1, y: 1, z: 1.6150299}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -429,8 +693,8 @@ Transform:
   m_GameObject: {fileID: 9065381028139921774}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 148.4, y: 0, z: -151.21}
-  m_LocalScale: {x: 1, y: 1, z: 0.94756263}
+  m_LocalPosition: {x: 148.4, y: 0.000000028635, z: -155.7}
+  m_LocalScale: {x: 1, y: 1, z: 1.0778525}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 593186667298116998}
@@ -823,10 +1087,22 @@ PrefabInstance:
       addedObject: {fileID: 5254941924038586108}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 80a1286eb69a32447b5b02c4ee1b3e6a, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 6925008125191557757}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 80a1286eb69a32447b5b02c4ee1b3e6a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7735447363367293042}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 80a1286eb69a32447b5b02c4ee1b3e6a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5818399375153881859}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 80a1286eb69a32447b5b02c4ee1b3e6a, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 402143882761753766}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 80a1286eb69a32447b5b02c4ee1b3e6a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1606267590989408980}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 80a1286eb69a32447b5b02c4ee1b3e6a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5726544397430043392}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80a1286eb69a32447b5b02c4ee1b3e6a, type: 3}
 --- !u!4 &593186667298116998 stripped
