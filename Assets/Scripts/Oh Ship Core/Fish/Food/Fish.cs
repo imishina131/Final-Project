@@ -35,7 +35,9 @@ public class Fish : FoodClass
     public override void UpdateCookedAmount(float incomingAmount)
     {
         m_cookedAmount = incomingAmount;
-        m_material.SetFloat(s_cookedAmount, m_cookedAmount);
+        //float cookedThreshold = m_foodData.GetThreshold(CookState.Cooked);
+        //float normalizedCook = Mathf.Clamp01(m_cookedAmount / cookedThreshold);
+        m_material.SetFloat(s_cookedAmount, incomingAmount);
         
         CookState newState = DetermineCookState(m_cookedAmount);
 
