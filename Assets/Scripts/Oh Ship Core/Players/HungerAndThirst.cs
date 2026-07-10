@@ -1,3 +1,4 @@
+using MatrixUtils.DependencyInjection;
 using MatrixUtils.GenericDatatypes;
 using UnityEngine;
 using UnityEngine.Events;
@@ -12,7 +13,7 @@ public class HungerAndThirst: MonoBehaviour
     [FormerlySerializedAs("manager")] private HungerAndThirstVisualManager m_manager;
     [SerializeField] private SerializableDictionary<InteractionTag, float> m_hungerLossRates;
     [SerializeField] private float thirstLossRate = 0.01f;
-    static int numberOfPassedOutPlayers = 0;
+    public static int numberOfPassedOutPlayers = 0;
     static readonly int s_passedOutAnimatorProperty = Animator.StringToHash("Passed Out");
     [FormerlySerializedAs("isPassedOut")] [SerializeField] bool m_isPassedOut;
     [SerializeField] VisualEffect m_passedOutEffect;
@@ -21,18 +22,21 @@ public class HungerAndThirst: MonoBehaviour
     PlayerInteractor m_playerInteractor;
     bool fromHunger;
     bool fromThirst;
-    //[SerializeField] Animator fadeAnim;
+   
+    [Inject] ISceneTransitioner m_sceneTransitioner;
     
     public bool IsPassedOut => m_isPassedOut;
     [SerializeField] UnityEvent<bool> OnEnableMovement = new();
     
 
 
-    [FormerlySerializedAs("anim")] [SerializeField] Animator animator;
+    private Animator animator;
     void Start()
     {
          m_playerInteractor = GetComponentInChildren<PlayerInteractor>();
          m_playerInteractionState = GetComponent<PlayerInteractionState>();
+         animator = GetComponentInChildren<Animator>();
+         FindAnyObjectByType<Injector>().Inject(this);
         
         Hunger.Notify();
         Thirst.Notify();
@@ -40,7 +44,6 @@ public class HungerAndThirst: MonoBehaviour
 
     void Update()
     {
-        Debug.Log("number of players:" + numberOfPassedOutPlayers);
         foreach (var hungerChecks in m_hungerLossRates)
         {
             if (m_playerInteractionState.CheckInteractionTag(hungerChecks.Key))
@@ -88,13 +91,13 @@ public class HungerAndThirst: MonoBehaviour
             fromThirst = true;
         }
         animator.SetBool(s_passedOutAnimatorProperty, true);
-        //fadeAnim.SetBool("Fade", true);
+       
         m_playerInteractor.EndActiveInteraction();
         numberOfPassedOutPlayers++;
         m_isPassedOut = true;
         gameObject.layer = LayerMask.NameToLayer("Default");
         OnEnableMovement.Invoke(false);
-        if(numberOfPassedOutPlayers >= 2)SceneManager.LoadScene("StarvedSequence");
+        if (numberOfPassedOutPlayers >= 2) m_sceneTransitioner.TransitionToScene("StarvedSequence",0.5f);
         m_passedOutEffect.Play();
     }
 
@@ -113,7 +116,7 @@ public class HungerAndThirst: MonoBehaviour
         }
 
         animator.SetBool(s_passedOutAnimatorProperty, false);
-        //fadeAnim.SetBool("Fade", false);
+        
         Debug.Log("Waking Up");
         numberOfPassedOutPlayers--;
         GetComponent<Rigidbody>().isKinematic = false;

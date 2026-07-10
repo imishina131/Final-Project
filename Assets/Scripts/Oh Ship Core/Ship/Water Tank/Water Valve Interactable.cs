@@ -28,7 +28,8 @@ public class WaterValveInteractable : MonoBehaviour, IInteractable, IPlayerContr
     InteractionSession m_currentInteractionSession;
     GameObject m_player;
 
-    private AudioSource audio;
+    [Header("Get the first Audio Source on this Game Object")]
+    [SerializeField] private AudioSource audio;
 
     [Header ("Audio")]
     [SerializeField] private AudioClip wheelTurning;

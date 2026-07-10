@@ -17,8 +17,17 @@ public class CharacterSelectionSpawnManager : MonoBehaviour
     void Awake()
     {
         FindAnyObjectByType<Injector>().Inject(this);
+        StartCoroutine(EnableJoining());
 
     }
+
+    IEnumerator  EnableJoining()
+    {
+        m_playerInputManager.DisableJoining();
+        yield return new WaitUntil(() => Gamepad.all.Count >= 2);
+        m_playerInputManager.EnableJoining();
+    }
+
     public void OnSpawn(PlayerInput playerInput)
     {
         Debug.Log($"OnSpawn called for: {playerInput.name}");

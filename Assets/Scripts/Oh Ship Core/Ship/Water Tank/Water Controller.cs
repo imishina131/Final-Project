@@ -13,6 +13,8 @@ public class WaterController : MonoBehaviour
     [Header("Required References")]
     [SerializeField, RequiredField] MeshRenderer m_waterFillMesh;
     [SerializeField, RequiredField] VisualEffect m_smokeEffect;
+    [SerializeField, RequiredField] AudioSource m_alertAudioSource;
+    
     [Header("Settings")]
     [SerializeField] float m_maxFill = 1f;
     [SerializeField] float m_minFill = -1f;
@@ -42,6 +44,7 @@ public class WaterController : MonoBehaviour
     [SerializeField] SoundData m_underPressureFailure;
     [SerializeField] SoundData m_pressureEqualized;
     
+    
     float FillCenter => Mathf.Lerp(m_minFill, m_maxFill, 0.5f);
     public float CurrentFill { get; private set; }
     public float NormalizedFill => Mathf.InverseLerp(m_minFill, m_maxFill, CurrentFill);
@@ -62,6 +65,11 @@ public class WaterController : MonoBehaviour
         UpdateCurrentFill(CurrentFill + m_activeFillDirection * m_playerFillChangeRate * Time.deltaTime);
         OnWaterFillUpdate.Invoke(NormalizedFill);
         m_currentDrift.OnEventUpdate(CurrentFill);
+        
+        if (m_activeAlert && Mathf.Abs(CurrentFill - FillCenter) <= m_stableRange)
+        {
+            OnPressureEqualized();
+        }
     }
 
     public void HandleFillInput(float fillDirection) => m_activeFillDirection = fillDirection;
@@ -114,7 +122,10 @@ public class WaterController : MonoBehaviour
         if (m_activeAlert) return;
         m_activeAlert = true;
         m_notificationMessenger.TryNotify("enable steam");
-        SoundManager.Instance.CreateSound().WithSoundData(m_overPressureThresholdReached).WithPosition(transform.position).WithRandomPitch().Play();
+        m_alertAudioSource.clip = m_overPressureThresholdReached.Clip;
+        m_alertAudioSource.Play();
+        
+        //SoundManager.Instance.CreateSound().WithSoundData(m_overPressureThresholdReached).WithPosition(transform.position).WithRandomPitch().Play();
         OnOverPressureThresholdReached.Invoke();
     }
 
@@ -123,7 +134,9 @@ public class WaterController : MonoBehaviour
         if (m_activeAlert) return;
         m_activeAlert = true;
         m_notificationMessenger.TryNotify("enable steam");
-        SoundManager.Instance.CreateSound().WithSoundData(m_underPressureThresholdReached).WithPosition(transform.position).WithRandomPitch().Play();
+        m_alertAudioSource.clip = m_underPressureThresholdReached.Clip;
+        m_alertAudioSource.Play();
+        //SoundManager.Instance.CreateSound().WithSoundData(m_underPressureThresholdReached).WithPosition(transform.position).WithRandomPitch().Play();
         OnUnderPressureThresholdReached.Invoke();
     }
     void OverPressureMaximumReached()
@@ -151,6 +164,7 @@ public class WaterController : MonoBehaviour
 
     void OnPressureEqualized()
     {
+        m_alertAudioSource.Stop();
         SoundManager.Instance.CreateSound().WithSoundData(m_pressureEqualized).WithPosition(transform.position).WithRandomPitch().Play();
         if (!m_activeAlert) return;
         m_activeAlert = false;

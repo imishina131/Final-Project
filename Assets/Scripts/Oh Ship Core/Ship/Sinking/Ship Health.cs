@@ -36,6 +36,8 @@ public class ShipHealth : MonoBehaviour, IDamageable
         shipBody = GetComponent<Rigidbody>();
         shipBody.maxAngularVelocity = 1f;
         m_availableHoles = new(m_holePositions);
+        HungerAndThirst.numberOfPassedOutPlayers  = 0; //I KNOW THIS IS STUPID BUT IT'S A FAIL SAFE!
+        Debug.Log(HungerAndThirst.numberOfPassedOutPlayers + " knock out player count set to 0 in: " + "Ship Health script");
         m_shipHoles = new ObjectPool<ShipHole>
         (
             createFunc: () =>

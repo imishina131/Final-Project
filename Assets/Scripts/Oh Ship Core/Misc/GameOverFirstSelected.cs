@@ -8,6 +8,7 @@ public class GameOverFirstSelected : MonoBehaviour
     [SerializeField] private GameObject m_firstSelected;
     void Start()
     {
+        
         StartCoroutine(SelectFirstAsync());
     }
 
