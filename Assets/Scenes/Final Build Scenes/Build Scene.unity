@@ -23723,6 +23723,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -16.200012
       objectReference: {fileID: 0}
+    - target: {fileID: 8214078280095431828, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.814
+      objectReference: {fileID: 0}
     - target: {fileID: 8366890479264653818, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.5900002
@@ -24850,8 +24854,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.3818046, y: 1.5856521, z: 0.33868393}
-  m_Center: {x: 0.021381319, y: -0.025977552, z: 0.00050136505}
+  m_Size: {x: 0.36532706, y: 1.591098, z: 0.33868393}
+  m_Center: {x: 0.013142557, y: -0.02870053, z: 0.00050136406}
 --- !u!114 &1945998541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24944,15 +24948,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1945998535}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.18230103, y: -0.6542758, z: 0.21475498, w: 0.70183325}
-  m_LocalPosition: {x: -5.6159935, y: 3.346, z: -95.646}
+  m_LocalRotation: {x: 0.20082916, y: -0.677988, z: 0.20082916, w: 0.677988}
+  m_LocalPosition: {x: -5.5989933, y: 3.346, z: -95.646}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 686196560}
   - {fileID: 1853788398}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 33.554, y: -89.933, z: 0.348}
+  m_LocalEulerAnglesHint: {x: 33, y: -90, z: 0}
 --- !u!82 &1945998545
 AudioSource:
   m_ObjectHideFlags: 0
