@@ -195,10 +195,25 @@ public class CookingInteractable : MonoBehaviour, IInteractable, IPromptProvider
     {
         Debug.Log("Warning Label");
         int playerIndex = _playerInteractionState.PlayerIndex;
-        Debug.Log($"Firing: 'enable raw player{playerIndex}'");
-        m_notificationMessenger.TryNotify($"enable raw player{playerIndex}");
-        yield return new WaitForSeconds(3f);
-        m_notificationMessenger.TryNotify($"disable raw player{playerIndex}");;
+
+        if (howIsCooked == CookingProcess.InPot)
+        {
+            m_notificationMessenger.TryNotify($"enable need crab player{playerIndex}");
+            yield return new WaitForSeconds(3f);
+            m_notificationMessenger.TryNotify($"disable need crab player{playerIndex}"); ;
+        }
+        else if (howIsCooked == CookingProcess.OnGrill)
+        {
+            m_notificationMessenger.TryNotify($"enable need fish player{playerIndex}");
+            yield return new WaitForSeconds(3f);
+            m_notificationMessenger.TryNotify($"disable need fish player{playerIndex}"); ;
+        }
+        else
+        {
+            m_notificationMessenger.TryNotify($"enable raw player{playerIndex}");
+            yield return new WaitForSeconds(3f);
+            m_notificationMessenger.TryNotify($"disable raw player{playerIndex}"); ;
+        }
     }
     
 }
