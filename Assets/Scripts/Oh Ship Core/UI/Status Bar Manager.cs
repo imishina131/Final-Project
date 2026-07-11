@@ -18,6 +18,7 @@ public class HungerAndThirstVisualManager : MonoBehaviour
     public void UpdateThirst(float thirstPercentage)
     {
         m_thirstBar.UpdateFillPercentage(thirstPercentage);
+        m_hungerVolume.HandlePostEffects(thirstPercentage);
     }
 
     [Serializable]
