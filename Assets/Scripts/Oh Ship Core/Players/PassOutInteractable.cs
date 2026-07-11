@@ -1,3 +1,5 @@
+using MatrixUtils.DependencyInjection;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -86,6 +88,7 @@ public class PassOutInteractable : MonoBehaviour, IInteractable, IPromptProvider
     {
         return _interactDisplayTransform.position;
     }
+
 
 
 }

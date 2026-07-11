@@ -24,7 +24,8 @@ public class HungerAndThirst: MonoBehaviour
     bool fromThirst;
    
     [Inject] ISceneTransitioner m_sceneTransitioner;
-    
+    [Inject] INotificationMessenger m_notificationMessenger;
+
     public bool IsPassedOut => m_isPassedOut;
     [SerializeField] UnityEvent<bool> OnEnableMovement = new();
     
@@ -82,7 +83,9 @@ public class HungerAndThirst: MonoBehaviour
     public void PassOut(int cause)
     {
         if(m_isPassedOut) return;
-        if(cause == 1)
+        int secondPlayerIndex = m_playerInteractionState.PlayerIndex == 0 ? 1 : 0;
+        DisplayWarning(secondPlayerIndex);
+        if (cause == 1)
         {
             fromHunger = true;
         }
@@ -104,7 +107,9 @@ public class HungerAndThirst: MonoBehaviour
     public void WakeUp(float value)
     {
         if(!m_isPassedOut) return;
-        if(fromHunger)
+        int secondPlayerIndex = m_playerInteractionState.PlayerIndex == 0 ? 1 : 0;
+        HideWarning(secondPlayerIndex);
+        if (fromHunger)
         {
             Hunger.Value = value;
             fromHunger = false;
@@ -125,5 +130,16 @@ public class HungerAndThirst: MonoBehaviour
         Debug.Log($"Layer set to: {gameObject.layer}, expected: {LayerMask.NameToLayer("Player")}");
         OnEnableMovement.Invoke(true);
 
+    }
+
+    void DisplayWarning(int index)
+    {
+        Debug.Log("displays pass out");
+        m_notificationMessenger.TryNotify($"enable passed out player{index}");
+    }
+
+    void HideWarning(int index)
+    {
+        m_notificationMessenger.TryNotify($"disable passed out player{index}");
     }
 }
