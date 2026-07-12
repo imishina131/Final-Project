@@ -17,7 +17,7 @@ public class CharacterSelectorButton : Button
     [SerializeField] public UnityEvent<int> OnCharacterSelectionFailed = new();
     [SerializeField] public UnityEvent<int> OnCharacterDeselected = new();
     [Inject] ICharacterSelectionDataHandler m_characterSelectionDataHandler;
-
+    
     int m_ownerPlayerIndex = -1;
     bool IsLockedIn => m_ownerPlayerIndex != -1;
 
@@ -29,12 +29,14 @@ public class CharacterSelectorButton : Button
             if (playerInput.playerIndex != m_ownerPlayerIndex) return;
             m_characterSelectionDataHandler.ClearCharacterSelectionData(m_ownerPlayerIndex);
             m_ownerPlayerIndex = -1;
+            interactable = true;
             OnCharacterDeselected.Invoke(playerInput.playerIndex);
             return;
         }
         if (m_characterSelectionDataHandler.TrySetCharacterSelectionData(playerInput.playerIndex, m_characterData))
         {
             m_ownerPlayerIndex = playerInput.playerIndex;
+            interactable = false;
             OnCharacterSelectedSuccessfully.Invoke(playerInput.playerIndex);
             Debug.Log("Successfully set character selection");
             base.OnSubmit(eventData);
@@ -50,7 +52,7 @@ public class CharacterSelectorButton : Button
         if (IsLockedIn && TryGetPlayerInput(eventData, out PlayerInput playerInput) && playerInput.playerIndex == m_ownerPlayerIndex) return;
         base.OnMove(eventData);
     }
-
+    
     static bool TryGetPlayerInput(BaseEventData eventData, out PlayerInput playerInput)
     {
         if (eventData.currentInputModule is InputSystemUIInputModule { } inputModule && inputModule.transform.root.GetComponent<PlayerInput>() is { } input)
