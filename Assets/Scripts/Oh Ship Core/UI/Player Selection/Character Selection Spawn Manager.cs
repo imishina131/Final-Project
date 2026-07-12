@@ -30,7 +30,7 @@ public class CharacterSelectionSpawnManager : MonoBehaviour
 
     public void OnSpawn(PlayerInput playerInput)
     {
-        Debug.Log($"OnSpawn called for: {playerInput.name}");
+        Debug.Log($"OnSpawn Player Joined: {playerInput.playerIndex}");
         if(playerInput.transform.root.GetComponentInChildren<MultiplayerEventSystem>() is not {} multiplayerEventSystem) return;
         StartCoroutine(SpawnPlayerSelectionCanvas(multiplayerEventSystem));
     }

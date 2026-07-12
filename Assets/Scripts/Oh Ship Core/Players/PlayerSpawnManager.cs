@@ -29,6 +29,7 @@ public class PlayerSpawnManager : MonoBehaviour
 
     public void Spawn(PlayerInput playerInput)
     {
+        Debug.Log("PlayerSpawnManager.Spawn called for Player:" + playerInput.playerIndex);
         IPlayerController controller = playerInput.gameObject.GetComponent<IPlayerController>();
         Vector3 spawnPosition = Vector3.zero;
         Quaternion spawnRotation = Quaternion.identity;
@@ -41,7 +42,9 @@ public class PlayerSpawnManager : MonoBehaviour
         m_injector.Inject(controller.GetAssociatedGameObject());
         SO_CharacterSpecificData data = null;
         m_characterSelectionDataHandler?.TryGetCharacterSelectionData(playerInput.playerIndex, out data);
+        Debug.Log($"Player {playerInput.playerIndex} data: {data?.name ?? "NULL"}, CharacterModelPrefab: {data?.CharacterModelPrefab?.name ?? "NULL"}");
         IPlayerControllable selectedControllable = data?.CharacterModelPrefab.GetComponent<IPlayerControllable>() ?? m_playerControllable.Value;
+        Debug.Log($"Selected controllable: {selectedControllable?.GetAssociatedGameObject()?.name ?? "NULL"}");
         GameObject player = Instantiate(selectedControllable.GetAssociatedGameObject(), spawnPosition, spawnRotation);
         controller.ChangeControlledEntity(player.GetComponent<IPlayerControllable>());
         
@@ -59,6 +62,7 @@ public class PlayerSpawnManager : MonoBehaviour
         }
         playerInput.GetComponentInChildren<CinemachineBrain>().ChannelMask = channels;
         player.GetComponentInChildren<CinemachineCamera>().OutputChannel = channels;
+        Debug.Log($"Player {playerInput.playerIndex} Data;{data.name ?? "NULL"}");
     }
 
     static bool SelectRandom<T>(List<T> list, out T result)

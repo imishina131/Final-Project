@@ -26,10 +26,11 @@ public class CharacterSelectionDataHandler : PersistentService<ICharacterSelecti
 
     public bool TrySetCharacterSelectionData(int playerIndex, SO_CharacterSpecificData characterSpecificData)
     {
-        Debug.Log("Try Data");
-        if(m_selectedCharacters.Contains(characterSpecificData)) return false;
+        Debug.Log($"TrySetCharacterSelectionData called for player: {playerIndex}, data: {characterSpecificData?.name}");
+        if (m_selectedCharacters.Contains(characterSpecificData)) return false;
         m_characterSelectionDataSet[playerIndex] = characterSpecificData;
         bool result = m_selectedCharacters.Add(characterSpecificData);
+        Debug.Log($"TrySetCharacterSelectionData called for player: {playerIndex}, data: {characterSpecificData?.name}");
         return result;
     }
     public bool HasSelection(int playerIndex) => m_characterSelectionDataSet.ContainsKey(playerIndex);
@@ -39,13 +40,14 @@ public class CharacterSelectionDataHandler : PersistentService<ICharacterSelecti
 
     public void ClearSelections()
     {
-        Debug.Log("Clearing selections");
+        Debug.Log($"ClearSelections called, stack: {System.Environment.StackTrace}");
         m_characterSelectionDataSet.Clear();
         m_selectedCharacters.Clear();
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        Debug.Log($"OnSceneLoaded: {scene.name}, characterSelectionSceneName: {m_characterSelectionSceneName}, match: {scene.name == m_characterSelectionSceneName}");
         if (scene.name == m_characterSelectionSceneName)
         {
             ClearSelections();

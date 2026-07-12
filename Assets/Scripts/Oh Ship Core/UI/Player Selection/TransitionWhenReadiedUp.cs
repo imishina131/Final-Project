@@ -15,8 +15,8 @@ public class TransitionWhenReadiedUp : MonoBehaviour, IDependencyProvider
         m_readyUpCount++;
         if (m_readyUpCount >= m_transitionThreshold)
         {
-            //m_sceneTransitioner.LoadScene(m_sceneToTransitionTo, 0.5f);
-            loading.LoadScene(m_sceneToTransitionTo);
+            m_sceneTransitioner.TransitionToScene(m_sceneToTransitionTo, 0.5f);
+            //loading.LoadScene(m_sceneToTransitionTo);
         }
     }
 
