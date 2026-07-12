@@ -37,7 +37,7 @@ public class PromptDisplay : MonoBehaviour, IPromptDisplay
         
     }
 
-    void Update()
+    void LateUpdate()
     {
         if (m_activePrompts.Count <= 0) return;
         foreach (KeyValuePair<IPromptProvider, PromptInfo> prompt in m_activePrompts)
