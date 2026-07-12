@@ -12,34 +12,36 @@ public class AIMovement : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        agent.SetDestination(targetLocations[locationIndex].position);
     }
 
     // Update is called once per frame
     void Update()
-    {     
-        if(agent.remainingDistance < 1f)
+    {
+        if (!agent.pathPending && agent.isOnNavMesh)
         {
-            if (goingBack)
+            if (agent.remainingDistance < 1f)
             {
-                locationIndex--;
-            }
-            else
-            {
-                locationIndex++;
-            }
+                if (goingBack)
+                {
+                    locationIndex--;
+                }
+                else
+                {
+                    locationIndex++;
+                }
 
-            if (locationIndex >= targetLocations.Length - 1)
-            {
-                goingBack = true;
-            }
-            else if (locationIndex <= 0)
-            {
-                goingBack = false;
-            }
+                if (locationIndex >= targetLocations.Length - 1)
+                {
+                    goingBack = true;
+                }
+                else if (locationIndex <= 0)
+                {
+                    goingBack = false;
+                }
 
-            agent.SetDestination(targetLocations[locationIndex].position);
-        }
+                agent.SetDestination(targetLocations[locationIndex].position);
+            }
+        }        
         
     }
 
