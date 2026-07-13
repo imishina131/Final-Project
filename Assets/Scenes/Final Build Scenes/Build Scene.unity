@@ -31209,13 +31209,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1016252840}
     - target: {fileID: 6209415758916147482, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
+      propertyPath: m_gramophoneTracks.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6209415758916147482, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
       propertyPath: 'm_gramophoneTracks.Array.data[0]'
       value: 
-      objectReference: {fileID: 8300000, guid: 7b26fbab8c28fe74cae6ffdc7e964a8a, type: 3}
+      objectReference: {fileID: 8300000, guid: abdd6efe56ecf2c499c0c25d49e53bf7, type: 3}
     - target: {fileID: 6209415758916147482, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
       propertyPath: 'm_gramophoneTracks.Array.data[1]'
       value: 
       objectReference: {fileID: 8300000, guid: 1f614bb40c862fc46b2f36b004910b99, type: 3}
+    - target: {fileID: 6209415758916147482, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
+      propertyPath: 'm_gramophoneTracks.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 7b26fbab8c28fe74cae6ffdc7e964a8a, type: 3}
+    - target: {fileID: 6209415758916147482, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
+      propertyPath: 'm_gramophoneTracks.Array.data[3]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 9f6280bfc77254aac86071001b6b7b76, type: 3}
     - target: {fileID: 6315079195521403227, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
       propertyPath: m_speedMultiplier
       value: 4
