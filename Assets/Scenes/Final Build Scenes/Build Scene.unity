@@ -9075,7 +9075,7 @@ Transform:
   m_GameObject: {fileID: 547921119}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -38.32141, y: -75, z: -2498}
+  m_LocalPosition: {x: -38.32141, y: -80, z: -2498}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -30763,6 +30763,14 @@ PrefabInstance:
     - target: {fileID: 633370073185298021, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
       propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
       value: 1.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 841866500237528475, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
+      propertyPath: m_speedometerElement.MaxAngle
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 841866500237528475, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
+      propertyPath: m_speedometerElement.MinAngle
+      value: -180
       objectReference: {fileID: 0}
     - target: {fileID: 848438743785790366, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
       propertyPath: m_LocalPosition.y
