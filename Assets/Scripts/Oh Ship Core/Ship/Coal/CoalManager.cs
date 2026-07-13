@@ -36,6 +36,7 @@ public class CoalManager : MonoBehaviour, IInteractable, IPlayerControllable, IP
     [Header("Audio")]
     [SerializeField] private AudioClip rightInput;
     [SerializeField] private AudioClip wrongInput;
+    [SerializeField] private AudioClip[] shovelCoalList;
 
     private void Start()
     {
@@ -125,6 +126,7 @@ public class CoalManager : MonoBehaviour, IInteractable, IPlayerControllable, IP
 
     private void EndMiniGame()
     {
+        audio.PlayOneShot(shovelCoalList[Random.Range(0,shovelCoalList.Length)]);
         m_currentInteractionSession.End();
     }
 

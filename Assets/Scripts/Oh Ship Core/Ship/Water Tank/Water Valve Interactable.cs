@@ -98,6 +98,7 @@ public class WaterValveInteractable : MonoBehaviour, IInteractable, IPlayerContr
         m_currentInteractionState.RemoveInteractionTag(InteractionTag.AdjustingWaterTank);
         m_currentInteractionSession.End();
         m_activePlayerController = null;
+        audio.Stop();
         m_pressureSystem.HandleFillInput(0);
         m_pressureSystem.OnUserInteractionEnded();
     }
