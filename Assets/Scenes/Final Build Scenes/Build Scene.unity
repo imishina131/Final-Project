@@ -5633,6 +5633,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9159440181383975300, guid: c25b6fd3deb70a64b8b144046ce58859, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 9159440181383975300, guid: c25b6fd3deb70a64b8b144046ce58859, type: 3}
       propertyPath: m_Name
       value: Canoe (4)
       objectReference: {fileID: 0}
@@ -9075,7 +9079,7 @@ Transform:
   m_GameObject: {fileID: 547921119}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -38.32141, y: -80, z: -2498}
+  m_LocalPosition: {x: -38.32141, y: -139, z: -2498}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -30215,8 +30219,8 @@ Transform:
   m_GameObject: {fileID: 1887769180}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -38.32141, y: -12.3, z: -2498}
-  m_LocalScale: {x: 1, y: 0.31264538, z: 1}
+  m_LocalPosition: {x: -38.32141, y: -49, z: -2498}
+  m_LocalScale: {x: 1, y: 1.1489718, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -30317,8 +30321,8 @@ Transform:
   m_GameObject: {fileID: 1906475988}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -38.32141, y: -61.8, z: -2498}
-  m_LocalScale: {x: 1, y: 0.34781796, z: 1}
+  m_LocalPosition: {x: -38.32141, y: -133, z: -2498}
+  m_LocalScale: {x: 1, y: 0.7999813, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -30780,6 +30784,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -2.201
       objectReference: {fileID: 0}
+    - target: {fileID: 1360864495459079380, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360864495459079380, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10.09
+      objectReference: {fileID: 0}
     - target: {fileID: 1369656882922866794, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.8303
@@ -30855,6 +30867,14 @@ PrefabInstance:
     - target: {fileID: 1878548977224036500, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1926843122937966853, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 1926843122937966853, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10.09
       objectReference: {fileID: 0}
     - target: {fileID: 2058550514175767308, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
       propertyPath: m_LocalScale.x
@@ -39074,7 +39094,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 217134124005197324, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
       propertyPath: yOffset
-      value: 45
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 217134124005197324, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
       propertyPath: _playerSteamBoat
@@ -39546,7 +39566,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1320048185041333726, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -25.35
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 1320048185041333726, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
       propertyPath: m_LocalPosition.z
