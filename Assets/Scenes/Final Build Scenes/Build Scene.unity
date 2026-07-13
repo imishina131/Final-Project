@@ -7784,6 +7784,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &453315909 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 219887180413961405, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
+  m_PrefabInstance: {fileID: 7501252337306102668}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91168742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff44eb390ad833241bd1e98d5ee00b79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: OhShip.Core.UI::SceneTransitionerProxy
 --- !u!4 &457600212 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5049912455561075455, guid: a303f6bc281db0740b6c79c44d9da4ba, type: 3}
@@ -43563,32 +43574,128 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5523844188059048367, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
+      propertyPath: OnOverPressureFailure.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5523844188059048367, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
+      propertyPath: OnUnderPressureFailure.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5523844188059048367, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
       propertyPath: OnWaterFillUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1614289363}
+    - target: {fileID: 5523844188059048367, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
+      propertyPath: OnOverPressureFailure.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5523844188059048367, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
+      propertyPath: OnUnderPressureFailure.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5523844188059048367, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
+      propertyPath: OnUnderPressureFailure.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5523844188059048367, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
       propertyPath: OnWaterFillUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5523844188059048367, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
+      propertyPath: OnOverPressureFailure.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 453315903}
+    - target: {fileID: 5523844188059048367, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
       propertyPath: OnWaterFillUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: AdjustWaterGauge
+      objectReference: {fileID: 0}
+    - target: {fileID: 5523844188059048367, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
+      propertyPath: OnUnderPressureFailure.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 453315909}
+    - target: {fileID: 5523844188059048367, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
+      propertyPath: OnUnderPressureFailure.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 453315903}
+    - target: {fileID: 5523844188059048367, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
+      propertyPath: OnOverPressureFailure.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5523844188059048367, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
+      propertyPath: OnOverPressureFailure.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayOneShot
+      objectReference: {fileID: 0}
+    - target: {fileID: 5523844188059048367, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
+      propertyPath: OnUnderPressureFailure.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5523844188059048367, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
+      propertyPath: OnUnderPressureFailure.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TransitionToScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 5523844188059048367, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
+      propertyPath: OnUnderPressureFailure.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayOneShot
       objectReference: {fileID: 0}
     - target: {fileID: 5523844188059048367, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
       propertyPath: OnWaterFillUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: FuelWarning, OhShip.Core.Ship
       objectReference: {fileID: 0}
     - target: {fileID: 5523844188059048367, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
+      propertyPath: OnOverPressureFailure.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5523844188059048367, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
+      propertyPath: OnUnderPressureFailure.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneTransitionerProxy, OhShip.Core.UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 5523844188059048367, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
+      propertyPath: OnUnderPressureFailure.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5523844188059048367, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
       propertyPath: OnOverPressureFailure.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: BlewUpSequence
+      objectReference: {fileID: 0}
+    - target: {fileID: 5523844188059048367, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
+      propertyPath: OnOverPressureFailure.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 8300000, guid: 704752c361fe80f42b0bf9e1f79018e2, type: 3}
+    - target: {fileID: 5523844188059048367, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
+      propertyPath: OnOverPressureFailure.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: BlewUpSequence
+      objectReference: {fileID: 0}
+    - target: {fileID: 5523844188059048367, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
+      propertyPath: OnUnderPressureFailure.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5523844188059048367, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
       propertyPath: OnUnderPressureFailure.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: BlewUpSequence
       objectReference: {fileID: 0}
     - target: {fileID: 5523844188059048367, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
+      propertyPath: OnUnderPressureFailure.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 8300000, guid: 704752c361fe80f42b0bf9e1f79018e2, type: 3}
+    - target: {fileID: 5523844188059048367, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
+      propertyPath: OnUnderPressureFailure.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: BlewUpSequence
+      objectReference: {fileID: 0}
+    - target: {fileID: 5523844188059048367, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
       propertyPath: OnWaterFillUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5523844188059048367, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
+      propertyPath: OnOverPressureFailure.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.AudioClip, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5523844188059048367, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
+      propertyPath: OnUnderPressureFailure.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5523844188059048367, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
+      propertyPath: OnUnderPressureFailure.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.AudioClip, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5531531540247488218, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
       propertyPath: m_StaticEditorFlags
