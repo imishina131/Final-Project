@@ -47,6 +47,7 @@ public class WaterController : MonoBehaviour
     
     float FillCenter => Mathf.Lerp(m_minFill, m_maxFill, 0.5f);
     public float CurrentFill { get; private set; }
+    public bool IsAlertActive => m_activeAlert;
     public float NormalizedFill => Mathf.InverseLerp(m_minFill, m_maxFill, CurrentFill);
     static readonly int s_fillProperty = Shader.PropertyToID("_Fill");
     float m_activeFillDirection;

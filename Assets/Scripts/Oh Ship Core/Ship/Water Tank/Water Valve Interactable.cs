@@ -42,6 +42,7 @@ public class WaterValveInteractable : MonoBehaviour, IInteractable, IPlayerContr
     }
     public InteractionSession BeginInteraction(IInteractor interactor)
     {
+        
         IPlayerControllable oldControllable = interactor.GetAssociatedGameObject().transform.parent.GetComponent<IPlayerControllable>();
         IPlayerController controller = oldControllable.GetActivePlayerController();
         m_currentInteractionState = oldControllable.GetAssociatedGameObject().GetComponent<PlayerInteractionState>();
@@ -49,6 +50,11 @@ public class WaterValveInteractable : MonoBehaviour, IInteractable, IPlayerContr
         if(m_currentInteractionState.CheckInteractionTag(InteractionTag.HoldingFish) || m_currentInteractionState.CheckInteractionTag(InteractionTag.HoldingBottle) || m_currentInteractionState.CheckInteractionTag(InteractionTag.HoldingBottleWithWater) || m_currentInteractionSession is {IsActive: true})
         {
             Debug.Log("Blocked interaction");
+            return null;
+        }
+
+        if (!m_pressureSystem.IsAlertActive)
+        {
             return null;
         }
         CinemachineCamera playerCamera = interactor.GetAssociatedGameObject().GetComponent<CinemachineCamera>();
@@ -130,7 +136,11 @@ public class WaterValveInteractable : MonoBehaviour, IInteractable, IPlayerContr
     public IPlayerController GetActivePlayerController() => m_activePlayerController;
     void HandleInteract(InputAction.CallbackContext context) => m_currentInteractionSession.End();
     public GameObject GetAssociatedGameObject() => gameObject;
-    public PromptData GetPromptData() => new() {AssociatedWidget = m_widgetForPrompt};
+
+    public PromptData GetPromptData() => new()
+    {
+        AssociatedWidget = m_pressureSystem.IsAlertActive ? m_widgetForPrompt : ""
+    };
     public Vector3 GetWidgetWorldPosition() => m_displayForInteraction.position;
     
     [Serializable]
