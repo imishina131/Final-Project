@@ -38263,8 +38263,8 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7104522681095600729, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
   m_PrefabInstance: {fileID: 7501252337306102668}
   m_PrefabAsset: {fileID: 0}
---- !u!64 &2105543916
-MeshCollider:
+--- !u!65 &2105543913
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -38281,10 +38281,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -5076798556035486163, guid: 8849e9fbbc3c8f445823692a4bea6a55, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 0.49343595, y: 1.7206095, z: 0.9364261}
+  m_Center: {x: -0.0000010659847, y: 0.516752, z: 0.22149546}
 --- !u!1001 &2105901469
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44621,6 +44620,22 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7625584898569986275, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.3339898
+      objectReference: {fileID: 0}
+    - target: {fileID: 7625584898569986275, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7625584898569986275, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.94257665
+      objectReference: {fileID: 0}
+    - target: {fileID: 7625584898569986275, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -219.022
+      objectReference: {fileID: 0}
     - target: {fileID: 7634689624399529445, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -45484,7 +45499,7 @@ PrefabInstance:
       addedObject: {fileID: 1991547863}
     - targetCorrespondingSourceObject: {fileID: 7104522681095600729, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2105543916}
+      addedObject: {fileID: 2105543913}
     - targetCorrespondingSourceObject: {fileID: 27829036184690117, guid: 00a0a69a1175a9a4ea12b6dcb511a9c9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2005694895}
