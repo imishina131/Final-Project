@@ -20,6 +20,6 @@ public class UnderbellyFollow : MonoBehaviour
         Vector3 targetPosition = _playerSteamBoat.transform.position;
         targetPosition.y -= yOffset; 
         m_rigidbody.MovePosition(targetPosition);
-        m_rigidbody.MoveRotation(_playerSteamBoat.transform.rotation);
+        //m_rigidbody.MoveRotation(_playerSteamBoat.transform.rotation);
     }
 }
