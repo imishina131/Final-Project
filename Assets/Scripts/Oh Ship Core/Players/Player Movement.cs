@@ -201,7 +201,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Vector3 currentWorldPos = connectedBody.transform.TransformPoint(connectionLocalPos);
             Vector3 connectionMovement = currentWorldPos - connectionWorldPos;
-            connectionVelocity = connectionMovement / Time.fixedDeltaTime;
+            connectionVelocity = Vector3.ClampMagnitude(connectionMovement / Time.fixedDeltaTime, 10f);
             
             platformYaw = connectedBody.transform.eulerAngles.y;
 
