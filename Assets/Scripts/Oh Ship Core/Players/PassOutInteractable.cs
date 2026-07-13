@@ -68,7 +68,9 @@ public class PassOutInteractable : MonoBehaviour, IInteractable, IPromptProvider
                 Debug.Log("should wake up");
                 _hungerNThirst.WakeUp(0.2f);
             }
-            heldItem?.Use();
+            if(heldItem != null)
+                Destroy(heldItem.GetTransform().gameObject);
+            //heldItem?.Use();
             return m_currentInteractionSession;
         }
 
