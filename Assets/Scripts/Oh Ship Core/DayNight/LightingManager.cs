@@ -29,7 +29,7 @@ public class LightingManager : MonoBehaviour
 
     private void Start()
     {
-        timeOfDay = 18;
+        timeOfDay = 20;
         lights = GameObject.FindGameObjectsWithTag("Light");
         fireflies = GameObject.FindGameObjectsWithTag("Firefly");
         windowLights = GameObject.FindGameObjectsWithTag("WindowLight");
@@ -77,7 +77,7 @@ public class LightingManager : MonoBehaviour
             if (lightCount > 0 && finishedLightUp)
             {
                 finishedLightUp = false;
-                Invoke("LightUp", Random.Range(0.1f, 0.6f));
+                Invoke("LightUp", Random.Range(0.01f, 0.03f));
             }
             LightUpBuildings();
 
